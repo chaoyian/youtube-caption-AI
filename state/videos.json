@@ -8,7 +8,8 @@
       "analyzed_hash": "789c196cb6d79e02e594c5dee7eb326ed657c10383f854c3c29fbebd1f266f88",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
-      "email_status": "disabled",
+      "email_sent_at": "2026-07-28T11:21:46+00:00",
+      "email_status": "sent",
       "entities": [
         "AMD",
         "Airbnb",
@@ -118,7 +119,8 @@
       "analyzed_hash": "bc94624a3cf118f58ed651e570d910a47453f3e113323bbd4165169d2d41ee9f",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
-      "email_status": "disabled",
+      "email_sent_at": "2026-07-28T11:21:46+00:00",
+      "email_status": "sent",
       "entities": [
         "Airbnb",
         "Anthropic",
@@ -228,7 +230,8 @@
       "analyzed_hash": "ae433f2738f8599d76aea87c2a5317351c330f104c48a1929df6296fa4636337",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
-      "email_status": "disabled",
+      "email_sent_at": "2026-07-28T11:21:46+00:00",
+      "email_status": "sent",
       "entities": [
         "301条款",
         "338条款",
@@ -338,7 +341,8 @@
       "analyzed_hash": "433655d04ca54178d02e978d7be27d34bee12031a9bb5ab44f2700d6c1c63e05",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
-      "email_status": "disabled",
+      "email_sent_at": "2026-07-28T11:21:46+00:00",
+      "email_status": "sent",
       "entities": [
         "AI",
         "Alphabet",
@@ -446,7 +450,8 @@
       "analyzed_hash": "bf6381c844d781f5eb399501fd5e8551fee2deb13921e3f43617fde632c4a57a",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
-      "email_status": "disabled",
+      "email_sent_at": "2026-07-28T11:21:46+00:00",
+      "email_status": "sent",
       "entities": [
         "AI晶片",
         "AI用电保护承诺",
