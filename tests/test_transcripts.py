@@ -81,3 +81,46 @@ def test_transcript_api_receives_same_proxy(monkeypatch):
     assert captured["http_url"] == "http://user:password@proxy.invalid:8080"
     assert captured["https_url"] == "http://user:password@proxy.invalid:8080"
     assert captured["config"] == "proxy-config"
+
+
+def test_supadata_returns_timestamped_segments(monkeypatch):
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
+    monkeypatch.setattr(
+        transcripts,
+        "_supadata_request",
+        lambda url, key: (
+            200,
+            {
+                "lang": "zh-TW",
+                "availableLangs": ["zh-TW"],
+                "content": [
+                    {"text": "利率政策", "offset": 1500, "duration": 800, "lang": "zh-TW"}
+                ],
+            },
+        ),
+    )
+    result = transcripts.fetch_with_supadata("abcdefghijk", ["zh-TW"])
+    assert result.source == "supadata"
+    assert result.language == "zh-TW"
+    assert result.segments[0].start == 1.5
+    assert result.segments[0].duration == 0.8
+
+
+def test_supadata_is_first_when_configured(monkeypatch):
+    expected = TranscriptResult(
+        "zh-TW", False, "supadata", [TranscriptSegment(start=0, text="金融")]
+    )
+    calls = []
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_supadata",
+        lambda *args: calls.append("supadata") or expected,
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_ytdlp",
+        lambda *args: (_ for _ in ()).throw(AssertionError("should not run")),
+    )
+    assert transcripts.fetch_transcript("abcdefghijk", ["zh-TW"]) == expected
+    assert calls == ["supadata"]

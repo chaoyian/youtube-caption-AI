@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urlsplit
@@ -72,15 +72,28 @@ def _record_failure(record: dict[str, Any], stage: str, error: Exception) -> Non
 def _safe_error(error: Exception) -> str:
     message = f"{type(error).__name__}: {error}"
     proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
-    if not proxy_url:
-        return message
-    parsed = urlsplit(proxy_url)
-    sensitive_values = [proxy_url, quote(proxy_url, safe=""), parsed.username, parsed.password]
+    parsed = urlsplit(proxy_url) if proxy_url else None
+    sensitive_values = [
+        os.environ.get("SUPADATA_API_KEY"),
+        os.environ.get("POE_API_KEY"),
+        os.environ.get("RESEND_API_KEY"),
+        os.environ.get("DISCORD_WEBHOOK_URL"),
+        proxy_url,
+        parsed.username if parsed else None,
+        parsed.password if parsed else None,
+    ]
     for value in sensitive_values:
         if value and len(value) >= 4:
             message = message.replace(value, "***")
             message = message.replace(quote(value, safe=""), "***")
     return message
+
+
+def _revision_check_due(record: dict[str, Any]) -> bool:
+    last_fetched = record.get("last_fetched_at")
+    if not last_fetched:
+        return True
+    return datetime.fromisoformat(last_fetched) <= datetime.now(UTC) - timedelta(days=7)
 
 
 def process(
@@ -132,6 +145,14 @@ def process(
             channel_id=channel.id,
         )
         if not force and record.get("analysis_status") == "failed" and not retry_due(record):
+            continue
+        if (
+            not force
+            and record.get("analysis_status") == "complete"
+            and record.get("analyzed_hash")
+            and not _revision_check_due(record)
+        ):
+            result.unchanged += 1
             continue
         try:
             transcript = fetch_transcript(video.id, channel.languages)

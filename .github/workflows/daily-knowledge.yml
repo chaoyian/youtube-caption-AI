@@ -45,6 +45,7 @@ jobs:
       POE_MODEL: ${{ vars.POE_MODEL || 'GPT-5.4' }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
       YOUTUBE_PROXY_URL: ${{ secrets.YOUTUBE_PROXY_URL }}
       EMAIL_FROM: ${{ vars.EMAIL_FROM }}
       EMAIL_TO: ${{ vars.EMAIL_TO }}
@@ -65,10 +66,10 @@ jobs:
       - name: Install
         run: python -m pip install .
 
-      - name: Verify YouTube proxy
+      - name: Verify transcript access
         run: |
-          if [[ -z "$YOUTUBE_PROXY_URL" ]]; then
-            echo "::error::YOUTUBE_PROXY_URL is required on GitHub-hosted runners. Configure a rotating residential proxy URL in Actions Secrets."
+          if [[ -z "$SUPADATA_API_KEY" && -z "$YOUTUBE_PROXY_URL" ]]; then
+            echo "::error::Configure SUPADATA_API_KEY (recommended) or YOUTUBE_PROXY_URL in Actions Secrets."
             exit 1
           fi
 
