@@ -21,6 +21,10 @@ Secrets：
 - `POE_API_KEY`：从 Poe 新建的 API Key。不要使用任何已经公开或发到聊天中的 Key。
 - `RESEND_API_KEY`：Resend API Key。
 - `DISCORD_WEBHOOK_URL`：目标频道的 Discord Webhook URL。
+- `YOUTUBE_PROXY_URL`：轮换住宅代理 URL，例如
+  `http://用户名:密码@代理主机:端口`。GitHub 托管 Runner 的机房 IP 通常会被
+  YouTube 拦截，因此这是线上运行的必需项。不要使用免费公开代理，也不要提交
+  YouTube 账号 Cookies。
 
 Variables：
 
@@ -31,6 +35,13 @@ Variables：
 然后在 **Actions → Daily finance knowledge → Run workflow** 中先开启 `preview`，检查生成的 Artifact。确认至少三篇笔记后，再关闭 `preview` 正式运行。
 
 仓库的 Actions 设置必须允许工作流对仓库内容执行写操作。
+
+### 为什么需要代理
+
+GitHub 托管 Runner 使用云服务商 IP，YouTube 经常要求这类 IP 登录确认。程序会把
+同一个 `YOUTUBE_PROXY_URL` 同时交给 `yt-dlp` 和备用字幕抓取器。建议选择支持轮换
+IP 的住宅代理；普通数据中心代理很可能仍会被拦截。代理 URL 只存放在 GitHub
+Secret 中，错误写入公开状态文件前也会自动遮蔽账号、密码和完整 URL。
 
 ## 新增频道
 

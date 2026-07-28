@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import urllib.request
 from dataclasses import dataclass
@@ -8,6 +9,7 @@ from html import unescape
 from typing import Any
 
 from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api.proxies import GenericProxyConfig
 from yt_dlp import YoutubeDL
 
 from .models import TranscriptSegment
@@ -15,6 +17,20 @@ from .models import TranscriptSegment
 
 class TranscriptUnavailable(RuntimeError):
     pass
+
+
+class _QuietYtDlpLogger:
+    def debug(self, message: str) -> None:
+        pass
+
+    def info(self, message: str) -> None:
+        pass
+
+    def warning(self, message: str) -> None:
+        pass
+
+    def error(self, message: str) -> None:
+        pass
 
 
 @dataclass(frozen=True)
@@ -110,13 +126,17 @@ def _parse_vtt(data: bytes) -> list[TranscriptSegment]:
 
 
 def fetch_with_ytdlp(video_id: str, languages: list[str]) -> TranscriptResult:
+    proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
     options = {
         "quiet": True,
         "no_warnings": True,
         "skip_download": True,
         "extract_flat": False,
         "socket_timeout": 30,
+        "logger": _QuietYtDlpLogger(),
     }
+    if proxy_url:
+        options["proxy"] = proxy_url
     with YoutubeDL(options) as downloader:
         info = downloader.extract_info(f"https://www.youtube.com/watch?v={video_id}", download=False)
     manual = _select_track(info.get("subtitles") or {}, languages)
@@ -136,7 +156,11 @@ def fetch_with_ytdlp(video_id: str, languages: list[str]) -> TranscriptResult:
 
 
 def fetch_with_transcript_api(video_id: str, languages: list[str]) -> TranscriptResult:
-    api = YouTubeTranscriptApi()
+    proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
+    proxy_config = (
+        GenericProxyConfig(http_url=proxy_url, https_url=proxy_url) if proxy_url else None
+    )
+    api = YouTubeTranscriptApi(proxy_config=proxy_config)
     transcript_list = api.list(video_id)
     try:
         transcript = transcript_list.find_manually_created_transcript(languages)
@@ -164,4 +188,3 @@ def fetch_transcript(video_id: str, languages: list[str]) -> TranscriptResult:
         except Exception as error:
             errors.append(f"{fetcher.__name__}: {type(error).__name__}: {error}")
     raise TranscriptUnavailable(" | ".join(errors))
-

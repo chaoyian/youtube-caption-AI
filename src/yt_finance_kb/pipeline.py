@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote, urlsplit
 
 from yt_dlp import YoutubeDL
 
@@ -63,9 +64,23 @@ def _record_failure(record: dict[str, Any], stage: str, error: Exception) -> Non
     record[f"{stage}_status"] = "failed"
     record["failure_count"] = int(record.get("failure_count", 0)) + 1
     record["next_retry_at"] = schedule_retry(record["failure_count"])
-    record["last_error"] = f"{type(error).__name__}: {error}"[:1200]
+    record["last_error"] = _safe_error(error)[:1200]
     record["last_attempt_at"] = now_iso()
     record["alert_status"] = "pending"
+
+
+def _safe_error(error: Exception) -> str:
+    message = f"{type(error).__name__}: {error}"
+    proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
+    if not proxy_url:
+        return message
+    parsed = urlsplit(proxy_url)
+    sensitive_values = [proxy_url, quote(proxy_url, safe=""), parsed.username, parsed.password]
+    for value in sensitive_values:
+        if value and len(value) >= 4:
+            message = message.replace(value, "***")
+            message = message.replace(quote(value, safe=""), "***")
+    return message
 
 
 def process(

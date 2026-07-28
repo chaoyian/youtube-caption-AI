@@ -118,3 +118,14 @@ def test_prompt_input_keeps_finance_but_local_filter_removes_ad(
     assert "訂閱按讚" not in analyzer.last_transcript
     assert "金融市场和利率" in analyzer.last_transcript
 
+
+def test_proxy_credentials_are_redacted_from_public_errors(monkeypatch):
+    proxy = "http://secret-user:secret-password@proxy.example:8080"
+    monkeypatch.setenv("YOUTUBE_PROXY_URL", proxy)
+    message = pipeline._safe_error(
+        RuntimeError(f"connection through {proxy} failed for secret-user / secret-password")
+    )
+    assert proxy not in message
+    assert "secret-user" not in message
+    assert "secret-password" not in message
+    assert "***" in message
