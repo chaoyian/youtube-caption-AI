@@ -2,7 +2,7 @@
   "schema_version": 1,
   "videos": {
     "HXHxiiYjKFY": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
@@ -19,7 +19,7 @@
       "video_url": "https://www.youtube.com/watch?v=HXHxiiYjKFY"
     },
     "NZGYUCHpm0w": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
@@ -36,7 +36,7 @@
       "video_url": "https://www.youtube.com/watch?v=NZGYUCHpm0w"
     },
     "_m4TSQiYZi4": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
@@ -53,7 +53,7 @@
       "video_url": "https://www.youtube.com/watch?v=_m4TSQiYZi4"
     },
     "sMSDQyQANIM": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
@@ -70,7 +70,7 @@
       "video_url": "https://www.youtube.com/watch?v=sMSDQyQANIM"
     },
     "vxCO-f4F3BA": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
