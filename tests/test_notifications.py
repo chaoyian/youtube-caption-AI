@@ -1,6 +1,28 @@
 import json
 
 import yt_finance_kb.pipeline as pipeline
+from yt_finance_kb.notifications import _without_front_matter
+
+
+def test_email_body_excludes_yaml_front_matter():
+    body = """---
+title: "很长的标题"
+video_id: abcdefghijk
+topics:
+  - 财经
+---
+
+# 正常标题
+
+## 金融摘要
+
+摘要正文
+"""
+    visible = _without_front_matter(body)
+    assert visible.startswith("# 正常标题")
+    assert "title:" not in visible
+    assert "video_id:" not in visible
+    assert "## 金融摘要" in visible
 
 
 def test_notification_retry_does_not_analyze_and_recovers_after_config_added(tmp_path, monkeypatch):
@@ -46,4 +68,3 @@ def test_notification_retry_does_not_analyze_and_recovers_after_config_added(tmp
     monkeypatch.setattr(pipeline, "send_discord", lambda *args: sent.append("discord"))
     pipeline.notify(tmp_path, state_path, "https://github.com/example/repo")
     assert sent == ["email", "discord"]
-
