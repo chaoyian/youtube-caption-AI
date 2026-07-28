@@ -5,7 +5,7 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import yt_finance_kb.pipeline as pipeline
-from yt_finance_kb.transcripts import TranscriptResult
+from yt_finance_kb.transcripts import TranscriptPending, TranscriptResult
 
 
 class FakeAnalyzer:
@@ -103,6 +103,33 @@ def test_fetch_failure_does_not_call_ai(tmp_path, monkeypatch, sample_video, sam
     assert analyzer.calls == 0
     assert record["fetch_status"] == "failed"
     assert record["alert_status"] == "pending"
+
+
+def test_missing_captions_waits_without_failing_or_calling_ai(
+    tmp_path, monkeypatch, sample_video, sample_note
+):
+    config, state = _workspace(tmp_path)
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", lambda *args, **kwargs: [sample_video])
+    calls = []
+
+    def pending(*args):
+        calls.append("fetch")
+        raise TranscriptPending("native captions are not available yet")
+
+    monkeypatch.setattr(pipeline, "fetch_transcript", pending)
+    analyzer = FakeAnalyzer(sample_note)
+    first = pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
+    second = pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
+    record = json.loads(state.read_text(encoding="utf-8"))["videos"][sample_video.id]
+    assert first.waiting == 1
+    assert first.failed == 0
+    assert second.waiting == 1
+    assert calls == ["fetch"]
+    assert analyzer.calls == 0
+    assert record["fetch_status"] == "waiting"
+    assert record["analysis_status"] == "pending"
+    assert record["alert_status"] == "none"
+    assert datetime.fromisoformat(record["next_retry_at"]) > datetime.now(UTC)
 
 
 def test_prompt_input_keeps_finance_but_local_filter_removes_ad(

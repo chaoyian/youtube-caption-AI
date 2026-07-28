@@ -14,10 +14,17 @@ from .cleaning import clean_segments, transcript_hash, transcript_text
 from .config import load_config
 from .discovery import fetch_channel_videos, video_id_from_url
 from .models import ChannelConfig, Video
-from .notifications import read_note, send_discord, send_discord_alert, send_email
+from .notifications import (
+    configured_email_providers,
+    email_recipients,
+    read_note,
+    send_discord,
+    send_discord_alert,
+    send_email,
+)
 from .rendering import note_path, rebuild_indexes, render_note
 from .state import load_state, now_iso, retry_due, save_state, schedule_retry
-from .transcripts import fetch_transcript
+from .transcripts import TranscriptPending, fetch_transcript
 
 
 @dataclass
@@ -25,6 +32,7 @@ class ProcessResult:
     discovered: int = 0
     unchanged: int = 0
     analyzed: int = 0
+    waiting: int = 0
     failed: int = 0
 
 
@@ -69,6 +77,16 @@ def _record_failure(record: dict[str, Any], stage: str, error: Exception) -> Non
     record["alert_status"] = "pending"
 
 
+def _record_waiting(record: dict[str, Any], error: Exception) -> None:
+    record["fetch_status"] = "waiting"
+    record["analysis_status"] = "pending"
+    record["waiting_count"] = int(record.get("waiting_count", 0)) + 1
+    record["next_retry_at"] = schedule_retry(hours=1)
+    record["last_error"] = _safe_error(error)[:1200]
+    record["last_attempt_at"] = now_iso()
+    record["alert_status"] = "none"
+
+
 def _safe_error(error: Exception) -> str:
     message = f"{type(error).__name__}: {error}"
     proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
@@ -77,6 +95,7 @@ def _safe_error(error: Exception) -> str:
         os.environ.get("SUPADATA_API_KEY"),
         os.environ.get("POE_API_KEY"),
         os.environ.get("RESEND_API_KEY"),
+        os.environ.get("GMAIL_APP_PASSWORD"),
         os.environ.get("DISCORD_WEBHOOK_URL"),
         proxy_url,
         parsed.username if parsed else None,
@@ -144,6 +163,9 @@ def process(
             video_url=video.url,
             channel_id=channel.id,
         )
+        if not force and record.get("fetch_status") == "waiting" and not retry_due(record):
+            result.waiting += 1
+            continue
         if not force and record.get("analysis_status") == "failed" and not retry_due(record):
             continue
         if (
@@ -170,6 +192,10 @@ def process(
                 failure_count=0,
                 next_retry_at=None,
             )
+        except TranscriptPending as error:
+            _record_waiting(record, error)
+            result.waiting += 1
+            continue
         except Exception as error:
             _record_failure(record, "fetch", error)
             result.failed += 1
@@ -204,6 +230,7 @@ def process(
                 topics=sorted({topic for card in note.cards for topic in card.topics} | set(channel.tags)),
                 entities=sorted({entity.name for entity in note.entities}),
                 email_status="pending",
+                email_deliveries={},
                 discord_status="pending",
                 alert_status="none",
                 last_error=None,
@@ -249,26 +276,53 @@ def notify(root: Path, state_path: Path, repository_url: str, branch: str = "mai
             continue
         body = read_note(root, record["note_path"])
         url = _note_url(repository_url, branch, record["note_path"])
-        if record.get("email_status") in {"pending", "failed", "disabled"}:
-            required = ("RESEND_API_KEY", "EMAIL_FROM", "EMAIL_TO")
-            if not all(os.environ.get(name) for name in required):
+        if record.get("email_status") in {"pending", "partial", "failed", "disabled"}:
+            recipients = email_recipients()
+            providers = configured_email_providers()
+            if not recipients or not providers:
                 record["email_status"] = "disabled"
             else:
-                try:
+                version = int(record["note_version"])
+                deliveries = record.setdefault("email_deliveries", {})
+                pending = [
+                    recipient
+                    for recipient in recipients
+                    if deliveries.get(recipient, {}).get("status") != "sent"
+                    or deliveries.get(recipient, {}).get("version") != version
+                ]
+                results = (
                     send_email(
                         record["title"],
                         body,
                         url,
                         record["video_url"],
-                        f"{record['video_id']}-v{record['note_version']}",
+                        f"{record['video_id']}-v{version}",
+                        pending,
                     )
+                    if pending
+                    else {}
+                )
+                for recipient, delivery in results.items():
+                    deliveries[recipient] = {**delivery, "version": version, "attempted_at": now_iso()}
+                    if delivery["status"] == "sent":
+                        counts["email"] += 1
+                sent = sum(
+                    deliveries.get(recipient, {}).get("status") == "sent"
+                    and deliveries.get(recipient, {}).get("version") == version
+                    for recipient in recipients
+                )
+                if sent == len(recipients):
                     record["email_status"] = "sent"
                     record["email_sent_at"] = now_iso()
-                    counts["email"] += 1
-                except Exception as error:
+                    record.pop("email_error", None)
+                elif sent:
+                    record["email_status"] = "partial"
+                    record["email_error"] = "One or more recipients could not be reached"
+                    counts["failed"] += len(recipients) - sent
+                else:
                     record["email_status"] = "failed"
-                    record["email_error"] = f"{type(error).__name__}: {error}"[:600]
-                    counts["failed"] += 1
+                    record["email_error"] = "No recipients could be reached"
+                    counts["failed"] += len(recipients)
             save_state(state_path, state)
         if record.get("discord_status") in {"pending", "failed", "disabled"}:
             if not os.environ.get("DISCORD_WEBHOOK_URL"):
