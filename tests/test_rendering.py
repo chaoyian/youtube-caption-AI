@@ -1,0 +1,32 @@
+from pathlib import Path
+
+from yt_finance_kb.models import ChannelConfig
+from yt_finance_kb.rendering import rebuild_indexes, render_note
+
+
+def test_render_note_has_timestamp_and_no_transcript(sample_video, sample_note):
+    channel = ChannelConfig(id="test-channel", url="https://www.youtube.com/@test", tags=["财经"])
+    body = render_note(sample_video, channel, sample_note, 1)
+    assert "https://youtu.be/abcdefghijk?t=12" in body
+    assert "## 原子知识卡片" in body
+    assert "字幕正文" not in body
+
+
+def test_rebuild_indexes_is_deterministic(tmp_path: Path):
+    records = {
+        "abcdefghijk": {
+            "analysis_status": "complete",
+            "title": "节目",
+            "published_at": "2026-07-28T00:00:00+00:00",
+            "note_path": "knowledge/channel/2026/2026-07-28-abcdefghijk.md",
+            "topics": ["利率"],
+            "entities": ["联准会"],
+        }
+    }
+    rebuild_indexes(tmp_path, records)
+    first = (tmp_path / "indexes/topics/利率.md").read_text(encoding="utf-8")
+    rebuild_indexes(tmp_path, records)
+    second = (tmp_path / "indexes/topics/利率.md").read_text(encoding="utf-8")
+    assert first == second
+    assert "../../knowledge/channel/2026/2026-07-28-abcdefghijk.md" in first
+

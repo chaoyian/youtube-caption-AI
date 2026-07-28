@@ -1,0 +1,117 @@
+name: Daily finance knowledge
+
+on:
+  schedule:
+    - cron: "23 11 * * *"
+      timezone: "Asia/Shanghai"
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "频道配置 ID；留空表示全部启用频道"
+        required: false
+        type: string
+      video:
+        description: "单个 YouTube 视频 URL；使用时必须指定频道"
+        required: false
+        type: string
+      backfill_days:
+        description: "覆盖默认回溯天数；留空使用频道配置"
+        required: false
+        type: string
+      preview:
+        description: "只生成预览 Artifact，不提交、不通知"
+        required: false
+        default: false
+        type: boolean
+      force:
+        description: "即使字幕未变化也重新调用 AI"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-finance-kb
+  cancel-in-progress: false
+
+jobs:
+  build-knowledge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      POE_API_KEY: ${{ secrets.POE_API_KEY }}
+      POE_MODEL: ${{ vars.POE_MODEL || 'GPT-5.4' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      EMAIL_FROM: ${{ vars.EMAIL_FROM }}
+      EMAIL_TO: ${{ vars.EMAIL_TO }}
+      REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: python -m pip install .
+
+      - name: Process captions
+        env:
+          INPUT_CHANNEL: ${{ inputs.channel }}
+          INPUT_VIDEO: ${{ inputs.video }}
+          INPUT_BACKFILL_DAYS: ${{ inputs.backfill_days }}
+          INPUT_PREVIEW: ${{ inputs.preview }}
+          INPUT_FORCE: ${{ inputs.force }}
+        run: |
+          args=(process)
+          if [[ -n "$INPUT_CHANNEL" ]]; then args+=(--channel "$INPUT_CHANNEL"); fi
+          if [[ -n "$INPUT_VIDEO" ]]; then args+=(--video "$INPUT_VIDEO"); fi
+          if [[ -n "$INPUT_BACKFILL_DAYS" ]]; then args+=(--backfill-days "$INPUT_BACKFILL_DAYS"); fi
+          if [[ "$INPUT_PREVIEW" == "true" ]]; then args+=(--preview); fi
+          if [[ "$INPUT_FORCE" == "true" ]]; then args+=(--force); fi
+          python -m yt_finance_kb "${args[@]}"
+
+      - name: Upload preview
+        if: ${{ inputs.preview == true }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: finance-knowledge-preview
+          path: preview-output/
+          if-no-files-found: error
+
+      - name: Commit knowledge
+        if: ${{ inputs.preview != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add knowledge indexes state/videos.json
+          if git diff --cached --quiet; then
+            echo "No new knowledge to commit"
+          else
+            git commit -m "knowledge: update YouTube finance notes"
+            git push
+          fi
+
+      - name: Send pending notifications
+        if: ${{ inputs.preview != true }}
+        run: python -m yt_finance_kb notify --repository-url "$REPOSITORY_URL"
+
+      - name: Commit delivery state
+        if: ${{ inputs.preview != true }}
+        run: |
+          git add state/videos.json
+          if git diff --cached --quiet; then
+            echo "No delivery state to commit"
+          else
+            git commit -m "state: record knowledge deliveries"
+            git push
+          fi

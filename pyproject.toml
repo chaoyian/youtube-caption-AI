@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "youtube-finance-kb"
+version = "0.1.0"
+description = "Build a finance-focused knowledge base from YouTube captions"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "Markdown==3.10.2",
+  "openai==2.49.0",
+  "pydantic==2.13.4",
+  "PyYAML==6.0.3",
+  "youtube-transcript-api==1.2.4",
+  "yt-dlp==2026.7.4",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+yt-finance-kb = "yt_finance_kb.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/yt_finance_kb"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
