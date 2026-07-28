@@ -23,6 +23,11 @@ def _parser() -> argparse.ArgumentParser:
     run.add_argument("--backfill-days", type=int)
     run.add_argument("--preview", action="store_true")
     run.add_argument("--force", action="store_true")
+    run.add_argument(
+        "--fail-on-errors",
+        action="store_true",
+        help="处理完成并保存状态后，在任一视频失败时返回非零状态",
+    )
 
     deliver = subparsers.add_parser("notify", help="补发待处理通知，不调用 AI")
     deliver.add_argument("--state", type=Path, default=Path("state/videos.json"))
@@ -49,6 +54,8 @@ def main() -> None:
             force=args.force,
         )
         print(json.dumps(output.__dict__, ensure_ascii=False))
+        if args.fail_on_errors and output.failed:
+            raise SystemExit(1)
     elif args.command == "notify":
         if not args.repository_url:
             raise SystemExit("--repository-url or REPOSITORY_URL is required")
@@ -62,4 +69,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

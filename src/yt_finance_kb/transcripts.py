@@ -1,13 +1,17 @@
 from __future__ import annotations
 
 import json
+import os
 import re
+import time
 import urllib.request
 from dataclasses import dataclass
 from html import unescape
 from typing import Any
+from urllib.parse import urlencode
 
 from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api.proxies import GenericProxyConfig
 from yt_dlp import YoutubeDL
 
 from .models import TranscriptSegment
@@ -15,6 +19,20 @@ from .models import TranscriptSegment
 
 class TranscriptUnavailable(RuntimeError):
     pass
+
+
+class _QuietYtDlpLogger:
+    def debug(self, message: str) -> None:
+        pass
+
+    def info(self, message: str) -> None:
+        pass
+
+    def warning(self, message: str) -> None:
+        pass
+
+    def error(self, message: str) -> None:
+        pass
 
 
 @dataclass(frozen=True)
@@ -50,6 +68,69 @@ def _download(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(request, timeout=45) as response:
         return response.read()
+
+
+def _supadata_request(url: str, api_key: str) -> tuple[int, dict[str, Any]]:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "youtube-finance-kb/0.1",
+            "x-api-key": api_key,
+            "Accept": "application/json",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return response.status, json.loads(response.read())
+
+
+def fetch_with_supadata(video_id: str, languages: list[str]) -> TranscriptResult:
+    api_key = os.environ.get("SUPADATA_API_KEY")
+    if not api_key:
+        raise TranscriptUnavailable("SUPADATA_API_KEY is not configured")
+    query = urlencode(
+        {
+            "url": f"https://www.youtube.com/watch?v={video_id}",
+            "lang": languages[0] if languages else "zh-TW",
+            "text": "false",
+            "mode": "native",
+        }
+    )
+    status, document = _supadata_request(f"https://api.supadata.ai/v1/transcript?{query}", api_key)
+    if status == 202 or "jobId" in document:
+        job_id = document.get("jobId")
+        if not job_id:
+            raise TranscriptUnavailable("Supadata returned an asynchronous response without jobId")
+        for _ in range(30):
+            time.sleep(2)
+            _, document = _supadata_request(
+                f"https://api.supadata.ai/v1/transcript/{job_id}", api_key
+            )
+            if document.get("status") == "completed":
+                break
+            if document.get("status") == "failed":
+                raise TranscriptUnavailable(f"Supadata transcript job failed: {document.get('error')}")
+        else:
+            raise TranscriptUnavailable("Supadata transcript job did not finish within 60 seconds")
+    content = document.get("content")
+    if not isinstance(content, list):
+        raise TranscriptUnavailable("Supadata returned no timestamped transcript")
+    segments = [
+        TranscriptSegment(
+            start=float(item.get("offset", 0)) / 1000,
+            duration=float(item.get("duration", 0)) / 1000,
+            text=str(item.get("text", "")).strip(),
+        )
+        for item in content
+        if str(item.get("text", "")).strip()
+    ]
+    if not segments:
+        raise TranscriptUnavailable("Supadata returned an empty transcript")
+    return TranscriptResult(
+        language=str(document.get("lang") or languages[0]),
+        is_generated=False,
+        source="supadata",
+        segments=segments,
+    )
 
 
 def _parse_json3(data: bytes) -> list[TranscriptSegment]:
@@ -110,13 +191,17 @@ def _parse_vtt(data: bytes) -> list[TranscriptSegment]:
 
 
 def fetch_with_ytdlp(video_id: str, languages: list[str]) -> TranscriptResult:
+    proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
     options = {
         "quiet": True,
         "no_warnings": True,
         "skip_download": True,
         "extract_flat": False,
         "socket_timeout": 30,
+        "logger": _QuietYtDlpLogger(),
     }
+    if proxy_url:
+        options["proxy"] = proxy_url
     with YoutubeDL(options) as downloader:
         info = downloader.extract_info(f"https://www.youtube.com/watch?v={video_id}", download=False)
     manual = _select_track(info.get("subtitles") or {}, languages)
@@ -136,7 +221,11 @@ def fetch_with_ytdlp(video_id: str, languages: list[str]) -> TranscriptResult:
 
 
 def fetch_with_transcript_api(video_id: str, languages: list[str]) -> TranscriptResult:
-    api = YouTubeTranscriptApi()
+    proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
+    proxy_config = (
+        GenericProxyConfig(http_url=proxy_url, https_url=proxy_url) if proxy_url else None
+    )
+    api = YouTubeTranscriptApi(proxy_config=proxy_config)
     transcript_list = api.list(video_id)
     try:
         transcript = transcript_list.find_manually_created_transcript(languages)
@@ -158,10 +247,12 @@ def fetch_with_transcript_api(video_id: str, languages: list[str]) -> Transcript
 
 def fetch_transcript(video_id: str, languages: list[str]) -> TranscriptResult:
     errors: list[str] = []
-    for fetcher in (fetch_with_ytdlp, fetch_with_transcript_api):
+    fetchers = [fetch_with_ytdlp, fetch_with_transcript_api]
+    if os.environ.get("SUPADATA_API_KEY"):
+        fetchers.insert(0, fetch_with_supadata)
+    for fetcher in fetchers:
         try:
             return fetcher(video_id, languages)
         except Exception as error:
             errors.append(f"{fetcher.__name__}: {type(error).__name__}: {error}")
     raise TranscriptUnavailable(" | ".join(errors))
-

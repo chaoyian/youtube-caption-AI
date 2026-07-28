@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import yt_finance_kb.pipeline as pipeline
@@ -77,6 +78,11 @@ def test_changed_transcript_reanalyzes_once(
     analyzer = FakeAnalyzer(sample_note)
     pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
     current.append(type(sample_segments[0])(start=30, text="新的金融观点"))
+    state_data = json.loads(state.read_text(encoding="utf-8"))
+    state_data["videos"][sample_video.id]["last_fetched_at"] = (
+        datetime.now(UTC) - timedelta(days=8)
+    ).isoformat()
+    state.write_text(json.dumps(state_data), encoding="utf-8")
     pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
     pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
     record = json.loads(state.read_text(encoding="utf-8"))["videos"][sample_video.id]
@@ -118,3 +124,21 @@ def test_prompt_input_keeps_finance_but_local_filter_removes_ad(
     assert "訂閱按讚" not in analyzer.last_transcript
     assert "金融市场和利率" in analyzer.last_transcript
 
+
+def test_proxy_credentials_are_redacted_from_public_errors(monkeypatch):
+    proxy = "http://secret-user:secret-password@proxy.example:8080"
+    monkeypatch.setenv("YOUTUBE_PROXY_URL", proxy)
+    message = pipeline._safe_error(
+        RuntimeError(f"connection through {proxy} failed for secret-user / secret-password")
+    )
+    assert proxy not in message
+    assert "secret-user" not in message
+    assert "secret-password" not in message
+    assert "***" in message
+
+
+def test_api_keys_are_redacted_from_public_errors(monkeypatch):
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-sensitive-value")
+    message = pipeline._safe_error(RuntimeError("request used supadata-sensitive-value"))
+    assert "supadata-sensitive-value" not in message
+    assert "***" in message

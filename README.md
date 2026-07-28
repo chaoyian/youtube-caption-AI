@@ -21,6 +21,9 @@ Secrets：
 - `POE_API_KEY`：从 Poe 新建的 API Key。不要使用任何已经公开或发到聊天中的 Key。
 - `RESEND_API_KEY`：Resend API Key。
 - `DISCORD_WEBHOOK_URL`：目标频道的 Discord Webhook URL。
+- `SUPADATA_API_KEY`：推荐。Supadata 字幕 API Key；免费额度足够日更频道使用。
+- `YOUTUBE_PROXY_URL`：可选的高级备用方案。轮换住宅代理 URL，例如
+  `http://用户名:密码@代理主机:端口`。使用 Supadata 时无需配置。
 
 Variables：
 
@@ -31,6 +34,23 @@ Variables：
 然后在 **Actions → Daily finance knowledge → Run workflow** 中先开启 `preview`，检查生成的 Artifact。确认至少三篇笔记后，再关闭 `preview` 正式运行。
 
 仓库的 Actions 设置必须允许工作流对仓库内容执行写操作。
+
+### 为什么需要字幕 API
+
+GitHub 托管 Runner 使用云服务商 IP，YouTube 经常要求这类 IP 登录确认。更换
+Selenium、Playwright 或其他爬虫不会改变 GitHub 的出口 IP，因此仍可能被拦截。
+推荐配置 `SUPADATA_API_KEY`，由专业字幕服务获取字幕；程序只对新视频调用一次，
+已处理视频最多每 7 天检查一次修订，避免浪费免费额度。
+
+Supadata 注册入口为 <https://dash.supadata.ai>，创建 Key 后将其直接保存为 GitHub
+Secret，不要发到聊天或提交到仓库。
+
+### 可选的代理方案
+
+如果不希望使用字幕 API，也可以配置 `YOUTUBE_PROXY_URL`。程序会把同一个代理交给
+`yt-dlp` 和备用抓取器。建议使用轮换住宅代理；免费公开代理和普通数据中心代理通常
+不可靠。代理 URL 只存放在 GitHub Secret 中，错误写入公开状态文件前会自动遮蔽
+账号、密码和完整 URL。不要提交 YouTube 账号 Cookies。
 
 ## 新增频道
 
