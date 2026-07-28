@@ -2,7 +2,7 @@ name: Daily finance knowledge
 
 on:
   schedule:
-    - cron: "23 11 * * *"
+    - cron: "23 10,11,12,14,17,21,23 * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
     inputs:
@@ -49,11 +49,15 @@ jobs:
       POE_API_KEY: ${{ secrets.POE_API_KEY }}
       POE_MODEL: ${{ vars.POE_MODEL || 'GPT-5.4' }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
       YOUTUBE_PROXY_URL: ${{ secrets.YOUTUBE_PROXY_URL }}
       EMAIL_FROM: ${{ vars.EMAIL_FROM }}
       EMAIL_TO: ${{ vars.EMAIL_TO }}
+      EMAIL_PROVIDER: ${{ vars.EMAIL_PROVIDER || 'auto' }}
+      GMAIL_FROM: ${{ vars.GMAIL_FROM }}
       REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
 
     steps:

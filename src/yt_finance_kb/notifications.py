@@ -2,9 +2,13 @@ from __future__ import annotations
 
 import json
 import os
+import smtplib
+import ssl
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from email.message import EmailMessage
+from hashlib import sha256
 from pathlib import Path
 
 import markdown
@@ -33,25 +37,105 @@ def _post_json(url: str, payload: dict, headers: dict[str, str] | None = None) -
     return json.loads(data) if data else {}
 
 
-def send_email(title: str, markdown_body: str, note_url: str, video_url: str, idempotency_key: str) -> None:
+def email_recipients() -> list[str]:
+    recipients: list[str] = []
+    seen: set[str] = set()
+    for value in os.environ.get("EMAIL_TO", "").split(","):
+        address = value.strip()
+        normalized = address.casefold()
+        if address and normalized not in seen:
+            recipients.append(address)
+            seen.add(normalized)
+    return recipients
+
+
+def configured_email_providers() -> list[str]:
+    requested = os.environ.get("EMAIL_PROVIDER", "auto").strip().lower() or "auto"
+    if requested not in {"auto", "gmail", "resend"}:
+        raise ValueError("EMAIL_PROVIDER must be auto, gmail, or resend")
+    available = {
+        "gmail": bool(os.environ.get("GMAIL_USERNAME") and os.environ.get("GMAIL_APP_PASSWORD")),
+        "resend": bool(os.environ.get("RESEND_API_KEY") and os.environ.get("EMAIL_FROM")),
+    }
+    if requested == "auto":
+        return [provider for provider in ("gmail", "resend") if available[provider]]
+    return [requested] if available[requested] else []
+
+
+def _email_content(markdown_body: str, note_url: str, video_url: str) -> tuple[str, str]:
+    visible_markdown = _without_front_matter(markdown_body)
+    html = markdown.markdown(visible_markdown, extensions=["extra"])
+    html += f'<hr><p><a href="{note_url}">GitHub 原文</a> · <a href="{video_url}">YouTube 视频</a></p>'
+    text = f"{visible_markdown.rstrip()}\n\nGitHub 原文：{note_url}\nYouTube 视频：{video_url}\n"
+    return text, html
+
+
+def _send_resend_one(
+    recipient: str, title: str, html: str, idempotency_key: str
+) -> None:
     api_key = os.environ["RESEND_API_KEY"]
     sender = os.environ["EMAIL_FROM"]
-    recipient = os.environ["EMAIL_TO"]
-    html = markdown.markdown(_without_front_matter(markdown_body), extensions=["extra"])
-    html += f'<hr><p><a href="{note_url}">GitHub 原文</a> · <a href="{video_url}">YouTube 视频</a></p>'
+    recipient_key = sha256(recipient.casefold().encode("utf-8")).hexdigest()[:16]
     _post_json(
         "https://api.resend.com/emails",
         {
             "from": sender,
-            "to": [address.strip() for address in recipient.split(",") if address.strip()],
+            "to": [recipient],
             "subject": f"财经知识库｜{title}",
             "html": html,
         },
         {
             "Authorization": f"Bearer {api_key}",
-            "Idempotency-Key": idempotency_key[:256],
+            "Idempotency-Key": f"{idempotency_key}-{recipient_key}"[:256],
         },
     )
+
+
+def _send_gmail_one(recipient: str, title: str, text: str, html: str) -> None:
+    username = os.environ["GMAIL_USERNAME"]
+    message = EmailMessage()
+    message["From"] = os.environ.get("GMAIL_FROM") or f"财经知识库 <{username}>"
+    message["To"] = recipient
+    message["Subject"] = f"财经知识库｜{title}"
+    message.set_content(text)
+    message.add_alternative(html, subtype="html")
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context, timeout=45) as smtp:
+        smtp.login(username, os.environ["GMAIL_APP_PASSWORD"])
+        smtp.send_message(message)
+
+
+def send_email(
+    title: str,
+    markdown_body: str,
+    note_url: str,
+    video_url: str,
+    idempotency_key: str,
+    recipients: list[str] | None = None,
+) -> dict[str, dict[str, str]]:
+    targets = recipients if recipients is not None else email_recipients()
+    providers = configured_email_providers()
+    if not targets:
+        raise RuntimeError("EMAIL_TO has no valid recipients")
+    if not providers:
+        raise RuntimeError("No configured email provider is available")
+    text, html = _email_content(markdown_body, note_url, video_url)
+    results: dict[str, dict[str, str]] = {}
+    for recipient in targets:
+        errors: list[str] = []
+        for provider in providers:
+            try:
+                if provider == "gmail":
+                    _send_gmail_one(recipient, title, text, html)
+                else:
+                    _send_resend_one(recipient, title, html, idempotency_key)
+                results[recipient] = {"status": "sent", "provider": provider}
+                break
+            except Exception as error:
+                errors.append(f"{provider}: {type(error).__name__}: {error}")
+        else:
+            results[recipient] = {"status": "failed", "error": " | ".join(errors)[:600]}
+    return results
 
 
 def test_email(root: Path, records: dict, repository_url: str, branch: str = "main") -> str:
@@ -64,13 +148,20 @@ def test_email(root: Path, records: dict, repository_url: str, branch: str = "ma
         raise RuntimeError("No completed knowledge note is available for an email test")
     record = max(completed, key=lambda item: (item.get("published_at", ""), item["video_id"]))
     note_path = record["note_path"]
-    send_email(
+    results = send_email(
         f"[测试] {record['title']}",
         read_note(root, note_path),
         f"{repository_url.rstrip('/')}/blob/{branch}/{note_path}",
         record["video_url"],
         f"email-test-{datetime.now(timezone.utc).isoformat()}",
     )
+    failures = [
+        f"{recipient}: {result.get('error', 'unknown error')}"
+        for recipient, result in results.items()
+        if result["status"] != "sent"
+    ]
+    if failures:
+        raise RuntimeError("Email test failed: " + " ; ".join(failures))
     return note_path
 
 

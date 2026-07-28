@@ -21,6 +21,10 @@ class TranscriptUnavailable(RuntimeError):
     pass
 
 
+class TranscriptPending(TranscriptUnavailable):
+    """The video exists, but a native caption track is not available yet."""
+
+
 class _QuietYtDlpLogger:
     def debug(self, message: str) -> None:
         pass
@@ -96,6 +100,8 @@ def fetch_with_supadata(video_id: str, languages: list[str]) -> TranscriptResult
         }
     )
     status, document = _supadata_request(f"https://api.supadata.ai/v1/transcript?{query}", api_key)
+    if status == 206 or document.get("error") == "transcript-unavailable":
+        raise TranscriptPending("Supadata reports that native captions are not available yet")
     if status == 202 or "jobId" in document:
         job_id = document.get("jobId")
         if not job_id:
@@ -247,6 +253,7 @@ def fetch_with_transcript_api(video_id: str, languages: list[str]) -> Transcript
 
 def fetch_transcript(video_id: str, languages: list[str]) -> TranscriptResult:
     errors: list[str] = []
+    pending = False
     fetchers = [fetch_with_ytdlp, fetch_with_transcript_api]
     if os.environ.get("SUPADATA_API_KEY"):
         fetchers.insert(0, fetch_with_supadata)
@@ -254,5 +261,7 @@ def fetch_transcript(video_id: str, languages: list[str]) -> TranscriptResult:
         try:
             return fetcher(video_id, languages)
         except Exception as error:
+            pending = pending or isinstance(error, TranscriptPending)
             errors.append(f"{fetcher.__name__}: {type(error).__name__}: {error}")
-    raise TranscriptUnavailable(" | ".join(errors))
+    exception = TranscriptPending if pending else TranscriptUnavailable
+    raise exception(" | ".join(errors))

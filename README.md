@@ -3,7 +3,9 @@
 这是一个基于Youtube API的项目，通过从 YouTube 频道取得新字幕，整理为可检索的金融研究笔记，并通过邮件和 Discord 发送。邮件转发依赖resend，爬取字幕依赖Supadata，因此若你fork本仓库，你需要注册并填写这两个网站的API，同时你还需要一个AI API，用于整理，下面会有说明
 
 ## 每日工作
-每天北京时间 11:23 读取频道 RSS。
+每天北京时间 `10:23、11:23、12:23、14:23、17:23、21:23、23:23`
+读取频道 RSS。字幕尚未生成时记为等待并在下一个时点重试；字幕成功后，当天余下
+任务会根据状态立即跳过，不重复请求字幕或调用 AI。
 
 ## GitHub 设置
 
@@ -13,6 +15,9 @@ Secrets：
 
 - `POE_API_KEY`：从 Poe 新建的 API Key。不要使用任何已经公开或发到聊天中的 Key。
 - `RESEND_API_KEY`：Resend API Key。
+- `GMAIL_USERNAME`：可选，作为发件人的完整 Gmail 地址。
+- `GMAIL_APP_PASSWORD`：可选，开启 Google 两步验证后生成的 16 位应用专用密码；
+  不要填写 Gmail 登录密码。
 - `DISCORD_WEBHOOK_URL`：目标频道的 Discord Webhook URL。
 - `SUPADATA_API_KEY`：推荐。Supadata 字幕 API Key；免费额度足够日更频道使用。
 - `YOUTUBE_PROXY_URL`：可选的高级备用方案。轮换住宅代理 URL，例如
@@ -23,6 +28,14 @@ Variables：
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
 - `EMAIL_FROM`：已在 Resend 验证的发件地址，例如 `知识库 <notes@updates.example.com>`。
 - `EMAIL_TO`：收件地址；多个地址用英文逗号分隔。
+- `EMAIL_PROVIDER`：可选，`auto`（默认）、`gmail` 或 `resend`。`auto` 优先 Gmail，
+  单个收件人投递失败时再尝试 Resend。
+- `GMAIL_FROM`：可选的 Gmail 显示发件人，例如
+  `财经知识库 <your-account@gmail.com>`；留空时根据 `GMAIL_USERNAME` 自动生成。
+
+邮件会逐个收件人独立发送，不会在邮件头中暴露其他人的地址。只配置 Resend 时仍按
+原方式工作；只配置 Gmail 时无需购买域名。两套凭据都存在且 `EMAIL_PROVIDER=auto`
+时，Gmail 为主通道、Resend 为逐收件人备用通道，不会在主通道成功后重复发送。
 
 然后在 **Actions → Daily finance knowledge → Run workflow** 中先开启 `preview`，检查生成的 Artifact。确认至少三篇笔记后，再关闭 `preview` 正式运行。
 

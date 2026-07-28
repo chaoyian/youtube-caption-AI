@@ -106,6 +106,44 @@ def test_supadata_returns_timestamped_segments(monkeypatch):
     assert result.segments[0].duration == 0.8
 
 
+def test_supadata_reports_missing_native_captions_as_pending(monkeypatch):
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
+    monkeypatch.setattr(
+        transcripts,
+        "_supadata_request",
+        lambda url, key: (
+            206,
+            {
+                "error": "transcript-unavailable",
+                "message": "Transcript Unavailable",
+            },
+        ),
+    )
+    with pytest.raises(transcripts.TranscriptPending):
+        transcripts.fetch_with_supadata("abcdefghijk", ["zh-TW"])
+
+
+def test_aggregate_preserves_pending_status_after_backups_fail(monkeypatch):
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_supadata",
+        lambda *_: (_ for _ in ()).throw(transcripts.TranscriptPending("not yet")),
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_ytdlp",
+        lambda *_: (_ for _ in ()).throw(RuntimeError("blocked")),
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_transcript_api",
+        lambda *_: (_ for _ in ()).throw(RuntimeError("blocked")),
+    )
+    with pytest.raises(transcripts.TranscriptPending):
+        transcripts.fetch_transcript("abcdefghijk", ["zh-TW"])
+
+
 def test_supadata_is_first_when_configured(monkeypatch):
     expected = TranscriptResult(
         "zh-TW", False, "supadata", [TranscriptSegment(start=0, text="金融")]

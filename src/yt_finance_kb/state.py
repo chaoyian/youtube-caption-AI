@@ -33,8 +33,8 @@ def now_iso() -> str:
     return datetime.now(UTC).replace(microsecond=0).isoformat()
 
 
-def schedule_retry(failure_count: int) -> str:
-    return (datetime.now(UTC) + timedelta(days=1)).replace(microsecond=0).isoformat()
+def schedule_retry(failure_count: int = 0, *, hours: int = 24) -> str:
+    return (datetime.now(UTC) + timedelta(hours=hours)).replace(microsecond=0).isoformat()
 
 
 def retry_due(record: dict[str, Any]) -> bool:
