@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 
+from .notifications import test_email
 from .pipeline import notify, process
 from .rendering import rebuild_indexes
 from .state import load_state
@@ -34,6 +35,11 @@ def _parser() -> argparse.ArgumentParser:
     deliver.add_argument("--repository-url", default=os.environ.get("REPOSITORY_URL", ""))
     deliver.add_argument("--branch", default=os.environ.get("GITHUB_REF_NAME", "main"))
 
+    email_test = subparsers.add_parser("test-email", help="发送最新一篇笔记作为测试，不调用 AI")
+    email_test.add_argument("--state", type=Path, default=Path("state/videos.json"))
+    email_test.add_argument("--repository-url", default=os.environ.get("REPOSITORY_URL", ""))
+    email_test.add_argument("--branch", default=os.environ.get("GITHUB_REF_NAME", "main"))
+
     rebuild = subparsers.add_parser("rebuild-indexes", help="确定性重建索引，不调用 AI")
     rebuild.add_argument("--state", type=Path, default=Path("state/videos.json"))
     return parser
@@ -61,6 +67,12 @@ def main() -> None:
             raise SystemExit("--repository-url or REPOSITORY_URL is required")
         output = notify(root, (root / args.state).resolve(), args.repository_url, args.branch)
         print(json.dumps(output, ensure_ascii=False))
+    elif args.command == "test-email":
+        if not args.repository_url:
+            raise SystemExit("--repository-url or REPOSITORY_URL is required")
+        records = load_state((root / args.state).resolve())["videos"]
+        note_path = test_email(root, records, args.repository_url, args.branch)
+        print(json.dumps({"email_test": "sent", "note_path": note_path}, ensure_ascii=False))
     else:
         state_path = (root / args.state).resolve()
         rebuild_indexes(root, load_state(state_path)["videos"])

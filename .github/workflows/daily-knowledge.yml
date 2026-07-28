@@ -28,6 +28,11 @@ on:
         required: false
         default: false
         type: boolean
+      test_email:
+        description: "仅发送最新一篇笔记作为测试，不抓字幕、不调用 AI"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -75,6 +80,7 @@ jobs:
 
       - name: Process captions
         id: process
+        if: ${{ inputs.test_email != true }}
         continue-on-error: true
         env:
           INPUT_CHANNEL: ${{ inputs.channel }}
@@ -92,7 +98,7 @@ jobs:
           python -m yt_finance_kb "${args[@]}"
 
       - name: Upload preview
-        if: ${{ inputs.preview == true }}
+        if: ${{ inputs.test_email != true && inputs.preview == true }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: finance-knowledge-preview
@@ -100,7 +106,7 @@ jobs:
           if-no-files-found: error
 
       - name: Commit knowledge
-        if: ${{ inputs.preview != true }}
+        if: ${{ inputs.test_email != true && inputs.preview != true }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -113,11 +119,11 @@ jobs:
           fi
 
       - name: Send pending notifications
-        if: ${{ inputs.preview != true }}
+        if: ${{ inputs.test_email != true && inputs.preview != true }}
         run: python -m yt_finance_kb notify --repository-url "$REPOSITORY_URL"
 
       - name: Commit delivery state
-        if: ${{ inputs.preview != true }}
+        if: ${{ inputs.test_email != true && inputs.preview != true }}
         run: |
           git add state/videos.json
           if git diff --cached --quiet; then
@@ -127,8 +133,12 @@ jobs:
             git push
           fi
 
+      - name: Send test email
+        if: ${{ inputs.test_email == true }}
+        run: python -m yt_finance_kb test-email --repository-url "$REPOSITORY_URL"
+
       - name: Report processing failure
-        if: ${{ steps.process.outcome == 'failure' }}
+        if: ${{ inputs.test_email != true && steps.process.outcome == 'failure' }}
         run: |
           echo "::error::One or more videos could not be processed. See Process captions and state/videos.json."
           exit 1

@@ -4,9 +4,19 @@ import json
 import os
 import urllib.error
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 import markdown
+
+
+def _without_front_matter(markdown_body: str) -> str:
+    """Remove repository-only YAML metadata from an email body."""
+    normalized = markdown_body.lstrip("\ufeff")
+    if not normalized.startswith("---\n"):
+        return normalized
+    _, separator, content = normalized[4:].partition("\n---\n")
+    return content.lstrip() if separator else normalized
 
 
 def _post_json(url: str, payload: dict, headers: dict[str, str] | None = None) -> dict:
@@ -27,7 +37,7 @@ def send_email(title: str, markdown_body: str, note_url: str, video_url: str, id
     api_key = os.environ["RESEND_API_KEY"]
     sender = os.environ["EMAIL_FROM"]
     recipient = os.environ["EMAIL_TO"]
-    html = markdown.markdown(markdown_body, extensions=["extra"])
+    html = markdown.markdown(_without_front_matter(markdown_body), extensions=["extra"])
     html += f'<hr><p><a href="{note_url}">GitHub 原文</a> · <a href="{video_url}">YouTube 视频</a></p>'
     _post_json(
         "https://api.resend.com/emails",
@@ -42,6 +52,26 @@ def send_email(title: str, markdown_body: str, note_url: str, video_url: str, id
             "Idempotency-Key": idempotency_key[:256],
         },
     )
+
+
+def test_email(root: Path, records: dict, repository_url: str, branch: str = "main") -> str:
+    completed = [
+        record
+        for record in records.values()
+        if record.get("analysis_status") == "complete" and record.get("note_path")
+    ]
+    if not completed:
+        raise RuntimeError("No completed knowledge note is available for an email test")
+    record = max(completed, key=lambda item: (item.get("published_at", ""), item["video_id"]))
+    note_path = record["note_path"]
+    send_email(
+        f"[测试] {record['title']}",
+        read_note(root, note_path),
+        f"{repository_url.rstrip('/')}/blob/{branch}/{note_path}",
+        record["video_url"],
+        f"email-test-{datetime.now(timezone.utc).isoformat()}",
+    )
+    return note_path
 
 
 def _discord_summary(markdown_body: str, note_url: str, video_url: str) -> str:
@@ -80,4 +110,3 @@ def send_discord_alert(message: str) -> None:
 
 def read_note(root: Path, note_path: str) -> str:
     return (root / note_path).read_text(encoding="utf-8")
-
