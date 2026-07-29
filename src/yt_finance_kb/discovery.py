@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import json
+import os
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import UTC, datetime, timedelta
 from html import unescape
+from urllib.error import HTTPError
+from urllib.parse import urlencode
 
 from .models import ChannelConfig, Video
 
@@ -17,6 +21,22 @@ def _get(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read()
+
+
+def _supadata_get(path: str, query: dict[str, str | int]) -> dict:
+    api_key = os.environ.get("SUPADATA_API_KEY")
+    if not api_key:
+        raise RuntimeError("SUPADATA_API_KEY is required when the YouTube RSS feed is unavailable")
+    request = urllib.request.Request(
+        f"https://api.supadata.ai/v1/{path}?{urlencode(query)}",
+        headers={
+            "User-Agent": USER_AGENT,
+            "x-api-key": api_key,
+            "Accept": "application/json",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return json.loads(response.read())
 
 
 def resolve_channel_id(url: str) -> str:
@@ -42,8 +62,14 @@ def fetch_channel_videos(
 ) -> list[Video]:
     youtube_channel_id = channel.youtube_channel_id or resolve_channel_id(str(channel.url))
     feed_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={youtube_channel_id}"
-    root = ET.fromstring(_get(feed_url))
     cutoff = datetime.now(UTC) - timedelta(days=channel.backfill_days if backfill_days is None else backfill_days)
+    try:
+        root = ET.fromstring(_get(feed_url))
+    except HTTPError:
+        if not os.environ.get("SUPADATA_API_KEY"):
+            raise
+        return _fetch_channel_videos_with_supadata(channel, cutoff, include_ids)
+
     videos: list[Video] = []
     for entry in root.findall(f"{{{ATOM}}}entry"):
         video_id = entry.findtext(f"{{{YT}}}videoId")
@@ -59,6 +85,45 @@ def fetch_channel_videos(
                 id=video_id,
                 channel_id=channel.id,
                 title=unescape(title),
+                published_at=published_at,
+                url=f"https://www.youtube.com/watch?v={video_id}",
+            )
+        )
+    return sorted(videos, key=lambda video: video.published_at)
+
+
+def _fetch_channel_videos_with_supadata(
+    channel: ChannelConfig,
+    cutoff: datetime,
+    include_ids: set[str] | None,
+) -> list[Video]:
+    listing = _supadata_get(
+        "youtube/channel/videos",
+        {"id": str(channel.url), "limit": 30, "type": "all"},
+    )
+    video_ids = list(
+        dict.fromkeys(
+            [
+                *listing.get("videoIds", []),
+                *listing.get("liveIds", []),
+                *listing.get("shortIds", []),
+            ]
+        )
+    )
+    videos: list[Video] = []
+    for video_id in video_ids:
+        metadata = _supadata_get("youtube/video", {"id": video_id})
+        upload_date = metadata.get("uploadDate")
+        if not upload_date:
+            continue
+        published_at = datetime.fromisoformat(upload_date.replace("Z", "+00:00"))
+        if published_at < cutoff and video_id not in (include_ids or set()):
+            continue
+        videos.append(
+            Video(
+                id=video_id,
+                channel_id=channel.id,
+                title=unescape(str(metadata.get("title") or video_id)),
                 published_at=published_at,
                 url=f"https://www.youtube.com/watch?v={video_id}",
             )

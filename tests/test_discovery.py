@@ -1,4 +1,5 @@
 from datetime import UTC, datetime
+from urllib.error import HTTPError
 
 import yt_finance_kb.discovery as discovery
 from yt_finance_kb.models import ChannelConfig
@@ -37,3 +38,39 @@ def test_configured_channel_id_skips_handle_resolution(monkeypatch):
         "https://www.youtube.com/feeds/videos.xml?channel_id=UC0123456789abcdefghijk"
     ]
     assert videos[0].id == "abcdefghijk"
+
+
+def test_supadata_fallback_when_youtube_feed_is_unavailable(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+        backfill_days=7,
+    )
+    published = datetime.now(UTC).isoformat().replace("+00:00", "Z")
+    monkeypatch.setenv("SUPADATA_API_KEY", "test-key")
+    monkeypatch.setattr(
+        discovery,
+        "_get",
+        lambda url: (_ for _ in ()).throw(HTTPError(url, 404, "Not Found", {}, None)),
+    )
+    requests = []
+
+    def fake_supadata(path, query):
+        requests.append((path, query))
+        if path == "youtube/channel/videos":
+            return {"videoIds": [], "liveIds": ["abcdefghijk"], "shortIds": []}
+        return {
+            "id": "abcdefghijk",
+            "title": "今日财经",
+            "uploadDate": published,
+        }
+
+    monkeypatch.setattr(discovery, "_supadata_get", fake_supadata)
+    videos = discovery.fetch_channel_videos(channel)
+    assert videos[0].id == "abcdefghijk"
+    assert videos[0].title == "今日财经"
+    assert requests[0] == (
+        "youtube/channel/videos",
+        {"id": "https://www.youtube.com/@test", "limit": 30, "type": "all"},
+    )
