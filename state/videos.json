@@ -223,6 +223,23 @@
       "video_id": "NZGYUCHpm0w",
       "video_url": "https://www.youtube.com/watch?v=NZGYUCHpm0w"
     },
+    "ShG-9GudCsM": {
+      "alert_status": "pending",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 1,
+      "fetch_status": "failed",
+      "last_attempt_at": "2026-07-29T04:11:07+00:00",
+      "last_error": "TranscriptUnavailable: fetch_with_supadata: HTTPError: HTTP Error 403: Forbidden | fetch_with_ytdlp: DownloadError: ERROR: [youtube] ShG-9GudCsM: This video is available to this channel's members on level: 財經皓角新觀點🐸 (or any higher level). Join this channel to get access to members-only content and other exclusive perks. | fetch_with_transcript_api: VideoUnplayable: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=ShG-9GudCsM! This is most likely caused by:\n\nThe video is unplayable for the following reason: This video is available to this channel's members on level: 財經皓角新觀點🐸 (or any higher priced level).\n\nIf you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!",
+      "next_retry_at": "2026-07-30T04:11:07+00:00",
+      "note_version": 0,
+      "published_at": "2026-07-23T00:00:00+00:00",
+      "title": "【會員專屬 – 專題影片】記憶體循環",
+      "video_id": "ShG-9GudCsM",
+      "video_url": "https://www.youtube.com/watch?v=ShG-9GudCsM"
+    },
     "_m4TSQiYZi4": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -442,6 +459,23 @@
       "transcript_source": "supadata",
       "video_id": "sMSDQyQANIM",
       "video_url": "https://www.youtube.com/watch?v=sMSDQyQANIM"
+    },
+    "v-tPoKBJBoA": {
+      "alert_status": "pending",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 1,
+      "fetch_status": "failed",
+      "last_attempt_at": "2026-07-29T04:11:10+00:00",
+      "last_error": "TranscriptUnavailable: fetch_with_supadata: HTTPError: HTTP Error 403: Forbidden | fetch_with_ytdlp: DownloadError: ERROR: [youtube] v-tPoKBJBoA: This video is available to this channel's members on level: 財經皓角新觀點🐸 (or any higher level). Join this channel to get access to members-only content and other exclusive perks. | fetch_with_transcript_api: VideoUnplayable: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=v-tPoKBJBoA! This is most likely caused by:\n\nThe video is unplayable for the following reason: This video is available to this channel's members on level: 財經皓角新觀點🐸 (or any higher priced level).\n\nIf you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!",
+      "next_retry_at": "2026-07-30T04:11:10+00:00",
+      "note_version": 0,
+      "published_at": "2026-07-23T00:00:00+00:00",
+      "title": "【會員專屬 – 專題影片】OpenAI與Anthropic上市之路",
+      "video_id": "v-tPoKBJBoA",
+      "video_url": "https://www.youtube.com/watch?v=v-tPoKBJBoA"
     },
     "vxCO-f4F3BA": {
       "alert_status": "none",
