@@ -130,13 +130,16 @@ def _fetch_channel_videos_with_supadata(
 def fetch_video_with_supadata(video_id: str, channel: ChannelConfig) -> Video:
     metadata = _supadata_get("youtube/video", {"id": video_id})
     upload_date = metadata.get("uploadDate")
-    if not upload_date:
-        raise RuntimeError(f"Supadata returned no upload date for {video_id}")
+    published_at = (
+        datetime.fromisoformat(upload_date.replace("Z", "+00:00"))
+        if upload_date
+        else datetime.now(UTC)
+    )
     return Video(
         id=video_id,
         channel_id=channel.id,
         title=unescape(str(metadata.get("title") or video_id)),
-        published_at=datetime.fromisoformat(upload_date.replace("Z", "+00:00")),
+        published_at=published_at,
         url=f"https://www.youtube.com/watch?v={video_id}",
     )
 
