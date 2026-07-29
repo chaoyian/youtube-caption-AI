@@ -97,22 +97,30 @@ def _fetch_channel_videos_with_supadata(
     cutoff: datetime,
     include_ids: set[str] | None,
 ) -> list[Video]:
-    listing = _supadata_get(
-        "youtube/channel/videos",
-        {"id": str(channel.url), "limit": 30, "type": "all"},
-    )
+    listings = [
+        _supadata_get(
+            "youtube/channel/videos",
+            {"id": str(channel.url), "limit": 20, "type": video_type},
+        )
+        for video_type in ("video", "live")
+    ]
     video_ids = list(
         dict.fromkeys(
             [
-                *listing.get("videoIds", []),
-                *listing.get("liveIds", []),
-                *listing.get("shortIds", []),
+                *(
+                    video_id
+                    for listing in listings
+                    for video_id in [*listing.get("videoIds", []), *listing.get("liveIds", [])]
+                ),
             ]
         )
     )
     videos: list[Video] = []
     for video_id in video_ids:
         metadata = _supadata_get("youtube/video", {"id": video_id})
+        title = unescape(str(metadata.get("title") or video_id))
+        if re.search(r"會員專屬|会员专属|members?[\s-]+only", title, re.IGNORECASE):
+            continue
         upload_date = metadata.get("uploadDate")
         if not upload_date:
             continue
@@ -123,7 +131,7 @@ def _fetch_channel_videos_with_supadata(
             Video(
                 id=video_id,
                 channel_id=channel.id,
-                title=unescape(str(metadata.get("title") or video_id)),
+                title=title,
                 published_at=published_at,
                 url=f"https://www.youtube.com/watch?v={video_id}",
             )

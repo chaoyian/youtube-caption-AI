@@ -59,7 +59,11 @@ def test_supadata_fallback_when_youtube_feed_is_unavailable(monkeypatch):
     def fake_supadata(path, query):
         requests.append((path, query))
         if path == "youtube/channel/videos":
-            return {"videoIds": [], "liveIds": ["abcdefghijk"], "shortIds": []}
+            return (
+                {"videoIds": [], "liveIds": ["abcdefghijk"]}
+                if query["type"] == "live"
+                else {"videoIds": [], "liveIds": []}
+            )
         return {
             "id": "abcdefghijk",
             "title": "今日财经",
@@ -72,5 +76,35 @@ def test_supadata_fallback_when_youtube_feed_is_unavailable(monkeypatch):
     assert videos[0].title == "今日财经"
     assert requests[0] == (
         "youtube/channel/videos",
-        {"id": "https://www.youtube.com/@test", "limit": 30, "type": "all"},
+        {"id": "https://www.youtube.com/@test", "limit": 20, "type": "video"},
     )
+    assert requests[1] == (
+        "youtube/channel/videos",
+        {"id": "https://www.youtube.com/@test", "limit": 20, "type": "live"},
+    )
+
+
+def test_supadata_fallback_ignores_members_only_videos(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+    )
+    monkeypatch.setenv("SUPADATA_API_KEY", "test-key")
+    monkeypatch.setattr(
+        discovery,
+        "_get",
+        lambda url: (_ for _ in ()).throw(HTTPError(url, 404, "Not Found", {}, None)),
+    )
+
+    def fake_supadata(path, query):
+        if path == "youtube/channel/videos":
+            return {"videoIds": ["abcdefghijk"], "liveIds": []}
+        return {
+            "id": "abcdefghijk",
+            "title": "【會員專屬 – 專題影片】測試",
+            "uploadDate": datetime.now(UTC).isoformat(),
+        }
+
+    monkeypatch.setattr(discovery, "_supadata_get", fake_supadata)
+    assert discovery.fetch_channel_videos(channel) == []
