@@ -66,6 +66,7 @@ Secret，不要发到聊天或提交到仓库。
 channels:
   - id: another-channel
     url: https://www.youtube.com/@example
+    youtube_channel_id: UCxxxxxxxxxxxxxxxxxxxxxx # 可选，固定 ID 可避免云端解析错误
     enabled: true
     languages: [zh-TW, zh-Hant, zh, en]
     backfill_days: 7
