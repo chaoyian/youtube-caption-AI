@@ -40,7 +40,7 @@ def fetch_channel_videos(
     backfill_days: int | None = None,
     include_ids: set[str] | None = None,
 ) -> list[Video]:
-    youtube_channel_id = resolve_channel_id(str(channel.url))
+    youtube_channel_id = channel.youtube_channel_id or resolve_channel_id(str(channel.url))
     feed_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={youtube_channel_id}"
     root = ET.fromstring(_get(feed_url))
     cutoff = datetime.now(UTC) - timedelta(days=channel.backfill_days if backfill_days is None else backfill_days)

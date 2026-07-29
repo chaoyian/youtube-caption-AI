@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field, HttpUrl, field_validator
 class ChannelConfig(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9][a-z0-9-]*$")
     url: HttpUrl
+    youtube_channel_id: str | None = Field(default=None, pattern=r"^UC[\w-]+$")
     enabled: bool = True
     languages: list[str] = Field(default_factory=lambda: ["zh-TW", "zh-Hant", "zh", "en"])
     backfill_days: int = Field(default=7, ge=0, le=3650)

@@ -1,8 +1,8 @@
 channels:
   - id: yutinghao-finance
     url: https://www.youtube.com/@yutinghaofinance
+    youtube_channel_id: UC0lbAQVpenvfA2QqzsRtL_g
     enabled: true
     languages: [zh-TW, zh-Hant, zh, en]
     backfill_days: 7
     tags: [财经, 台湾, 美股, 宏观]
-
