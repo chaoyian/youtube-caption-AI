@@ -64,6 +64,39 @@ def test_unchanged_transcript_never_calls_ai(
     assert analyzer.calls == 1
 
 
+def test_rediscovery_does_not_replace_original_publish_time(
+    tmp_path, monkeypatch, sample_video, sample_segments, sample_note
+):
+    config, state = _workspace(tmp_path)
+    discovered = [sample_video]
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", lambda *args, **kwargs: discovered)
+    monkeypatch.setattr(
+        pipeline,
+        "fetch_transcript",
+        lambda *args: TranscriptResult("zh-TW", True, "fake", sample_segments),
+    )
+    pipeline.process(
+        tmp_path,
+        config_path=config,
+        state_path=state,
+        analyzer=FakeAnalyzer(sample_note),
+    )
+    original = json.loads(state.read_text(encoding="utf-8"))["videos"][sample_video.id][
+        "published_at"
+    ]
+    discovered[0] = sample_video.model_copy(
+        update={"published_at": sample_video.published_at + timedelta(hours=2)}
+    )
+    pipeline.process(
+        tmp_path,
+        config_path=config,
+        state_path=state,
+        analyzer=FakeAnalyzer(sample_note),
+    )
+    record = json.loads(state.read_text(encoding="utf-8"))["videos"][sample_video.id]
+    assert record["published_at"] == original
+
+
 def test_changed_transcript_reanalyzes_once(
     tmp_path, monkeypatch, sample_video, sample_segments, sample_note
 ):

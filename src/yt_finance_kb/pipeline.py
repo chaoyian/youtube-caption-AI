@@ -161,10 +161,11 @@ def process(
         record = records.setdefault(video.id, _base_record(video))
         record.update(
             title=video.title,
-            published_at=video.published_at.isoformat(),
             video_url=video.url,
             channel_id=channel.id,
         )
+        if not record.get("published_at"):
+            record["published_at"] = video.published_at.isoformat()
         if not force and record.get("fetch_status") == "waiting" and not retry_due(record):
             result.waiting += 1
             continue
