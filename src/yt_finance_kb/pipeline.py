@@ -12,7 +12,7 @@ from yt_dlp import YoutubeDL
 from .analyzer import PoeAnalyzer
 from .cleaning import clean_segments, transcript_hash, transcript_text
 from .config import load_config
-from .discovery import fetch_channel_videos, video_id_from_url
+from .discovery import fetch_channel_videos, fetch_video_with_supadata, video_id_from_url
 from .models import ChannelConfig, Video
 from .notifications import (
     configured_email_providers,
@@ -38,6 +38,8 @@ class ProcessResult:
 
 def _manual_video(value: str, channel: ChannelConfig) -> Video:
     video_id = video_id_from_url(value)
+    if os.environ.get("SUPADATA_API_KEY"):
+        return fetch_video_with_supadata(video_id, channel)
     with YoutubeDL({"quiet": True, "no_warnings": True, "skip_download": True}) as downloader:
         info = downloader.extract_info(f"https://www.youtube.com/watch?v={video_id}", download=False)
     timestamp = info.get("timestamp")

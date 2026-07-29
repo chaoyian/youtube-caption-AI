@@ -117,26 +117,28 @@ def _fetch_channel_videos_with_supadata(
     )
     videos: list[Video] = []
     for video_id in video_ids:
-        metadata = _supadata_get("youtube/video", {"id": video_id})
-        title = unescape(str(metadata.get("title") or video_id))
+        video = fetch_video_with_supadata(video_id, channel)
+        title = video.title
         if re.search(r"會員專屬|会员专属|members?[\s-]+only", title, re.IGNORECASE):
             continue
-        upload_date = metadata.get("uploadDate")
-        if not upload_date:
+        if video.published_at < cutoff and video_id not in (include_ids or set()):
             continue
-        published_at = datetime.fromisoformat(upload_date.replace("Z", "+00:00"))
-        if published_at < cutoff and video_id not in (include_ids or set()):
-            continue
-        videos.append(
-            Video(
-                id=video_id,
-                channel_id=channel.id,
-                title=title,
-                published_at=published_at,
-                url=f"https://www.youtube.com/watch?v={video_id}",
-            )
-        )
+        videos.append(video)
     return sorted(videos, key=lambda video: video.published_at)
+
+
+def fetch_video_with_supadata(video_id: str, channel: ChannelConfig) -> Video:
+    metadata = _supadata_get("youtube/video", {"id": video_id})
+    upload_date = metadata.get("uploadDate")
+    if not upload_date:
+        raise RuntimeError(f"Supadata returned no upload date for {video_id}")
+    return Video(
+        id=video_id,
+        channel_id=channel.id,
+        title=unescape(str(metadata.get("title") or video_id)),
+        published_at=datetime.fromisoformat(upload_date.replace("Z", "+00:00")),
+        url=f"https://www.youtube.com/watch?v={video_id}",
+    )
 
 
 def video_id_from_url(value: str) -> str:
