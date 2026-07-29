@@ -224,7 +224,7 @@
       "video_url": "https://www.youtube.com/watch?v=NZGYUCHpm0w"
     },
     "ShG-9GudCsM": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
@@ -461,7 +461,7 @@
       "video_url": "https://www.youtube.com/watch?v=sMSDQyQANIM"
     },
     "v-tPoKBJBoA": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
