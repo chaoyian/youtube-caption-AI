@@ -7,9 +7,35 @@
       "analyzed_at": "2026-07-29T04:17:44+00:00",
       "analyzed_hash": "62c7e2f61333ff6fdf7c24510aea53cfe50c34bbf70ffb6961a89bfe8dd3cd16",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-07-29T04:17:52+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-07-29T04:17:52+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-07-29T04:17:52+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-07-29T04:17:52+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-07-29T04:17:52+00:00",
+      "email_status": "sent",
       "entities": [
         "CDS",
         "DRAM",
