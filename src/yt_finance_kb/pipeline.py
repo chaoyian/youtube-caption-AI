@@ -9,7 +9,7 @@ from urllib.parse import quote, urlsplit
 
 from yt_dlp import YoutubeDL
 
-from .analyzer import PoeAnalyzer
+from .analyzer import DEFAULT_POINT_LIMIT_PER_VIDEO, PoeAnalyzer, PoePointBudget, PoeUsage
 from .cleaning import clean_segments, transcript_hash, transcript_text
 from .config import load_config
 from .discovery import fetch_channel_videos, fetch_video_with_supadata, video_id_from_url
@@ -108,6 +108,26 @@ def _safe_error(error: Exception) -> str:
             message = message.replace(value, "***")
             message = message.replace(quote(value, safe=""), "***")
     return message
+
+
+def _optional_int(name: str) -> int | None:
+    value = os.environ.get(name)
+    return int(value) if value else None
+
+
+def _usage_recorder(record: dict[str, Any]):
+    def record_usage(usage: PoeUsage) -> None:
+        total = record.setdefault(
+            "poe_usage",
+            {"points": 0, "prompt_tokens": 0, "completion_tokens": 0, "calls": 0, "models": {}},
+        )
+        total["points"] += usage.points
+        total["prompt_tokens"] += usage.prompt_tokens
+        total["completion_tokens"] += usage.completion_tokens
+        total["calls"] += 1
+        total["models"][usage.model] = total["models"].get(usage.model, 0) + usage.points
+
+    return record_usage
 
 
 def _revision_check_due(record: dict[str, Any]) -> bool:
@@ -213,7 +233,28 @@ def process(
                 api_key = os.environ.get("POE_API_KEY")
                 if not api_key:
                     raise RuntimeError("POE_API_KEY is required for a new or changed transcript")
-                active_analyzer = PoeAnalyzer(api_key, os.environ.get("POE_MODEL", "GPT-5.4"))
+                point_limit = int(
+                    os.environ.get("POE_POINT_LIMIT_PER_VIDEO", DEFAULT_POINT_LIMIT_PER_VIDEO)
+                )
+                record["poe_usage"] = {
+                    "points": 0,
+                    "prompt_tokens": 0,
+                    "completion_tokens": 0,
+                    "calls": 0,
+                    "models": {},
+                    "limit": point_limit,
+                }
+                active_analyzer = PoeAnalyzer(
+                    api_key,
+                    os.environ.get("POE_MODEL", "GPT-5.4"),
+                    budget=PoePointBudget(point_limit),
+                    input_points_per_1k=_optional_int("POE_INPUT_POINTS_PER_1K"),
+                    output_points_per_1k=_optional_int("POE_OUTPUT_POINTS_PER_1K"),
+                    aux_model=os.environ.get("POE_AUX_MODEL"),
+                    aux_input_points_per_1k=_optional_int("POE_AUX_INPUT_POINTS_PER_1K"),
+                    aux_output_points_per_1k=_optional_int("POE_AUX_OUTPUT_POINTS_PER_1K"),
+                    usage_recorder=_usage_recorder(record),
+                )
             note = active_analyzer.analyze(video, transcript_text(cleaned))
             version = int(record.get("note_version", 0)) + 1
             markdown_body = render_note(video, channel, note, version)

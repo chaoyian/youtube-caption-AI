@@ -26,6 +26,15 @@ Secrets：
 Variables：
 
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
+- `POE_POINT_LIMIT_PER_VIDEO`：可选，默认 `10000`。这是每个新视频的硬预算护栏，
+  不是要求程序必须花满；没有新字幕、字幕未变化或仅重试通知时均为 0 点。
+- `POE_INPUT_POINTS_PER_1K`、`POE_OUTPUT_POINTS_PER_1K`：通常无需填写。程序内置
+  GPT‑5.4（75/450）和 Kimi K3（100/500）的 Poe 当前费率；切换到其他主模型时，
+  按 Poe 模型页的实时费率填写。
+- `POE_AUX_MODEL`：可选的超长字幕提取模型。普通字幕会直接交给主模型，不调用它。
+  若填写未内置费率的小模型（例如 `GPT-5.4-Mini`），还必须填写
+  `POE_AUX_INPUT_POINTS_PER_1K` 和 `POE_AUX_OUTPUT_POINTS_PER_1K`。费率必须以 Poe
+  模型页当日显示为准，避免过期价格破坏预算计算。
 - `EMAIL_FROM`：已在 Resend 验证的发件地址，例如 `知识库 <notes@updates.example.com>`。
 - `EMAIL_TO`：收件地址；多个地址用英文逗号分隔。
 - `EMAIL_PROVIDER`：可选，`auto`（默认）、`gmail` 或 `resend`。`auto` 优先 Gmail，
@@ -99,6 +108,15 @@ POE_API_KEY="新建的Key" python -m yt_finance_kb process \
 ```
 
 `--force` 会无视字幕哈希重新调用 AI，只应在明确需要重做笔记时使用。`rebuild-indexes` 和 `notify` 命令不会调用 AI。
+
+## AI 点数与笔记质量
+
+- 正常一期只调用一次 GPT‑5.4；程序不会为了“省钱”固定增加一次小模型调用。
+- 完整字幕在预算可容纳时直接分析，避免旧版分块先压成简单观点而丢掉数据、因果链和风险。
+- 只有超长字幕才走分块；分块结果必须保留主张、证据、因果链、前提和反例。
+- 最终笔记限制为 3–5 个核心判断、5–8 张卡片、最多 15 个实体，并要求跨栏目去重。
+- 每次返回后的 token 与估算 Poe 点数写入对应视频的 `poe_usage` 状态。程序会在发起
+  下一次调用前预留输入、输出和安全余量，超过每视频上限时停止，不会继续修复重试。
 
 ## 数据说明
 

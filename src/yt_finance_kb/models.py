@@ -51,8 +51,18 @@ class TimedPoint(BaseModel):
     source_type: SourceType
 
 
+class ExtractedClaim(BaseModel):
+    claim: str = Field(min_length=2)
+    evidence: list[str] = Field(default_factory=list, max_length=3)
+    causal_chain: str | None = None
+    conditions: list[str] = Field(default_factory=list, max_length=3)
+    risks: list[str] = Field(default_factory=list, max_length=3)
+    timestamp: int = Field(ge=0)
+    source_type: SourceType
+
+
 class ChunkExtraction(BaseModel):
-    points: list[TimedPoint]
+    claims: list[ExtractedClaim]
 
 
 class Entity(BaseModel):
@@ -66,18 +76,18 @@ class KnowledgeCard(BaseModel):
     insight: str
     timestamp: int = Field(ge=0)
     source_type: SourceType
-    topics: list[str] = Field(min_length=1, max_length=6)
+    topics: list[str] = Field(min_length=1, max_length=3)
 
 
 class ResearchNote(BaseModel):
     summary: str = Field(min_length=40, max_length=600)
-    macro_context: list[TimedPoint]
-    core_theses: list[TimedPoint] = Field(min_length=1)
-    evidence: list[TimedPoint]
-    bull_case: list[TimedPoint]
-    bear_case: list[TimedPoint]
-    risks: list[TimedPoint]
-    time_sensitive: list[TimedPoint]
-    entities: list[Entity]
-    cards: list[KnowledgeCard] = Field(min_length=5, max_length=12)
+    macro_context: list[TimedPoint] = Field(max_length=3)
+    core_theses: list[TimedPoint] = Field(min_length=3, max_length=5)
+    evidence: list[TimedPoint] = Field(max_length=6)
+    bull_case: list[TimedPoint] = Field(max_length=3)
+    bear_case: list[TimedPoint] = Field(max_length=3)
+    risks: list[TimedPoint] = Field(max_length=5)
+    time_sensitive: list[TimedPoint] = Field(max_length=3)
+    entities: list[Entity] = Field(max_length=15)
+    cards: list[KnowledgeCard] = Field(min_length=5, max_length=8)
     disclaimer: str

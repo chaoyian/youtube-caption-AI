@@ -49,7 +49,7 @@ def sample_note() -> ResearchNote:
     return ResearchNote(
         summary="本期节目集中讨论利率政策与科技股估值之间的关系，并分析市场预期变化可能造成的资产价格波动和主要风险。",
         macro_context=[point],
-        core_theses=[point],
+        core_theses=[point, point, point],
         evidence=[point],
         bull_case=[point],
         bear_case=[point],
@@ -59,4 +59,3 @@ def sample_note() -> ResearchNote:
         cards=cards,
         disclaimer="内容来自节目字幕的结构化整理，未经外部核实，不构成投资建议。",
     )
-
