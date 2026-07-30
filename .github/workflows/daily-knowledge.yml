@@ -2,8 +2,8 @@ name: Daily finance knowledge
 
 on:
   schedule:
-    - cron: "23,53 10-23 * * *"
-      timezone: "Asia/Shanghai"
+    # UTC 02:23-15:53 = Asia/Shanghai 10:23-23:53.
+    - cron: "23,53 2-15 * * *"
   workflow_dispatch:
     inputs:
       channel:
