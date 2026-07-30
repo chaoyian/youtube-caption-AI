@@ -7,6 +7,8 @@ from typing import Iterable
 
 from .models import ChannelConfig, ResearchNote, TimedPoint, Video
 
+MAX_INDEX_TOPICS = 12
+
 
 def timestamp_link(video_id: str, seconds: int) -> str:
     return f"https://youtu.be/{video_id}?t={seconds}"
@@ -25,8 +27,18 @@ def _points(title: str, points: Iterable[TimedPoint], video_id: str) -> list[str
     return lines + [""]
 
 
+def note_topics(note: ResearchNote, channel: ChannelConfig) -> list[str]:
+    values: list[str] = []
+    for topic in [*channel.tags, *(topic for card in note.cards for topic in card.topics)]:
+        if topic not in values:
+            values.append(topic)
+        if len(values) == MAX_INDEX_TOPICS:
+            break
+    return values
+
+
 def render_note(video: Video, channel: ChannelConfig, note: ResearchNote, version: int) -> str:
-    topics = sorted({topic for card in note.cards for topic in card.topics} | set(channel.tags))
+    topics = note_topics(note, channel)
     entity_names = sorted({entity.name for entity in note.entities})
     date = video.published_at.date().isoformat()
     lines = [
@@ -132,4 +144,3 @@ def _write_index_group(directory: Path, kind: str, mapping: dict[str, list[dict]
     for old_path in directory.glob("*.md"):
         if old_path not in expected:
             old_path.unlink()
-

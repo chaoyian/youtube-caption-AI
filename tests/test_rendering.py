@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from yt_finance_kb.models import ChannelConfig
-from yt_finance_kb.rendering import rebuild_indexes, render_note
+from yt_finance_kb.rendering import MAX_INDEX_TOPICS, note_topics, rebuild_indexes, render_note
 
 
 def test_render_note_has_timestamp_and_no_transcript(sample_video, sample_note):
@@ -30,3 +30,13 @@ def test_rebuild_indexes_is_deterministic(tmp_path: Path):
     assert first == second
     assert "../../knowledge/channel/2026/2026-07-28-abcdefghijk.md" in first
 
+
+def test_note_topics_are_deduplicated_and_capped(sample_note):
+    sample_note.cards = [
+        card.model_copy(update={"topics": [f"主题{index}", f"行业{index}", f"资产{index}"]})
+        for index, card in enumerate(sample_note.cards)
+    ]
+    channel = ChannelConfig(id="test", url="https://www.youtube.com/@test", tags=["财经"])
+    topics = note_topics(sample_note, channel)
+    assert topics[0] == "财经"
+    assert len(topics) == MAX_INDEX_TOPICS

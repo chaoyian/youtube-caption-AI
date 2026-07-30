@@ -22,7 +22,7 @@ from .notifications import (
     send_discord_alert,
     send_email,
 )
-from .rendering import note_path, rebuild_indexes, render_note
+from .rendering import note_path, note_topics, rebuild_indexes, render_note
 from .state import load_state, now_iso, retry_due, save_state, schedule_retry
 from .transcripts import TranscriptPending, fetch_transcript
 
@@ -34,6 +34,8 @@ class ProcessResult:
     analyzed: int = 0
     waiting: int = 0
     failed: int = 0
+    poe_calls: int = 0
+    poe_points: int = 0
 
 
 def _manual_video(value: str, channel: ChannelConfig) -> Video:
@@ -115,7 +117,7 @@ def _optional_int(name: str) -> int | None:
     return int(value) if value else None
 
 
-def _usage_recorder(record: dict[str, Any]):
+def _usage_recorder(record: dict[str, Any], result: ProcessResult):
     def record_usage(usage: PoeUsage) -> None:
         total = record.setdefault(
             "poe_usage",
@@ -126,6 +128,8 @@ def _usage_recorder(record: dict[str, Any]):
         total["completion_tokens"] += usage.completion_tokens
         total["calls"] += 1
         total["models"][usage.model] = total["models"].get(usage.model, 0) + usage.points
+        result.poe_calls += 1
+        result.poe_points += usage.points
 
     return record_usage
 
@@ -253,7 +257,7 @@ def process(
                     aux_model=os.environ.get("POE_AUX_MODEL"),
                     aux_input_points_per_1k=_optional_int("POE_AUX_INPUT_POINTS_PER_1K"),
                     aux_output_points_per_1k=_optional_int("POE_AUX_OUTPUT_POINTS_PER_1K"),
-                    usage_recorder=_usage_recorder(record),
+                    usage_recorder=_usage_recorder(record, result),
                 )
             note = active_analyzer.analyze(video, transcript_text(cleaned))
             version = int(record.get("note_version", 0)) + 1
@@ -271,7 +275,7 @@ def process(
                 analyzed_at=now_iso(),
                 note_version=version,
                 note_path=relative_path,
-                topics=sorted({topic for card in note.cards for topic in card.topics} | set(channel.tags)),
+                topics=note_topics(note, channel),
                 entities=sorted({entity.name for entity in note.entities}),
                 email_status="pending",
                 email_deliveries={},
