@@ -40,6 +40,26 @@ def test_configured_channel_id_skips_handle_resolution(monkeypatch):
     assert videos[0].id == "abcdefghijk"
 
 
+def test_rss_discovery_ignores_members_only_videos(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+    )
+    published = datetime.now(UTC).isoformat()
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:yt="http://www.youtube.com/xml/schemas/2015">
+  <entry>
+    <yt:videoId>abcdefghijk</yt:videoId>
+    <title>【會員專屬 – 專題影片】測試</title>
+    <published>{published}</published>
+  </entry>
+</feed>""".encode()
+    monkeypatch.setattr(discovery, "_get", lambda url: feed)
+    assert discovery.fetch_channel_videos(channel) == []
+
+
 def test_supadata_fallback_when_youtube_feed_is_unavailable(monkeypatch):
     channel = ChannelConfig(
         id="test-channel",

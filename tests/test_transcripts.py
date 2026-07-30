@@ -1,3 +1,5 @@
+from urllib.error import HTTPError
+
 import pytest
 
 import yt_finance_kb.transcripts as transcripts
@@ -120,6 +122,19 @@ def test_supadata_reports_missing_native_captions_as_pending(monkeypatch):
         ),
     )
     with pytest.raises(transcripts.TranscriptPending):
+        transcripts.fetch_with_supadata("abcdefghijk", ["zh-TW"])
+
+
+def test_supadata_rate_limit_is_retryable(monkeypatch):
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
+    monkeypatch.setattr(
+        transcripts,
+        "_supadata_request",
+        lambda *args: (_ for _ in ()).throw(
+            HTTPError("https://api.supadata.ai", 429, "Too Many Requests", {}, None)
+        ),
+    )
+    with pytest.raises(transcripts.TranscriptPending, match="retry next hour"):
         transcripts.fetch_with_supadata("abcdefghijk", ["zh-TW"])
 
 

@@ -8,6 +8,7 @@ import urllib.request
 from dataclasses import dataclass
 from html import unescape
 from typing import Any
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -99,7 +100,14 @@ def fetch_with_supadata(video_id: str, languages: list[str]) -> TranscriptResult
             "mode": "native",
         }
     )
-    status, document = _supadata_request(f"https://api.supadata.ai/v1/transcript?{query}", api_key)
+    try:
+        status, document = _supadata_request(
+            f"https://api.supadata.ai/v1/transcript?{query}", api_key
+        )
+    except HTTPError as error:
+        if error.code == 429:
+            raise TranscriptPending("Supadata is temporarily rate limited; retry next hour") from error
+        raise
     if status == 206 or document.get("error") == "transcript-unavailable":
         raise TranscriptPending("Supadata reports that native captions are not available yet")
     if status == 202 or "jobId" in document:

@@ -18,6 +18,10 @@ ATOM = "http://www.w3.org/2005/Atom"
 YT = "http://www.youtube.com/xml/schemas/2015"
 
 
+def _is_members_only(title: str) -> bool:
+    return bool(re.search(r"會員專屬|会员专属|members?[\s-]+only", title, re.IGNORECASE))
+
+
 def _get(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt, delay in enumerate((0, 2, 6)):
@@ -86,6 +90,8 @@ def fetch_channel_videos(
         title = entry.findtext(f"{{{ATOM}}}title")
         if not video_id or not published or not title:
             continue
+        if _is_members_only(title):
+            continue
         published_at = datetime.fromisoformat(published)
         if published_at < cutoff and video_id not in (include_ids or set()):
             continue
@@ -134,7 +140,7 @@ def _fetch_channel_videos_with_supadata(
             continue
         video = fetch_video_with_supadata(video_id, channel)
         title = video.title
-        if re.search(r"會員專屬|会员专属|members?[\s-]+only", title, re.IGNORECASE):
+        if _is_members_only(title):
             continue
         if video.published_at < cutoff and video_id not in (include_ids or set()):
             continue
