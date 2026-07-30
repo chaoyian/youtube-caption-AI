@@ -489,21 +489,22 @@
       "video_url": "https://www.youtube.com/watch?v=_m4TSQiYZi4"
     },
     "g4Z6z8cUhBc": {
-      "alert_status": "disabled",
+      "alert_status": "none",
       "analysis_status": "pending",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 1,
-      "fetch_status": "failed",
-      "last_attempt_at": "2026-07-30T03:28:29+00:00",
-      "last_error": "TranscriptUnavailable: fetch_with_supadata: HTTPError: HTTP Error 429: Too Many Requests | fetch_with_ytdlp: DownloadError: ERROR: [youtube] g4Z6z8cUhBc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=g4Z6z8cUhBc! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://git",
-      "next_retry_at": "2026-07-31T03:28:29+00:00",
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-07-30T09:23:45+00:00",
+      "last_error": "TranscriptPending: fetch_with_supadata: TranscriptPending: Supadata is temporarily rate limited; retry next hour | fetch_with_ytdlp: DownloadError: ERROR: [youtube] g4Z6z8cUhBc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: IpBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=g4Z6z8cUhBc! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nWays to work around this are explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readm",
+      "next_retry_at": "2026-07-30T10:23:45+00:00",
       "note_version": 0,
       "published_at": "2026-07-30T01:07:55+00:00",
       "title": "2026/7/30(四)華許重申抗通膨 債市扛不住?晶片股大崩 AI恐慌過頭了嗎?【早晨財經速解讀】",
       "video_id": "g4Z6z8cUhBc",
-      "video_url": "https://www.youtube.com/watch?v=g4Z6z8cUhBc"
+      "video_url": "https://www.youtube.com/watch?v=g4Z6z8cUhBc",
+      "waiting_count": 1
     },
     "sMSDQyQANIM": {
       "alert_status": "none",
