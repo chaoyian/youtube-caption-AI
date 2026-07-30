@@ -2,7 +2,7 @@ name: Daily finance knowledge
 
 on:
   schedule:
-    - cron: "23 10-23 * * *"
+    - cron: "23,53 10-23 * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
     inputs:

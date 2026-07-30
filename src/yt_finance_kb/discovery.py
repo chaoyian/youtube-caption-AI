@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import UTC, datetime, timedelta
@@ -19,8 +20,16 @@ YT = "http://www.youtube.com/xml/schemas/2015"
 
 def _get(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read()
+    for attempt, delay in enumerate((0, 2, 6)):
+        if delay:
+            time.sleep(delay)
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read()
+        except HTTPError as error:
+            if attempt == 2 or error.code not in {404, 429, 500, 502, 503, 504}:
+                raise
+    raise RuntimeError("unreachable")
 
 
 def _supadata_get(path: str, query: dict[str, str | int]) -> dict:
@@ -117,6 +126,12 @@ def _fetch_channel_videos_with_supadata(
     )
     videos: list[Video] = []
     for video_id in video_ids:
+        # The fallback is used when YouTube RSS is temporarily unavailable.
+        # Known videos can wait for a later RSS revision check; querying their
+        # metadata again wastes Supadata quota and can hide a genuinely new ID
+        # behind a 429 response.
+        if video_id in (include_ids or set()):
+            continue
         video = fetch_video_with_supadata(video_id, channel)
         title = video.title
         if re.search(r"會員專屬|会员专属|members?[\s-]+only", title, re.IGNORECASE):

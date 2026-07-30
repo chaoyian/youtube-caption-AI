@@ -108,3 +108,29 @@ def test_supadata_fallback_ignores_members_only_videos(monkeypatch):
 
     monkeypatch.setattr(discovery, "_supadata_get", fake_supadata)
     assert discovery.fetch_channel_videos(channel) == []
+
+
+def test_supadata_fallback_does_not_refetch_known_video_metadata(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+    )
+    monkeypatch.setenv("SUPADATA_API_KEY", "test-key")
+    monkeypatch.setattr(
+        discovery,
+        "_get",
+        lambda url: (_ for _ in ()).throw(HTTPError(url, 404, "Not Found", {}, None)),
+    )
+    metadata_requests = []
+
+    def fake_supadata(path, query):
+        if path == "youtube/channel/videos":
+            return {"videoIds": ["abcdefghijk"], "liveIds": []}
+        metadata_requests.append((path, query))
+        raise AssertionError("known video metadata should not be requested")
+
+    monkeypatch.setattr(discovery, "_supadata_get", fake_supadata)
+    videos = discovery.fetch_channel_videos(channel, include_ids={"abcdefghijk"})
+    assert videos == []
+    assert metadata_requests == []
