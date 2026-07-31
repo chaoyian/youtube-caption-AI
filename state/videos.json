@@ -1,6 +1,72 @@
 {
   "schema_version": 1,
   "videos": {
+    "7RUZWygQDvE": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-07-31T03:00:36+00:00",
+      "analyzed_hash": "6297122050d6db633867e658e94e67f0dc91c5b767a113015326422e6f3ba99e",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "entities": [
+        "KOSPI",
+        "Meta",
+        "SK海力士",
+        "三星电子",
+        "亚马逊",
+        "台积电",
+        "微软",
+        "摩根大通",
+        "纳斯达克指数",
+        "美光",
+        "联准会",
+        "联电",
+        "苹果",
+        "费城半导体指数",
+        "韩国股市稳定基金"
+      ],
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "6297122050d6db633867e658e94e67f0dc91c5b767a113015326422e6f3ba99e",
+      "last_error": null,
+      "last_fetched_at": "2026-07-31T02:59:52+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-07-31-7RUZWygQDvE.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5540,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4089
+        },
+        "points": 4089,
+        "prompt_tokens": 21245
+      },
+      "published_at": "2026-07-31T01:07:09+00:00",
+      "title": "2026/7/31(五)美股大彈絕地反攻 槓桿去化完成?現在該減碼 還是做多?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "去杠杆",
+        "市场结构",
+        "量能",
+        "盘整",
+        "技术面",
+        "微软",
+        "半导体",
+        "财报"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "7RUZWygQDvE",
+      "video_url": "https://www.youtube.com/watch?v=7RUZWygQDvE"
+    },
     "C8bYSy7FLIc": {
       "alert_status": "none",
       "analysis_status": "complete",
