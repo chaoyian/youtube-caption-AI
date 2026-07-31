@@ -7,9 +7,35 @@
       "analyzed_at": "2026-07-31T03:00:36+00:00",
       "analyzed_hash": "6297122050d6db633867e658e94e67f0dc91c5b767a113015326422e6f3ba99e",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-07-31T03:00:59+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-07-31T03:00:59+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-07-31T03:00:59+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-07-31T03:00:59+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-07-31T03:00:59+00:00",
+      "email_status": "sent",
       "entities": [
         "KOSPI",
         "Meta",
