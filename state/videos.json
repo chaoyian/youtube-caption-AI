@@ -494,9 +494,35 @@
       "analyzed_at": "2026-07-31T02:13:35+00:00",
       "analyzed_hash": "459155de1d1681add636a664129a9228b47e49c15a1e413c3229cabc11e722ce",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-07-31T02:13:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-07-31T02:13:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-07-31T02:13:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-07-31T02:13:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-07-31T02:13:44+00:00",
+      "email_status": "sent",
       "entities": [
         "FOMC",
         "Meta",
