@@ -59,6 +59,9 @@ jobs:
       GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
       GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      APIFY_TRANSCRIPT_ACTOR: ${{ vars.APIFY_TRANSCRIPT_ACTOR || 'apihq~youtube-transcript-scraper' }}
       SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
       YOUTUBE_PROXY_URL: ${{ secrets.YOUTUBE_PROXY_URL }}
       EMAIL_FROM: ${{ vars.EMAIL_FROM }}
@@ -84,8 +87,8 @@ jobs:
 
       - name: Verify transcript access
         run: |
-          if [[ -z "$SUPADATA_API_KEY" && -z "$YOUTUBE_PROXY_URL" ]]; then
-            echo "::error::Configure SUPADATA_API_KEY (recommended) or YOUTUBE_PROXY_URL in Actions Secrets."
+          if [[ -z "$APIFY_TOKEN" && -z "$SUPADATA_API_KEY" && -z "$YOUTUBE_PROXY_URL" ]]; then
+            echo "::error::Configure APIFY_TOKEN, SUPADATA_API_KEY, or YOUTUBE_PROXY_URL in Actions Secrets."
             exit 1
           fi
 

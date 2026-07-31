@@ -12,7 +12,12 @@ from yt_dlp import YoutubeDL
 from .analyzer import DEFAULT_POINT_LIMIT_PER_VIDEO, PoeAnalyzer, PoePointBudget, PoeUsage
 from .cleaning import clean_segments, transcript_hash, transcript_text
 from .config import load_config
-from .discovery import fetch_channel_videos, fetch_video_with_supadata, video_id_from_url
+from .discovery import (
+    fetch_channel_videos,
+    fetch_video_with_supadata,
+    fetch_video_with_youtube_api,
+    video_id_from_url,
+)
 from .models import ChannelConfig, Video
 from .notifications import (
     configured_email_providers,
@@ -40,10 +45,22 @@ class ProcessResult:
 
 def _manual_video(value: str, channel: ChannelConfig) -> Video:
     video_id = video_id_from_url(value)
-    if os.environ.get("SUPADATA_API_KEY"):
-        return fetch_video_with_supadata(video_id, channel)
-    with YoutubeDL({"quiet": True, "no_warnings": True, "skip_download": True}) as downloader:
-        info = downloader.extract_info(f"https://www.youtube.com/watch?v={video_id}", download=False)
+    if os.environ.get("YOUTUBE_API_KEY"):
+        try:
+            return fetch_video_with_youtube_api(video_id, channel)
+        except Exception:
+            pass
+    try:
+        with YoutubeDL(
+            {"quiet": True, "no_warnings": True, "skip_download": True}
+        ) as downloader:
+            info = downloader.extract_info(
+                f"https://www.youtube.com/watch?v={video_id}", download=False
+            )
+    except Exception:
+        if os.environ.get("SUPADATA_API_KEY"):
+            return fetch_video_with_supadata(video_id, channel)
+        raise
     timestamp = info.get("timestamp")
     published = datetime.fromtimestamp(timestamp, UTC) if timestamp else datetime.now(UTC)
     return Video(
@@ -96,6 +113,8 @@ def _safe_error(error: Exception) -> str:
     proxy_url = os.environ.get("YOUTUBE_PROXY_URL")
     parsed = urlsplit(proxy_url) if proxy_url else None
     sensitive_values = [
+        os.environ.get("YOUTUBE_API_KEY"),
+        os.environ.get("APIFY_TOKEN"),
         os.environ.get("SUPADATA_API_KEY"),
         os.environ.get("POE_API_KEY"),
         os.environ.get("RESEND_API_KEY"),

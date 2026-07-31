@@ -108,6 +108,48 @@ def test_supadata_returns_timestamped_segments(monkeypatch):
     assert result.segments[0].duration == 0.8
 
 
+def test_apify_returns_timestamped_segments(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "apify-test-token")
+    monkeypatch.setattr(
+        transcripts,
+        "_apify_request",
+        lambda video_id, token: [
+            {
+                "success": True,
+                "video_id": video_id,
+                "language": "zh-TW",
+                "is_auto_generated": True,
+                "transcript": [
+                    {"text": "市场关注利率", "start": 2.5, "duration": 1.2},
+                ],
+            }
+        ],
+    )
+    result = transcripts.fetch_with_apify("abcdefghijk", ["zh-TW"])
+    assert result.source == "apify"
+    assert result.language == "zh-TW"
+    assert result.is_generated is True
+    assert result.segments[0].start == 2.5
+    assert result.segments[0].duration == 1.2
+
+
+def test_apify_missing_captions_are_retryable(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "apify-test-token")
+    monkeypatch.setattr(
+        transcripts,
+        "_apify_request",
+        lambda *_: [
+            {
+                "success": False,
+                "code": "NO_CAPTIONS",
+                "error": "captions are not ready",
+            }
+        ],
+    )
+    with pytest.raises(transcripts.TranscriptPending, match="NO_CAPTIONS"):
+        transcripts.fetch_with_apify("abcdefghijk", ["zh-TW"])
+
+
 def test_supadata_reports_missing_native_captions_as_pending(monkeypatch):
     monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
     monkeypatch.setattr(
@@ -159,7 +201,7 @@ def test_aggregate_preserves_pending_status_after_backups_fail(monkeypatch):
         transcripts.fetch_transcript("abcdefghijk", ["zh-TW"])
 
 
-def test_supadata_is_first_when_configured(monkeypatch):
+def test_free_fetchers_run_before_supadata(monkeypatch):
     expected = TranscriptResult(
         "zh-TW", False, "supadata", [TranscriptSegment(start=0, text="金融")]
     )
@@ -173,7 +215,47 @@ def test_supadata_is_first_when_configured(monkeypatch):
     monkeypatch.setattr(
         transcripts,
         "fetch_with_ytdlp",
-        lambda *args: (_ for _ in ()).throw(AssertionError("should not run")),
+        lambda *args: calls.append("yt-dlp")
+        or (_ for _ in ()).throw(RuntimeError("blocked")),
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_transcript_api",
+        lambda *args: calls.append("youtube-transcript-api")
+        or (_ for _ in ()).throw(RuntimeError("blocked")),
     )
     assert transcripts.fetch_transcript("abcdefghijk", ["zh-TW"]) == expected
-    assert calls == ["supadata"]
+    assert calls == ["yt-dlp", "youtube-transcript-api", "supadata"]
+
+
+def test_apify_runs_before_supadata(monkeypatch):
+    expected = TranscriptResult(
+        "zh-TW", False, "apify", [TranscriptSegment(start=0, text="金融")]
+    )
+    calls = []
+    monkeypatch.setenv("APIFY_TOKEN", "apify-test-token")
+    monkeypatch.setenv("SUPADATA_API_KEY", "supadata-test-key")
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_ytdlp",
+        lambda *args: calls.append("yt-dlp")
+        or (_ for _ in ()).throw(RuntimeError("blocked")),
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_transcript_api",
+        lambda *args: calls.append("youtube-transcript-api")
+        or (_ for _ in ()).throw(RuntimeError("blocked")),
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_apify",
+        lambda *args: calls.append("apify") or expected,
+    )
+    monkeypatch.setattr(
+        transcripts,
+        "fetch_with_supadata",
+        lambda *args: (_ for _ in ()).throw(AssertionError("should not spend Supadata")),
+    )
+    assert transcripts.fetch_transcript("abcdefghijk", ["zh-TW"]) == expected
+    assert calls == ["yt-dlp", "youtube-transcript-api", "apify"]

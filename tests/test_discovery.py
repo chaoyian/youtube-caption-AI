@@ -60,6 +60,93 @@ def test_rss_discovery_ignores_members_only_videos(monkeypatch):
     assert discovery.fetch_channel_videos(channel) == []
 
 
+def test_youtube_data_api_is_primary_discovery_channel(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+        backfill_days=7,
+    )
+    published = datetime.now(UTC).isoformat().replace("+00:00", "Z")
+    requests = []
+    monkeypatch.setenv("YOUTUBE_API_KEY", "youtube-test-key")
+
+    def fake_youtube(path, query):
+        requests.append((path, query))
+        if path == "channels":
+            return {
+                "items": [
+                    {
+                        "contentDetails": {
+                            "relatedPlaylists": {"uploads": "UU0123456789abcdefghijk"}
+                        }
+                    }
+                ]
+            }
+        return {
+            "items": [
+                {
+                    "contentDetails": {
+                        "videoId": "abcdefghijk",
+                        "videoPublishedAt": published,
+                    },
+                    "snippet": {"title": "今日财经"},
+                }
+            ]
+        }
+
+    monkeypatch.setattr(discovery, "_youtube_api_get", fake_youtube)
+    monkeypatch.setattr(
+        discovery,
+        "_get",
+        lambda url: (_ for _ in ()).throw(AssertionError("RSS should not be called")),
+    )
+    videos = discovery.fetch_channel_videos(channel)
+    assert videos[0].id == "abcdefghijk"
+    assert videos[0].title == "今日财经"
+    assert requests == [
+        (
+            "channels",
+            {"part": "contentDetails", "id": "UC0123456789abcdefghijk"},
+        ),
+        (
+            "playlistItems",
+            {
+                "part": "snippet,contentDetails",
+                "playlistId": "UU0123456789abcdefghijk",
+                "maxResults": 20,
+            },
+        ),
+    ]
+
+
+def test_youtube_data_api_failure_falls_back_to_rss(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+    )
+    published = datetime.now(UTC).isoformat()
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:yt="http://www.youtube.com/xml/schemas/2015">
+  <entry>
+    <yt:videoId>abcdefghijk</yt:videoId>
+    <title>RSS 财经视频</title>
+    <published>{published}</published>
+  </entry>
+</feed>""".encode()
+    monkeypatch.setenv("YOUTUBE_API_KEY", "youtube-test-key")
+    monkeypatch.setattr(
+        discovery,
+        "_youtube_api_get",
+        lambda *_: (_ for _ in ()).throw(RuntimeError("quota unavailable")),
+    )
+    monkeypatch.setattr(discovery, "_get", lambda url: feed)
+    videos = discovery.fetch_channel_videos(channel)
+    assert videos[0].title == "RSS 财经视频"
+
+
 def test_supadata_fallback_when_youtube_feed_is_unavailable(monkeypatch):
     channel = ChannelConfig(
         id="test-channel",

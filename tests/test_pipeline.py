@@ -202,3 +202,14 @@ def test_api_keys_are_redacted_from_public_errors(monkeypatch):
     message = pipeline._safe_error(RuntimeError("request used supadata-sensitive-value"))
     assert "supadata-sensitive-value" not in message
     assert "***" in message
+
+
+def test_discovery_and_apify_keys_are_redacted_from_public_errors(monkeypatch):
+    monkeypatch.setenv("YOUTUBE_API_KEY", "youtube-sensitive-value")
+    monkeypatch.setenv("APIFY_TOKEN", "apify-sensitive-value")
+    message = pipeline._safe_error(
+        RuntimeError("youtube-sensitive-value then apify-sensitive-value")
+    )
+    assert "youtube-sensitive-value" not in message
+    assert "apify-sensitive-value" not in message
+    assert message.count("***") == 2

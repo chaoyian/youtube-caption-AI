@@ -8,7 +8,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import UTC, datetime, timedelta
 from html import unescape
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 
 from .models import ChannelConfig, Video
@@ -16,6 +16,7 @@ from .models import ChannelConfig, Video
 USER_AGENT = "youtube-finance-kb/0.1"
 ATOM = "http://www.w3.org/2005/Atom"
 YT = "http://www.youtube.com/xml/schemas/2015"
+YOUTUBE_DATA_API = "https://www.googleapis.com/youtube/v3"
 
 
 def _is_members_only(title: str) -> bool:
@@ -52,6 +53,18 @@ def _supadata_get(path: str, query: dict[str, str | int]) -> dict:
         return json.loads(response.read())
 
 
+def _youtube_api_get(path: str, query: dict[str, str | int]) -> dict:
+    api_key = os.environ.get("YOUTUBE_API_KEY")
+    if not api_key:
+        raise RuntimeError("YOUTUBE_API_KEY is not configured")
+    request = urllib.request.Request(
+        f"{YOUTUBE_DATA_API}/{path}?{urlencode({**query, 'key': api_key})}",
+        headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
+    )
+    with urllib.request.urlopen(request, timeout=45) as response:
+        return json.loads(response.read())
+
+
 def resolve_channel_id(url: str) -> str:
     match = re.search(r"/channel/(UC[\w-]+)", url)
     if match:
@@ -74,14 +87,29 @@ def fetch_channel_videos(
     include_ids: set[str] | None = None,
 ) -> list[Video]:
     youtube_channel_id = channel.youtube_channel_id or resolve_channel_id(str(channel.url))
-    feed_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={youtube_channel_id}"
     cutoff = datetime.now(UTC) - timedelta(days=channel.backfill_days if backfill_days is None else backfill_days)
+    youtube_api_error: Exception | None = None
+    if os.environ.get("YOUTUBE_API_KEY"):
+        try:
+            return _fetch_channel_videos_with_youtube_api(
+                channel, youtube_channel_id, cutoff, include_ids
+            )
+        except Exception as error:
+            youtube_api_error = error
+
+    feed_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={youtube_channel_id}"
     try:
         root = ET.fromstring(_get(feed_url))
-    except HTTPError:
-        if not os.environ.get("SUPADATA_API_KEY"):
-            raise
-        return _fetch_channel_videos_with_supadata(channel, cutoff, include_ids)
+    except (HTTPError, URLError, ET.ParseError) as rss_error:
+        if os.environ.get("SUPADATA_API_KEY"):
+            return _fetch_channel_videos_with_supadata(channel, cutoff, include_ids)
+        if youtube_api_error is not None:
+            raise RuntimeError(
+                "YouTube Data API and RSS discovery both failed: "
+                f"{type(youtube_api_error).__name__}: {youtube_api_error} | "
+                f"{type(rss_error).__name__}: {rss_error}"
+            ) from rss_error
+        raise
 
     videos: list[Video] = []
     for entry in root.findall(f"{{{ATOM}}}entry"):
@@ -105,6 +133,88 @@ def fetch_channel_videos(
             )
         )
     return sorted(videos, key=lambda video: video.published_at)
+
+
+def _fetch_channel_videos_with_youtube_api(
+    channel: ChannelConfig,
+    youtube_channel_id: str,
+    cutoff: datetime,
+    include_ids: set[str] | None,
+) -> list[Video]:
+    channel_document = _youtube_api_get(
+        "channels",
+        {"part": "contentDetails", "id": youtube_channel_id},
+    )
+    channel_items = channel_document.get("items") or []
+    if not channel_items:
+        raise RuntimeError(f"YouTube Data API returned no channel for {youtube_channel_id}")
+    uploads_playlist = (
+        channel_items[0]
+        .get("contentDetails", {})
+        .get("relatedPlaylists", {})
+        .get("uploads")
+    )
+    if not uploads_playlist:
+        raise RuntimeError(
+            f"YouTube Data API returned no uploads playlist for {youtube_channel_id}"
+        )
+
+    document = _youtube_api_get(
+        "playlistItems",
+        {
+            "part": "snippet,contentDetails",
+            "playlistId": uploads_playlist,
+            "maxResults": 20,
+        },
+    )
+    videos: list[Video] = []
+    for item in document.get("items") or []:
+        snippet = item.get("snippet") or {}
+        content = item.get("contentDetails") or {}
+        video_id = content.get("videoId") or (snippet.get("resourceId") or {}).get(
+            "videoId"
+        )
+        title = str(snippet.get("title") or "")
+        published = content.get("videoPublishedAt") or snippet.get("publishedAt")
+        if not video_id or not title or not published or _is_members_only(title):
+            continue
+        published_at = datetime.fromisoformat(str(published).replace("Z", "+00:00"))
+        if published_at < cutoff and video_id not in (include_ids or set()):
+            continue
+        videos.append(
+            Video(
+                id=video_id,
+                channel_id=channel.id,
+                title=unescape(title),
+                published_at=published_at,
+                url=f"https://www.youtube.com/watch?v={video_id}",
+            )
+        )
+    return sorted(videos, key=lambda video: video.published_at)
+
+
+def fetch_video_with_youtube_api(video_id: str, channel: ChannelConfig) -> Video:
+    document = _youtube_api_get(
+        "videos",
+        {"part": "snippet", "id": video_id},
+    )
+    items = document.get("items") or []
+    if not items:
+        raise RuntimeError(f"YouTube Data API returned no video for {video_id}")
+    snippet = items[0].get("snippet") or {}
+    published = snippet.get("publishedAt")
+    published_at = (
+        datetime.fromisoformat(str(published).replace("Z", "+00:00"))
+        if published
+        else datetime.now(UTC)
+    )
+    return Video(
+        id=video_id,
+        channel_id=channel.id,
+        title=unescape(str(snippet.get("title") or video_id)),
+        published_at=published_at,
+        url=f"https://www.youtube.com/watch?v={video_id}",
+    )
 
 
 def _fetch_channel_videos_with_supadata(

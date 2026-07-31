@@ -88,6 +88,76 @@ def _supadata_request(url: str, api_key: str) -> tuple[int, dict[str, Any]]:
         return response.status, json.loads(response.read())
 
 
+def _apify_request(video_id: str, token: str) -> list[dict[str, Any]]:
+    actor = os.environ.get(
+        "APIFY_TRANSCRIPT_ACTOR", "apihq~youtube-transcript-scraper"
+    ).strip()
+    if not actor or not re.fullmatch(r"[\w~-]+", actor):
+        raise ValueError("APIFY_TRANSCRIPT_ACTOR contains invalid characters")
+    body = json.dumps(
+        {"videoId": video_id, "metadata": False},
+        ensure_ascii=False,
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        (
+            f"https://api.apify.com/v2/acts/{actor}/"
+            "run-sync-get-dataset-items?timeout=90&clean=true"
+        ),
+        data=body,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "youtube-finance-kb/0.1",
+            "Accept": "application/json",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(request, timeout=105) as response:
+        document = json.loads(response.read())
+    if not isinstance(document, list):
+        raise TranscriptUnavailable("Apify returned an invalid dataset response")
+    return document
+
+
+def fetch_with_apify(video_id: str, languages: list[str]) -> TranscriptResult:
+    token = os.environ.get("APIFY_TOKEN")
+    if not token:
+        raise TranscriptUnavailable("APIFY_TOKEN is not configured")
+    rows = _apify_request(video_id, token)
+    if not rows:
+        raise TranscriptUnavailable("Apify returned no transcript result")
+    row = rows[0]
+    if not row.get("success"):
+        code = str(row.get("code") or "UNKNOWN")
+        message = str(row.get("error") or "transcript unavailable")
+        exception = (
+            TranscriptPending
+            if code in {"NO_CAPTIONS", "CAPTIONS_TIMEOUT"}
+            else TranscriptUnavailable
+        )
+        raise exception(f"Apify {code}: {message}")
+    content = row.get("transcript")
+    if not isinstance(content, list):
+        raise TranscriptUnavailable("Apify returned no timestamped transcript")
+    segments = [
+        TranscriptSegment(
+            start=float(item.get("start", 0)),
+            duration=float(item.get("duration", 0)),
+            text=str(item.get("text", "")).strip(),
+        )
+        for item in content
+        if str(item.get("text", "")).strip()
+    ]
+    if not segments:
+        raise TranscriptUnavailable("Apify returned an empty transcript")
+    return TranscriptResult(
+        language=str(row.get("language") or (languages[0] if languages else "unknown")),
+        is_generated=bool(row.get("is_auto_generated")),
+        source="apify",
+        segments=segments,
+    )
+
+
 def fetch_with_supadata(video_id: str, languages: list[str]) -> TranscriptResult:
     api_key = os.environ.get("SUPADATA_API_KEY")
     if not api_key:
@@ -263,8 +333,10 @@ def fetch_transcript(video_id: str, languages: list[str]) -> TranscriptResult:
     errors: list[str] = []
     pending = False
     fetchers = [fetch_with_ytdlp, fetch_with_transcript_api]
+    if os.environ.get("APIFY_TOKEN"):
+        fetchers.append(fetch_with_apify)
     if os.environ.get("SUPADATA_API_KEY"):
-        fetchers.insert(0, fetch_with_supadata)
+        fetchers.append(fetch_with_supadata)
     for fetcher in fetchers:
         try:
             return fetcher(video_id, languages)
