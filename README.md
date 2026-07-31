@@ -1,6 +1,8 @@
 # YouTube 知识AI整理
 
-这是一个基于Youtube API的项目，通过从 YouTube 频道取得新字幕，整理为可检索的金融研究笔记，并通过邮件和 Discord 发送。邮件转发依赖resend，爬取字幕依赖Supadata，因此若你fork本仓库，你需要注册并填写这两个网站的API，同时你还需要一个AI API，用于整理，下面会有说明
+这是一个基于 YouTube API 的项目，通过从 YouTube 频道取得新字幕，整理为可检索的金融
+研究笔记，并通过邮件和 Discord 发送。官方 YouTube Data API 负责发现新视频；字幕按
+本地抓取器、Apify、Supadata 的顺序逐级回退，避免任何一家服务成为单点故障。
 
 ## 每日工作
 每天北京时间 `10:28–23:58`，在每小时的 `:28` 和 `:58` 检查一次。字幕尚未生成时
@@ -16,17 +18,24 @@
 Secrets：
 
 - `POE_API_KEY`：从 Poe 新建的 API Key。不要使用任何已经公开或发到聊天中的 Key。
+- `YOUTUBE_API_KEY`：推荐。Google Cloud 中启用 YouTube Data API v3 后创建的 API
+  Key，只用于发现公开视频和读取元数据，不用于下载字幕。
+- `APIFY_TOKEN`：推荐的低成本字幕备用通道。Apify 免费方案每月提供平台额度；
+  本项目默认使用按成功字幕计费的 `apihq/youtube-transcript-scraper` Actor。
+- `SUPADATA_API_KEY`：可选的最后备用通道。只在免费抓取器和 Apify 都失败后调用，
+  不再用于正常频道发现。
+- `YOUTUBE_PROXY_URL`：可选。供 `yt-dlp` 与 `youtube-transcript-api` 共用的轮换
+  住宅代理 URL，例如 `http://用户名:密码@代理主机:端口`。
 - `RESEND_API_KEY`：Resend API Key。
 - `GMAIL_USERNAME`：可选，作为发件人的完整 Gmail 地址。
 - `GMAIL_APP_PASSWORD`：可选，开启 Google 两步验证后生成的 16 位应用专用密码；
   不要填写 Gmail 登录密码。
 - `DISCORD_WEBHOOK_URL`：目标频道的 Discord Webhook URL。
-- `SUPADATA_API_KEY`：推荐。Supadata 字幕 API Key；免费额度足够日更频道使用。
-- `YOUTUBE_PROXY_URL`：可选的高级备用方案。轮换住宅代理 URL，例如
-  `http://用户名:密码@代理主机:端口`。使用 Supadata 时无需配置。
 
 Variables：
 
+- `APIFY_TRANSCRIPT_ACTOR`：可选，默认
+  `apihq~youtube-transcript-scraper`。只有明确更换 Apify Actor 时才填写。
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
 - `POE_POINT_LIMIT_PER_VIDEO`：可选，默认 `10000`。这是每个新视频的硬预算护栏，
   不是要求程序必须花满；没有新字幕、字幕未变化或仅重试通知时均为 0 点。
@@ -52,22 +61,33 @@ Variables：
 
 仓库的 Actions 设置必须允许工作流对仓库内容执行写操作。
 
-### 为什么需要字幕 API
+### 视频发现与字幕回退
 
-GitHub 托管 Runner 使用云服务商 IP，YouTube 经常要求这类 IP 登录确认。更换
-Selenium、Playwright 或其他爬虫不会改变 GitHub 的出口 IP，因此仍可能被拦截。
-推荐配置 `SUPADATA_API_KEY`，由专业字幕服务获取字幕；程序只对新视频调用一次，
-已处理视频最多每 7 天检查一次修订，避免浪费免费额度。
+配置 `YOUTUBE_API_KEY` 后，程序使用官方 YouTube Data API 的频道上传播放列表发现
+视频。若 API 暂时失败，会回退到 YouTube RSS；只有两者都失败时才会用 Supadata
+发现频道内容。这样高频检查不会消耗 Supadata credits。
+
+字幕按以下顺序尝试，任一成功即停止：
+
+1. `yt-dlp`；
+2. `youtube-transcript-api`；
+3. Apify Actor（配置 `APIFY_TOKEN` 时）；
+4. Supadata（配置 `SUPADATA_API_KEY` 时）。
+
+GitHub 托管 Runner 使用云服务商 IP，前两种免费抓取方式可能被 YouTube 拦截；配置
+`YOUTUBE_PROXY_URL` 后会通过同一轮换住宅代理重试。Apify 免费方案的每月平台额度
+足够日更单频道作为备用，Supadata 因此只承担最后兜底。已处理视频最多每 7 天检查
+一次修订，字幕哈希未变化时不会调用 AI 或重复投递。
 
 Supadata 注册入口为 <https://dash.supadata.ai>，创建 Key 后将其直接保存为 GitHub
 Secret，不要发到聊天或提交到仓库。
 
 ### 可选的代理方案
 
-如果不希望使用字幕 API，也可以配置 `YOUTUBE_PROXY_URL`。程序会把同一个代理交给
-`yt-dlp` 和备用抓取器。建议使用轮换住宅代理；免费公开代理和普通数据中心代理通常
-不可靠。代理 URL 只存放在 GitHub Secret 中，错误写入公开状态文件前会自动遮蔽
-账号、密码和完整 URL。不要提交 YouTube 账号 Cookies。
+程序会把 `YOUTUBE_PROXY_URL` 同时交给 `yt-dlp` 和 `youtube-transcript-api`。建议
+使用轮换住宅代理；免费公开代理和普通数据中心代理通常不可靠。代理 URL、YouTube
+API Key、Apify Token 和其他凭据只存放在 GitHub Secret 中，错误写入公开状态文件
+前会自动遮蔽。不要提交 YouTube 账号 Cookies。
 
 ## 新增频道
 
