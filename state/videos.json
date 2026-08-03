@@ -586,9 +586,35 @@
       "analyzed_at": "2026-08-03T04:06:18+00:00",
       "analyzed_hash": "ff9f8295e36eea4379588383f2b1b1784482c4f7d13789e2b95f6499cdc6cf7c",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-03T04:06:27+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-03T04:06:27+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-03T04:06:27+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-03T04:06:27+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-03T04:06:27+00:00",
+      "email_status": "sent",
       "entities": [
         "AMD",
         "Meta",
