@@ -1004,7 +1004,7 @@
       "video_url": "https://www.youtube.com/watch?v=vxCO-f4F3BA"
     },
     "z3pq4kLE5Sw": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "analyzed_at": "2026-08-04T03:47:52+00:00",
       "analyzed_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
