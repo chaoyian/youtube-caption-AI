@@ -1004,8 +1004,8 @@
       "video_url": "https://www.youtube.com/watch?v=vxCO-f4F3BA"
     },
     "z3pq4kLE5Sw": {
-      "alert_status": "none",
-      "analysis_status": "complete",
+      "alert_status": "pending",
+      "analysis_status": "failed",
       "analyzed_at": "2026-08-04T03:47:52+00:00",
       "analyzed_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
       "channel_id": "yutinghao-finance",
@@ -1055,24 +1055,24 @@
         "高盛",
         "鸿海"
       ],
-      "failure_count": 0,
+      "failure_count": 1,
       "fetch_status": "complete",
       "fetched_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
-      "last_attempt_at": "2026-08-04T01:00:13+00:00",
-      "last_error": null,
-      "last_fetched_at": "2026-08-04T03:47:12+00:00",
-      "next_retry_at": null,
+      "last_attempt_at": "2026-08-04T08:21:53+00:00",
+      "last_error": "RuntimeError: Poe returned an empty response",
+      "last_fetched_at": "2026-08-04T08:20:05+00:00",
+      "next_retry_at": "2026-08-05T08:21:53+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-04-z3pq4kLE5Sw.md",
       "note_version": 1,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5098,
+        "calls": 1,
+        "completion_tokens": 3200,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3940
+          "Kimi-K3": 3174
         },
-        "points": 3940,
-        "prompt_tokens": 21925
+        "points": 3174,
+        "prompt_tokens": 15733
       },
       "published_at": "2026-08-03T23:53:26+00:00",
       "title": "2026/8/4(二)美日聯手救日圓 日圓套利大平倉?空單9萬口 外資想什麼?【早晨財經速解讀】",
