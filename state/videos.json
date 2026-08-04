@@ -1004,73 +1004,50 @@
       "video_url": "https://www.youtube.com/watch?v=vxCO-f4F3BA"
     },
     "z3pq4kLE5Sw": {
-      "alert_status": "disabled",
-      "analysis_status": "failed",
-      "analyzed_at": "2026-08-04T03:47:52+00:00",
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-04T09:01:03+00:00",
       "analyzed_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-08-04T03:48:00+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-08-04T03:48:00+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-08-04T03:48:00+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-04T03:48:00+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-08-04T03:48:00+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "entities": [
-        "Google",
-        "QQQ",
+        "Alphabet",
+        "Invesco QQQ",
         "亚马逊",
         "台指期",
         "台积电",
+        "川普",
         "微软",
         "日元",
         "日本央行",
-        "标普500指数",
-        "纳斯达克指数",
-        "美国国债",
+        "美国公债",
         "美联储",
+        "贝森特",
         "费城半导体指数",
-        "高盛",
+        "高市早苗",
         "鸿海"
       ],
-      "failure_count": 1,
+      "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
       "last_attempt_at": "2026-08-04T08:45:56+00:00",
-      "last_error": "InternalServerError: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx</center>\r\n<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML=\"window.__CF$cv$params={r:'a25c465839a70c3d',t:'MTc4NTgzMzAwOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);\";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>\r\n</html>",
-      "last_fetched_at": "2026-08-04T08:37:26+00:00",
-      "next_retry_at": "2026-08-05T08:45:56+00:00",
+      "last_error": null,
+      "last_fetched_at": "2026-08-04T08:51:50+00:00",
+      "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-04-z3pq4kLE5Sw.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 0,
-        "completion_tokens": 0,
+        "calls": 1,
+        "completion_tokens": 9621,
         "limit": 10000,
-        "models": {},
-        "points": 0,
-        "prompt_tokens": 0
+        "models": {
+          "Kimi-K3": 6385
+        },
+        "points": 6385,
+        "prompt_tokens": 15733
       },
       "published_at": "2026-08-03T23:53:26+00:00",
       "title": "2026/8/4(二)美日聯手救日圓 日圓套利大平倉?空單9萬口 外資想什麼?【早晨財經速解讀】",
@@ -1080,13 +1057,13 @@
         "美股",
         "宏观",
         "日元",
+        "汇率干预",
+        "美债",
+        "台股",
+        "外资",
         "套利交易",
-        "亚洲股市",
         "PMI",
-        "全球景气",
-        "AI",
-        "科技股",
-        "资金轮动"
+        "制造业"
       ],
       "transcript_generated": false,
       "transcript_language": "zh-TW",
