@@ -33,7 +33,7 @@ MODEL_FINAL_MAX_TOKENS = {
     # Kimi K3 may spend several thousand completion tokens on internal reasoning
     # before emitting the JSON answer. A 3,200-token cap can therefore return an
     # empty content field with finish_reason="length".
-    "kimi-k3": 6_000,
+    "kimi-k3": 16_000,
 }
 MODEL_EXTRA_BODY = {
     # Poe requires model-specific parameters to be nested under extra_body.
