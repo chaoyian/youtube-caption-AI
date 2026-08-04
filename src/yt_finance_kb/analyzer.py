@@ -35,6 +35,11 @@ MODEL_FINAL_MAX_TOKENS = {
     # empty content field with finish_reason="length".
     "kimi-k3": 6_000,
 }
+MODEL_EXTRA_BODY = {
+    # Poe requires model-specific parameters to be nested under extra_body.
+    # Kimi K3 always reasons and otherwise defaults to its longest effort.
+    "kimi-k3": {"reasoning_effort": "low"},
+}
 MIN_FINAL_OUTPUT_TOKENS = 1_400
 MIN_CHUNK_OUTPUT_TOKENS = 700
 POINT_SAFETY_RESERVE = 400
@@ -191,6 +196,7 @@ class PoeAnalyzer:
             messages=messages,
             temperature=0.1,
             max_completion_tokens=max_tokens,
+            extra_body=MODEL_EXTRA_BODY.get(model.lower()),
         )
         if response.usage:
             usage = self.budget.record(
