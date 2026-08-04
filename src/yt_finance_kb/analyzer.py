@@ -29,6 +29,12 @@ DIRECT_TRANSCRIPT_LIMIT = 100_000
 CHUNK_SIZE = 55_000
 DEFAULT_POINT_LIMIT_PER_VIDEO = 10_000
 DEFAULT_FINAL_MAX_TOKENS = 3_200
+MODEL_FINAL_MAX_TOKENS = {
+    # Kimi K3 may spend several thousand completion tokens on internal reasoning
+    # before emitting the JSON answer. A 3,200-token cap can therefore return an
+    # empty content field with finish_reason="length".
+    "kimi-k3": 6_000,
+}
 MIN_FINAL_OUTPUT_TOKENS = 1_400
 MIN_CHUNK_OUTPUT_TOKENS = 700
 POINT_SAFETY_RESERVE = 400
@@ -302,7 +308,9 @@ class PoeAnalyzer:
                 ]
             bad_output = self._complete(
                 messages,
-                requested_max_tokens=DEFAULT_FINAL_MAX_TOKENS,
+                requested_max_tokens=MODEL_FINAL_MAX_TOKENS.get(
+                    self.model.lower(), DEFAULT_FINAL_MAX_TOKENS
+                ),
                 minimum_output_tokens=MIN_FINAL_OUTPUT_TOKENS,
             )
             try:
