@@ -191,27 +191,49 @@ class PoeAnalyzer:
             requested=requested_max_tokens,
             minimum=minimum_output_tokens,
         )
-        response = self.client.chat.completions.create(
-            model=model,
-            messages=messages,
-            temperature=0.1,
-            max_completion_tokens=max_tokens,
-            extra_body=MODEL_EXTRA_BODY.get(model.lower()),
-        )
-        if response.usage:
+        request = {
+            "model": model,
+            "messages": messages,
+            "temperature": 0.1,
+            "max_completion_tokens": max_tokens,
+            "extra_body": MODEL_EXTRA_BODY.get(model.lower()),
+        }
+        usage = None
+        finish_reason = None
+        if model.lower() == "kimi-k3":
+            parts: list[str] = []
+            stream = self.client.chat.completions.create(
+                **request,
+                stream=True,
+                stream_options={"include_usage": True},
+            )
+            for chunk in stream:
+                if chunk.usage:
+                    usage = chunk.usage
+                for choice in chunk.choices:
+                    if choice.finish_reason:
+                        finish_reason = choice.finish_reason
+                    if choice.delta.content:
+                        parts.append(choice.delta.content)
+            content = "".join(parts)
+        else:
+            response = self.client.chat.completions.create(**request)
+            usage = response.usage
+            finish_reason = response.choices[0].finish_reason
+            content = response.choices[0].message.content
+        if usage:
             usage = self.budget.record(
                 model,
-                response.usage.prompt_tokens,
-                response.usage.completion_tokens,
+                usage.prompt_tokens,
+                usage.completion_tokens,
                 rates[0],
                 rates[1],
             )
             self.usages.append(usage)
             if self.usage_recorder:
                 self.usage_recorder(usage)
-        content = response.choices[0].message.content
         if not content:
-            raise RuntimeError("Poe returned an empty response")
+            raise RuntimeError(f"Poe returned an empty response (finish_reason={finish_reason})")
         return content
 
     @staticmethod
