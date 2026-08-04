@@ -1004,7 +1004,7 @@
       "video_url": "https://www.youtube.com/watch?v=vxCO-f4F3BA"
     },
     "z3pq4kLE5Sw": {
-      "alert_status": "disabled",
+      "alert_status": "pending",
       "analysis_status": "failed",
       "analyzed_at": "2026-08-04T03:47:52+00:00",
       "analyzed_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
@@ -1058,10 +1058,10 @@
       "failure_count": 1,
       "fetch_status": "complete",
       "fetched_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
-      "last_attempt_at": "2026-08-04T08:31:24+00:00",
+      "last_attempt_at": "2026-08-04T08:35:13+00:00",
       "last_error": "RuntimeError: Poe returned an empty response",
-      "last_fetched_at": "2026-08-04T08:29:29+00:00",
-      "next_retry_at": "2026-08-05T08:31:24+00:00",
+      "last_fetched_at": "2026-08-04T08:33:53+00:00",
+      "next_retry_at": "2026-08-05T08:35:13+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-04-z3pq4kLE5Sw.md",
       "note_version": 1,
       "poe_usage": {
