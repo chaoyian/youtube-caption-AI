@@ -918,9 +918,35 @@
       "analyzed_at": "2026-08-06T03:49:20+00:00",
       "analyzed_hash": "fb99d15e6fd3aab52105dca01887bd8a8c099d7dd178dfb1d3687b1e444cff39",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-06T03:49:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-06T03:49:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-06T03:49:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-06T03:49:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-06T03:49:28+00:00",
+      "email_status": "sent",
       "entities": [
         "Alphabet",
         "Anthropic",
