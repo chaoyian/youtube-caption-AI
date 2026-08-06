@@ -1,3 +1,4 @@
 # 实体：SOXL
 
+- 2026-08-04 [2026/8/5(三)費半飆漲6% 美股標普創史高!七巨頭回神 SpaceX AMD卻重挫?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-05-NspN81zjSzw.md)
 - 2026-08-03 [2026/8/3(一)科技股最慘七月 融資甩不掉?這波反彈 能夠走多遠?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-03-bi09ZJ7kOC4.md)
