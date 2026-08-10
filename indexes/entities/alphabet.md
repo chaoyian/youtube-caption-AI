@@ -1,5 +1,6 @@
 # 实体：Alphabet
 
+- 2026-08-09 [2026/8/10(一)非農爆冷 升息機率降?美股創高!波克夏也開始買股了?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-10-5_poweJsVBA.md)
 - 2026-08-05 [2026/8/6(四)雙軋行情還 能維持多久?川普民調創低  通航有解?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-06-sk7DVOEJpig.md)
 - 2026-08-04 [2026/8/5(三)費半飆漲6% 美股標普創史高!七巨頭回神 SpaceX AMD卻重挫?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-05-NspN81zjSzw.md)
 - 2026-08-03 [2026/8/4(二)美日聯手救日圓 日圓套利大平倉?空單9萬口 外資想什麼?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-04-z3pq4kLE5Sw.md)
