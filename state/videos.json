@@ -7,9 +7,35 @@
       "analyzed_at": "2026-08-10T04:27:36+00:00",
       "analyzed_hash": "159e5e207f188199ff6b992af199c4348906a133719b350e4ace734f82eecbf3",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-10T04:27:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-10T04:27:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-10T04:27:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-10T04:27:44+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-10T04:27:44+00:00",
+      "email_status": "sent",
       "entities": [
         "Alphabet",
         "CAC 40指数",
