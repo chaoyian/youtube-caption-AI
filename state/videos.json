@@ -1278,9 +1278,35 @@
       "analyzed_at": "2026-08-11T05:35:12+00:00",
       "analyzed_hash": "973111d95d9a97c20eafaf705569ef24ca5f05d2536557a2c9b3295d08436d25",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-11T05:35:19+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-11T05:35:19+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-11T05:35:19+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-11T05:35:19+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-11T05:35:19+00:00",
+      "email_status": "sent",
       "entities": [
         "Alphabet",
         "Meta",
