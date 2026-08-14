@@ -365,7 +365,7 @@
       "fetched_hash": "62c7e2f61333ff6fdf7c24510aea53cfe50c34bbf70ffb6961a89bfe8dd3cd16",
       "last_attempt_at": "2026-08-11T04:16:15+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] C8bYSy7FLIc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=C8bYSy7FLIc! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "last_fetched_at": "2026-08-13T06:55:27+00:00",
+      "last_fetched_at": "2026-08-14T00:08:31+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-07-29-C8bYSy7FLIc.md",
       "note_version": 1,
@@ -1239,6 +1239,24 @@
       "video_id": "g4Z6z8cUhBc",
       "video_url": "https://www.youtube.com/watch?v=g4Z6z8cUhBc",
       "waiting_count": 6
+    },
+    "oLPxNHRAPEI": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-08-14T00:08:37+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] oLPxNHRAPEI: This live event will begin in 21 minutes. | fetch_with_transcript_api: VideoUnplayable: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=oLPxNHRAPEI! This is most likely caused by:\n\nThe video is unplayable for the following reason: This live event will begin in 21 minutes.\n\nIf you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem! | fetch_with_apify: TranscriptUnavailable: Apify PLAYABILITY: Video oLPxNHRAPEI is not playable: This live event will begin in 21 minutes. | fetch_with_supadata: TranscriptPending: Supadata is temporarily rate limited; retry next hour",
+      "next_retry_at": "2026-08-14T01:08:37+00:00",
+      "note_version": 0,
+      "published_at": "2026-08-13T23:58:17+00:00",
+      "title": "2026/8/14(五)AI股不再雞犬升天 債市開始算帳!AI帳單 誰會來買單?【早晨財經速解讀】",
+      "video_id": "oLPxNHRAPEI",
+      "video_url": "https://www.youtube.com/watch?v=oLPxNHRAPEI",
+      "waiting_count": 1
     },
     "sMSDQyQANIM": {
       "alert_status": "none",
