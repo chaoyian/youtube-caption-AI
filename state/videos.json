@@ -930,9 +930,35 @@
       "analyzed_at": "2026-08-17T05:08:06+00:00",
       "analyzed_hash": "d86da0b261312d76d58ee3dd165d7b4345dddf7e1f1f5f17ee9eaad8e4249fe9",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-17T05:08:14+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-17T05:08:14+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-17T05:08:14+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-17T05:08:14+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-17T05:08:14+00:00",
+      "email_status": "sent",
       "entities": [
         "FOMC",
         "中国",
