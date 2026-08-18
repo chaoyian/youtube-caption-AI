@@ -1,5 +1,6 @@
 # 实体：SK海力士
 
+- 2026-08-18 [2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md)
 - 2026-08-13 [2026/8/14(五)AI股不再雞犬升天 債市開始算帳!AI帳單 誰會來買單?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-14-oLPxNHRAPEI.md)
 - 2026-08-10 [2026/8/11(二)AI舉債時代 自由現金流能翻正?外資再加空單!台股還能攻?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-11-v7TpiWK5DTQ.md)
 - 2026-08-07 [2026/8/7(五)DRAM缺貨燒到i18 7月ETF申購金額再創高!散戶沒在怕?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-07-IHB6xZANLDc.md)
