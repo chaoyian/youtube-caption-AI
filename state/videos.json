@@ -1541,10 +1541,35 @@
       "analyzed_at": "2026-08-19T03:26:01+00:00",
       "analyzed_hash": "77f92bc2083da4823f08131fff915466b5f30f2984ffad8852c7b967d382f0fc",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_sent_at": "2026-07-28T11:21:46+00:00",
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-19T03:26:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-19T03:26:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-19T03:26:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-19T03:26:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        }
+      },
+      "email_sent_at": "2026-08-19T03:26:38+00:00",
+      "email_status": "sent",
       "entities": [
         "Alphabet",
         "Amazon",
