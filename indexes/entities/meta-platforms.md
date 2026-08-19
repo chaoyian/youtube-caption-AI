@@ -1,3 +1,4 @@
 # 实体：Meta Platforms
 
 - 2026-08-11 [2026/8/12(三)GPU金融化狂潮 2008正在重演？兆元商機還是下一場危機？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-12-ApykW90PQ58.md)
+- 2026-07-27 [2026/7/27(一)財報黃金週 黃仁勳談AI:這次不一樣!本益比創低 該買巨頭嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-07-27-sMSDQyQANIM.md)
