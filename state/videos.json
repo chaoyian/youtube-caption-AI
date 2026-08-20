@@ -818,9 +818,35 @@
       "analyzed_at": "2026-08-20T03:05:43+00:00",
       "analyzed_hash": "106a2ad9ba34aba78fd003c0687b26c1f721256bc454ae4270437ad9e0ce2cae",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-20T03:05:51+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-20T03:05:51+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-20T03:05:51+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-20T03:05:51+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-20T03:05:51+00:00",
+      "email_status": "sent",
       "entities": [
         "30年期美债收益率",
         "Alphabet",
