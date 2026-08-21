@@ -1428,9 +1428,35 @@
       "analyzed_at": "2026-08-21T03:30:25+00:00",
       "analyzed_hash": "7e04a7d8740e2ac7ad2a60a4d504b4299b90060eb0a641bfd28ef2217650968f",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-21T03:30:34+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-21T03:30:34+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-21T03:30:34+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-21T03:30:34+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-21T03:30:34+00:00",
+      "email_status": "sent",
       "entities": [
         "Airbnb",
         "Alphabet",
