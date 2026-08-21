@@ -1,5 +1,6 @@
 # 实体：Alphabet
 
+- 2026-08-21 [2026/8/21(五)巨頭搶錢 誰來接美債?AI是革命or下一場債務危機?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-21-ajjRvohk-Og.md)
 - 2026-08-20 [2026/8/20(四)貝森特護盤!美債有救了?巨頭燒錢換市佔 利息拖垮經濟?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-20-LUGWERSl01s.md)
 - 2026-08-18 [2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md)
 - 2026-08-13 [2026/8/14(五)AI股不再雞犬升天 債市開始算帳!AI帳單 誰會來買單?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-14-oLPxNHRAPEI.md)

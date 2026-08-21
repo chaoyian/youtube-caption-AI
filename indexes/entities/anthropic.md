@@ -1,5 +1,6 @@
 # 实体：Anthropic
 
+- 2026-08-21 [2026/8/21(五)巨頭搶錢 誰來接美債?AI是革命or下一場債務危機?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-21-ajjRvohk-Og.md)
 - 2026-08-19 [2026/8/19(三)債市風暴 撿便宜時刻?美中爭霸燒錢戰 Al時代只能二選一？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md)
 - 2026-08-18 [2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md)
 - 2026-08-05 [2026/8/6(四)雙軋行情還 能維持多久?川普民調創低  通航有解?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-06-sk7DVOEJpig.md)
