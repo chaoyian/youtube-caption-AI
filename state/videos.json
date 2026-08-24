@@ -1616,9 +1616,35 @@
       "analyzed_at": "2026-08-24T03:31:59+00:00",
       "analyzed_hash": "983339930a5bfd24998b570078b7b5b1f26923870b996e6df798782fd84e3d1c",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-24T03:32:06+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-24T03:32:06+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-24T03:32:06+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-24T03:32:06+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-24T03:32:06+00:00",
+      "email_status": "sent",
       "entities": [
         "SK海力士",
         "以太币",
