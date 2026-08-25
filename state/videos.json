@@ -458,7 +458,7 @@
       "fetched_hash": "62c7e2f61333ff6fdf7c24510aea53cfe50c34bbf70ffb6961a89bfe8dd3cd16",
       "last_attempt_at": "2026-08-25T04:09:42+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] C8bYSy7FLIc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: IpBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=C8bYSy7FLIc! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nWays to work around this are explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).\n\n\nIf you are sure that ",
-      "last_fetched_at": "2026-08-25T06:58:07+00:00",
+      "last_fetched_at": "2026-08-25T23:49:54+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-07-29-C8bYSy7FLIc.md",
       "note_version": 1,
