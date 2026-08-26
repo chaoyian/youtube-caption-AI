@@ -812,6 +812,24 @@
       "video_url": "https://www.youtube.com/watch?v=KS_BkfqfALI",
       "waiting_count": 1
     },
+    "KUZC2NyCCCY": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-08-26T01:23:33+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] KUZC2NyCCCY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=KUZC2NyCCCY! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-08-26T02:23:33+00:00",
+      "note_version": 0,
+      "published_at": "2026-08-26T01:15:20+00:00",
+      "title": "2026/8/26(三)美債回購能 救川普選情?日本缺工 歐洲缺膽 誰能突圍?【早晨財經速解讀】",
+      "video_id": "KUZC2NyCCCY",
+      "video_url": "https://www.youtube.com/watch?v=KUZC2NyCCCY",
+      "waiting_count": 1
+    },
     "LUGWERSl01s": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -2450,7 +2468,7 @@
       "fetched_hash": "aaad839a26fec81bf36251d3fc4cc165df309a3101d94d5636f6a1133dc919ba",
       "last_attempt_at": "2026-08-04T08:45:56+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-19T01:20:05+00:00",
+      "last_fetched_at": "2026-08-26T01:23:21+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-04-z3pq4kLE5Sw.md",
       "note_version": 2,
