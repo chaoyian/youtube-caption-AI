@@ -3,7 +3,7 @@
 Pipedream 只负责按时调用 GitHub API。字幕处理、AI 分析、提交、邮件和 Discord
 通知仍全部在 GitHub Actions 内完成，不需要部署网站或服务器。
 
-推荐排程为北京时间每天 `07:30–13:30`、每小时一次，共 7 次。外部排程稳定后，
+推荐排程为北京时间每天 `09:30–12:00`、每半小时一次，共 6 次。外部排程稳定后，
 再把 GitHub 原生 `schedule` 调低为备用；首次部署前不要关闭现有排程。
 
 ## 1. 创建最小权限 GitHub Token
@@ -33,13 +33,16 @@ Fine-grained tokens → Generate new token**，然后设置：
 ## 3. 建立排程工作流
 
 1. 在 Project 中选择 **New Workflow**。
-2. Trigger 选择 **Schedule**。
-3. 选择 **Cron Expression**。
-4. Timezone 选择 `Asia/Shanghai`。
-5. Cron 填写 `30 7-13 * * *`。
-6. 暂时保持工作流未部署，先完成下一步测试。
+2. 第一个 Trigger 选择 **Schedule → Cron Expression**。
+3. Timezone 选择 `Asia/Shanghai`，Cron 填写 `30 9-11 * * *`。
+4. 打开 Trigger 右上角菜单，选择 **Add trigger**。
+5. 第二个 Trigger 同样选择 **Schedule → Cron Expression**。
+6. Timezone 选择 `Asia/Shanghai`，Cron 填写 `0 10-12 * * *`。
+7. 暂时保持工作流未部署，先完成下一步测试。
 
-这个表达式会在每天北京时间 `07:30`、`08:30`、……、`13:30` 触发。
+两条排程会共同在每天北京时间 `09:30`、`10:00`、`10:30`、`11:00`、
+`11:30`、`12:00` 触发。标准 cron 无法用一条表达式精确表示这组时间而不额外包含
+`09:00` 或 `12:30`，因此这里使用同一个 Workflow 的两个 Trigger。
 
 ## 4. 添加 GitHub 调用步骤
 
@@ -71,7 +74,7 @@ Fine-grained tokens → Generate new token**，然后设置：
 - GitHub Actions 的运行名称会保留来源，方便区分 `pipedream`、`schedule` 和 `manual`。
 - GitHub token 到期或被撤销时，Pipedream 会显示 401/403；生成新 token 后只需更新
   Project Secret，不需要修改代码。
-- Pipedream 免费账户有每日 credit 限额。这个工作流每天运行 7 次，每次通常只执行
+- Pipedream 免费账户有每日 credit 限额。这个工作流每天运行 6 次，每次通常只执行
   一个很短的 HTTP 请求；仍应在 Pipedream Billing 页面确认账户实际配额。
 - Pipedream 稳定运行数日后，可把 GitHub 原生 cron 改为少量备用触发，避免无意义的
   重复 Actions 运行。

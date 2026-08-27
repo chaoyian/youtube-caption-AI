@@ -12,9 +12,10 @@
 不依赖 GitHub 的时区字段。
 字幕成功后，当天余下任务会根据字幕哈希立即跳过，不重复调用 AI 或发送通知。
 
-推荐用 Pipedream 每小时调用一次现有 `workflow_dispatch`，避开 GitHub `schedule`
-事件本身的延迟，同时保留少量 GitHub 原生排程作为备用。整个方案不需要网站或
-服务器；完整设置见 [`docs/pipedream-deployment.md`](docs/pipedream-deployment.md)。
+推荐用 Pipedream 在北京时间 `09:30–12:00` 每半小时调用一次现有
+`workflow_dispatch`，避开 GitHub `schedule` 事件本身的延迟，同时保留少量 GitHub
+原生排程作为备用。整个方案不需要网站或服务器；完整设置见
+[`docs/pipedream-deployment.md`](docs/pipedream-deployment.md)。
 
 ## GitHub 设置
 
