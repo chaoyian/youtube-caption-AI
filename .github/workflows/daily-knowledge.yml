@@ -1,4 +1,5 @@
 name: Daily finance knowledge
+run-name: Daily finance knowledge (${{ inputs.trigger_source || github.event_name }})
 
 on:
   schedule:
@@ -35,6 +36,11 @@ on:
         required: false
         default: false
         type: boolean
+      trigger_source:
+        description: "触发来源标记；外部排程器填写 pipedream"
+        required: false
+        default: manual
+        type: string
 
 permissions:
   contents: write
@@ -72,6 +78,11 @@ jobs:
       REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
 
     steps:
+      - name: Record trigger
+        env:
+          TRIGGER_SOURCE: ${{ inputs.trigger_source || github.event_name }}
+        run: echo "Trigger source：${TRIGGER_SOURCE}" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
