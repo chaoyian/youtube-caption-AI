@@ -1,5 +1,6 @@
 # 实体：Meta
 
+- 2026-08-27 [2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md)
 - 2026-08-21 [2026/8/21(五)巨頭搶錢 誰來接美債?AI是革命or下一場債務危機?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-21-ajjRvohk-Og.md)
 - 2026-08-18 [2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md)
 - 2026-08-13 [2026/8/14(五)AI股不再雞犬升天 債市開始算帳!AI帳單 誰會來買單?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-14-oLPxNHRAPEI.md)
