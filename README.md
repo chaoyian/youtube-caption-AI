@@ -40,6 +40,35 @@ Secrets：
 
 Variables：
 
+- `YOUTUBE_CHANNELS_JSON`：可选。用 JSON 配置全部频道，方便直接在 GitHub 仓库的
+  Actions Variables 中增删频道；填写后会覆盖 `config/channels.yaml`，留空则使用仓库
+  内配置。推荐填写为频道数组，例如：
+
+  ```json
+  [
+    {
+      "id": "yutinghao-finance",
+      "url": "https://www.youtube.com/@yutinghaofinance",
+      "youtube_channel_id": "UC0lbAQVpenvfA2QqzsRtL_g",
+      "enabled": true,
+      "languages": ["zh-TW", "zh-Hant", "zh", "en"],
+      "backfill_days": 7,
+      "tags": ["财经", "台湾", "美股", "宏观"]
+    },
+    {
+      "id": "wtfinance-podcast",
+      "url": "https://www.youtube.com/@WTFinancepodcast",
+      "youtube_channel_id": "UCPI-DJWmId3Y-Dd1yI8LDnw",
+      "enabled": true,
+      "languages": ["en"],
+      "backfill_days": 7,
+      "tags": ["财经", "投资", "宏观", "英文"]
+    }
+  ]
+  ```
+- GitHub 设置路径为 **Settings → Secrets and variables → Actions → Variables**。
+  修改变量会在下一次任务运行时生效，无需提交代码。变量内容必须保留所有需要采集的
+  频道，因为它代表完整频道列表，而不是增量追加。
 - `APIFY_TRANSCRIPT_ACTOR`：可选，默认
   `apihq~youtube-transcript-scraper`。只有明确更换 Apify Actor 时才填写。
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
@@ -97,7 +126,8 @@ API Key、Apify Token 和其他凭据只存放在 GitHub Secret 中，错误写�
 
 ## 新增频道
 
-编辑 [`config/channels.yaml`](config/channels.yaml)：
+推荐在 GitHub 的 `YOUTUBE_CHANNELS_JSON` Variable 中直接修改完整频道列表。未设置该
+变量时，编辑 [`config/channels.yaml`](config/channels.yaml)：
 
 ```yaml
 channels:

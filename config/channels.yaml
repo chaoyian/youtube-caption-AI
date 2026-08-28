@@ -6,3 +6,10 @@ channels:
     languages: [zh-TW, zh-Hant, zh, en]
     backfill_days: 7
     tags: [财经, 台湾, 美股, 宏观]
+  - id: wtfinance-podcast
+    url: https://www.youtube.com/@WTFinancepodcast
+    youtube_channel_id: UCPI-DJWmId3Y-Dd1yI8LDnw
+    enabled: true
+    languages: [en]
+    backfill_days: 7
+    tags: [财经, 投资, 宏观, 英文]
