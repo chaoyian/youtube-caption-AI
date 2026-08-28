@@ -7,9 +7,77 @@
       "analyzed_at": "2026-08-28T07:09:25+00:00",
       "analyzed_hash": "6192a250a9ade1d82b4e18e1f64f3ff9442ab0260f93d2e11e7b29342d062c57",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:13:11+00:00",
+      "email_status": "sent",
       "entities": [
         "中东",
         "中国",
@@ -389,9 +457,77 @@
       "analyzed_at": "2026-08-28T07:02:45+00:00",
       "analyzed_hash": "d77f31294ec1ef91465b31a587f60054b0a9513e69b5c4d5794366deed4e93cc",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:25+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:13:25+00:00",
+      "email_status": "sent",
       "entities": [
         "东京",
         "利率",
@@ -777,9 +913,77 @@
       "analyzed_at": "2026-08-28T07:05:21+00:00",
       "analyzed_hash": "55efada9405a6d1c24b5c7bfdb030e0b007afe85b48f4cf33a5f799e7e32dd47",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:38+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:13:38+00:00",
+      "email_status": "sent",
       "entities": [
         "VanEck",
         "中国",
@@ -836,9 +1040,77 @@
       "analyzed_at": "2026-08-28T07:10:05+00:00",
       "analyzed_hash": "2dfb506bbb9f84deedbed9666c953c919cbc494d2cc92810501c4f67254dc6e8",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:13:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:13:50+00:00",
+      "email_status": "sent",
       "entities": [
         "Bank of England",
         "CBDC",
@@ -901,9 +1173,77 @@
       "analyzed_at": "2026-08-28T07:07:27+00:00",
       "analyzed_hash": "16aa02a85288bfdf3eab0266e92c188e5bba9694f99573038e512b38faddb9c0",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:04+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:14:04+00:00",
+      "email_status": "sent",
       "entities": [
         "CBDC",
         "世界经济论坛",
@@ -1787,9 +2127,77 @@
       "analyzed_at": "2026-08-28T07:10:51+00:00",
       "analyzed_hash": "ce8a4659b71c74cefeb7ec762a1863fee23d52c1b25707b0a26e63a6a1245601",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:14:17+00:00",
+      "email_status": "sent",
       "entities": [
         "Bretton Woods system",
         "China",
@@ -1853,9 +2261,77 @@
       "analyzed_at": "2026-08-28T07:04:34+00:00",
       "analyzed_hash": "3a02214ca3c6cf42d4c3deaf7b968a4de93687fb311566ba06e33d419a0ae04e",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:29+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:14:29+00:00",
+      "email_status": "sent",
       "entities": [
         "美元",
         "美国",
@@ -1943,9 +2419,77 @@
       "analyzed_at": "2026-08-28T07:12:08+00:00",
       "analyzed_hash": "0f8ccaed9ede45bfde828b22e9eaa8f7df92efa76a18536f10590fbb459a3481",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T07:14:42+00:00",
+      "email_status": "sent",
       "entities": [
         "供应链",
         "去中心化技术",
@@ -2108,9 +2652,77 @@
       "analyzed_at": "2026-08-28T07:06:08+00:00",
       "analyzed_hash": "2c2508267c8d03552e8ab7526adcae5077a5d152a44e02b48b281d0fab0cc5da",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:50+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_error": "One or more recipients could not be reached",
+      "email_status": "partial",
       "entities": [
         "Bank of England",
         "CBDC",
@@ -2547,9 +3159,77 @@
       "analyzed_at": "2026-08-28T07:03:26+00:00",
       "analyzed_hash": "8a984de7acf9f3a221337d4b8be0834cf80479ab0b79fd4e975b1aca0046d29d",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "provider": "resend",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:53+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        }
+      },
+      "email_error": "One or more recipients could not be reached",
+      "email_status": "partial",
       "entities": [
         "Jared Bernstein",
         "唐纳德·特朗普",
@@ -2606,9 +3286,77 @@
       "analyzed_at": "2026-08-28T07:12:55+00:00",
       "analyzed_hash": "fbfb03e831471966b1f787466e26f51ba5347653acbfb6fc037b134982378ad9",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "provider": "resend",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:57+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        }
+      },
+      "email_error": "One or more recipients could not be reached",
+      "email_status": "partial",
       "entities": [
         "AI基础设施",
         "本地农户",
@@ -2758,9 +3506,77 @@
       "analyzed_at": "2026-08-28T07:11:28+00:00",
       "analyzed_hash": "22e87ef9548337c27c7024fac9ccd6941402ceb3d6919bc1152c35c3c87f3185",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "provider": "resend",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:14:59+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        }
+      },
+      "email_error": "One or more recipients could not be reached",
+      "email_status": "partial",
       "entities": [
         "AI",
         "Anthropic",
@@ -3067,9 +3883,77 @@
       "analyzed_at": "2026-08-28T07:06:42+00:00",
       "analyzed_hash": "853c8d91134070a79efb98cdedc4938627800d0cd4d5c82dc326d7deebf52ed8",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "provider": "resend",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:15:02+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        }
+      },
+      "email_error": "One or more recipients could not be reached",
+      "email_status": "partial",
       "entities": [
         "代币",
         "去中心化技术"
@@ -3887,9 +4771,77 @@
       "analyzed_at": "2026-08-28T07:08:42+00:00",
       "analyzed_hash": "b50aa95f8ada7c4005deffda9aec2f7f32dcdfb8b6f4fe8742b47a82ddf39a64",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "provider": "resend",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T07:15:06+00:00",
+          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
+          "status": "failed",
+          "version": 1
+        }
+      },
+      "email_error": "One or more recipients could not be reached",
+      "email_status": "partial",
       "entities": [
         "AI infrastructure",
         "Austerity",
