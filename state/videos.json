@@ -2401,9 +2401,77 @@
       "analyzed_at": "2026-08-28T11:37:26+00:00",
       "analyzed_hash": "782c51141204668fb6d0e3b82ac7914e14a2181b2332913bfb1075454aea9f0f",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T11:38:12+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T11:38:12+00:00",
+      "email_status": "sent",
       "entities": [
         "COMEX",
         "Gold",
@@ -2700,9 +2768,9 @@
           "version": 1
         },
         "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T07:14:50+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:18+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1832033599@qq.com": {
@@ -2712,27 +2780,27 @@
           "version": 1
         },
         "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T07:14:50+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:18+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T07:14:50+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:18+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T07:14:50+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:18+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "787663687@qq.com": {
-          "attempted_at": "2026-08-28T07:14:50+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:18+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "892199508@qq.com": {
@@ -2742,9 +2810,9 @@
           "version": 1
         },
         "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T07:14:50+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:18+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "jiayi9922333@gmail.com": {
@@ -2760,8 +2828,8 @@
           "version": 1
         }
       },
-      "email_error": "One or more recipients could not be reached",
-      "email_status": "partial",
+      "email_sent_at": "2026-08-28T11:38:18+00:00",
+      "email_status": "sent",
       "entities": [
         "Bank of England",
         "CBDC",
@@ -3201,57 +3269,57 @@
       "discord_status": "disabled",
       "email_deliveries": {
         "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "787663687@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "892199508@qq.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "jiayi9922333@gmail.com": {
@@ -3261,14 +3329,14 @@
           "version": 1
         },
         "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T07:14:53+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:31+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         }
       },
-      "email_error": "One or more recipients could not be reached",
-      "email_status": "partial",
+      "email_sent_at": "2026-08-28T11:38:31+00:00",
+      "email_status": "sent",
       "entities": [
         "Jared Bernstein",
         "唐纳德·特朗普",
@@ -3328,57 +3396,57 @@
       "discord_status": "disabled",
       "email_deliveries": {
         "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "787663687@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "892199508@qq.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "jiayi9922333@gmail.com": {
@@ -3388,14 +3456,14 @@
           "version": 1
         },
         "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T07:14:57+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:42+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         }
       },
-      "email_error": "One or more recipients could not be reached",
-      "email_status": "partial",
+      "email_sent_at": "2026-08-28T11:38:42+00:00",
+      "email_status": "sent",
       "entities": [
         "AI基础设施",
         "本地农户",
@@ -3548,57 +3616,57 @@
       "discord_status": "disabled",
       "email_deliveries": {
         "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "787663687@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "892199508@qq.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "jiayi9922333@gmail.com": {
@@ -3608,14 +3676,14 @@
           "version": 1
         },
         "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T07:14:59+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:38:54+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         }
       },
-      "email_error": "One or more recipients could not be reached",
-      "email_status": "partial",
+      "email_sent_at": "2026-08-28T11:38:54+00:00",
+      "email_status": "sent",
       "entities": [
         "AI",
         "Anthropic",
@@ -3810,9 +3878,77 @@
       "analyzed_at": "2026-08-28T11:37:56+00:00",
       "analyzed_hash": "a4285008c45a456bfca1b02cb16067afd16c9a809622b361c76c993e47d50ff2",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-28T11:39:07+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-28T11:39:07+00:00",
+      "email_status": "sent",
       "entities": [
         "Central Bank Digital Currencies",
         "Central Banks",
@@ -3965,57 +4101,57 @@
       "discord_status": "disabled",
       "email_deliveries": {
         "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "787663687@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "892199508@qq.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "jiayi9922333@gmail.com": {
@@ -4025,14 +4161,14 @@
           "version": 1
         },
         "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T07:15:02+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:17+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         }
       },
-      "email_error": "One or more recipients could not be reached",
-      "email_status": "partial",
+      "email_sent_at": "2026-08-28T11:39:17+00:00",
+      "email_status": "sent",
       "entities": [
         "代币",
         "去中心化技术"
@@ -4853,57 +4989,57 @@
       "discord_status": "disabled",
       "email_deliveries": {
         "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "787663687@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "892199508@qq.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         },
         "jiayi9922333@gmail.com": {
@@ -4913,14 +5049,14 @@
           "version": 1
         },
         "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T07:15:06+00:00",
-          "error": "gmail: SMTPServerDisconnected: Connection unexpectedly closed | resend: RuntimeError: Notification request failed with HTTP 403: {\"statusCode\":403,\"name\":\"validation_error\",\"message\":\"You can only send testing emails to your own email address (jiayi9922333@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain.\"}",
-          "status": "failed",
+          "attempted_at": "2026-08-28T11:39:28+00:00",
+          "provider": "gmail",
+          "status": "sent",
           "version": 1
         }
       },
-      "email_error": "One or more recipients could not be reached",
-      "email_status": "partial",
+      "email_sent_at": "2026-08-28T11:39:28+00:00",
+      "email_status": "sent",
       "entities": [
         "AI infrastructure",
         "Austerity",
