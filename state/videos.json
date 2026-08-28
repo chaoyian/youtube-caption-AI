@@ -1207,7 +1207,7 @@
       "fetched_hash": "4099910b6bb7f1272ff8ef1815ff295c8f7d4d59843fa52a66c7e5eebf191a4e",
       "last_attempt_at": "2026-08-05T03:48:37+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-20T23:51:43+00:00",
+      "last_fetched_at": "2026-08-28T01:30:38+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-05-NspN81zjSzw.md",
       "note_version": 1,
@@ -2157,6 +2157,24 @@
       "transcript_source": "apify",
       "video_id": "oLPxNHRAPEI",
       "video_url": "https://www.youtube.com/watch?v=oLPxNHRAPEI",
+      "waiting_count": 1
+    },
+    "rTnPsm_gAhA": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-08-28T01:30:45+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] rTnPsm_gAhA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=rTnPsm_gAhA! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-08-28T02:30:45+00:00",
+      "note_version": 0,
+      "published_at": "2026-08-28T01:18:23+00:00",
+      "title": "2026/8/28(五)輝達救美股 華許救美債?台灣景氣連八紅 台灣人終於有感?【早晨財經速解讀】",
+      "video_id": "rTnPsm_gAhA",
+      "video_url": "https://www.youtube.com/watch?v=rTnPsm_gAhA",
       "waiting_count": 1
     },
     "sMSDQyQANIM": {
