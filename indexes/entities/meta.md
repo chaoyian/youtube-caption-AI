@@ -1,5 +1,6 @@
 # 实体：Meta
 
+- 2026-08-28 [2026/8/28(五)輝達救美股 華許救美債?台灣景氣連八紅 台灣人終於有感?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-28-rTnPsm_gAhA.md)
 - 2026-08-27 [2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md)
 - 2026-08-21 [2026/8/21(五)巨頭搶錢 誰來接美債?AI是革命or下一場債務危機?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-21-ajjRvohk-Og.md)
 - 2026-08-18 [2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md)
