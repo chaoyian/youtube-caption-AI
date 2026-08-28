@@ -64,6 +64,63 @@ def test_unchanged_transcript_never_calls_ai(
     assert analyzer.calls == 1
 
 
+def test_latest_per_channel_limits_each_channel(
+    tmp_path, monkeypatch, sample_segments, sample_note
+):
+    config, state = _workspace(tmp_path)
+    config.write_text(
+        """
+channels:
+  - id: first-channel
+    url: https://www.youtube.com/@first
+  - id: second-channel
+    url: https://www.youtube.com/@second
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    base_time = datetime.now(UTC) - timedelta(days=3)
+
+    def videos_for(channel, *args, **kwargs):
+        return [
+            pipeline.Video(
+                id=f"{channel.id}-{index}",
+                channel_id=channel.id,
+                title=f"{channel.id} video {index}",
+                published_at=base_time + timedelta(days=index),
+                url=f"https://www.youtube.com/watch?v={channel.id}-{index}",
+            )
+            for index in range(3)
+        ]
+
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", videos_for)
+    monkeypatch.setattr(
+        pipeline,
+        "fetch_transcript",
+        lambda *args: TranscriptResult("en", False, "fake", sample_segments),
+    )
+    analyzer = FakeAnalyzer(sample_note)
+
+    result = pipeline.process(
+        tmp_path,
+        config_path=config,
+        state_path=state,
+        latest_per_channel=2,
+        analyzer=analyzer,
+    )
+
+    records = json.loads(state.read_text(encoding="utf-8"))["videos"]
+    assert result.discovered == 4
+    assert result.analyzed == 4
+    assert analyzer.calls == 4
+    assert set(records) == {
+        "first-channel-1",
+        "first-channel-2",
+        "second-channel-1",
+        "second-channel-2",
+    }
+
+
 def test_rediscovery_does_not_replace_original_publish_time(
     tmp_path, monkeypatch, sample_video, sample_segments, sample_note
 ):

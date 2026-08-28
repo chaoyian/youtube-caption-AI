@@ -31,6 +31,11 @@ on:
         required: false
         default: false
         type: boolean
+      test_channels:
+        description: "频道验收：每个启用频道取最新 2 条，重新抓字幕、分析并发送"
+        required: false
+        default: false
+        type: boolean
       test_email:
         description: "仅发送最新一篇笔记作为测试，不抓字幕、不调用 AI"
         required: false
@@ -115,17 +120,22 @@ jobs:
           INPUT_BACKFILL_DAYS: ${{ inputs.backfill_days }}
           INPUT_PREVIEW: ${{ inputs.preview }}
           INPUT_FORCE: ${{ inputs.force }}
+          INPUT_TEST_CHANNELS: ${{ inputs.test_channels }}
         run: |
           args=(process --fail-on-errors)
           if [[ -n "$INPUT_CHANNEL" ]]; then args+=(--channel "$INPUT_CHANNEL"); fi
-          if [[ -n "$INPUT_VIDEO" ]]; then args+=(--video "$INPUT_VIDEO"); fi
-          if [[ -n "$INPUT_BACKFILL_DAYS" ]]; then args+=(--backfill-days "$INPUT_BACKFILL_DAYS"); fi
-          if [[ "$INPUT_PREVIEW" == "true" ]]; then args+=(--preview); fi
-          if [[ "$INPUT_FORCE" == "true" ]]; then args+=(--force); fi
+          if [[ "$INPUT_TEST_CHANNELS" == "true" ]]; then
+            args+=(--latest-per-channel 2 --backfill-days 3650 --force)
+          else
+            if [[ -n "$INPUT_VIDEO" ]]; then args+=(--video "$INPUT_VIDEO"); fi
+            if [[ -n "$INPUT_BACKFILL_DAYS" ]]; then args+=(--backfill-days "$INPUT_BACKFILL_DAYS"); fi
+            if [[ "$INPUT_PREVIEW" == "true" ]]; then args+=(--preview); fi
+            if [[ "$INPUT_FORCE" == "true" ]]; then args+=(--force); fi
+          fi
           python -m yt_finance_kb "${args[@]}"
 
       - name: Upload preview
-        if: ${{ inputs.test_email != true && inputs.preview == true }}
+        if: ${{ inputs.test_email != true && inputs.preview == true && inputs.test_channels != true }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: finance-knowledge-preview
@@ -133,7 +143,7 @@ jobs:
           if-no-files-found: error
 
       - name: Commit knowledge
-        if: ${{ inputs.test_email != true && inputs.preview != true }}
+        if: ${{ inputs.test_email != true && (inputs.preview != true || inputs.test_channels == true) }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -146,11 +156,11 @@ jobs:
           fi
 
       - name: Send pending notifications
-        if: ${{ inputs.test_email != true && inputs.preview != true }}
+        if: ${{ inputs.test_email != true && (inputs.preview != true || inputs.test_channels == true) }}
         run: python -m yt_finance_kb notify --repository-url "$REPOSITORY_URL"
 
       - name: Commit delivery state
-        if: ${{ inputs.test_email != true && inputs.preview != true }}
+        if: ${{ inputs.test_email != true && (inputs.preview != true || inputs.test_channels == true) }}
         run: |
           git add state/videos.json
           if git diff --cached --quiet; then

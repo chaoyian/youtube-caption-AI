@@ -22,6 +22,11 @@ def _parser() -> argparse.ArgumentParser:
     run.add_argument("--channel")
     run.add_argument("--video")
     run.add_argument("--backfill-days", type=int)
+    run.add_argument(
+        "--latest-per-channel",
+        type=int,
+        help="每个选中频道只处理最新的 N 条视频",
+    )
     run.add_argument("--preview", action="store_true")
     run.add_argument("--force", action="store_true")
     run.add_argument(
@@ -56,6 +61,7 @@ def main() -> None:
             channel_filter=args.channel or None,
             video_url=args.video or None,
             backfill_days=args.backfill_days,
+            latest_per_channel=args.latest_per_channel,
             preview=args.preview,
             force=args.force,
         )

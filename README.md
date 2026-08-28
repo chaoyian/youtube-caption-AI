@@ -167,6 +167,19 @@ POE_API_KEY="新建的Key" python -m yt_finance_kb process \
 
 `--force` 会无视字幕哈希重新调用 AI，只应在明确需要重做笔记时使用。`rebuild-indexes` 和 `notify` 命令不会调用 AI。
 
+### 新频道验收测试
+
+在 **Actions → Daily finance knowledge → Run workflow** 中勾选 `test_channels`，即可对
+每个启用频道各取最新 2 条视频，强制重新抓取字幕、生成笔记并发送邮件和 Discord。
+若只想测试一个新频道，同时填写它的 `channel` 配置 ID。验收模式会忽略 `video`、
+`backfill_days`、`preview` 和 `force` 输入，并自动回溯查找最新视频。
+
+本地也可以只验证抓取范围：
+
+```bash
+python -m yt_finance_kb process --latest-per-channel 2 --backfill-days 3650 --force
+```
+
 ## AI 点数与笔记质量
 
 - 正常一期只调用一次 GPT‑5.4；程序不会为了“省钱”固定增加一次小模型调用。

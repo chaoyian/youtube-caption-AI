@@ -168,6 +168,7 @@ def process(
     channel_filter: str | None = None,
     video_url: str | None = None,
     backfill_days: int | None = None,
+    latest_per_channel: int | None = None,
     preview: bool = False,
     force: bool = False,
     analyzer: Any | None = None,
@@ -185,6 +186,10 @@ def process(
         raise ValueError(f"No enabled channel matched {channel_filter!r}")
     if video_url and len(channels) != 1:
         raise ValueError("--video requires exactly one selected channel (use --channel)")
+    if video_url and latest_per_channel is not None:
+        raise ValueError("--video cannot be combined with --latest-per-channel")
+    if latest_per_channel is not None and latest_per_channel < 1:
+        raise ValueError("--latest-per-channel must be at least 1")
 
     candidates: list[tuple[ChannelConfig, Video]] = []
     for channel in channels:
@@ -194,10 +199,14 @@ def process(
         known_ids = {
             video_id for video_id, record in records.items() if record.get("channel_id") == channel.id
         }
-        candidates.extend(
-            (channel, video)
-            for video in fetch_channel_videos(channel, backfill_days, include_ids=known_ids)
+        channel_videos = fetch_channel_videos(
+            channel, backfill_days, include_ids=known_ids
         )
+        if latest_per_channel is not None:
+            channel_videos = sorted(
+                channel_videos, key=lambda candidate: candidate.published_at
+            )[-latest_per_channel:]
+        candidates.extend((channel, video) for video in channel_videos)
     result.discovered = len(candidates)
 
     for channel, video in candidates:
