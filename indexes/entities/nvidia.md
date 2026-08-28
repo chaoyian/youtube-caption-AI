@@ -1,3 +1,6 @@
-# 实体：Nvidia
+# 实体：NVIDIA
 
-- 2026-08-26 [The AI Crash is Coming (And It’s Worse than 2008) | Edward Dowd](../../knowledge/wtfinance-podcast/2026/2026-08-26-5KYh-RMH2R8.md)
+- 2026-08-19 [2026/8/19(三)債市風暴 撿便宜時刻?美中爭霸燒錢戰 Al時代只能二選一？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md)
+- 2026-08-11 [2026/8/12(三)GPU金融化狂潮 2008正在重演？兆元商機還是下一場危機？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-12-ApykW90PQ58.md)
+- 2026-07-27 [2026/7/27(一)財報黃金週 黃仁勳談AI:這次不一樣!本益比創低 該買巨頭嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-07-27-sMSDQyQANIM.md)
+- 2026-07-23 [2026/7/23(四)谷歌財報 優預期仍遭賣 AI大燒錢 錢快花光了!巨頭還能撐多久?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-07-23-HXHxiiYjKFY.md)
