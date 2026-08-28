@@ -1,6 +1,71 @@
 {
   "schema_version": 1,
   "videos": {
+    "5KYh-RMH2R8": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-28T06:42:46+00:00",
+      "analyzed_hash": "885515f2aec0f0809e54faba392c13c402f55252e38e74e704bb1a7e8f013e62",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "entities": [
+        "AI基础设施",
+        "Apollo",
+        "Nvidia",
+        "OpenAI",
+        "S&P 500",
+        "SK Hynix",
+        "Samsung Electronics",
+        "Walmart",
+        "中国",
+        "半导体行业",
+        "私人信贷",
+        "美国",
+        "美国住房市场",
+        "长期国债"
+      ],
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "885515f2aec0f0809e54faba392c13c402f55252e38e74e704bb1a7e8f013e62",
+      "last_error": null,
+      "last_fetched_at": "2026-08-28T06:42:01+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-08-26-5KYh-RMH2R8.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5389,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3708
+        },
+        "points": 3708,
+        "prompt_tokens": 17078
+      },
+      "published_at": "2026-08-26T16:00:40+00:00",
+      "title": "The AI Crash is Coming (And It’s Worse than 2008) | Edward Dowd",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "AI",
+        "信用周期",
+        "基础设施",
+        "半导体",
+        "库存周期",
+        "资本开支",
+        "美国经济",
+        "消费"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "5KYh-RMH2R8",
+      "video_url": "https://www.youtube.com/watch?v=5KYh-RMH2R8"
+    },
     "5_poweJsVBA": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -1934,114 +1999,47 @@
     "lDeHFopOfIs": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-08-27T04:39:26+00:00",
+      "analyzed_at": "2026-08-28T06:41:07+00:00",
       "analyzed_hash": "61d8111439fd2ca8c77208131f9fe4a4d56d9c1a7c1b12b46a5551d5bfe71715",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-27T04:39:43+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-08-27T04:39:43+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "entities": [
-        "Alphabet",
-        "Anthropic",
-        "HBM",
+        "Apollo",
+        "BlackRock",
+        "Google",
+        "KKR",
         "Marvell",
         "Meta",
-        "OpenAI",
-        "亞馬遜",
+        "亚马逊",
         "博通",
-        "台積電",
-        "微軟",
+        "台积电",
+        "微软",
         "甲骨文",
-        "紐約州",
         "美光",
-        "超微",
-        "輝達"
+        "英伟达",
+        "英特尔",
+        "超微"
       ],
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "61d8111439fd2ca8c77208131f9fe4a4d56d9c1a7c1b12b46a5551d5bfe71715",
       "last_error": null,
-      "last_fetched_at": "2026-08-27T04:38:42+00:00",
+      "last_fetched_at": "2026-08-28T06:40:20+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5191,
+        "completion_tokens": 5297,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3847
+          "GPT-5.4": 3995
         },
-        "points": 3847,
-        "prompt_tokens": 20128
+        "points": 3995,
+        "prompt_tokens": 21459
       },
       "published_at": "2026-08-27T01:13:40+00:00",
       "title": "2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】",
@@ -2050,14 +2048,14 @@
         "台湾",
         "美股",
         "宏观",
-        "輝達",
-        "估值",
+        "财报",
+        "AI基建",
+        "市场预期",
+        "数据中心",
         "AI",
-        "資料中心",
-        "客戶結構",
-        "指引",
-        "中國",
-        "毛利率"
+        "营收结构",
+        "客户结构",
+        "AI需求"
       ],
       "transcript_generated": false,
       "transcript_language": "zh-TW",
@@ -2162,89 +2160,25 @@
     "rTnPsm_gAhA": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-08-28T02:44:12+00:00",
+      "analyzed_at": "2026-08-28T06:41:54+00:00",
       "analyzed_hash": "2c132c6b05f180e32857cd7b41bf12da4913e550698286a1817535ea438988a3",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T02:44:31+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-08-28T02:44:31+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "entities": [
         "Google",
         "Jackson Hole",
         "Meta",
-        "台湾中央银行",
+        "PCE",
+        "台湾央行",
         "台积电",
         "台股",
         "微软",
-        "无人机产业",
+        "无人机条例",
+        "标普服务业PMI",
+        "核心PCE",
         "美债",
         "联准会",
         "辉达",
@@ -2255,19 +2189,19 @@
       "fetched_hash": "2c132c6b05f180e32857cd7b41bf12da4913e550698286a1817535ea438988a3",
       "last_attempt_at": "2026-08-28T01:30:45+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-28T02:43:31+00:00",
+      "last_fetched_at": "2026-08-28T06:41:13+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-28-rTnPsm_gAhA.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5153,
+        "completion_tokens": 5223,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4144
+          "GPT-5.4": 4157
         },
-        "points": 4144,
-        "prompt_tokens": 24305
+        "points": 4157,
+        "prompt_tokens": 24062
       },
       "published_at": "2026-08-28T01:18:23+00:00",
       "title": "2026/8/28(五)輝達救美股 華許救美債?台灣景氣連八紅 台灣人終於有感?【早晨財經速解讀】",
@@ -2278,12 +2212,12 @@
         "宏观",
         "AI",
         "财报",
-        "企业投资",
-        "云端",
         "通胀",
         "联准会",
-        "服务业",
-        "消费"
+        "美债",
+        "GDP",
+        "消费",
+        "AI投资"
       ],
       "transcript_generated": false,
       "transcript_language": "zh-TW",
@@ -2572,6 +2506,68 @@
       "video_id": "tLvKGHyxhd8",
       "video_url": "https://www.youtube.com/watch?v=tLvKGHyxhd8",
       "waiting_count": 1
+    },
+    "tjxO59iCSDw": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-28T06:43:22+00:00",
+      "analyzed_hash": "951afbfc89481b5ba1d60fe3decae31658236691a1d833829273e8033bc11359",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "entities": [
+        "中国人民银行",
+        "国际清算银行",
+        "日本银行",
+        "欧元",
+        "欧洲",
+        "欧洲中央银行",
+        "美国",
+        "美国联邦储备系统",
+        "股票市场",
+        "英国",
+        "荷兰"
+      ],
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "951afbfc89481b5ba1d60fe3decae31658236691a1d833829273e8033bc11359",
+      "last_error": null,
+      "last_fetched_at": "2026-08-28T06:42:51+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-08-26-tjxO59iCSDw.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3716,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2094
+        },
+        "points": 2094,
+        "prompt_tokens": 5606
+      },
+      "published_at": "2026-08-26T17:55:52+00:00",
+      "title": "BIS Central Banker's Game: Asset Stripping Europe Explained",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "央行",
+        "政策协调",
+        "BIS",
+        "中国",
+        "财富分配",
+        "政府债务",
+        "股票市场",
+        "财政"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "tjxO59iCSDw",
+      "video_url": "https://www.youtube.com/watch?v=tjxO59iCSDw"
     },
     "v-tPoKBJBoA": {
       "alert_status": "disabled",

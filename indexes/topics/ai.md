@@ -2,6 +2,7 @@
 
 - 2026-08-28 [2026/8/28(五)輝達救美股 華許救美債?台灣景氣連八紅 台灣人終於有感?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-28-rTnPsm_gAhA.md)
 - 2026-08-27 [2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md)
+- 2026-08-26 [The AI Crash is Coming (And It’s Worse than 2008) | Edward Dowd](../../knowledge/wtfinance-podcast/2026/2026-08-26-5KYh-RMH2R8.md)
 - 2026-08-25 [2026/8/25(二)輝達連七黑 領頭羊動搖 ?經濟諾曼第行動 通膨撐得住?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-25-tLvKGHyxhd8.md)
 - 2026-08-20 [2026/8/20(四)貝森特護盤!美債有救了?巨頭燒錢換市佔 利息拖垮經濟?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-20-LUGWERSl01s.md)
 - 2026-08-19 [2026/8/19(三)債市風暴 撿便宜時刻?美中爭霸燒錢戰 Al時代只能二選一？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md)
