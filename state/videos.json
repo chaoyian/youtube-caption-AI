@@ -1,6 +1,67 @@
 {
   "schema_version": 1,
   "videos": {
+    "20fQIC6PwQI": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-29T01:31:20+00:00",
+      "analyzed_hash": "e5a7f14c2acf52c286f0a1d78b568ad85222495f14245749b8c6b41d44c80339",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "entities": [
+        "Canada",
+        "China",
+        "Iran",
+        "Russia",
+        "Scott Bessent",
+        "Strait of Hormuz",
+        "US Dollar System",
+        "United States Treasuries",
+        "Vaca Muerta",
+        "Xi Jinping"
+      ],
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "e5a7f14c2acf52c286f0a1d78b568ad85222495f14245749b8c6b41d44c80339",
+      "last_error": null,
+      "last_fetched_at": "2026-08-29T01:30:41+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-08-28-20fQIC6PwQI.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4936,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3363
+        },
+        "points": 3363,
+        "prompt_tokens": 15194
+      },
+      "published_at": "2026-08-28T20:00:24+00:00",
+      "title": "Sleepwalking through the current crisis with Doomberg",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美国政治",
+        "资本开支",
+        "能源",
+        "伊朗",
+        "外交",
+        "政策风险",
+        "美债",
+        "美元"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "20fQIC6PwQI",
+      "video_url": "https://www.youtube.com/watch?v=20fQIC6PwQI"
+    },
     "56m37NuxQsg": {
       "alert_status": "none",
       "analysis_status": "complete",

@@ -1,3 +1,4 @@
 # 实体：Iran
 
+- 2026-08-28 [Sleepwalking through the current crisis with Doomberg](../../knowledge/wtfinance-podcast/2026/2026-08-28-20fQIC6PwQI.md)
 - 2026-08-25 [Post-Dollar World: Saudi, Iran, China Form New Pacts](../../knowledge/wtfinance-podcast/2026/2026-08-25-QBbZgj-a_is.md)
