@@ -6,5 +6,6 @@ dist/
 build/
 *.egg-info/
 preview-output/
+.prompt-optimizer/
 .DS_Store
 AGENTS.md

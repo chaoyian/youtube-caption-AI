@@ -4,6 +4,8 @@ import json
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
+import pytest
+
 import yt_finance_kb.pipeline as pipeline
 from yt_finance_kb.transcripts import TranscriptPending, TranscriptResult
 
@@ -240,6 +242,108 @@ def test_prompt_input_keeps_finance_but_local_filter_removes_ad(
     pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
     assert "訂閱按讚" not in analyzer.last_transcript
     assert "金融市场和利率" in analyzer.last_transcript
+
+
+def test_preview_exports_raw_timestamped_transcript(
+    tmp_path, monkeypatch, sample_video, sample_note
+):
+    from yt_finance_kb.models import TranscriptSegment
+
+    config, state = _workspace(tmp_path)
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", lambda *args, **kwargs: [sample_video])
+    segments = [
+        TranscriptSegment(start=1.9, text="記得訂閱按讚"),
+        TranscriptSegment(start=5.2, text="今天分析金融市场和利率"),
+    ]
+    monkeypatch.setattr(
+        pipeline, "fetch_transcript", lambda *args: TranscriptResult("zh-TW", True, "fake", segments)
+    )
+
+    pipeline.process(
+        tmp_path,
+        config_path=config,
+        state_path=state,
+        preview=True,
+        analyzer=FakeAnalyzer(sample_note),
+    )
+
+    exported = (
+        tmp_path / "preview-output" / f"{sample_video.id}.raw-transcript.txt"
+    ).read_text(encoding="utf-8")
+    assert exported == "[1] 記得訂閱按讚\n[5] 今天分析金融市场和利率"
+    eval_case = json.loads(
+        (tmp_path / "preview-output" / f"{sample_video.id}.prompt-eval.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert eval_case["schema_version"] == 1
+    assert eval_case["video"]["id"] == sample_video.id
+    assert "訂閱按讚" not in eval_case["transcript"]
+    assert "金融市场和利率" in eval_case["transcript"]
+
+
+def test_non_preview_does_not_export_raw_transcript(
+    tmp_path, monkeypatch, sample_video, sample_segments, sample_note
+):
+    config, state = _workspace(tmp_path)
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", lambda *args, **kwargs: [sample_video])
+    monkeypatch.setattr(
+        pipeline,
+        "fetch_transcript",
+        lambda *args: TranscriptResult("zh-TW", True, "fake", sample_segments),
+    )
+
+    pipeline.process(
+        tmp_path,
+        config_path=config,
+        state_path=state,
+        analyzer=FakeAnalyzer(sample_note),
+    )
+
+    assert not (
+        tmp_path / "preview-output" / f"{sample_video.id}.raw-transcript.txt"
+    ).exists()
+    assert not (
+        tmp_path / "preview-output" / f"{sample_video.id}.prompt-eval.json"
+    ).exists()
+
+
+def test_prompt_eval_only_fetches_case_without_calling_analyzer(
+    tmp_path, monkeypatch, sample_video, sample_segments
+):
+    config, state = _workspace(tmp_path)
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", lambda *args, **kwargs: [sample_video])
+    monkeypatch.setattr(
+        pipeline,
+        "fetch_transcript",
+        lambda *args: TranscriptResult("zh-TW", True, "fake", sample_segments),
+    )
+    monkeypatch.delenv("POE_API_KEY", raising=False)
+
+    result = pipeline.process(
+        tmp_path,
+        config_path=config,
+        state_path=state,
+        preview=True,
+        prompt_eval_only=True,
+        force=True,
+    )
+
+    assert result.discovered == 1
+    assert result.analyzed == 0
+    assert (tmp_path / "preview-output" / f"{sample_video.id}.prompt-eval.json").exists()
+    assert not (tmp_path / "preview-output" / f"{sample_video.id}.md").exists()
+
+
+def test_prompt_eval_only_requires_preview(tmp_path):
+    config, state = _workspace(tmp_path)
+    with pytest.raises(ValueError, match="requires preview"):
+        pipeline.process(
+            tmp_path,
+            config_path=config,
+            state_path=state,
+            prompt_eval_only=True,
+        )
 
 
 def test_proxy_credentials_are_redacted_from_public_errors(monkeypatch):

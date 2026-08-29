@@ -1,8 +1,10 @@
 import json
 
+import pytest
+
 import yt_finance_kb.pipeline as pipeline
 import yt_finance_kb.notifications as notifications
-from yt_finance_kb.notifications import _without_front_matter
+from yt_finance_kb.notifications import _without_front_matter, normalize_email_recipients
 
 
 def test_email_body_excludes_yaml_front_matter():
@@ -24,6 +26,50 @@ topics:
     assert "title:" not in visible
     assert "video_id:" not in visible
     assert "## 金融摘要" in visible
+
+
+def test_explicit_email_recipients_are_validated_and_deduplicated():
+    assert normalize_email_recipients(
+        ["one@example.com,two@example.com", "ONE@example.com"]
+    ) == ["one@example.com", "two@example.com"]
+
+
+@pytest.mark.parametrize("value", ["not-an-email", "a@example.com\nBcc:x@example.com"])
+def test_invalid_explicit_email_recipient_is_rejected(value):
+    with pytest.raises(ValueError, match="Email|email"):
+        normalize_email_recipients([value])
+
+
+def test_test_email_uses_explicit_recipient_without_changing_email_to(tmp_path, monkeypatch):
+    note = tmp_path / "knowledge/channel/2026/note.md"
+    note.parent.mkdir(parents=True)
+    note.write_text("# 笔记", encoding="utf-8")
+    records = {
+        "abcdefghijk": {
+            "video_id": "abcdefghijk",
+            "title": "节目",
+            "video_url": "https://youtu.be/abcdefghijk",
+            "published_at": "2026-08-29T00:00:00+00:00",
+            "analysis_status": "complete",
+            "note_path": "knowledge/channel/2026/note.md",
+        }
+    }
+    monkeypatch.setenv("EMAIL_TO", "production@example.com")
+    captured = []
+
+    def fake_send(*args):
+        captured.append(args[-1])
+        return {"reviewer@example.com": {"status": "sent", "provider": "gmail"}}
+
+    monkeypatch.setattr(notifications, "send_email", fake_send)
+    notifications.test_email(
+        tmp_path,
+        records,
+        "https://github.com/example/repo",
+        recipients=["reviewer@example.com"],
+    )
+    assert captured == [["reviewer@example.com"]]
+    assert notifications.email_recipients() == ["production@example.com"]
 
 
 def test_notification_retry_does_not_analyze_and_recovers_after_config_added(tmp_path, monkeypatch):

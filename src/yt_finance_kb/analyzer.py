@@ -11,10 +11,9 @@ from openai import OpenAI
 from pydantic import ValidationError
 
 from .models import ChunkExtraction, ResearchNote, Video
+from .prompt_resources import load_quality_prompt
 
-SYSTEM_PROMPT = """你是一名严谨的金融研究助理。字幕可能包含黄段子、性暗示、冷笑话、闲聊、口头禅、广告、互动或与金融主题无关的娱乐内容。忽略这些内容，不要引用、解释、总结或将其制作成知识卡片。只保留与宏观经济、金融市场、公司、行业、投资逻辑、政策、数据、风险和资产价格有关的信息。幽默内容只有在其本身表达了实质金融观点时，才提取其中的金融含义，并改写为中性、专业语言。
-
-不要联网补充或假装核实事实。严格区分主持人陈述、模型归纳和模型推导。不得提供个性化投资建议。所有 timestamp 必须来自输入中的 [秒数]，不得编造。只输出 JSON，不要 Markdown。"""
+SYSTEM_PROMPT = load_quality_prompt()
 
 OUTPUT_INSTRUCTIONS = """输出紧凑、去重的研究笔记 JSON。对象必须包含：
 summary（100至180个中文字）；
@@ -136,6 +135,7 @@ class PoeAnalyzer:
         aux_input_points_per_1k: int | None = None,
         aux_output_points_per_1k: int | None = None,
         usage_recorder: Any | None = None,
+        quality_prompt: str | None = None,
     ) -> None:
         self.client = OpenAI(api_key=api_key, base_url="https://api.poe.com/v1", timeout=180)
         self.model = model
@@ -164,6 +164,9 @@ class PoeAnalyzer:
                 )
         self.budget = budget or PoePointBudget(DEFAULT_POINT_LIMIT_PER_VIDEO)
         self.usage_recorder = usage_recorder
+        self.quality_prompt = (quality_prompt or SYSTEM_PROMPT).strip()
+        if not self.quality_prompt:
+            raise ValueError("quality_prompt cannot be empty")
         self.usages: list[PoeUsage] = []
         self.encoding = tiktoken.get_encoding("o200k_base")
 
@@ -263,7 +266,7 @@ class PoeAnalyzer:
                 '"timestamp":秒数,"source_type":"主持人陈述"}]}。没有金融内容时 claims 为空。'
             )
             messages = [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": self.quality_prompt},
                 {"role": "user", "content": instruction + "\n\n" + chunk},
             ]
             extraction = None
@@ -272,7 +275,7 @@ class PoeAnalyzer:
             for attempt in range(3):
                 if attempt:
                     messages = [
-                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "system", "content": self.quality_prompt},
                         {
                             "role": "user",
                             "content": (
@@ -317,7 +320,7 @@ class PoeAnalyzer:
             f"{OUTPUT_INSTRUCTIONS}\n\n带秒数的字幕：\n{transcript}"
         )
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": self.quality_prompt},
             {"role": "user", "content": prompt},
         ]
         last_error: Exception | None = None
@@ -325,7 +328,7 @@ class PoeAnalyzer:
         for attempt in range(3):
             if attempt:
                 messages = [
-                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "system", "content": self.quality_prompt},
                     {
                         "role": "user",
                         "content": (

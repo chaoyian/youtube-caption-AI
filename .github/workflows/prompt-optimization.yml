@@ -1,0 +1,251 @@
+name: Prompt optimization
+run-name: Prompt optimization · ${{ inputs.mode }} · ${{ inputs.channel || 'saved session' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "start 抓字幕并运行首轮；continue 提交反馈；finalize 定稿"
+        required: true
+        default: start
+        type: choice
+        options: [start, continue, finalize]
+      channel:
+        description: "start 使用的频道配置 ID"
+        required: false
+        type: string
+      video:
+        description: "start 可指定单个 YouTube URL；留空取频道最新一期"
+        required: false
+        type: string
+      previous_run_id:
+        description: "continue/finalize 的上一轮 Prompt optimization Run ID"
+        required: false
+        type: string
+      decision:
+        description: "continue/finalize 的选择；machine 仅用于带文字反馈的 continue"
+        required: false
+        default: A
+        type: choice
+        options: [A, B, C, keep, machine]
+      feedback:
+        description: "给下一轮的修改意见；不选 A/B/C 时将从机器赢家继续"
+        required: false
+        type: string
+      edited_prompt:
+        description: "可选：continue 时用此完整质量提示词替换所选父版本"
+        required: false
+        type: string
+      email_to:
+        description: "start/continue 的候选预览收件地址"
+        required: false
+        type: string
+      max_rounds:
+        description: "会话最多轮数，1-5"
+        required: false
+        default: "5"
+        type: string
+      point_limit:
+        description: "整个优化会话的 Poe 点数上限"
+        required: false
+        default: "50000"
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: prompt-optimization
+  cancel-in-progress: false
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      POE_API_KEY: ${{ secrets.POE_API_KEY }}
+      POE_MODEL: ${{ vars.POE_MODEL || 'GPT-5.4' }}
+      POE_INPUT_POINTS_PER_1K: ${{ vars.POE_INPUT_POINTS_PER_1K }}
+      POE_OUTPUT_POINTS_PER_1K: ${{ vars.POE_OUTPUT_POINTS_PER_1K }}
+      APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      APIFY_TRANSCRIPT_ACTOR: ${{ vars.APIFY_TRANSCRIPT_ACTOR || 'apihq~youtube-transcript-scraper' }}
+      SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
+      YOUTUBE_PROXY_URL: ${{ secrets.YOUTUBE_PROXY_URL }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_CHANNELS_JSON: ${{ vars.YOUTUBE_CHANNELS_JSON }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      EMAIL_FROM: ${{ vars.EMAIL_FROM }}
+      GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_FROM: ${{ vars.GMAIL_FROM }}
+      EMAIL_PROVIDER: ${{ vars.EMAIL_PROVIDER || 'auto' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: python -m pip install .
+
+      - name: Validate inputs
+        env:
+          MODE: ${{ inputs.mode }}
+          CHANNEL: ${{ inputs.channel }}
+          PREVIOUS_RUN_ID: ${{ inputs.previous_run_id }}
+          DECISION: ${{ inputs.decision }}
+          FEEDBACK: ${{ inputs.feedback }}
+          EMAIL_TO_INPUT: ${{ inputs.email_to }}
+        run: |
+          if [[ "$MODE" == "start" && -z "$CHANNEL" ]]; then
+            echo "::error::channel is required for start."
+            exit 1
+          fi
+          if [[ "$MODE" != "start" && ! "$PREVIOUS_RUN_ID" =~ ^[0-9]+$ ]]; then
+            echo "::error::previous_run_id must be the numeric Run ID from the preceding optimization run."
+            exit 1
+          fi
+          if [[ "$MODE" != "finalize" && -z "$EMAIL_TO_INPUT" ]]; then
+            echo "::error::email_to is required for start and continue."
+            exit 1
+          fi
+          if [[ "$MODE" == "continue" && "$DECISION" == "machine" && -z "$FEEDBACK" ]]; then
+            echo "::error::machine requires written feedback."
+            exit 1
+          fi
+          if [[ "$MODE" == "finalize" && "$DECISION" == "machine" ]]; then
+            echo "::error::finalize requires A, B, C, or keep."
+            exit 1
+          fi
+          if [[ -n "$EMAIL_TO_INPUT" ]]; then echo "::add-mask::$EMAIL_TO_INPUT"; fi
+
+      - name: Download previous session
+        if: ${{ inputs.mode != 'start' }}
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: prompt-optimizer-session
+          path: .
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.previous_run_id }}
+
+      - name: Verify transcript access
+        if: ${{ inputs.mode == 'start' }}
+        run: |
+          if [[ -z "$APIFY_TOKEN" && -z "$SUPADATA_API_KEY" && -z "$YOUTUBE_PROXY_URL" ]]; then
+            echo "::error::Configure APIFY_TOKEN, SUPADATA_API_KEY, or YOUTUBE_PROXY_URL."
+            exit 1
+          fi
+
+      - name: Fetch evaluation transcript
+        if: ${{ inputs.mode == 'start' }}
+        env:
+          CHANNEL: ${{ inputs.channel }}
+          VIDEO: ${{ inputs.video }}
+        run: |
+          args=(process --channel "$CHANNEL" --preview --prompt-eval-only --force --fail-on-errors)
+          if [[ -n "$VIDEO" ]]; then
+            args+=(--video "$VIDEO")
+          else
+            args+=(--latest-per-channel 1 --backfill-days 3650)
+          fi
+          python -m yt_finance_kb "${args[@]}"
+
+      - name: Start optimization
+        if: ${{ inputs.mode == 'start' }}
+        env:
+          EMAIL_TO_INPUT: ${{ inputs.email_to }}
+          MAX_ROUNDS: ${{ inputs.max_rounds }}
+          POINT_LIMIT: ${{ inputs.point_limit }}
+        run: |
+          mapfile -t cases < <(find preview-output -name '*.prompt-eval.json' -type f -print | sort)
+          if [[ "${#cases[@]}" -eq 0 ]]; then
+            echo "::error::No prompt evaluation case was produced."
+            exit 1
+          fi
+          args=(prompt-optimize start --rounds "$MAX_ROUNDS" --point-limit "$POINT_LIMIT" --email-to "$EMAIL_TO_INPUT")
+          for case_path in "${cases[@]}"; do args+=(--case "$case_path"); done
+          python -m yt_finance_kb "${args[@]}"
+
+      - name: Continue optimization
+        if: ${{ inputs.mode == 'continue' }}
+        env:
+          DECISION: ${{ inputs.decision }}
+          FEEDBACK: ${{ inputs.feedback }}
+          EDITED_PROMPT: ${{ inputs.edited_prompt }}
+          EMAIL_TO_INPUT: ${{ inputs.email_to }}
+        run: |
+          session_path="$(find .prompt-optimizer -name session.json -type f -print -quit)"
+          if [[ -z "$session_path" ]]; then
+            echo "::error::Downloaded artifact has no optimization session."
+            exit 1
+          fi
+          args=(prompt-optimize continue "$session_path" --email-to "$EMAIL_TO_INPUT")
+          if [[ "$DECISION" == "keep" ]]; then
+            args+=(--keep)
+          elif [[ "$DECISION" != "machine" ]]; then
+            args+=(--select "$DECISION")
+          fi
+          if [[ -n "$FEEDBACK" ]]; then args+=(--feedback "$FEEDBACK"); fi
+          if [[ -n "$EDITED_PROMPT" ]]; then
+            edit_path="$RUNNER_TEMP/edited-quality-prompt.txt"
+            printf '%s\n' "$EDITED_PROMPT" > "$edit_path"
+            args+=(--edit-file "$edit_path")
+          fi
+          python -m yt_finance_kb "${args[@]}"
+
+      - name: Finalize prompt
+        if: ${{ inputs.mode == 'finalize' }}
+        env:
+          DECISION: ${{ inputs.decision }}
+        run: |
+          session_path="$(find .prompt-optimizer -name session.json -type f -print -quit)"
+          if [[ -z "$session_path" ]]; then
+            echo "::error::Downloaded artifact has no optimization session."
+            exit 1
+          fi
+          args=(prompt-optimize finalize "$session_path")
+          if [[ "$DECISION" == "keep" ]]; then args+=(--keep); else args+=(--select "$DECISION"); fi
+          python -m yt_finance_kb "${args[@]}"
+
+      - name: Locate session
+        id: session
+        if: ${{ always() }}
+        run: |
+          session_path="$(find .prompt-optimizer -name session.json -type f -print -quit)"
+          echo "path=$session_path" >> "$GITHUB_OUTPUT"
+          echo "Current Run ID: $GITHUB_RUN_ID" >> "$GITHUB_STEP_SUMMARY"
+          if [[ -n "$session_path" ]]; then echo "Session: $session_path" >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - name: Upload session and immutable cases
+        if: ${{ always() && steps.session.outputs.path != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: prompt-optimizer-session
+          path: |
+            .prompt-optimizer/
+            preview-output/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Commit finalized prompt
+        if: ${{ inputs.mode == 'finalize' && success() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prompts/finance-note src/yt_finance_kb/prompt_assets/finance_quality.txt
+          if git diff --cached --quiet; then
+            echo "No prompt change to commit"
+          else
+            git commit -m "prompt: finalize finance note optimization"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

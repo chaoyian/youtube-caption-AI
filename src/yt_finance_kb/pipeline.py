@@ -27,6 +27,7 @@ from .notifications import (
     send_discord_alert,
     send_email,
 )
+from .prompt_optimizer import write_eval_case
 from .rendering import note_path, note_topics, rebuild_indexes, render_note
 from .state import load_state, now_iso, retry_due, save_state, schedule_retry
 from .transcripts import TranscriptPending, fetch_transcript
@@ -170,6 +171,7 @@ def process(
     backfill_days: int | None = None,
     latest_per_channel: int | None = None,
     preview: bool = False,
+    prompt_eval_only: bool = False,
     force: bool = False,
     analyzer: Any | None = None,
 ) -> ProcessResult:
@@ -190,6 +192,8 @@ def process(
         raise ValueError("--video cannot be combined with --latest-per-channel")
     if latest_per_channel is not None and latest_per_channel < 1:
         raise ValueError("--latest-per-channel must be at least 1")
+    if prompt_eval_only and not preview:
+        raise ValueError("prompt_eval_only requires preview mode")
 
     candidates: list[tuple[ChannelConfig, Video]] = []
     for channel in channels:
@@ -233,9 +237,23 @@ def process(
             continue
         try:
             transcript = fetch_transcript(video.id, channel.languages)
+            if preview:
+                transcript_target = (
+                    root / "preview-output" / f"{video.id}.raw-transcript.txt"
+                )
+                transcript_target.parent.mkdir(parents=True, exist_ok=True)
+                transcript_target.write_text(
+                    transcript_text(transcript.segments), encoding="utf-8"
+                )
             cleaned = clean_segments(transcript.segments)
             if not cleaned:
                 raise RuntimeError("Transcript became empty after cleaning")
+            if preview:
+                write_eval_case(
+                    root / "preview-output" / f"{video.id}.prompt-eval.json",
+                    video,
+                    transcript_text(cleaned),
+                )
             content_hash = transcript_hash(cleaned)
             record.update(
                 fetch_status="complete",
@@ -247,6 +265,8 @@ def process(
                 failure_count=0,
                 next_retry_at=None,
             )
+            if prompt_eval_only:
+                continue
         except TranscriptPending as error:
             _record_waiting(record, error)
             result.waiting += 1

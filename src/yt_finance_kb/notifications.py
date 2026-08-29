@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import smtplib
 import ssl
 import urllib.error
@@ -9,9 +10,13 @@ import urllib.request
 from datetime import datetime, timezone
 from email.message import EmailMessage
 from hashlib import sha256
+from html import escape
 from pathlib import Path
 
 import markdown
+
+
+EMAIL_PATTERN = re.compile(r"^[^\s@,<>]+@[^\s@,<>]+\.[^\s@,<>]+$")
 
 
 def _without_front_matter(markdown_body: str) -> str:
@@ -25,7 +30,7 @@ def _without_front_matter(markdown_body: str) -> str:
 
 def _post_json(url: str, payload: dict, headers: dict[str, str] | None = None) -> dict:
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    request_headers = {"Content-Type": "application/json", "User-Agent": "youtube-finance-kb/0.1"}
+    request_headers = {"Content-Type": "application/json", "User-Agent": "youtube-finance-kb/0.2"}
     request_headers.update(headers or {})
     request = urllib.request.Request(url, data=body, headers=request_headers, method="POST")
     try:
@@ -37,16 +42,27 @@ def _post_json(url: str, payload: dict, headers: dict[str, str] | None = None) -
     return json.loads(data) if data else {}
 
 
-def email_recipients() -> list[str]:
+def normalize_email_recipients(values: list[str]) -> list[str]:
     recipients: list[str] = []
     seen: set[str] = set()
-    for value in os.environ.get("EMAIL_TO", "").split(","):
-        address = value.strip()
-        normalized = address.casefold()
-        if address and normalized not in seen:
-            recipients.append(address)
-            seen.add(normalized)
+    for value in values:
+        if "\r" in value or "\n" in value:
+            raise ValueError("Email addresses cannot contain newlines")
+        for item in value.split(","):
+            address = item.strip()
+            if not address:
+                continue
+            if not EMAIL_PATTERN.fullmatch(address):
+                raise ValueError("Invalid email recipient address")
+            normalized = address.casefold()
+            if normalized not in seen:
+                recipients.append(address)
+                seen.add(normalized)
     return recipients
+
+
+def email_recipients() -> list[str]:
+    return normalize_email_recipients([os.environ.get("EMAIL_TO", "")])
 
 
 def configured_email_providers() -> list[str]:
@@ -70,9 +86,7 @@ def _email_content(markdown_body: str, note_url: str, video_url: str) -> tuple[s
     return text, html
 
 
-def _send_resend_one(
-    recipient: str, title: str, html: str, idempotency_key: str
-) -> None:
+def _send_resend_one(recipient: str, subject: str, html: str, idempotency_key: str) -> None:
     api_key = os.environ["RESEND_API_KEY"]
     sender = os.environ["EMAIL_FROM"]
     recipient_key = sha256(recipient.casefold().encode("utf-8")).hexdigest()[:16]
@@ -81,7 +95,7 @@ def _send_resend_one(
         {
             "from": sender,
             "to": [recipient],
-            "subject": f"财经知识库｜{title}",
+            "subject": subject,
             "html": html,
         },
         {
@@ -91,18 +105,49 @@ def _send_resend_one(
     )
 
 
-def _send_gmail_one(recipient: str, title: str, text: str, html: str) -> None:
+def _send_gmail_one(recipient: str, subject: str, text: str, html: str) -> None:
     username = os.environ["GMAIL_USERNAME"]
     message = EmailMessage()
     message["From"] = os.environ.get("GMAIL_FROM") or f"财经知识库 <{username}>"
     message["To"] = recipient
-    message["Subject"] = f"财经知识库｜{title}"
+    message["Subject"] = subject
     message.set_content(text)
     message.add_alternative(html, subtype="html")
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context, timeout=45) as smtp:
         smtp.login(username, os.environ["GMAIL_APP_PASSWORD"])
         smtp.send_message(message)
+
+
+def send_message_email(
+    subject: str,
+    text: str,
+    html: str,
+    idempotency_key: str,
+    recipients: list[str] | None = None,
+) -> dict[str, dict[str, str]]:
+    targets = normalize_email_recipients(recipients) if recipients is not None else email_recipients()
+    providers = configured_email_providers()
+    if not targets:
+        raise RuntimeError("No valid email recipients were provided")
+    if not providers:
+        raise RuntimeError("No configured email provider is available")
+    results: dict[str, dict[str, str]] = {}
+    for recipient in targets:
+        errors: list[str] = []
+        for provider in providers:
+            try:
+                if provider == "gmail":
+                    _send_gmail_one(recipient, subject, text, html)
+                else:
+                    _send_resend_one(recipient, subject, html, idempotency_key)
+                results[recipient] = {"status": "sent", "provider": provider}
+                break
+            except Exception as error:
+                errors.append(f"{provider}: {type(error).__name__}: {error}")
+        else:
+            results[recipient] = {"status": "failed", "error": " | ".join(errors)[:600]}
+    return results
 
 
 def send_email(
@@ -113,32 +158,19 @@ def send_email(
     idempotency_key: str,
     recipients: list[str] | None = None,
 ) -> dict[str, dict[str, str]]:
-    targets = recipients if recipients is not None else email_recipients()
-    providers = configured_email_providers()
-    if not targets:
-        raise RuntimeError("EMAIL_TO has no valid recipients")
-    if not providers:
-        raise RuntimeError("No configured email provider is available")
     text, html = _email_content(markdown_body, note_url, video_url)
-    results: dict[str, dict[str, str]] = {}
-    for recipient in targets:
-        errors: list[str] = []
-        for provider in providers:
-            try:
-                if provider == "gmail":
-                    _send_gmail_one(recipient, title, text, html)
-                else:
-                    _send_resend_one(recipient, title, html, idempotency_key)
-                results[recipient] = {"status": "sent", "provider": provider}
-                break
-            except Exception as error:
-                errors.append(f"{provider}: {type(error).__name__}: {error}")
-        else:
-            results[recipient] = {"status": "failed", "error": " | ".join(errors)[:600]}
-    return results
+    return send_message_email(
+        f"财经知识库｜{title}", text, html, idempotency_key, recipients
+    )
 
 
-def test_email(root: Path, records: dict, repository_url: str, branch: str = "main") -> str:
+def test_email(
+    root: Path,
+    records: dict,
+    repository_url: str,
+    branch: str = "main",
+    recipients: list[str] | None = None,
+) -> str:
     completed = [
         record
         for record in records.values()
@@ -154,6 +186,7 @@ def test_email(root: Path, records: dict, repository_url: str, branch: str = "ma
         f"{repository_url.rstrip('/')}/blob/{branch}/{note_path}",
         record["video_url"],
         f"email-test-{datetime.now(timezone.utc).isoformat()}",
+        recipients,
     )
     failures = [
         f"{recipient}: {result.get('error', 'unknown error')}"
@@ -161,8 +194,57 @@ def test_email(root: Path, records: dict, repository_url: str, branch: str = "ma
         if result["status"] != "sent"
     ]
     if failures:
-        raise RuntimeError("Email test failed: " + " ; ".join(failures))
+        raise RuntimeError(f"Email test failed for {len(failures)} recipient(s)")
     return note_path
+
+
+def send_optimization_preview(summary: dict, recipients: list[str]) -> None:
+    choices = summary["choices"]
+    text_parts = [
+        f"提示词优化第 {summary['round']} 轮",
+        f"模型：{summary['model']}",
+        f"机器建议：{summary['machine_recommendation']}",
+    ]
+    html_parts = [
+        f"<h1>提示词优化第 {summary['round']} 轮</h1>",
+        f"<p><strong>模型：</strong>{escape(summary['model'])}</p>",
+        f"<p><strong>机器建议：</strong>{escape(summary['machine_recommendation'])}</p>",
+    ]
+    for choice, candidate in choices.items():
+        output = json.dumps(candidate["outputs"], ensure_ascii=False, indent=2)
+        output = output if len(output) <= 6000 else output[:5999] + "…"
+        text_parts.extend(
+            [
+                f"\n[{choice}] {candidate['title']} — {candidate['score']:.2f}/100",
+                f"策略：{candidate['strategy']}",
+                f"最强项：{candidate['strongest']}",
+                f"主要风险：{candidate['risk']}",
+                "提示词：\n" + candidate["prompt"],
+                "样例输出：\n" + output,
+            ]
+        )
+        html_parts.extend(
+            [
+                f"<h2>{choice} · {escape(candidate['title'])} — {candidate['score']:.2f}/100</h2>",
+                f"<p><strong>策略：</strong>{escape(candidate['strategy'])}</p>",
+                f"<p><strong>最强项：</strong>{escape(candidate['strongest'])}</p>",
+                f"<p><strong>主要风险：</strong>{escape(candidate['risk'])}</p>",
+                f"<h3>提示词</h3><pre>{escape(candidate['prompt'])}</pre>",
+                f"<h3>样例输出</h3><pre>{escape(output)}</pre>",
+            ]
+        )
+    text_parts.append("\n邮件仅供预览。请通过 CLI/API 提交选择、反馈或 final。")
+    html_parts.append("<p>邮件仅供预览。请通过 CLI/API 提交选择、反馈或 final。</p>")
+    results = send_message_email(
+        f"提示词优化预览｜第 {summary['round']} 轮",
+        "\n".join(text_parts),
+        "".join(html_parts),
+        f"prompt-optimizer-{summary['session_id']}-r{summary['round']}",
+        recipients,
+    )
+    failures = sum(result["status"] != "sent" for result in results.values())
+    if failures:
+        raise RuntimeError(f"Optimization preview failed for {failures} recipient(s)")
 
 
 def _discord_summary(markdown_body: str, note_url: str, video_url: str) -> str:

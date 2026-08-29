@@ -41,6 +41,10 @@ on:
         required: false
         default: false
         type: boolean
+      test_email_to:
+        description: "测试邮件收件地址；仅在 test_email=true 时使用"
+        required: false
+        type: string
       trigger_source:
         description: "触发来源标记；外部排程器填写 pipedream"
         required: false
@@ -104,6 +108,7 @@ jobs:
         run: python -m pip install .
 
       - name: Verify transcript access
+        if: ${{ inputs.test_email != true }}
         run: |
           if [[ -z "$APIFY_TOKEN" && -z "$SUPADATA_API_KEY" && -z "$YOUTUBE_PROXY_URL" ]]; then
             echo "::error::Configure APIFY_TOKEN, SUPADATA_API_KEY, or YOUTUBE_PROXY_URL in Actions Secrets."
@@ -172,7 +177,15 @@ jobs:
 
       - name: Send test email
         if: ${{ inputs.test_email == true }}
-        run: python -m yt_finance_kb test-email --repository-url "$REPOSITORY_URL"
+        env:
+          TEST_EMAIL_TO: ${{ inputs.test_email_to }}
+        run: |
+          if [[ -z "$TEST_EMAIL_TO" ]]; then
+            echo "::error::test_email_to is required when test_email is enabled."
+            exit 1
+          fi
+          echo "::add-mask::$TEST_EMAIL_TO"
+          python -m yt_finance_kb test-email --repository-url "$REPOSITORY_URL" --to "$TEST_EMAIL_TO"
 
       - name: Report processing failure
         if: ${{ inputs.test_email != true && steps.process.outcome == 'failure' }}

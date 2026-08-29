@@ -79,7 +79,7 @@ def _supadata_request(url: str, api_key: str) -> tuple[int, dict[str, Any]]:
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "youtube-finance-kb/0.1",
+            "User-Agent": "youtube-finance-kb/0.2",
             "x-api-key": api_key,
             "Accept": "application/json",
         },
@@ -107,7 +107,7 @@ def _apify_request(video_id: str, token: str) -> list[dict[str, Any]]:
         headers={
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json",
-            "User-Agent": "youtube-finance-kb/0.1",
+            "User-Agent": "youtube-finance-kb/0.2",
             "Accept": "application/json",
         },
         method="POST",

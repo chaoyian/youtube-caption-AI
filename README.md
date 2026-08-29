@@ -167,6 +167,101 @@ POE_API_KEY="新建的Key" python -m yt_finance_kb process \
 
 `--force` 会无视字幕哈希重新调用 AI，只应在明确需要重做笔记时使用。`rebuild-indexes` 和 `notify` 命令不会调用 AI。
 
+## 提示词优化开发工具
+
+0.2.0 将 Prompt Optimizer 集成到项目中。它只优化研究质量、筛选和表达指令；固定的
+`ResearchNote` JSON 字段、数量限制和修复规则不会被候选提示词修改。
+
+### GitHub 远程 Workflow（主要入口）
+
+在仓库 **Actions → Prompt optimization → Run workflow** 运行，或让具有该仓库 Actions
+权限的 AI/自动化通过 GitHub API/CLI 触发 `prompt-optimization.yml`。只有仓库链接并不
+授予操作权；远程调用方仍须使用有权触发 Workflow 的 GitHub 身份或 Token。
+
+Workflow 有三种模式：
+
+1. `start`：填写 `channel`、可选的 `video`、`email_to`、最多轮数和点数上限。Workflow
+   获取指定视频或频道最新一期字幕，只生成本地评测案例，不运行生产分析；随后在相同
+   字幕与模型上测试 A/B/C，并将完整候选、样例输出和匿名评分发到指定邮箱。
+2. `continue`：把上一轮页面显示的数字 Run ID 填入 `previous_run_id`，选择 A/B/C、
+   `keep`，或选择 `machine` 并填写文字反馈。也可在 `edited_prompt` 提交完整自定义版本。
+   Workflow 从上一轮 Artifact 恢复同一字幕、量表和会话，再运行下一轮并发送邮件。
+3. `finalize`：填写上一轮 Run ID，并明确选择 A/B/C 或 `keep`。Workflow 更新正式提示词、
+   保存旧版和优化日志，然后提交并推送到当前分支；不会自动创建 Release 或标签。
+
+每一轮都会上传名为 `prompt-optimizer-session` 的 Artifact，并在 Job Summary 显示本轮
+Run ID。Artifact 保留 30 天；continue/finalize 应引用紧接上一轮的 Run ID。字幕案例只
+存在于 Artifact，不会提交到仓库。
+
+已授权自动化也可用 GitHub CLI 触发首轮，例如：
+
+```bash
+gh workflow run prompt-optimization.yml \
+  -f mode=start \
+  -f channel=yutinghao-finance \
+  -f email_to=reviewer@example.com
+```
+
+后续轮次同样通过 `gh workflow run` 提交 `mode`、`previous_run_id`、`decision` 和
+`feedback`。`POE_API_KEY` 与邮件/字幕凭据始终从 GitHub Secrets 读取，不通过 Workflow
+输入传递。
+
+### 本地调试入口
+
+先用预览模式生成本地评测案例。`preview-output/` 已加入忽略规则，不会提交字幕：
+
+```bash
+python -m yt_finance_kb process --channel yutinghao-finance \
+  --video "https://www.youtube.com/watch?v=VIDEO_ID" --preview --force
+```
+
+然后启动最多五轮的受控实验。三组候选会使用完全相同的案例、Poe 模型和参数，输出先
+通过 `ResearchNote` 校验，再以匿名随机编号进行加权评测：
+
+```bash
+POE_OPTIMIZER_POINT_LIMIT=50000 python -m yt_finance_kb prompt-optimize start \
+  --case preview-output/VIDEO_ID.prompt-eval.json \
+  --email-to reviewer@example.com
+```
+
+命令返回 `.prompt-optimizer/<会话>/session.json`。选择候选并进入下一轮：
+
+```bash
+python -m yt_finance_kb prompt-optimize continue .prompt-optimizer/<会话>/session.json \
+  --select B --feedback "保留证据密度，减少重复结论" \
+  --email-to reviewer@example.com
+```
+
+也可以用 `--edit-file my-quality-prompt.txt` 替换所选父版本；编辑版会先在固定案例上运行，
+再作为下一轮基线。只给 `--feedback` 时，机器赢家会被当作父版本并在日志中明确记录；
+`--keep` 保留上一轮父版本。连续两轮提升不超过 0.5 分会提示平台期。
+
+只有明确执行定稿才会更新正式提示词，并将旧版本保存到提示词历史目录：
+
+```bash
+python -m yt_finance_kb prompt-optimize finalize .prompt-optimizer/<会话>/session.json --select A
+```
+
+最终记录位于 `prompts/finance-note/`。日志只保存评测案例的路径、SHA-256、长度和描述，
+不保存原始字幕或 API Key。`--json` 可让 start/continue/finalize 返回结构化结果，供 AI
+或其他自动化读取。优化邮件只提供预览，不接收或解析回复。
+
+优化实验会产生候选生成、三组分析和匿名评测等多次 Poe 调用，使用独立的
+`POE_OPTIMIZER_POINT_LIMIT`，不会占用单条生产视频的 `POE_POINT_LIMIT_PER_VIDEO` 记录。
+
+### 测试指定邮箱
+
+本地测试可临时覆盖收件人，不会修改正式 `EMAIL_TO`：
+
+```bash
+python -m yt_finance_kb test-email --repository-url "https://github.com/OWNER/REPO" \
+  --to reviewer@example.com
+```
+
+GitHub Actions 中勾选 `test_email` 并填写 `test_email_to`。发件人始终来自已验证的
+Gmail/Resend 配置，不能由工作流输入伪造；测试邮件不抓字幕、不调用 AI，也不写入正式
+投递状态。多个收件地址可用英文逗号分隔，程序会校验并去重。
+
 ### 新频道验收测试
 
 在 **Actions → Daily finance knowledge → Run workflow** 中勾选 `test_channels`，即可对
@@ -195,3 +290,11 @@ python -m yt_finance_kb process --latest-per-channel 2 --backfill-days 3650 --fo
 - `indexes/topics/`、`indexes/entities/`：从状态确定性生成的索引。
 - `state/videos.json`：字幕哈希、笔记版本、失败和投递状态。
 - 字幕正文不会写入上述目录。
+
+## 从 0.1.0 升级
+
+- 重新安装项目依赖，使包版本更新到 0.2.0。
+- 原有生产配置无需迁移；`EMAIL_TO`、Gmail、Resend、Poe 和频道变量继续有效。
+- 如需使用优化器，额外设置可选的 `POE_OPTIMIZER_POINT_LIMIT`；未设置时为 50,000。
+- 完整版本变更和已知限制见 [`CHANGELOG.md`](CHANGELOG.md)。本仓库不会自动创建标签或
+  GitHub Release，发布者应在测试通过后依据该文件编写 Release Notes。

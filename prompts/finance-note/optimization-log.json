@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "baseline",
+  "created_at": "2026-08-29T00:00:00+08:00",
+  "source": "youtube-finance-kb 0.1.0 SYSTEM_PROMPT",
+  "rounds": [],
+  "winner": null,
+  "note": "Run prompt-optimize and explicitly finalize a candidate to replace this baseline."
+}

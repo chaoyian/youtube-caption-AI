@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "youtube-finance-kb"
-version = "0.1.0"
+version = "0.2.0"
 description = "Build a finance-focused knowledge base from YouTube captions"
 readme = "README.md"
 requires-python = ">=3.11"

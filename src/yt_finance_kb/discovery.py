@@ -13,7 +13,7 @@ from urllib.parse import urlencode
 
 from .models import ChannelConfig, Video
 
-USER_AGENT = "youtube-finance-kb/0.1"
+USER_AGENT = "youtube-finance-kb/0.2"
 ATOM = "http://www.w3.org/2005/Atom"
 YT = "http://www.youtube.com/xml/schemas/2015"
 YOUTUBE_DATA_API = "https://www.googleapis.com/youtube/v3"
