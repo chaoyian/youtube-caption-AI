@@ -84,6 +84,25 @@ def normalize_rubric(raw: Any) -> list[dict[str, Any]]:
     return items
 
 
+def normalize_dimension_scores(raw: Any) -> dict[str, float]:
+    if isinstance(raw, dict):
+        pairs = raw.items()
+    elif isinstance(raw, list):
+        pairs = (
+            (item.get("name", item.get("criterion", "")), item.get("score"))
+            for item in raw
+            if isinstance(item, dict)
+        )
+    else:
+        return {}
+    dimensions: dict[str, float] = {}
+    for name, score in pairs:
+        if not str(name).strip() or not isinstance(score, (int, float)):
+            continue
+        dimensions[str(name)] = max(0.0, min(10.0, float(score)))
+    return dimensions
+
+
 @dataclass
 class EvalCase:
     path: Path
@@ -329,11 +348,7 @@ and risk; ranking containing every id; and recommendation. Do not infer prompt i
         rubric_weights = {item["name"]: item["weight"] for item in rubric}
         for opaque, candidate in by_anon.items():
             item = item_map.get(opaque, {})
-            dimensions = {
-                str(name): max(0.0, min(10.0, float(score)))
-                for name, score in item.get("dimensions", {}).items()
-                if isinstance(score, (int, float))
-            }
+            dimensions = normalize_dimension_scores(item.get("dimensions", {}))
             weighted = sum(
                 dimensions.get(name, 0.0) * weight / 10 for name, weight in rubric_weights.items()
             )

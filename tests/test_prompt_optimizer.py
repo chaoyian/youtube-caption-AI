@@ -8,6 +8,7 @@ from yt_finance_kb.prompt_optimizer import (
     finalize_session,
     load_eval_case,
     load_session,
+    normalize_dimension_scores,
     normalize_rubric,
     session_summary,
     start_session,
@@ -90,6 +91,19 @@ def test_eval_case_round_trip_and_digest(tmp_path, sample_video):
     assert loaded.video == sample_video
     assert loaded.transcript.startswith("[1]")
     assert len(loaded.sha256) == 64
+
+
+def test_dimension_scores_accept_mapping_and_object_list():
+    assert normalize_dimension_scores({"正确性": 9, "遵循指令": 8.5}) == {
+        "正确性": 9.0,
+        "遵循指令": 8.5,
+    }
+    assert normalize_dimension_scores(
+        [
+            {"name": "正确性", "score": 11, "evidence": "..."},
+            {"criterion": "遵循指令", "score": 7},
+        ]
+    ) == {"正确性": 10.0, "遵循指令": 7.0}
 
 
 def test_start_uses_exactly_three_candidates_and_does_not_store_transcript(
