@@ -22,7 +22,7 @@ def _points(title: str, points: Iterable[TimedPoint], video_id: str) -> list[str
     for point in values:
         lines.append(
             f"- {point.text} ([{point.timestamp // 60:02d}:{point.timestamp % 60:02d}]"
-            f"({timestamp_link(video_id, point.timestamp)})) `[{point.source_type}]`"
+            f"({timestamp_link(video_id, point.timestamp)}))"
         )
     return lines + [""]
 
@@ -39,7 +39,6 @@ def note_topics(note: ResearchNote, channel: ChannelConfig) -> list[str]:
 
 def render_note(video: Video, channel: ChannelConfig, note: ResearchNote, version: int) -> str:
     topics = note_topics(note, channel)
-    entity_names = sorted({entity.name for entity in note.entities})
     date = video.published_at.date().isoformat()
     lines = [
         "---",
@@ -50,8 +49,6 @@ def render_note(video: Video, channel: ChannelConfig, note: ResearchNote, versio
         f"version: {version}",
         "topics:",
         *[f'  - "{value}"' for value in topics],
-        "entities:",
-        *[f'  - "{value}"' for value in entity_names],
         "---",
         "",
         f"# {video.title}",
@@ -72,14 +69,7 @@ def render_note(video: Video, channel: ChannelConfig, note: ResearchNote, versio
     lines.extend(_points("空方与反例", note.bear_case, video.id))
     lines.extend(_points("风险与不确定性", note.risks, video.id))
     lines.extend(_points("时效性判断", note.time_sensitive, video.id))
-    lines.extend(["## 涉及实体", ""])
-    if note.entities:
-        for entity in note.entities:
-            ticker = f"（{entity.ticker}）" if entity.ticker else ""
-            lines.append(f"- {entity.name}{ticker}：{entity.type}")
-    else:
-        lines.append("无。")
-    lines.extend(["", "## 原子知识卡片", ""])
+    lines.extend(["## 原子知识卡片", ""])
     for index, card in enumerate(note.cards, 1):
         topics_text = "、".join(card.topics)
         lines.extend(
@@ -88,7 +78,6 @@ def render_note(video: Video, channel: ChannelConfig, note: ResearchNote, versio
                 "",
                 card.insight,
                 "",
-                f"- 来源类型：`{card.source_type}`",
                 f"- 主题：{topics_text}",
                 f"- 时间戳：[{card.timestamp // 60:02d}:{card.timestamp % 60:02d}]"
                 f"({timestamp_link(video.id, card.timestamp)})",
@@ -112,7 +101,6 @@ def safe_slug(value: str) -> str:
 
 def rebuild_indexes(root: Path, records: dict[str, dict]) -> None:
     topic_map: dict[str, list[dict]] = {}
-    entity_map: dict[str, list[dict]] = {}
     for record in records.values():
         if record.get("analysis_status") != "complete" or not record.get("note_path"):
             continue
@@ -123,10 +111,7 @@ def rebuild_indexes(root: Path, records: dict[str, dict]) -> None:
         }
         for topic in record.get("topics", []):
             topic_map.setdefault(topic, []).append(item)
-        for entity in record.get("entities", []):
-            entity_map.setdefault(entity, []).append(item)
     _write_index_group(root / "indexes" / "topics", "主题", topic_map, root)
-    _write_index_group(root / "indexes" / "entities", "实体", entity_map, root)
 
 
 def _write_index_group(directory: Path, kind: str, mapping: dict[str, list[dict]], root: Path) -> None:

@@ -18,7 +18,6 @@ SYSTEM_PROMPT = load_quality_prompt()
 OUTPUT_INSTRUCTIONS = """输出紧凑、去重的研究笔记 JSON。对象必须包含：
 summary（100至180个中文字）；
 macro_context（最多3项）、core_theses（3至5项）、evidence（最多6项）、bull_case（最多3项）、bear_case（最多3项）、risks（最多5项）、time_sensitive（最多3项），每项包含 text、timestamp、source_type；
-entities（最多15项，只保留有检索价值的公司、行业、人物、股票代码、资产、政策或地区；每项包含 name、type、ticker）；
 cards（5至8项，每项包含 title、insight、timestamp、source_type、topics，topics 最多3个）；
 disclaimer。
 source_type 只能是：主持人陈述、模型归纳、模型推导。没有内容的非核心数组可以为空。

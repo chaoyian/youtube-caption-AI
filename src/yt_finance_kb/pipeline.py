@@ -255,6 +255,7 @@ def process(
                     transcript_text(cleaned),
                 )
             content_hash = transcript_hash(cleaned)
+            record.pop("entities", None)
             record.update(
                 fetch_status="complete",
                 transcript_language=transcript.language,
@@ -324,7 +325,6 @@ def process(
                 note_version=version,
                 note_path=relative_path,
                 topics=note_topics(note, channel),
-                entities=sorted({entity.name for entity in note.entities}),
                 email_status="pending",
                 email_deliveries={},
                 discord_status="pending",

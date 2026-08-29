@@ -9,6 +9,9 @@ def test_render_note_has_timestamp_and_no_transcript(sample_video, sample_note):
     body = render_note(sample_video, channel, sample_note, 1)
     assert "https://youtu.be/abcdefghijk?t=12" in body
     assert "## 原子知识卡片" in body
+    assert "涉及实体" not in body
+    assert "来源类型" not in body
+    assert "模型归纳" not in body
     assert "字幕正文" not in body
 
 
@@ -20,7 +23,6 @@ def test_rebuild_indexes_is_deterministic(tmp_path: Path):
             "published_at": "2026-07-28T00:00:00+00:00",
             "note_path": "knowledge/channel/2026/2026-07-28-abcdefghijk.md",
             "topics": ["利率"],
-            "entities": ["联准会"],
         }
     }
     rebuild_indexes(tmp_path, records)
@@ -29,6 +31,7 @@ def test_rebuild_indexes_is_deterministic(tmp_path: Path):
     second = (tmp_path / "indexes/topics/利率.md").read_text(encoding="utf-8")
     assert first == second
     assert "../../knowledge/channel/2026/2026-07-28-abcdefghijk.md" in first
+    assert not (tmp_path / "indexes/entities").exists()
 
 
 def test_note_topics_are_deduplicated_and_capped(sample_note):

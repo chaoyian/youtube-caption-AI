@@ -65,12 +65,6 @@ class ChunkExtraction(BaseModel):
     claims: list[ExtractedClaim]
 
 
-class Entity(BaseModel):
-    name: str
-    type: Literal["公司", "行业", "人物", "股票代码", "资产", "政策", "地区", "其他"]
-    ticker: str | None = None
-
-
 class KnowledgeCard(BaseModel):
     title: str
     insight: str
@@ -88,6 +82,5 @@ class ResearchNote(BaseModel):
     bear_case: list[TimedPoint] = Field(max_length=3)
     risks: list[TimedPoint] = Field(max_length=5)
     time_sensitive: list[TimedPoint] = Field(max_length=3)
-    entities: list[Entity] = Field(max_length=15)
     cards: list[KnowledgeCard] = Field(min_length=5, max_length=8)
     disclaimer: str

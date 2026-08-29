@@ -1,3 +1,0 @@
-# 实体：Sandisk
-
-- 2026-08-07 [2026/8/7(五)DRAM缺貨燒到i18 7月ETF申購金額再創高!散戶沒在怕?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-07-IHB6xZANLDc.md)

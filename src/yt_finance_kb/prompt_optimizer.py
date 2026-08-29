@@ -227,7 +227,27 @@ class PoeOptimizationRuntime:
             requested_max_tokens=max_tokens,
             minimum_output_tokens=500,
         )
-        return extract_json(content)
+        try:
+            return extract_json(content)
+        except (json.JSONDecodeError, ValueError):
+            repaired = self.gateway._complete(
+                [
+                    {
+                        "role": "system",
+                        "content": "Repair the supplied incomplete or invalid JSON. Return valid JSON only.",
+                    },
+                    {
+                        "role": "user",
+                        "content": (
+                            "Return a compact valid JSON object preserving the available values. "
+                            "Do not add commentary.\n\n" + content
+                        ),
+                    },
+                ],
+                requested_max_tokens=max_tokens,
+                minimum_output_tokens=500,
+            )
+            return extract_json(repaired)
 
     def create_rubric(self, objective: str, criteria: str) -> list[dict[str, Any]]:
         raw = self._json_call(
@@ -338,11 +358,12 @@ Objective: {objective}
 Rubric: {json.dumps(rubric, ensure_ascii=False)}
 Samples: {json.dumps(samples, ensure_ascii=False)}
 
-For each rubric dimension give a 0-10 score and observable evidence. Perform a pairwise preference
-check across every sample. Return JSON with items containing id, dimensions, rationale, strongest,
-and risk; ranking containing every id; and recommendation. Do not infer prompt identity or strategy.
+For each rubric dimension give only a 0-10 numeric score. Perform a pairwise preference check
+internally. Return compact JSON with items containing id, dimensions, rationale, strongest, and risk;
+ranking containing every id; and recommendation. Keep rationale under 80 Chinese characters and
+strongest/risk under 50 each. Do not include per-dimension prose, quote outputs, or infer prompt identity.
 """,
-            max_tokens=3600,
+            max_tokens=4800,
         )
         item_map = {str(item.get("id")): item for item in raw.get("items", [])}
         rubric_weights = {item["name"]: item["weight"] for item in rubric}

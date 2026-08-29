@@ -4,6 +4,7 @@ import pytest
 
 from yt_finance_kb.prompt_optimizer import (
     Candidate,
+    PoeOptimizationRuntime,
     continue_session,
     finalize_session,
     load_eval_case,
@@ -14,6 +15,14 @@ from yt_finance_kb.prompt_optimizer import (
     start_session,
     write_eval_case,
 )
+
+
+class RepairGateway:
+    def __init__(self):
+        self.responses = ['{"items":[', '{"items":[]}']
+
+    def _complete(self, *args, **kwargs):
+        return self.responses.pop(0)
 
 
 class FakeRuntime:
@@ -104,6 +113,13 @@ def test_dimension_scores_accept_mapping_and_object_list():
             {"criterion": "遵循指令", "score": 7},
         ]
     ) == {"正确性": 10.0, "遵循指令": 7.0}
+
+
+def test_json_call_repairs_truncated_evaluator_output():
+    runtime = PoeOptimizationRuntime.__new__(PoeOptimizationRuntime)
+    runtime.gateway = RepairGateway()
+
+    assert runtime._json_call("evaluate") == {"items": []}
 
 
 def test_start_uses_exactly_three_candidates_and_does_not_store_transcript(

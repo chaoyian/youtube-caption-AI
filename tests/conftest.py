@@ -5,7 +5,6 @@ from datetime import UTC, datetime
 import pytest
 
 from yt_finance_kb.models import (
-    Entity,
     KnowledgeCard,
     ResearchNote,
     TimedPoint,
@@ -55,7 +54,6 @@ def sample_note() -> ResearchNote:
         bear_case=[point],
         risks=[point],
         time_sensitive=[point],
-        entities=[Entity(name="联准会", type="政策")],
         cards=cards,
         disclaimer="内容来自节目字幕的结构化整理，未经外部核实，不构成投资建议。",
     )

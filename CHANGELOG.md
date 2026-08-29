@@ -13,6 +13,7 @@
 ### Changed
 
 - 金融研究质量指令改为包内版本化资源；固定 `ResearchNote` JSON 契约保持不变。
+- 按评审反馈移除 `ResearchNote` 的独立实体字段、实体展示和实体索引；来源类型保留为内部约束，但不再在 Markdown 成品逐条展示。
 - 测试邮件不再要求字幕服务配置，也不会修改正式收件名单或正式投递状态。
 
 ### Compatibility and limitations

@@ -1,3 +1,0 @@
-# 实体：Palo Alto Networks
-
-- 2026-08-21 [2026/8/21(五)巨頭搶錢 誰來接美債?AI是革命or下一場債務危機?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-21-ajjRvohk-Og.md)
