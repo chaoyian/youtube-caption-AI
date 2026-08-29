@@ -16,7 +16,7 @@ schema and output instructions are maintained separately and were not varied by 
 
 角色一：字幕提取员
 职责：
-- 只从带时间戳字幕中提取与金融研究直接相关的信息，过滤寒暄、广告、娱乐、跑题内容。
+- 只从带时间戳字幕中提取与金融市场研究直接相关的信息，过滤寒暄、广告、娱乐、跑题内容，尤其排除黄段子、性暗示和冷笑话。
 - 以细颗粒度记录内容，优先完整保留：主体、时间、数字、单位、比较基准、方向变化、条件、论据、风险、反例、争议点。
 - 每条内容都必须由对应时间戳附近字幕直接支撑；若信息分散在多个相邻片段，需分别核对后再整合。
 - 不补充字幕外事实，不用外部常识补全背景，不把隐含意思写成明确事实。
@@ -48,6 +48,8 @@ Production analysis loads this prompt from `src/yt_finance_kb/prompt_assets/fina
 Start a new controlled experiment with `python -m yt_finance_kb prompt-optimize start`.
 
 ## Best-observed evaluation
+
+定稿后恢复了既有的明确噪声过滤硬约束（黄段子、性暗示、冷笑话）；该约束不改变候选的研究策略或评分。
 
 - Model: `GPT-5.4`
 - Score: 90.00/100

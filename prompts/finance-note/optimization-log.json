@@ -1994,6 +1994,13 @@
   "plateau_count": 1,
   "plateau": false,
   "finalized_at": "2026-08-29T09:28:27.498585+00:00",
+  "post_finalize_adjustments": [
+    {
+      "type": "restored_hard_filter",
+      "reason": "保留既有的非金融噪声安全约束并满足回归测试",
+      "change": "明确排除黄段子、性暗示和冷笑话；不改变候选研究策略或评分"
+    }
+  ],
   "winner": {
     "id": "r2c1",
     "title": "保守细粒度审稿版",
