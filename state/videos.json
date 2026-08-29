@@ -7,9 +7,77 @@
       "analyzed_at": "2026-08-29T01:31:20+00:00",
       "analyzed_hash": "e5a7f14c2acf52c286f0a1d78b568ad85222495f14245749b8c6b41d44c80339",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-29T01:31:39+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-29T01:31:39+00:00",
+      "email_status": "sent",
       "entities": [
         "Canada",
         "China",
