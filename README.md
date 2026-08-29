@@ -258,9 +258,10 @@ python -m yt_finance_kb test-email --repository-url "https://github.com/OWNER/RE
   --to reviewer@example.com
 ```
 
-GitHub Actions 中勾选 `test_email` 并填写 `test_email_to`。发件人始终来自已验证的
-Gmail/Resend 配置，不能由工作流输入伪造；测试邮件不抓字幕、不调用 AI，也不写入正式
-投递状态。多个收件地址可用英文逗号分隔，程序会校验并去重。
+GitHub Actions 中勾选 `test_email` 即可使用正式 `EMAIL_TO` 总名单；如填写
+`test_email_to`，则仅临时发送到指定地址。发件人始终来自已验证的 Gmail/Resend 配置，
+不能由工作流输入伪造；测试邮件不抓字幕、不调用 AI，也不写入正式投递状态。多个收件
+地址可用英文逗号分隔，程序会校验并去重。
 
 ### 新频道验收测试
 

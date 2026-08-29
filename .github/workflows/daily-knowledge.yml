@@ -42,7 +42,7 @@ on:
         default: false
         type: boolean
       test_email_to:
-        description: "测试邮件收件地址；仅在 test_email=true 时使用"
+        description: "可选测试收件地址；留空使用 EMAIL_TO 总名单"
         required: false
         type: string
       trigger_source:
@@ -180,12 +180,12 @@ jobs:
         env:
           TEST_EMAIL_TO: ${{ inputs.test_email_to }}
         run: |
-          if [[ -z "$TEST_EMAIL_TO" ]]; then
-            echo "::error::test_email_to is required when test_email is enabled."
-            exit 1
+          args=(test-email --repository-url "$REPOSITORY_URL")
+          if [[ -n "$TEST_EMAIL_TO" ]]; then
+            echo "::add-mask::$TEST_EMAIL_TO"
+            args+=(--to "$TEST_EMAIL_TO")
           fi
-          echo "::add-mask::$TEST_EMAIL_TO"
-          python -m yt_finance_kb test-email --repository-url "$REPOSITORY_URL" --to "$TEST_EMAIL_TO"
+          python -m yt_finance_kb "${args[@]}"
 
       - name: Report processing failure
         if: ${{ inputs.test_email != true && steps.process.outcome == 'failure' }}
