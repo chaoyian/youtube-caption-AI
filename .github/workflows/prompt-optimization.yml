@@ -219,7 +219,10 @@ jobs:
         id: session
         if: ${{ always() }}
         run: |
-          session_path="$(find .prompt-optimizer -name session.json -type f -print -quit)"
+          session_path=""
+          if [[ -d .prompt-optimizer ]]; then
+            session_path="$(find .prompt-optimizer -name session.json -type f -print -quit)"
+          fi
           echo "path=$session_path" >> "$GITHUB_OUTPUT"
           echo "Current Run ID: $GITHUB_RUN_ID" >> "$GITHUB_STEP_SUMMARY"
           if [[ -n "$session_path" ]]; then echo "Session: $session_path" >> "$GITHUB_STEP_SUMMARY"; fi

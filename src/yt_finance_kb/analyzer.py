@@ -199,6 +199,7 @@ class PoeAnalyzer:
             "messages": messages,
             "temperature": 0.1,
             "max_completion_tokens": max_tokens,
+            "response_format": {"type": "json_object"},
             "extra_body": MODEL_EXTRA_BODY.get(model.lower()),
         }
         usage = None
@@ -272,7 +273,7 @@ class PoeAnalyzer:
             extraction = None
             last_error: Exception | None = None
             bad_output = ""
-            for attempt in range(3):
+            for attempt in range(4):
                 if attempt:
                     messages = [
                         {"role": "system", "content": self.quality_prompt},
@@ -296,7 +297,7 @@ class PoeAnalyzer:
                 except (ValueError, json.JSONDecodeError, ValidationError) as error:
                     last_error = error
             if extraction is None:
-                raise RuntimeError(f"Chunk output remained invalid after two repairs: {last_error}")
+                raise RuntimeError(f"Chunk output remained invalid after three repairs: {last_error}")
             claims.extend(extraction.claims)
         return "\n".join(
             (
@@ -325,7 +326,7 @@ class PoeAnalyzer:
         ]
         last_error: Exception | None = None
         bad_output = ""
-        for attempt in range(3):
+        for attempt in range(4):
             if attempt:
                 messages = [
                     {"role": "system", "content": self.quality_prompt},
@@ -348,4 +349,4 @@ class PoeAnalyzer:
                 return ResearchNote.model_validate(_json_object(bad_output))
             except (ValueError, json.JSONDecodeError, ValidationError) as error:
                 last_error = error
-        raise RuntimeError(f"Poe output remained invalid after two repair attempts: {last_error}")
+        raise RuntimeError(f"Poe output remained invalid after three repair attempts: {last_error}")
