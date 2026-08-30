@@ -1296,6 +1296,55 @@
       "video_id": "FG3pyecKLvg",
       "video_url": "https://www.youtube.com/watch?v=FG3pyecKLvg"
     },
+    "FUEajAPAfL0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-30T01:31:13+00:00",
+      "analyzed_hash": "3ea30d0cfb9b4b02566b4dedc4b32587f7c5556748e13ee1adee70c0795222b8",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "3ea30d0cfb9b4b02566b4dedc4b32587f7c5556748e13ee1adee70c0795222b8",
+      "last_error": null,
+      "last_fetched_at": "2026-08-30T01:30:30+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-08-29-FUEajAPAfL0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3890,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2179
+        },
+        "points": 2179,
+        "prompt_tokens": 5700
+      },
+      "published_at": "2026-08-29T22:54:39+00:00",
+      "title": "Economy: Billionaires Thrive, Workers Suffer - Is Government to Blame?",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "工资份额",
+        "收入分配",
+        "企业利润",
+        "资本回报",
+        "分化经济",
+        "不平等",
+        "财富集中",
+        "富豪"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "FUEajAPAfL0",
+      "video_url": "https://www.youtube.com/watch?v=FUEajAPAfL0"
+    },
     "FlnyDuJXzAM": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -2383,6 +2432,55 @@
       "transcript_source": "apify",
       "video_id": "QBbZgj-a_is",
       "video_url": "https://www.youtube.com/watch?v=QBbZgj-a_is"
+    },
+    "R3Eic7CdLz4": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-30T01:30:19+00:00",
+      "analyzed_hash": "19933911b2f4d44e68853bcdd167218309384f51ba156680ead02aa386fff211",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "19933911b2f4d44e68853bcdd167218309384f51ba156680ead02aa386fff211",
+      "last_error": null,
+      "last_fetched_at": "2026-08-30T01:29:49+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-08-29-R3Eic7CdLz4.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4023,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2282
+        },
+        "points": 2282,
+        "prompt_tokens": 6252
+      },
+      "published_at": "2026-08-29T16:55:37+00:00",
+      "title": "Housing Crisis: Why Can't People Afford Homes?",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "房地产",
+        "可负担性",
+        "居民购买力",
+        "经济分化",
+        "美联储",
+        "生活成本",
+        "需求结构",
+        "财富分化"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "R3Eic7CdLz4",
+      "video_url": "https://www.youtube.com/watch?v=R3Eic7CdLz4"
     },
     "SOQXjoSlE7A": {
       "alert_status": "none",
