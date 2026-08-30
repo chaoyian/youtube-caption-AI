@@ -12,4 +12,5 @@ channels:
     enabled: true
     languages: [en]
     backfill_days: 7
+    min_duration_seconds: 600
     tags: [财经, 投资, 宏观, 英文]

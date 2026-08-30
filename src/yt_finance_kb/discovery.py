@@ -17,6 +17,9 @@ USER_AGENT = "youtube-finance-kb/0.2"
 ATOM = "http://www.w3.org/2005/Atom"
 YT = "http://www.youtube.com/xml/schemas/2015"
 YOUTUBE_DATA_API = "https://www.googleapis.com/youtube/v3"
+ISO_8601_DURATION = re.compile(
+    r"^P(?:(?P<days>\d+)D)?T(?:(?P<hours>\d+)H)?(?:(?P<minutes>\d+)M)?(?:(?P<seconds>\d+(?:\.\d+)?)S)?$"
+)
 
 
 def _is_members_only(title: str) -> bool:
@@ -63,6 +66,88 @@ def _youtube_api_get(path: str, query: dict[str, str | int]) -> dict:
     )
     with urllib.request.urlopen(request, timeout=45) as response:
         return json.loads(response.read())
+
+
+def _duration_seconds(value: object) -> int | None:
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        return max(0, int(value))
+    if not isinstance(value, str) or not value.strip():
+        return None
+    value = value.strip()
+    if value.isdigit():
+        return int(value)
+    if ":" in value:
+        parts = value.split(":")
+        if all(part.isdigit() for part in parts) and 2 <= len(parts) <= 3:
+            total = 0
+            for part in parts:
+                total = total * 60 + int(part)
+            return total
+    match = ISO_8601_DURATION.fullmatch(value)
+    if not match:
+        return None
+    return int(
+        int(match.group("days") or 0) * 86400
+        + int(match.group("hours") or 0) * 3600
+        + int(match.group("minutes") or 0) * 60
+        + float(match.group("seconds") or 0)
+    )
+
+
+def _youtube_durations(video_ids: list[str]) -> dict[str, int]:
+    if not video_ids:
+        return {}
+    document = _youtube_api_get(
+        "videos",
+        {"part": "contentDetails", "id": ",".join(video_ids)},
+    )
+    durations: dict[str, int] = {}
+    for item in document.get("items") or []:
+        video_id = item.get("id")
+        seconds = _duration_seconds((item.get("contentDetails") or {}).get("duration"))
+        if video_id and seconds is not None:
+            durations[str(video_id)] = seconds
+    return durations
+
+
+def _supadata_duration(metadata: dict) -> int | None:
+    for key in ("durationSeconds", "duration", "lengthSeconds"):
+        seconds = _duration_seconds(metadata.get(key))
+        if seconds is not None:
+            return seconds
+    return None
+
+
+def _apply_duration_filter(channel: ChannelConfig, videos: list[Video]) -> list[Video]:
+    minimum = channel.min_duration_seconds
+    if minimum <= 0 or not videos:
+        return videos
+
+    missing = [video.id for video in videos if video.duration_seconds is None]
+    if missing and os.environ.get("YOUTUBE_API_KEY"):
+        try:
+            durations = _youtube_durations(missing)
+        except Exception:
+            durations = {}
+        for video in videos:
+            if video.duration_seconds is None and video.id in durations:
+                video.duration_seconds = durations[video.id]
+
+    if os.environ.get("SUPADATA_API_KEY"):
+        for video in videos:
+            if video.duration_seconds is not None:
+                continue
+            try:
+                metadata = _supadata_get("youtube/video", {"id": video.id})
+            except Exception:
+                continue
+            video.duration_seconds = _supadata_duration(metadata)
+
+    return [
+        video
+        for video in videos
+        if video.duration_seconds is not None and video.duration_seconds >= minimum
+    ]
 
 
 def resolve_channel_id(url: str) -> str:
@@ -132,7 +217,7 @@ def fetch_channel_videos(
                 url=f"https://www.youtube.com/watch?v={video_id}",
             )
         )
-    return sorted(videos, key=lambda video: video.published_at)
+    return sorted(_apply_duration_filter(channel, videos), key=lambda video: video.published_at)
 
 
 def _fetch_channel_videos_with_youtube_api(
@@ -190,7 +275,11 @@ def _fetch_channel_videos_with_youtube_api(
                 url=f"https://www.youtube.com/watch?v={video_id}",
             )
         )
-    return sorted(videos, key=lambda video: video.published_at)
+    if channel.min_duration_seconds > 0:
+        durations = _youtube_durations([video.id for video in videos])
+        for video in videos:
+            video.duration_seconds = durations.get(video.id)
+    return sorted(_apply_duration_filter(channel, videos), key=lambda video: video.published_at)
 
 
 def fetch_video_with_youtube_api(video_id: str, channel: ChannelConfig) -> Video:
@@ -255,7 +344,7 @@ def _fetch_channel_videos_with_supadata(
         if video.published_at < cutoff and video_id not in (include_ids or set()):
             continue
         videos.append(video)
-    return sorted(videos, key=lambda video: video.published_at)
+    return sorted(_apply_duration_filter(channel, videos), key=lambda video: video.published_at)
 
 
 def fetch_video_with_supadata(video_id: str, channel: ChannelConfig) -> Video:
@@ -272,6 +361,7 @@ def fetch_video_with_supadata(video_id: str, channel: ChannelConfig) -> Video:
         title=unescape(str(metadata.get("title") or video_id)),
         published_at=published_at,
         url=f"https://www.youtube.com/watch?v={video_id}",
+        duration_seconds=_supadata_duration(metadata),
     )
 
 

@@ -147,6 +147,125 @@ def test_youtube_data_api_failure_falls_back_to_rss(monkeypatch):
     assert videos[0].title == "RSS 财经视频"
 
 
+def test_youtube_data_api_filters_videos_below_channel_minimum(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+        min_duration_seconds=600,
+    )
+    published = datetime.now(UTC).isoformat().replace("+00:00", "Z")
+    monkeypatch.setenv("YOUTUBE_API_KEY", "youtube-test-key")
+
+    def fake_youtube(path, query):
+        if path == "channels":
+            return {
+                "items": [
+                    {
+                        "contentDetails": {
+                            "relatedPlaylists": {"uploads": "UU0123456789abcdefghijk"}
+                        }
+                    }
+                ]
+            }
+        if path == "playlistItems":
+            return {
+                "items": [
+                    {
+                        "contentDetails": {
+                            "videoId": "shortvideo1",
+                            "videoPublishedAt": published,
+                        },
+                        "snippet": {"title": "一分钟切片"},
+                    },
+                    {
+                        "contentDetails": {
+                            "videoId": "longvideo01",
+                            "videoPublishedAt": published,
+                        },
+                        "snippet": {"title": "完整访谈"},
+                    },
+                ]
+            }
+        assert path == "videos"
+        assert query["id"] == "shortvideo1,longvideo01"
+        return {
+            "items": [
+                {"id": "shortvideo1", "contentDetails": {"duration": "PT1M24S"}},
+                {"id": "longvideo01", "contentDetails": {"duration": "PT31M2S"}},
+            ]
+        }
+
+    monkeypatch.setattr(discovery, "_youtube_api_get", fake_youtube)
+
+    videos = discovery.fetch_channel_videos(channel)
+
+    assert [(video.id, video.duration_seconds) for video in videos] == [
+        ("longvideo01", 1862)
+    ]
+
+
+def test_rss_duration_filter_uses_supadata_metadata(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+        min_duration_seconds=600,
+    )
+    published = datetime.now(UTC).isoformat()
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:yt="http://www.youtube.com/xml/schemas/2015">
+  <entry>
+    <yt:videoId>shortvideo1</yt:videoId>
+    <title>一分钟切片</title>
+    <published>{published}</published>
+  </entry>
+  <entry>
+    <yt:videoId>longvideo01</yt:videoId>
+    <title>完整访谈</title>
+    <published>{published}</published>
+  </entry>
+</feed>""".encode()
+    monkeypatch.setenv("SUPADATA_API_KEY", "test-key")
+    monkeypatch.delenv("YOUTUBE_API_KEY", raising=False)
+    monkeypatch.setattr(discovery, "_get", lambda url: feed)
+
+    def fake_supadata(path, query):
+        assert path == "youtube/video"
+        return {"duration": 84 if query["id"] == "shortvideo1" else 1862}
+
+    monkeypatch.setattr(discovery, "_supadata_get", fake_supadata)
+
+    videos = discovery.fetch_channel_videos(channel)
+
+    assert [video.id for video in videos] == ["longvideo01"]
+
+
+def test_duration_filter_fails_closed_when_metadata_is_unavailable(monkeypatch):
+    channel = ChannelConfig(
+        id="test-channel",
+        url="https://www.youtube.com/@test",
+        youtube_channel_id="UC0123456789abcdefghijk",
+        min_duration_seconds=600,
+    )
+    published = datetime.now(UTC).isoformat()
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:yt="http://www.youtube.com/xml/schemas/2015">
+  <entry>
+    <yt:videoId>unknown0001</yt:videoId>
+    <title>时长未知</title>
+    <published>{published}</published>
+  </entry>
+</feed>""".encode()
+    monkeypatch.delenv("YOUTUBE_API_KEY", raising=False)
+    monkeypatch.delenv("SUPADATA_API_KEY", raising=False)
+    monkeypatch.setattr(discovery, "_get", lambda url: feed)
+
+    assert discovery.fetch_channel_videos(channel) == []
+
+
 def test_supadata_fallback_when_youtube_feed_is_unavailable(monkeypatch):
     channel = ChannelConfig(
         id="test-channel",

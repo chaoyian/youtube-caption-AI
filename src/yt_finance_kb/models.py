@@ -13,6 +13,7 @@ class ChannelConfig(BaseModel):
     enabled: bool = True
     languages: list[str] = Field(default_factory=lambda: ["zh-TW", "zh-Hant", "zh", "en"])
     backfill_days: int = Field(default=7, ge=0, le=3650)
+    min_duration_seconds: int = Field(default=0, ge=0, le=86400)
     tags: list[str] = Field(default_factory=list)
 
 
@@ -34,6 +35,7 @@ class Video(BaseModel):
     title: str
     published_at: datetime
     url: str
+    duration_seconds: int | None = Field(default=None, ge=0)
 
 
 class TranscriptSegment(BaseModel):

@@ -62,6 +62,7 @@ Variables：
       "enabled": true,
       "languages": ["en"],
       "backfill_days": 7,
+      "min_duration_seconds": 600,
       "tags": ["财经", "投资", "宏观", "英文"]
     }
   ]
@@ -99,7 +100,9 @@ Variables：
 ### 视频发现与字幕回退
 
 配置 `YOUTUBE_API_KEY` 后，程序使用官方 YouTube Data API 的频道上传播放列表发现
-视频。若 API 暂时失败，会回退到 YouTube RSS；只有两者都失败时才会用 Supadata
+视频。频道可配置 `min_duration_seconds`，发现阶段会先按视频时长过滤，避免把 Shorts
+或短切片送去抓字幕、AI 分析和通知；无法取得时长的候选会安全跳过。若 API 暂时失败，
+会回退到 YouTube RSS；只有两者都失败时才会用 Supadata
 发现频道内容。这样高频检查不会消耗 Supadata credits。
 
 字幕按以下顺序尝试，任一成功即停止：

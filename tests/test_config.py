@@ -60,3 +60,19 @@ def test_blank_environment_value_uses_yaml(tmp_path, monkeypatch):
     config = load_config(config_path)
 
     assert [channel.id for channel in config.channels] == ["yaml-channel"]
+
+
+def test_channel_minimum_duration_is_loaded(tmp_path, monkeypatch):
+    config_path = tmp_path / "channels.yaml"
+    config_path.write_text(
+        "channels:\n"
+        "  - id: long-form\n"
+        "    url: https://www.youtube.com/@longform\n"
+        "    min_duration_seconds: 600\n",
+        encoding="utf-8",
+    )
+    monkeypatch.delenv("YOUTUBE_CHANNELS_JSON", raising=False)
+
+    config = load_config(config_path)
+
+    assert config.channels[0].min_duration_seconds == 600
