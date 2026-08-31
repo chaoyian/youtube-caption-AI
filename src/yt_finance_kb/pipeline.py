@@ -9,7 +9,13 @@ from urllib.parse import quote, urlsplit
 
 from yt_dlp import YoutubeDL
 
-from .analyzer import DEFAULT_POINT_LIMIT_PER_VIDEO, PoeAnalyzer, PoePointBudget, PoeUsage
+from .analyzer import (
+    DEFAULT_POINT_LIMIT_PER_VIDEO,
+    DEFAULT_TOKENRHYTHM_MODEL,
+    PoeAnalyzer,
+    PoePointBudget,
+    PoeUsage,
+)
 from .cleaning import clean_segments, transcript_hash, transcript_text
 from .config import load_config
 from .discovery import (
@@ -118,6 +124,7 @@ def _safe_error(error: Exception) -> str:
         os.environ.get("APIFY_TOKEN"),
         os.environ.get("SUPADATA_API_KEY"),
         os.environ.get("POE_API_KEY"),
+        os.environ.get("TOKENRHYTHM_API_KEY"),
         os.environ.get("RESEND_API_KEY"),
         os.environ.get("GMAIL_APP_PASSWORD"),
         os.environ.get("DISCORD_WEBHOOK_URL"),
@@ -148,6 +155,8 @@ def _usage_recorder(record: dict[str, Any], result: ProcessResult):
         total["completion_tokens"] += usage.completion_tokens
         total["calls"] += 1
         total["models"][usage.model] = total["models"].get(usage.model, 0) + usage.points
+        providers = total.setdefault("providers", {})
+        providers[usage.provider] = providers.get(usage.provider, 0) + 1
         result.poe_calls += 1
         result.poe_points += usage.points
 
@@ -284,8 +293,11 @@ def process(
             active_analyzer = analyzer
             if active_analyzer is None:
                 api_key = os.environ.get("POE_API_KEY")
-                if not api_key:
-                    raise RuntimeError("POE_API_KEY is required for a new or changed transcript")
+                tokenrhythm_api_key = os.environ.get("TOKENRHYTHM_API_KEY")
+                if not api_key and not tokenrhythm_api_key:
+                    raise RuntimeError(
+                        "POE_API_KEY or TOKENRHYTHM_API_KEY is required for a new or changed transcript"
+                    )
                 point_limit = int(
                     os.environ.get("POE_POINT_LIMIT_PER_VIDEO", DEFAULT_POINT_LIMIT_PER_VIDEO)
                 )
@@ -307,6 +319,17 @@ def process(
                     aux_input_points_per_1k=_optional_int("POE_AUX_INPUT_POINTS_PER_1K"),
                     aux_output_points_per_1k=_optional_int("POE_AUX_OUTPUT_POINTS_PER_1K"),
                     usage_recorder=_usage_recorder(record, result),
+                    tokenrhythm_api_key=tokenrhythm_api_key,
+                    tokenrhythm_model=os.environ.get(
+                        "TOKENRHYTHM_MODEL", DEFAULT_TOKENRHYTHM_MODEL
+                    ),
+                    provider_order=tuple(
+                        item.strip().lower()
+                        for item in os.environ.get(
+                            "AI_PROVIDER_ORDER", "tokenrhythm,poe"
+                        ).split(",")
+                        if item.strip()
+                    ),
                 )
             note = active_analyzer.analyze(video, transcript_text(cleaned))
             version = int(record.get("note_version", 0)) + 1

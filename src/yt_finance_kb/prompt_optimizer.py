@@ -10,7 +10,12 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Protocol
 
-from .analyzer import MODEL_POINT_RATES, PoeAnalyzer, PoePointBudget
+from .analyzer import (
+    DEFAULT_TOKENRHYTHM_MODEL,
+    MODEL_POINT_RATES,
+    PoeAnalyzer,
+    PoePointBudget,
+)
 from .models import ResearchNote, Video
 
 
@@ -192,13 +197,16 @@ def write_eval_case(path: Path, video: Video, transcript: str) -> Path:
 class PoeOptimizationRuntime:
     def __init__(
         self,
-        api_key: str,
+        api_key: str | None,
         model: str,
         *,
         point_limit: int,
         points_spent: int = 0,
         input_points_per_1k: int | None = None,
         output_points_per_1k: int | None = None,
+        tokenrhythm_api_key: str | None = None,
+        tokenrhythm_model: str = DEFAULT_TOKENRHYTHM_MODEL,
+        provider_order: tuple[str, ...] = ("tokenrhythm", "poe"),
     ) -> None:
         self.model = model
         self.point_limit = point_limit
@@ -206,12 +214,18 @@ class PoeOptimizationRuntime:
         self.input_points_per_1k = input_points_per_1k
         self.output_points_per_1k = output_points_per_1k
         self.api_key = api_key
+        self.tokenrhythm_api_key = tokenrhythm_api_key
+        self.tokenrhythm_model = tokenrhythm_model
+        self.provider_order = provider_order
         self.gateway = PoeAnalyzer(
             api_key,
             model,
             budget=self.budget,
             input_points_per_1k=input_points_per_1k,
             output_points_per_1k=output_points_per_1k,
+            tokenrhythm_api_key=tokenrhythm_api_key,
+            tokenrhythm_model=tokenrhythm_model,
+            provider_order=provider_order,
         )
 
     @property
@@ -325,6 +339,9 @@ Return {{"candidates":[{{"title":"...","strategy":"...","prompt":"..."}}]}} with
                 input_points_per_1k=self.input_points_per_1k,
                 output_points_per_1k=self.output_points_per_1k,
                 quality_prompt=candidate.prompt,
+                tokenrhythm_api_key=self.tokenrhythm_api_key,
+                tokenrhythm_model=self.tokenrhythm_model,
+                provider_order=self.provider_order,
             )
             note = analyzer.analyze(case.video, case.transcript)
             candidate.outputs.append(
@@ -738,8 +755,9 @@ def session_summary(state: dict[str, Any]) -> dict[str, Any]:
 
 def runtime_from_environment(state: dict[str, Any] | None = None, **overrides: Any) -> PoeOptimizationRuntime:
     api_key = os.environ.get("POE_API_KEY")
-    if not api_key:
-        raise RuntimeError("POE_API_KEY is required for prompt optimization")
+    tokenrhythm_api_key = os.environ.get("TOKENRHYTHM_API_KEY")
+    if not api_key and not tokenrhythm_api_key:
+        raise RuntimeError("POE_API_KEY or TOKENRHYTHM_API_KEY is required for prompt optimization")
     model = overrides.get("model") or (state or {}).get("model") or os.environ.get("POE_MODEL", "GPT-5.4")
     point_limit = int(
         overrides.get("point_limit")
@@ -749,7 +767,7 @@ def runtime_from_environment(state: dict[str, Any] | None = None, **overrides: A
     spent = int((state or {}).get("points_spent", 0))
     input_rate = os.environ.get("POE_INPUT_POINTS_PER_1K")
     output_rate = os.environ.get("POE_OUTPUT_POINTS_PER_1K")
-    if model.lower() not in MODEL_POINT_RATES and not (input_rate and output_rate):
+    if api_key and model.lower() not in MODEL_POINT_RATES and not (input_rate and output_rate):
         raise ValueError(f"Configure point rates for unknown Poe model {model!r}")
     return PoeOptimizationRuntime(
         api_key,
@@ -758,4 +776,11 @@ def runtime_from_environment(state: dict[str, Any] | None = None, **overrides: A
         points_spent=spent,
         input_points_per_1k=int(input_rate) if input_rate else None,
         output_points_per_1k=int(output_rate) if output_rate else None,
+        tokenrhythm_api_key=tokenrhythm_api_key,
+        tokenrhythm_model=os.environ.get("TOKENRHYTHM_MODEL", DEFAULT_TOKENRHYTHM_MODEL),
+        provider_order=tuple(
+            item.strip().lower()
+            for item in os.environ.get("AI_PROVIDER_ORDER", "tokenrhythm,poe").split(",")
+            if item.strip()
+        ),
     )
