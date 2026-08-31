@@ -326,7 +326,7 @@ def process(
                     provider_order=tuple(
                         item.strip().lower()
                         for item in os.environ.get(
-                            "AI_PROVIDER_ORDER", "tokenrhythm,poe"
+                            "AI_PROVIDER_ORDER", "poe,tokenrhythm"
                         ).split(",")
                         if item.strip()
                     ),

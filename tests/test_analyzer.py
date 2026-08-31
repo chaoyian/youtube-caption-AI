@@ -49,7 +49,7 @@ def test_analyzer_requests_json_object_mode(monkeypatch):
     assert captured["response_format"] == {"type": "json_object"}
 
 
-def test_tokenrhythm_is_preferred_and_uses_compatible_max_tokens(monkeypatch):
+def test_tokenrhythm_uses_compatible_max_tokens(monkeypatch):
     from types import SimpleNamespace
 
     from yt_finance_kb.analyzer import PoeAnalyzer
@@ -58,7 +58,11 @@ def test_tokenrhythm_is_preferred_and_uses_compatible_max_tokens(monkeypatch):
         "yt_finance_kb.analyzer.tiktoken.get_encoding",
         lambda name: SimpleNamespace(encode=lambda text: list(text)),
     )
-    analyzer = PoeAnalyzer("poe-key", tokenrhythm_api_key="rhythm-key")
+    analyzer = PoeAnalyzer(
+        "poe-key",
+        tokenrhythm_api_key="rhythm-key",
+        provider_order=("tokenrhythm", "poe"),
+    )
     captured = {}
 
     def fake_create(**request):
@@ -125,7 +129,11 @@ def test_tokenrhythm_error_falls_back_to_poe(monkeypatch):
         "yt_finance_kb.analyzer.tiktoken.get_encoding",
         lambda name: SimpleNamespace(encode=lambda text: list(text)),
     )
-    analyzer = PoeAnalyzer("poe-key", tokenrhythm_api_key="rhythm-key")
+    analyzer = PoeAnalyzer(
+        "poe-key",
+        tokenrhythm_api_key="rhythm-key",
+        provider_order=("tokenrhythm", "poe"),
+    )
     monkeypatch.setattr(
         analyzer.tokenrhythm_client.chat.completions,
         "create",

@@ -67,7 +67,7 @@ jobs:
       POE_API_KEY: ${{ secrets.POE_API_KEY }}
       TOKENRHYTHM_API_KEY: ${{ secrets.TOKENRHYTHM_API_KEY }}
       TOKENRHYTHM_MODEL: ${{ vars.TOKENRHYTHM_MODEL || 'glm-5.2' }}
-      AI_PROVIDER_ORDER: ${{ vars.AI_PROVIDER_ORDER || 'tokenrhythm,poe' }}
+      AI_PROVIDER_ORDER: ${{ vars.AI_PROVIDER_ORDER || 'poe,tokenrhythm' }}
       POE_MODEL: ${{ vars.POE_MODEL || 'GPT-5.4' }}
       POE_INPUT_POINTS_PER_1K: ${{ vars.POE_INPUT_POINTS_PER_1K }}
       POE_OUTPUT_POINTS_PER_1K: ${{ vars.POE_OUTPUT_POINTS_PER_1K }}

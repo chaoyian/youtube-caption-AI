@@ -23,10 +23,10 @@
 
 Secrets：
 
-- `TOKENRHYTHM_API_KEY`：基元律动 API Key。配置后默认作为主 AI 接口；Key 只在创建时
+- `TOKENRHYTHM_API_KEY`：基元律动 API Key。配置后默认作为 Poe 的备用 AI 接口；Key 只在创建时
   完整显示一次，请立即保存，且不要提交到仓库或写入日志。
 - `POE_API_KEY`：从 Poe 新建的 API Key。不要使用任何已经公开或发到聊天中的 Key。
-  同时配置基元律动时，Poe 默认作为备用接口。
+  同时配置基元律动时，Poe 默认作为主接口。
 - `YOUTUBE_API_KEY`：推荐。Google Cloud 中启用 YouTube Data API v3 后创建的 API
   Key，只用于发现公开视频和读取元数据，不用于下载字幕。
 - `APIFY_TOKEN`：推荐的低成本字幕备用通道。Apify 免费方案每月提供平台额度；
@@ -78,8 +78,8 @@ Variables：
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
 - `TOKENRHYTHM_MODEL`：可选，默认 `glm-5.2`。应填写基元律动模型页中当前账号可用的
   模型 ID。
-- `AI_PROVIDER_ORDER`：可选，默认 `tokenrhythm,poe`，即基元律动优先、Poe 备用。
-  如需 Poe 优先并在报错或点数预算耗尽时切到基元律动，改为 `poe,tokenrhythm`。
+- `AI_PROVIDER_ORDER`：可选，默认 `poe,tokenrhythm`，即 Poe 优先；Poe 报错、返回空内容
+  或点数预算耗尽时自动切到基元律动。反向顺序可改为 `tokenrhythm,poe`。
 - `POE_POINT_LIMIT_PER_VIDEO`：可选，默认 `10000`。这是每个新视频的硬预算护栏，
   不是要求程序必须花满；没有新字幕、字幕未变化或仅重试通知时均为 0 点。
 - `POE_INPUT_POINTS_PER_1K`、`POE_OUTPUT_POINTS_PER_1K`：通常无需填写。程序内置

@@ -206,7 +206,7 @@ class PoeOptimizationRuntime:
         output_points_per_1k: int | None = None,
         tokenrhythm_api_key: str | None = None,
         tokenrhythm_model: str = DEFAULT_TOKENRHYTHM_MODEL,
-        provider_order: tuple[str, ...] = ("tokenrhythm", "poe"),
+        provider_order: tuple[str, ...] = ("poe", "tokenrhythm"),
     ) -> None:
         self.model = model
         self.point_limit = point_limit
@@ -780,7 +780,7 @@ def runtime_from_environment(state: dict[str, Any] | None = None, **overrides: A
         tokenrhythm_model=os.environ.get("TOKENRHYTHM_MODEL", DEFAULT_TOKENRHYTHM_MODEL),
         provider_order=tuple(
             item.strip().lower()
-            for item in os.environ.get("AI_PROVIDER_ORDER", "tokenrhythm,poe").split(",")
+            for item in os.environ.get("AI_PROVIDER_ORDER", "poe,tokenrhythm").split(",")
             if item.strip()
         ),
     )

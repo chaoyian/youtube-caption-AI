@@ -49,7 +49,7 @@ MODEL_POINT_RATES = {
 
 TOKENRHYTHM_BASE_URL = "https://tokenrhythm.studio/v1"
 DEFAULT_TOKENRHYTHM_MODEL = "glm-5.2"
-DEFAULT_PROVIDER_ORDER = ("tokenrhythm", "poe")
+DEFAULT_PROVIDER_ORDER = ("poe", "tokenrhythm")
 
 
 class PoeBudgetExceeded(RuntimeError):
