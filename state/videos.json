@@ -429,29 +429,12 @@
       },
       "email_sent_at": "2026-08-10T04:27:44+00:00",
       "email_status": "sent",
-      "entities": [
-        "Alphabet",
-        "CAC 40指数",
-        "Greg Abel",
-        "STOXX 600",
-        "Warren Buffett",
-        "iShares Semiconductor ETF",
-        "富时100指数",
-        "德国DAX指数",
-        "标普500指数",
-        "波克夏海瑟威",
-        "美国",
-        "联准会",
-        "费城半导体指数",
-        "那斯达克100指数",
-        "黄金"
-      ],
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "159e5e207f188199ff6b992af199c4348906a133719b350e4ace734f82eecbf3",
       "last_attempt_at": "2026-08-10T02:40:53+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-24T05:34:31+00:00",
+      "last_fetched_at": "2026-08-31T05:53:09+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-10-5_poweJsVBA.md",
       "note_version": 1,
@@ -896,6 +879,131 @@
       "video_id": "ApykW90PQ58",
       "video_url": "https://www.youtube.com/watch?v=ApykW90PQ58",
       "waiting_count": 1
+    },
+    "BxtHhc6P1n0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-08-31T03:46:37+00:00",
+      "analyzed_hash": "1a4f924db8f0dbc436e4c0cdd3bc37ae3d469856ef25199c88212b096b00ce8b",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "genecc.chen@msa.hinet.net": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-08-31T03:46:56+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-08-31T03:46:56+00:00",
+      "email_status": "sent",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "1a4f924db8f0dbc436e4c0cdd3bc37ae3d469856ef25199c88212b096b00ce8b",
+      "last_attempt_at": "2026-08-31T02:30:41+00:00",
+      "last_error": null,
+      "last_fetched_at": "2026-08-31T03:45:35+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-08-31-BxtHhc6P1n0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 9144,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 6098
+        },
+        "points": 6098,
+        "prompt_tokens": 26409
+      },
+      "published_at": "2026-08-31T01:07:17+00:00",
+      "title": "2026/8/31(一)華許放鷹 升息躲得掉?高利率越久 美債美股 誰先撐不住？早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "联准会",
+        "升息预期",
+        "市场定价",
+        "SOFR",
+        "债券市场",
+        "政策利率",
+        "就业",
+        "薪资"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "BxtHhc6P1n0",
+      "video_url": "https://www.youtube.com/watch?v=BxtHhc6P1n0",
+      "waiting_count": 2
     },
     "C8bYSy7FLIc": {
       "alert_status": "none",
@@ -2319,24 +2427,12 @@
       },
       "email_sent_at": "2026-08-17T05:08:14+00:00",
       "email_status": "sent",
-      "entities": [
-        "FOMC",
-        "中国",
-        "原油",
-        "台湾无人机产业",
-        "无人机",
-        "标普500",
-        "沙乌地阿拉伯",
-        "纳斯达克100",
-        "美国",
-        "联准会"
-      ],
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "d86da0b261312d76d58ee3dd165d7b4345dddf7e1f1f5f17ee9eaad8e4249fe9",
       "last_attempt_at": "2026-08-17T03:27:18+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-24T05:34:39+00:00",
+      "last_fetched_at": "2026-08-31T05:53:20+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-17-OJ5vxmwQrE0.md",
       "note_version": 1,
@@ -3576,29 +3672,12 @@
       },
       "email_sent_at": "2026-08-24T03:32:06+00:00",
       "email_status": "sent",
-      "entities": [
-        "SK海力士",
-        "以太币",
-        "加拿大",
-        "川普",
-        "标普500",
-        "比特币",
-        "纳斯达克",
-        "美元指数",
-        "美光",
-        "美国国债",
-        "美国财政部",
-        "苹果",
-        "贝森特",
-        "道琼工业平均指数",
-        "黄金"
-      ],
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "983339930a5bfd24998b570078b7b5b1f26923870b996e6df798782fd84e3d1c",
       "last_attempt_at": "2026-08-24T01:22:59+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-24T03:31:16+00:00",
+      "last_fetched_at": "2026-08-31T03:45:28+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-24-dFYqrIQIMvw.md",
       "note_version": 1,
