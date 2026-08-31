@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add TokenRhythm (基元律动) as an OpenAI-compatible AI provider, preferred by default when its
+  API key is configured.
+- Automatically fail over between TokenRhythm and Poe on request errors, empty responses, or Poe
+  point-budget exhaustion, while preserving legacy usage-state compatibility.
+
 ## 0.2.0 — 2026-08-29
 
 ### Added

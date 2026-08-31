@@ -47,6 +47,10 @@ MODEL_POINT_RATES = {
     "kimi-k3": (100, 500),
 }
 
+TOKENRHYTHM_BASE_URL = "https://tokenrhythm.studio/v1"
+DEFAULT_TOKENRHYTHM_MODEL = "glm-5.2"
+DEFAULT_PROVIDER_ORDER = ("tokenrhythm", "poe")
+
 
 class PoeBudgetExceeded(RuntimeError):
     pass
@@ -58,6 +62,7 @@ class PoeUsage:
     prompt_tokens: int
     completion_tokens: int
     points: int
+    provider: str = "poe"
 
 
 class PoePointBudget:
@@ -124,7 +129,7 @@ def _json_object(content: str) -> dict[str, Any]:
 class PoeAnalyzer:
     def __init__(
         self,
-        api_key: str,
+        api_key: str | None,
         model: str = "GPT-5.4",
         *,
         budget: PoePointBudget | None = None,
@@ -135,19 +140,46 @@ class PoeAnalyzer:
         aux_output_points_per_1k: int | None = None,
         usage_recorder: Any | None = None,
         quality_prompt: str | None = None,
+        tokenrhythm_api_key: str | None = None,
+        tokenrhythm_model: str = DEFAULT_TOKENRHYTHM_MODEL,
+        provider_order: tuple[str, ...] = DEFAULT_PROVIDER_ORDER,
     ) -> None:
-        self.client = OpenAI(api_key=api_key, base_url="https://api.poe.com/v1", timeout=180)
+        self.client = (
+            OpenAI(api_key=api_key, base_url="https://api.poe.com/v1", timeout=180)
+            if api_key
+            else None
+        )
+        self.tokenrhythm_client = (
+            OpenAI(api_key=tokenrhythm_api_key, base_url=TOKENRHYTHM_BASE_URL, timeout=180)
+            if tokenrhythm_api_key
+            else None
+        )
+        if not self.client and not self.tokenrhythm_client:
+            raise ValueError("Configure POE_API_KEY or TOKENRHYTHM_API_KEY")
+        unknown_providers = set(provider_order) - {"poe", "tokenrhythm"}
+        if unknown_providers:
+            raise ValueError(f"Unknown AI provider(s): {', '.join(sorted(unknown_providers))}")
+        self.provider_order = tuple(dict.fromkeys(provider_order))
+        if not self.provider_order:
+            raise ValueError("provider_order cannot be empty")
         self.model = model
+        self.tokenrhythm_model = tokenrhythm_model
         default_rates = MODEL_POINT_RATES.get(model.lower())
-        if not default_rates and (input_points_per_1k is None or output_points_per_1k is None):
+        if self.client and not default_rates and (
+            input_points_per_1k is None or output_points_per_1k is None
+        ):
             raise ValueError(f"Configure point rates for unknown Poe model {model!r}")
         self.rates = (
-            input_points_per_1k or default_rates[0],
-            output_points_per_1k or default_rates[1],
+            (
+                input_points_per_1k or default_rates[0],
+                output_points_per_1k or default_rates[1],
+            )
+            if self.client
+            else None
         )
         self.aux_model = aux_model or None
         self.aux_rates: tuple[int, int] | None = None
-        if self.aux_model:
+        if self.client and self.aux_model:
             known_aux_rates = MODEL_POINT_RATES.get(self.aux_model.lower())
             if known_aux_rates:
                 self.aux_rates = (
@@ -169,6 +201,43 @@ class PoeAnalyzer:
         self.usages: list[PoeUsage] = []
         self.encoding = tiktoken.get_encoding("o200k_base")
 
+    def _providers(self) -> list[str]:
+        available = {
+            "poe": self.client is not None,
+            "tokenrhythm": self.tokenrhythm_client is not None,
+        }
+        return [provider for provider in self.provider_order if available[provider]]
+
+    def _record_usage(
+        self,
+        provider: str,
+        model: str,
+        usage: Any | None,
+        rates: tuple[int, int] | None,
+    ) -> None:
+        if not usage:
+            return
+        if provider == "poe":
+            assert rates is not None
+            recorded = self.budget.record(
+                model,
+                usage.prompt_tokens,
+                usage.completion_tokens,
+                rates[0],
+                rates[1],
+            )
+        else:
+            recorded = PoeUsage(
+                f"tokenrhythm/{model}",
+                usage.prompt_tokens,
+                usage.completion_tokens,
+                0,
+                provider="tokenrhythm",
+            )
+        self.usages.append(recorded)
+        if self.usage_recorder:
+            self.usage_recorder(recorded)
+
     def _estimated_tokens(self, messages: list[dict[str, str]]) -> int:
         return sum(len(self.encoding.encode(message["content"])) + 8 for message in messages) + 20
 
@@ -180,64 +249,73 @@ class PoeAnalyzer:
         minimum_output_tokens: int,
         use_aux: bool = False,
     ) -> str:
-        model = self.aux_model if use_aux else self.model
-        rates = self.aux_rates if use_aux else self.rates
-        if not model or not rates:
+        poe_model = self.aux_model if use_aux else self.model
+        poe_rates = self.aux_rates if use_aux else self.rates
+        if use_aux and self.client and (not poe_model or not poe_rates) and not self.tokenrhythm_client:
             raise PoeBudgetExceeded(
                 "The transcript is too large for one budgeted call and no auxiliary model is configured"
             )
-        max_tokens = self.budget.max_output_tokens(
-            estimated_prompt_tokens=self._estimated_tokens(messages),
-            input_points_per_1k=rates[0],
-            output_points_per_1k=rates[1],
-            requested=requested_max_tokens,
-            minimum=minimum_output_tokens,
-        )
-        request = {
-            "model": model,
-            "messages": messages,
-            "temperature": 0.1,
-            "max_completion_tokens": max_tokens,
-            "response_format": {"type": "json_object"},
-            "extra_body": MODEL_EXTRA_BODY.get(model.lower()),
-        }
-        usage = None
-        finish_reason = None
-        if model.lower() == "kimi-k3":
-            parts: list[str] = []
-            stream = self.client.chat.completions.create(
-                **request,
-                stream=True,
-                stream_options={"include_usage": True},
-            )
-            for chunk in stream:
-                if chunk.usage:
-                    usage = chunk.usage
-                for choice in chunk.choices:
-                    if choice.finish_reason:
-                        finish_reason = choice.finish_reason
-                    if choice.delta.content:
-                        parts.append(choice.delta.content)
-            content = "".join(parts)
-        else:
-            response = self.client.chat.completions.create(**request)
-            usage = response.usage
-            finish_reason = response.choices[0].finish_reason
-            content = response.choices[0].message.content
-        if usage:
-            usage = self.budget.record(
-                model,
-                usage.prompt_tokens,
-                usage.completion_tokens,
-                rates[0],
-                rates[1],
-            )
-            self.usages.append(usage)
-            if self.usage_recorder:
-                self.usage_recorder(usage)
-        if not content:
-            raise RuntimeError(f"Poe returned an empty response (finish_reason={finish_reason})")
-        return content
+        failures: list[str] = []
+        for provider in self._providers():
+            model = poe_model if provider == "poe" else self.tokenrhythm_model
+            rates = poe_rates if provider == "poe" else None
+            if not model or (provider == "poe" and not rates):
+                failures.append(f"{provider}: no model or point rates configured")
+                continue
+            try:
+                if provider == "poe":
+                    max_tokens = self.budget.max_output_tokens(
+                        estimated_prompt_tokens=self._estimated_tokens(messages),
+                        input_points_per_1k=rates[0],
+                        output_points_per_1k=rates[1],
+                        requested=requested_max_tokens,
+                        minimum=minimum_output_tokens,
+                    )
+                else:
+                    max_tokens = requested_max_tokens
+                request = {
+                    "model": model,
+                    "messages": messages,
+                }
+                usage = None
+                finish_reason = None
+                if provider == "poe":
+                    request["temperature"] = 0.1
+                    request["response_format"] = {"type": "json_object"}
+                    request["max_completion_tokens"] = max_tokens
+                    request["extra_body"] = MODEL_EXTRA_BODY.get(model.lower())
+                else:
+                    request["max_tokens"] = max_tokens
+                client = self.client if provider == "poe" else self.tokenrhythm_client
+                assert client is not None
+                if provider == "poe" and model.lower() == "kimi-k3":
+                    parts: list[str] = []
+                    stream = client.chat.completions.create(
+                        **request,
+                        stream=True,
+                        stream_options={"include_usage": True},
+                    )
+                    for chunk in stream:
+                        if chunk.usage:
+                            usage = chunk.usage
+                        for choice in chunk.choices:
+                            if choice.finish_reason:
+                                finish_reason = choice.finish_reason
+                            if choice.delta.content:
+                                parts.append(choice.delta.content)
+                    content = "".join(parts)
+                else:
+                    response = client.chat.completions.create(**request)
+                    usage = response.usage
+                    finish_reason = response.choices[0].finish_reason
+                    content = response.choices[0].message.content
+                if not content:
+                    raise RuntimeError(f"empty response (finish_reason={finish_reason})")
+                self._record_usage(provider, model, usage, rates)
+                return content
+            except Exception as error:
+                failures.append(f"{provider}: {type(error).__name__}: {error}")
+        raise RuntimeError("All configured AI providers failed; " + " | ".join(failures))
 
     @staticmethod
     def _chunks(transcript: str) -> list[str]:

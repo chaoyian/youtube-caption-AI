@@ -23,7 +23,10 @@
 
 Secrets：
 
+- `TOKENRHYTHM_API_KEY`：基元律动 API Key。配置后默认作为主 AI 接口；Key 只在创建时
+  完整显示一次，请立即保存，且不要提交到仓库或写入日志。
 - `POE_API_KEY`：从 Poe 新建的 API Key。不要使用任何已经公开或发到聊天中的 Key。
+  同时配置基元律动时，Poe 默认作为备用接口。
 - `YOUTUBE_API_KEY`：推荐。Google Cloud 中启用 YouTube Data API v3 后创建的 API
   Key，只用于发现公开视频和读取元数据，不用于下载字幕。
 - `APIFY_TOKEN`：推荐的低成本字幕备用通道。Apify 免费方案每月提供平台额度；
@@ -73,6 +76,10 @@ Variables：
 - `APIFY_TRANSCRIPT_ACTOR`：可选，默认
   `apihq~youtube-transcript-scraper`。只有明确更换 Apify Actor 时才填写。
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
+- `TOKENRHYTHM_MODEL`：可选，默认 `glm-5.2`。应填写基元律动模型页中当前账号可用的
+  模型 ID。
+- `AI_PROVIDER_ORDER`：可选，默认 `tokenrhythm,poe`，即基元律动优先、Poe 备用。
+  如需 Poe 优先并在报错或点数预算耗尽时切到基元律动，改为 `poe,tokenrhythm`。
 - `POE_POINT_LIMIT_PER_VIDEO`：可选，默认 `10000`。这是每个新视频的硬预算护栏，
   不是要求程序必须花满；没有新字幕、字幕未变化或仅重试通知时均为 0 点。
 - `POE_INPUT_POINTS_PER_1K`、`POE_OUTPUT_POINTS_PER_1K`：通常无需填写。程序内置
@@ -281,12 +288,14 @@ python -m yt_finance_kb process --latest-per-channel 2 --backfill-days 3650 --fo
 
 ## AI 点数与笔记质量
 
-- 正常一期只调用一次 GPT‑5.4；程序不会为了“省钱”固定增加一次小模型调用。
+- 正常一期只调用当前优先接口一次；只有接口报错、返回空内容或 Poe 点数预算不足时，
+  才会自动尝试下一个已配置接口，不会在主接口成功后重复调用。
 - 完整字幕在预算可容纳时直接分析，避免旧版分块先压成简单观点而丢掉数据、因果链和风险。
 - 只有超长字幕才走分块；分块结果必须保留主张、证据、因果链、前提和反例。
 - 最终笔记限制为 3–5 个核心判断、5–8 张卡片，并要求跨栏目去重；不再生成独立实体清单。
-- 每次返回后的 token 与估算 Poe 点数写入对应视频的 `poe_usage` 状态。程序会在发起
-  下一次调用前预留输入、输出和安全余量，超过每视频上限时停止，不会继续修复重试。
+- 每次返回后的 token、实际调用接口与估算 Poe 点数写入对应视频原有的 `poe_usage`
+  状态（字段名为兼容旧状态保留）。程序会在 Poe 调用前预留输入、输出和安全余量；
+  超过每视频 Poe 上限时自动尝试基元律动，不会继续消耗 Poe 点数。
 
 ## 数据说明
 

@@ -365,6 +365,13 @@ def test_api_keys_are_redacted_from_public_errors(monkeypatch):
     assert "***" in message
 
 
+def test_tokenrhythm_key_is_redacted_from_public_errors(monkeypatch):
+    monkeypatch.setenv("TOKENRHYTHM_API_KEY", "tokenrhythm-sensitive-value")
+    message = pipeline._safe_error(RuntimeError("request used tokenrhythm-sensitive-value"))
+    assert "tokenrhythm-sensitive-value" not in message
+    assert "***" in message
+
+
 def test_discovery_and_apify_keys_are_redacted_from_public_errors(monkeypatch):
     monkeypatch.setenv("YOUTUBE_API_KEY", "youtube-sensitive-value")
     monkeypatch.setenv("APIFY_TOKEN", "apify-sensitive-value")
