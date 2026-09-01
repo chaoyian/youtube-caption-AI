@@ -983,7 +983,7 @@
         "prompt_tokens": 26409
       },
       "published_at": "2026-08-31T01:07:17+00:00",
-      "title": "2026/8/31(一)華許放鷹 升息躲得掉?高利率越久 美債美股 誰先撐不住？早晨財經速解讀】",
+      "title": "2026/8/31(一)華許放鷹 升息躲得掉?高利率越久 美債美股 誰先撐不住？【早晨財經速解讀】",
       "topics": [
         "财经",
         "台湾",
@@ -2991,6 +2991,24 @@
       "video_url": "https://www.youtube.com/watch?v=SiQlhYjxBAY",
       "waiting_count": 1
     },
+    "XY31kO-V0Q4": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-09-01T01:30:51+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] XY31kO-V0Q4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=XY31kO-V0Q4! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-09-01T02:30:51+00:00",
+      "note_version": 0,
+      "published_at": "2026-09-01T01:07:02+00:00",
+      "title": "2026/9/1(二)美伊再交火 巨頭續燒錢！美股能擺脫 九月魔咒嗎?【早晨財經速解讀】",
+      "video_id": "XY31kO-V0Q4",
+      "video_url": "https://www.youtube.com/watch?v=XY31kO-V0Q4",
+      "waiting_count": 1
+    },
     "Z9pCZkTe358": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -3542,6 +3560,58 @@
       "video_id": "ajjRvohk-Og",
       "video_url": "https://www.youtube.com/watch?v=ajjRvohk-Og",
       "waiting_count": 1
+    },
+    "b1pGJHUFbI0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-01T01:31:37+00:00",
+      "analyzed_hash": "05b527ed7ff92f9c4afe9347c503c88d76e7900596e687e0585cfbc494403f89",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "05b527ed7ff92f9c4afe9347c503c88d76e7900596e687e0585cfbc494403f89",
+      "last_error": null,
+      "last_fetched_at": "2026-09-01T01:30:59+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-08-31-b1pGJHUFbI0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4921,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3838
+        },
+        "points": 3838,
+        "prompt_tokens": 21634,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-08-31T16:00:03+00:00",
+      "title": "The Great Wealth Reset: Why Gold Matters Now More Than Ever | Matthew Piepenburg",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "黄金",
+        "实际回报",
+        "估值框架",
+        "美债",
+        "资产配置",
+        "股票",
+        "去美元化",
+        "制裁"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "b1pGJHUFbI0",
+      "video_url": "https://www.youtube.com/watch?v=b1pGJHUFbI0"
     },
     "bi09ZJ7kOC4": {
       "alert_status": "none",
