@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-09-02 [2026/9/2(三)高利率炸彈 AI還能撐?亞洲AI行情 迎來大考驗?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-02-fpX071E5yI4.md)
 - 2026-08-28 [2026/8/28(五)輝達救美股 華許救美債?台灣景氣連八紅 台灣人終於有感?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-28-rTnPsm_gAhA.md)
 - 2026-08-27 [2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md)
 - 2026-08-26 [The AI Crash is Coming (And It’s Worse than 2008) | Edward Dowd](../../knowledge/wtfinance-podcast/2026/2026-08-26-5KYh-RMH2R8.md)
