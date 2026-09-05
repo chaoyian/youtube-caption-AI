@@ -1239,6 +1239,58 @@
       "video_url": "https://www.youtube.com/watch?v=C8bYSy7FLIc",
       "waiting_count": 10
     },
+    "DBbDrACd1W8": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-05T01:18:20+00:00",
+      "analyzed_hash": "5609571b861b5f7824c3e6786de92690e2da874f84dc641e50a62ba4208afe9d",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "5609571b861b5f7824c3e6786de92690e2da874f84dc641e50a62ba4208afe9d",
+      "last_error": null,
+      "last_fetched_at": "2026-09-05T01:17:16+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-04-DBbDrACd1W8.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8347,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5352
+        },
+        "points": 5352,
+        "prompt_tokens": 21249,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-09-04T19:30:39+00:00",
+      "title": "The Bond Market is Hitting its Breaking Point! Steve Hanke",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美国债券",
+        "货币供应",
+        "通胀",
+        "政策时滞",
+        "美国宏观",
+        "财政赤字",
+        "美国国债",
+        "利息负担"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "DBbDrACd1W8",
+      "video_url": "https://www.youtube.com/watch?v=DBbDrACd1W8"
+    },
     "E68MfE_PRnw": {
       "alert_status": "none",
       "analysis_status": "complete",
