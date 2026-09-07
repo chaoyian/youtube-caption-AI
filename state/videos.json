@@ -1063,7 +1063,7 @@
       "fetched_hash": "1a4f924db8f0dbc436e4c0cdd3bc37ae3d469856ef25199c88212b096b00ce8b",
       "last_attempt_at": "2026-08-31T02:30:41+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-31T03:45:35+00:00",
+      "last_fetched_at": "2026-09-07T04:46:20+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-31-BxtHhc6P1n0.md",
       "note_version": 1,
@@ -4340,56 +4340,34 @@
     "dFYqrIQIMvw": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-08-24T03:31:59+00:00",
-      "analyzed_hash": "983339930a5bfd24998b570078b7b5b1f26923870b996e6df798782fd84e3d1c",
+      "analyzed_at": "2026-09-07T04:46:14+00:00",
+      "analyzed_hash": "5803b259532c351fdb78a69556e18a3cb9b2875145685cb32dd40c19385b11e2",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-08-24T03:32:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-08-24T03:32:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-08-24T03:32:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-24T03:32:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-08-24T03:32:06+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "983339930a5bfd24998b570078b7b5b1f26923870b996e6df798782fd84e3d1c",
+      "fetched_hash": "5803b259532c351fdb78a69556e18a3cb9b2875145685cb32dd40c19385b11e2",
       "last_attempt_at": "2026-08-24T01:22:59+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-08-31T03:45:28+00:00",
+      "last_fetched_at": "2026-09-07T04:45:35+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-24-dFYqrIQIMvw.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5266,
+        "completion_tokens": 5800,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3972
+          "GPT-5.4": 4058
         },
-        "points": 3972,
-        "prompt_tokens": 21338
+        "points": 4058,
+        "prompt_tokens": 19280,
+        "providers": {
+          "poe": 2
+        }
       },
       "published_at": "2026-08-24T01:08:17+00:00",
       "title": "2026/8/24(一)美債救不動 黃金 比特幣先起飛?關稅戰再起 最後誰買單？【早晨財經速解讀】",
@@ -4400,15 +4378,15 @@
         "宏观",
         "美债",
         "美元",
-        "避险资产",
-        "财政赤字",
         "利率",
+        "财政赤字",
+        "风险溢价",
         "比特币",
         "资金流",
-        "市场结构"
+        "空头回补"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "dFYqrIQIMvw",
       "video_url": "https://www.youtube.com/watch?v=dFYqrIQIMvw",
