@@ -3913,7 +3913,7 @@
       "video_url": "https://www.youtube.com/watch?v=_t-xcxPL86E"
     },
     "aRPmzQfTLFc": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "analyzed_at": "2026-08-18T03:01:38+00:00",
       "analyzed_hash": "f63e0f38d4f0b0e6238781b8b1148518e8e0748659028c5b47db49a55ec9892d",
