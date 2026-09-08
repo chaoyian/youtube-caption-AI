@@ -3913,8 +3913,8 @@
       "video_url": "https://www.youtube.com/watch?v=_t-xcxPL86E"
     },
     "aRPmzQfTLFc": {
-      "alert_status": "none",
-      "analysis_status": "complete",
+      "alert_status": "pending",
+      "analysis_status": "failed",
       "analyzed_at": "2026-08-18T03:01:38+00:00",
       "analyzed_hash": "f63e0f38d4f0b0e6238781b8b1148518e8e0748659028c5b47db49a55ec9892d",
       "channel_id": "yutinghao-finance",
@@ -3947,24 +3947,27 @@
       },
       "email_sent_at": "2026-08-18T03:01:48+00:00",
       "email_status": "sent",
-      "failure_count": 0,
+      "failure_count": 1,
       "fetch_status": "complete",
-      "fetched_hash": "f63e0f38d4f0b0e6238781b8b1148518e8e0748659028c5b47db49a55ec9892d",
-      "last_attempt_at": "2026-08-18T01:18:31+00:00",
-      "last_error": null,
-      "last_fetched_at": "2026-09-01T03:30:37+00:00",
-      "next_retry_at": null,
+      "fetched_hash": "7f5959540d198f97ed2e9025482667ae4ebff28c87a88d7c2ab4edee5631a459",
+      "last_attempt_at": "2026-09-08T03:47:03+00:00",
+      "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: 33 validation errors for ResearchNote\nmacro_context.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[36]-[56], [97]-[112]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.1.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[417]-[423], [425]-[430]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.2.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[1173]-[1196], [1333]-[1409], [1578]-[1601]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[135]-[163], [223]-[259]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.1.timestamp\n  Input should be a valid integer, un",
+      "last_fetched_at": "2026-09-08T03:45:47+00:00",
+      "next_retry_at": "2026-09-09T03:47:03+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md",
       "note_version": 1,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5187,
+        "calls": 4,
+        "completion_tokens": 12354,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4029
+          "GPT-5.4": 7510
         },
-        "points": 4029,
-        "prompt_tokens": 22572
+        "points": 7510,
+        "prompt_tokens": 25979,
+        "providers": {
+          "poe": 4
+        }
       },
       "published_at": "2026-08-18T01:07:41+00:00",
       "title": "2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】",
@@ -3982,8 +3985,8 @@
         "企业债",
         "AI资本开支"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "aRPmzQfTLFc",
       "video_url": "https://www.youtube.com/watch?v=aRPmzQfTLFc",
@@ -5986,7 +5989,7 @@
       "fetched_hash": "732b23cd7e5f744c4e8e53c8eae8ebd80bccb6e5c5caf8fd6316cf83c0bedcdb",
       "last_attempt_at": "2026-08-25T01:20:22+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-01T03:30:41+00:00",
+      "last_fetched_at": "2026-09-08T03:47:08+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-25-tLvKGHyxhd8.md",
       "note_version": 1,
