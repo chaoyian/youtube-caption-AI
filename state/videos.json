@@ -2165,8 +2165,8 @@
       "waiting_count": 1
     },
     "KUZC2NyCCCY": {
-      "alert_status": "none",
-      "analysis_status": "complete",
+      "alert_status": "pending",
+      "analysis_status": "failed",
       "analyzed_at": "2026-08-26T03:33:11+00:00",
       "analyzed_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
       "channel_id": "yutinghao-finance",
@@ -2241,24 +2241,22 @@
       },
       "email_sent_at": "2026-08-26T03:33:31+00:00",
       "email_status": "sent",
-      "failure_count": 0,
+      "failure_count": 1,
       "fetch_status": "complete",
-      "fetched_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
-      "last_attempt_at": "2026-08-26T01:23:33+00:00",
-      "last_error": null,
-      "last_fetched_at": "2026-09-02T03:45:47+00:00",
-      "next_retry_at": null,
+      "fetched_hash": "8e14f0666c25624c7594671c9af3604ef07dc0149e7f8a5c61beebc0d96d895a",
+      "last_attempt_at": "2026-09-09T04:49:49+00:00",
+      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
+      "last_fetched_at": "2026-09-09T04:46:42+00:00",
+      "next_retry_at": "2026-09-10T04:49:49+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-26-KUZC2NyCCCY.md",
       "note_version": 1,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 4766,
+        "calls": 0,
+        "completion_tokens": 0,
         "limit": 10000,
-        "models": {
-          "GPT-5.4": 3770
-        },
-        "points": 3770,
-        "prompt_tokens": 21648
+        "models": {},
+        "points": 0,
+        "prompt_tokens": 0
       },
       "published_at": "2026-08-26T01:15:20+00:00",
       "title": "2026/8/26(三)美債回購能 救川普選情?日本缺工 歐洲缺膽 誰能突圍?【早晨財經速解讀】",
@@ -2276,8 +2274,8 @@
         "英伟达",
         "财报"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "KUZC2NyCCCY",
       "video_url": "https://www.youtube.com/watch?v=KUZC2NyCCCY",
@@ -3913,7 +3911,7 @@
       "video_url": "https://www.youtube.com/watch?v=_t-xcxPL86E"
     },
     "aRPmzQfTLFc": {
-      "alert_status": "disabled",
+      "alert_status": "pending",
       "analysis_status": "failed",
       "analyzed_at": "2026-08-18T03:01:38+00:00",
       "analyzed_hash": "f63e0f38d4f0b0e6238781b8b1148518e8e0748659028c5b47db49a55ec9892d",
@@ -3950,24 +3948,19 @@
       "failure_count": 1,
       "fetch_status": "complete",
       "fetched_hash": "7f5959540d198f97ed2e9025482667ae4ebff28c87a88d7c2ab4edee5631a459",
-      "last_attempt_at": "2026-09-08T03:47:03+00:00",
-      "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: 33 validation errors for ResearchNote\nmacro_context.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[36]-[56], [97]-[112]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.1.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[417]-[423], [425]-[430]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.2.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[1173]-[1196], [1333]-[1409], [1578]-[1601]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[135]-[163], [223]-[259]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.1.timestamp\n  Input should be a valid integer, un",
-      "last_fetched_at": "2026-09-08T03:45:47+00:00",
-      "next_retry_at": "2026-09-09T03:47:03+00:00",
+      "last_attempt_at": "2026-09-09T04:46:32+00:00",
+      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: RuntimeError: empty response (finish_reason=length)",
+      "last_fetched_at": "2026-09-09T04:45:34+00:00",
+      "next_retry_at": "2026-09-10T04:46:32+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md",
       "note_version": 1,
       "poe_usage": {
-        "calls": 4,
-        "completion_tokens": 12354,
+        "calls": 0,
+        "completion_tokens": 0,
         "limit": 10000,
-        "models": {
-          "GPT-5.4": 7510
-        },
-        "points": 7510,
-        "prompt_tokens": 25979,
-        "providers": {
-          "poe": 4
-        }
+        "models": {},
+        "points": 0,
+        "prompt_tokens": 0
       },
       "published_at": "2026-08-18T01:07:41+00:00",
       "title": "2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?【早晨財經速解讀】",
@@ -5065,7 +5058,7 @@
       "fetched_hash": "9873dfe4d1d52f8bb5d082fe0359269adf310e76b1b546290b1c9e73df8d7ba4",
       "last_attempt_at": "2026-09-02T02:30:52+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-02T03:45:52+00:00",
+      "last_fetched_at": "2026-09-09T04:49:56+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-02-fpX071E5yI4.md",
       "note_version": 1,
