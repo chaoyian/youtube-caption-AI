@@ -822,8 +822,8 @@
       "video_url": "https://www.youtube.com/watch?v=7eu_tEs4rjo"
     },
     "9VqNpjPGmbM": {
-      "alert_status": "none",
-      "analysis_status": "complete",
+      "alert_status": "pending",
+      "analysis_status": "failed",
       "analyzed_at": "2026-08-19T05:03:07+00:00",
       "analyzed_hash": "a9cbb14d65d5f8181e73e05ee363074ef9965a789cf0de547a41b7af1d81e38e",
       "channel_id": "yutinghao-finance",
@@ -856,24 +856,22 @@
       },
       "email_sent_at": "2026-08-19T05:03:15+00:00",
       "email_status": "sent",
-      "failure_count": 0,
+      "failure_count": 1,
       "fetch_status": "complete",
-      "fetched_hash": "a9cbb14d65d5f8181e73e05ee363074ef9965a789cf0de547a41b7af1d81e38e",
-      "last_attempt_at": "2026-08-19T03:26:31+00:00",
-      "last_error": null,
-      "last_fetched_at": "2026-09-02T09:16:03+00:00",
-      "next_retry_at": null,
+      "fetched_hash": "bceaffc36dbe57cfd5066a9306114943cf05a0705c219e5151ce2f03cec2636f",
+      "last_attempt_at": "2026-09-09T09:37:50+00:00",
+      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
+      "last_fetched_at": "2026-09-09T09:34:36+00:00",
+      "next_retry_at": "2026-09-10T09:37:50+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md",
       "note_version": 1,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5509,
+        "calls": 0,
+        "completion_tokens": 0,
         "limit": 10000,
-        "models": {
-          "GPT-5.4": 4158
-        },
-        "points": 4158,
-        "prompt_tokens": 22370
+        "models": {},
+        "points": 0,
+        "prompt_tokens": 0
       },
       "published_at": "2026-08-19T01:09:37+00:00",
       "title": "2026/8/19(三)債市風暴 撿便宜時刻?美中爭霸燒錢戰 Al時代只能二選一？【早晨財經速解讀】",
@@ -891,8 +889,8 @@
         "AI",
         "融资"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "9VqNpjPGmbM",
       "video_url": "https://www.youtube.com/watch?v=9VqNpjPGmbM",
