@@ -4623,7 +4623,7 @@
       "waiting_count": 2
     },
     "cOTLqoaHBxE": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
