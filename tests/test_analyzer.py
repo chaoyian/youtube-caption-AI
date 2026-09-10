@@ -364,3 +364,42 @@ def test_empty_reasoning_response_still_records_usage(monkeypatch):
     assert recorded[0].completion_tokens == 16000
     assert recorded[0].provider == "tokenrhythm"
     assert analyzer.budget.spent == 0
+
+
+def test_interrupted_stream_discards_partial_answer_on_retry(monkeypatch):
+    from types import SimpleNamespace
+    import httpx
+    from yt_finance_kb.analyzer import PoeAnalyzer
+
+    monkeypatch.setattr(
+        "yt_finance_kb.analyzer.tiktoken.get_encoding",
+        lambda name: SimpleNamespace(encode=lambda text: list(text)),
+    )
+    analyzer = PoeAnalyzer(None, tokenrhythm_api_key="test-key")
+    closed = []
+
+    class InterruptedStream:
+        def __enter__(self):
+            def chunks():
+                yield SimpleNamespace(usage=None, choices=[SimpleNamespace(
+                    finish_reason=None, delta=SimpleNamespace(content="partial garbage"),
+                )])
+                raise httpx.ReadError("connection lost")
+            return chunks()
+
+        def __exit__(self, *args):
+            closed.append(True)
+
+    streams = iter([
+        InterruptedStream(),
+        StreamResponse(usage=None, choices=[SimpleNamespace(
+            finish_reason="stop", message=SimpleNamespace(content='{"ok":true}'),
+        )]),
+    ])
+    monkeypatch.setattr(analyzer.tokenrhythm_client.chat.completions, "create", lambda **kwargs: next(streams))
+    monkeypatch.setattr("yt_finance_kb.analyzer.time.sleep", lambda _: None)
+    assert analyzer._complete(
+        [{"role": "user", "content": "return JSON"}],
+        requested_max_tokens=3200, minimum_output_tokens=100,
+    ) == '{"ok":true}'
+    assert closed == [True]
