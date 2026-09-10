@@ -2936,8 +2936,8 @@
       "video_url": "https://www.youtube.com/watch?v=QBbZgj-a_is"
     },
     "R15MWKzLJpE": {
-      "alert_status": "none",
-      "analysis_status": "complete",
+      "alert_status": "pending",
+      "analysis_status": "failed",
       "analyzed_at": "2026-09-03T02:31:19+00:00",
       "analyzed_hash": "0a242232d44b69ba2d7f418c7a1c0c3ad583e0440612527da4ab69938be4c0ee",
       "channel_id": "yutinghao-finance",
@@ -3018,27 +3018,22 @@
       },
       "email_sent_at": "2026-09-03T02:31:41+00:00",
       "email_status": "sent",
-      "failure_count": 0,
+      "failure_count": 1,
       "fetch_status": "complete",
-      "fetched_hash": "0a242232d44b69ba2d7f418c7a1c0c3ad583e0440612527da4ab69938be4c0ee",
-      "last_attempt_at": "2026-09-03T01:19:16+00:00",
-      "last_error": null,
-      "last_fetched_at": "2026-09-03T02:30:39+00:00",
-      "next_retry_at": null,
+      "fetched_hash": "14ca2506917d623ee351eab938e7c307b5685f3de9b3e9de716b74c612709c27",
+      "last_attempt_at": "2026-09-10T02:48:56+00:00",
+      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
+      "last_fetched_at": "2026-09-10T02:45:44+00:00",
+      "next_retry_at": "2026-09-11T02:48:56+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-03-R15MWKzLJpE.md",
       "note_version": 1,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5038,
+        "calls": 0,
+        "completion_tokens": 0,
         "limit": 10000,
-        "models": {
-          "GPT-5.4": 4019
-        },
-        "points": 4019,
-        "prompt_tokens": 23335,
-        "providers": {
-          "poe": 2
-        }
+        "models": {},
+        "points": 0,
+        "prompt_tokens": 0
       },
       "published_at": "2026-09-03T01:13:06+00:00",
       "title": "2026/9/3(四)美國製造業 真的回來了？台灣央行 該升息了嗎?【早晨財經速解讀】",
@@ -3056,8 +3051,8 @@
         "ASIC",
         "美国制造业"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "R15MWKzLJpE",
       "video_url": "https://www.youtube.com/watch?v=R15MWKzLJpE",
