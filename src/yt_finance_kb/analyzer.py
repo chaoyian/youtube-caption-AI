@@ -3,11 +3,12 @@ from __future__ import annotations
 import json
 import math
 import re
+import time
 from dataclasses import dataclass
 from typing import Any
 
 import tiktoken
-from openai import OpenAI
+from openai import APIConnectionError, APITimeoutError, OpenAI
 from pydantic import ValidationError
 
 from .models import ChunkExtraction, ResearchNote, Video
@@ -50,6 +51,9 @@ MODEL_POINT_RATES = {
 TOKENRHYTHM_BASE_URL = "https://tokenrhythm.studio/v1"
 DEFAULT_TOKENRHYTHM_MODEL = "glm-5.2"
 DEFAULT_PROVIDER_ORDER = ("poe", "tokenrhythm")
+TOKENRHYTHM_MAX_ATTEMPTS = 3
+TOKENRHYTHM_RETRY_DELAYS = (1.0, 2.0)
+RETRYABLE_HTTP_STATUS_CODES = {408, 409, 429, 500, 502, 503, 504}
 
 
 class PoeBudgetExceeded(RuntimeError):
@@ -150,7 +154,12 @@ class PoeAnalyzer:
             else None
         )
         self.tokenrhythm_client = (
-            OpenAI(api_key=tokenrhythm_api_key, base_url=TOKENRHYTHM_BASE_URL, timeout=180)
+            OpenAI(
+                api_key=tokenrhythm_api_key,
+                base_url=TOKENRHYTHM_BASE_URL,
+                timeout=180,
+                max_retries=0,
+            )
             if tokenrhythm_api_key
             else None
         )
@@ -241,6 +250,23 @@ class PoeAnalyzer:
     def _estimated_tokens(self, messages: list[dict[str, str]]) -> int:
         return sum(len(self.encoding.encode(message["content"])) + 8 for message in messages) + 20
 
+    @staticmethod
+    def _tokenrhythm_error_is_retryable(error: Exception) -> bool:
+        if isinstance(error, (APIConnectionError, APITimeoutError)):
+            return True
+        return getattr(error, "status_code", None) in RETRYABLE_HTTP_STATUS_CODES
+
+    def _tokenrhythm_create(self, client: OpenAI, request: dict[str, Any]) -> Any:
+        for attempt in range(TOKENRHYTHM_MAX_ATTEMPTS):
+            try:
+                return client.chat.completions.create(**request)
+            except Exception as error:
+                final_attempt = attempt == TOKENRHYTHM_MAX_ATTEMPTS - 1
+                if final_attempt or not self._tokenrhythm_error_is_retryable(error):
+                    raise
+                time.sleep(TOKENRHYTHM_RETRY_DELAYS[attempt])
+        raise AssertionError("unreachable")
+
     def _complete(
         self,
         messages: list[dict[str, str]],
@@ -305,7 +331,11 @@ class PoeAnalyzer:
                                 parts.append(choice.delta.content)
                     content = "".join(parts)
                 else:
-                    response = client.chat.completions.create(**request)
+                    response = (
+                        self._tokenrhythm_create(client, request)
+                        if provider == "tokenrhythm"
+                        else client.chat.completions.create(**request)
+                    )
                     usage = response.usage
                     finish_reason = response.choices[0].finish_reason
                     content = response.choices[0].message.content
