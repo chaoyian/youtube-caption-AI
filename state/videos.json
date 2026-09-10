@@ -4618,29 +4618,52 @@
       "waiting_count": 2
     },
     "cOTLqoaHBxE": {
-      "alert_status": "disabled",
-      "analysis_status": "failed",
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-10T04:00:32+00:00",
+      "analyzed_hash": "270db324be729cf11d19b21ce9e3ba294e420858c8f65f0c8bc6ec6b0e47ebad",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
+      "email_deliveries": {},
       "email_status": "pending",
-      "failure_count": 1,
+      "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "270db324be729cf11d19b21ce9e3ba294e420858c8f65f0c8bc6ec6b0e47ebad",
       "last_attempt_at": "2026-09-10T02:31:31+00:00",
-      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: RuntimeError: empty response (finish_reason=length)",
-      "last_fetched_at": "2026-09-10T02:30:40+00:00",
-      "next_retry_at": "2026-09-11T02:31:31+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-09-10T03:53:52+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-09-10-cOTLqoaHBxE.md",
+      "note_version": 1,
       "poe_usage": {
-        "calls": 0,
-        "completion_tokens": 0,
+        "calls": 2,
+        "completion_tokens": 20529,
         "limit": 10000,
-        "models": {},
+        "models": {
+          "tokenrhythm/glm-5.2": 0
+        },
         "points": 0,
-        "prompt_tokens": 0
+        "prompt_tokens": 22256,
+        "providers": {
+          "tokenrhythm": 2
+        }
       },
       "published_at": "2026-09-10T01:11:45+00:00",
       "title": "2026/9/10(四)摺疊機登場 蘋果救美股? 市場飽和 蘋果能創造 下一個換機潮？【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "蘋果",
+        "折疊機",
+        "消費性電子",
+        "手機市場",
+        "出貨量",
+        "存量市場",
+        "科技通膨",
+        "毛利率"
+      ],
       "transcript_generated": false,
       "transcript_language": "zh-TW",
       "transcript_source": "apify",
