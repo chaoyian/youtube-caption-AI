@@ -50,6 +50,8 @@ MODEL_POINT_RATES = {
 
 TOKENRHYTHM_BASE_URL = "https://tokenrhythm.studio/v1"
 DEFAULT_TOKENRHYTHM_MODEL = "glm-5.2"
+# Reasoning tokens share max_tokens with the final answer on this model.
+TOKENRHYTHM_REASONING_RESERVE = {"glm-5.2": 12_800}
 DEFAULT_PROVIDER_ORDER = ("poe", "tokenrhythm")
 TOKENRHYTHM_MAX_ATTEMPTS = 3
 TOKENRHYTHM_RETRY_DELAYS = (1.0, 2.0)
@@ -157,7 +159,7 @@ class PoeAnalyzer:
             OpenAI(
                 api_key=tokenrhythm_api_key,
                 base_url=TOKENRHYTHM_BASE_URL,
-                timeout=180,
+                timeout=600,
                 max_retries=0,
             )
             if tokenrhythm_api_key
@@ -298,7 +300,9 @@ class PoeAnalyzer:
                         minimum=minimum_output_tokens,
                     )
                 else:
-                    max_tokens = requested_max_tokens
+                    max_tokens = requested_max_tokens + TOKENRHYTHM_REASONING_RESERVE.get(
+                        model.lower(), 0
+                    )
                 request = {
                     "model": model,
                     "messages": messages,
@@ -339,9 +343,9 @@ class PoeAnalyzer:
                     usage = response.usage
                     finish_reason = response.choices[0].finish_reason
                     content = response.choices[0].message.content
-                if not content:
-                    raise RuntimeError(f"empty response (finish_reason={finish_reason})")
                 self._record_usage(provider, model, usage, rates)
+                if not content or not content.strip():
+                    raise RuntimeError(f"empty response (finish_reason={finish_reason})")
                 return content
             except Exception as error:
                 failures.append(f"{provider}: {type(error).__name__}: {error}")

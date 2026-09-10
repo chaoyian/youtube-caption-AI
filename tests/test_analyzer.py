@@ -80,7 +80,7 @@ def test_tokenrhythm_uses_compatible_max_tokens(monkeypatch):
     )
 
     assert captured["model"] == "glm-5.2"
-    assert captured["max_tokens"] == 800
+    assert captured["max_tokens"] == 800 + 12_800
     assert "max_completion_tokens" not in captured
     assert analyzer.usages[0].provider == "tokenrhythm"
 
@@ -199,6 +199,40 @@ def test_tokenrhythm_retries_504_before_falling_back(monkeypatch):
     ) == '{"ok":true}'
     assert attempts == 3
     assert delays == [1.0, 2.0]
+
+
+def test_tokenrhythm_stops_after_three_transport_attempts(monkeypatch):
+    from types import SimpleNamespace
+
+    import httpx
+    import pytest
+    from openai import APITimeoutError
+
+    from yt_finance_kb.analyzer import PoeAnalyzer
+
+    monkeypatch.setattr(
+        "yt_finance_kb.analyzer.tiktoken.get_encoding",
+        lambda name: SimpleNamespace(encode=lambda text: list(text)),
+    )
+    analyzer = PoeAnalyzer(None, tokenrhythm_api_key="test-key")
+    calls = []
+    delays = []
+
+    def timeout(**request):
+        calls.append(request)
+        raise APITimeoutError(request=httpx.Request("POST", "https://example.com"))
+
+    monkeypatch.setattr(analyzer.tokenrhythm_client.chat.completions, "create", timeout)
+    monkeypatch.setattr("yt_finance_kb.analyzer.time.sleep", delays.append)
+    with pytest.raises(RuntimeError, match="APITimeoutError"):
+        analyzer._complete(
+            [{"role": "user", "content": "return JSON"}],
+            requested_max_tokens=800,
+            minimum_output_tokens=100,
+        )
+    assert len(calls) == 3
+    assert delays == [1.0, 2.0]
+    assert analyzer.tokenrhythm_client.max_retries == 0
 
 
 def test_tokenrhythm_does_not_retry_non_transient_error(monkeypatch):
