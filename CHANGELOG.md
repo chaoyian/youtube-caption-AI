@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Reserve GLM-5.2 reasoning tokens separately from the answer allowance and allow 600-second requests.
+- Record usage even for empty answers and print sanitized failures in preview workflow logs.
+
 - Add TokenRhythm (基元律动) as an OpenAI-compatible fallback provider for Poe.
 - Automatically fail over between TokenRhythm and Poe on request errors, empty responses, or Poe
   point-budget exhaustion, while preserving legacy usage-state compatibility.

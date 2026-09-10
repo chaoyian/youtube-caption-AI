@@ -314,3 +314,34 @@ def test_poe_local_budget_exhaustion_falls_back_to_tokenrhythm(monkeypatch):
         requested_max_tokens=800,
         minimum_output_tokens=100,
     ) == '{"ok":true}'
+
+
+def test_empty_reasoning_response_still_records_usage(monkeypatch):
+    from types import SimpleNamespace
+    import pytest
+    from yt_finance_kb.analyzer import PoeAnalyzer
+
+    monkeypatch.setattr(
+        "yt_finance_kb.analyzer.tiktoken.get_encoding",
+        lambda name: SimpleNamespace(encode=lambda text: list(text)),
+    )
+    recorded = []
+    analyzer = PoeAnalyzer(None, tokenrhythm_api_key="test-key", usage_recorder=recorded.append)
+    monkeypatch.setattr(
+        analyzer.tokenrhythm_client.chat.completions,
+        "create",
+        lambda **request: SimpleNamespace(
+            usage=SimpleNamespace(prompt_tokens=100, completion_tokens=16000),
+            choices=[SimpleNamespace(finish_reason="length", message=SimpleNamespace(content=""))],
+        ),
+    )
+    with pytest.raises(RuntimeError, match="finish_reason=length"):
+        analyzer._complete(
+            [{"role": "user", "content": "return JSON"}],
+            requested_max_tokens=3200,
+            minimum_output_tokens=100,
+        )
+    assert len(recorded) == 1
+    assert recorded[0].completion_tokens == 16000
+    assert recorded[0].provider == "tokenrhythm"
+    assert analyzer.budget.spent == 0
