@@ -1364,7 +1364,7 @@
       "video_url": "https://www.youtube.com/watch?v=DBbDrACd1W8"
     },
     "DmXJIDku62I": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "channel_id": "wtfinance-podcast",
       "discord_status": "pending",
