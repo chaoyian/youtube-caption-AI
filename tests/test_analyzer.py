@@ -6,6 +6,24 @@ from yt_finance_kb.analyzer import (
 )
 
 
+class StreamResponse:
+    def __init__(self, *, usage, choices):
+        from types import SimpleNamespace
+        self.chunks = [SimpleNamespace(
+            usage=usage,
+            choices=[SimpleNamespace(
+                finish_reason=c.finish_reason,
+                delta=SimpleNamespace(content=c.message.content),
+            ) for c in choices],
+        )]
+
+    def __enter__(self):
+        return iter(self.chunks)
+
+    def __exit__(self, *args):
+        pass
+
+
 def test_system_prompt_explicitly_ignores_non_financial_humor():
     for phrase in ("黄段子", "性暗示", "冷笑话", "金融市场", "风险"):
         assert phrase in SYSTEM_PROMPT
@@ -67,7 +85,7 @@ def test_tokenrhythm_uses_compatible_max_tokens(monkeypatch):
 
     def fake_create(**request):
         captured.update(request)
-        return SimpleNamespace(
+        return StreamResponse(
             usage=SimpleNamespace(prompt_tokens=10, completion_tokens=5),
             choices=[SimpleNamespace(finish_reason="stop", message=SimpleNamespace(content='{"ok":true}'))],
         )
@@ -80,6 +98,7 @@ def test_tokenrhythm_uses_compatible_max_tokens(monkeypatch):
     )
 
     assert captured["model"] == "glm-5.2"
+    assert captured["stream"] is True
     assert captured["max_tokens"] == 800 + 12_800
     assert "max_completion_tokens" not in captured
     assert analyzer.usages[0].provider == "tokenrhythm"
@@ -107,7 +126,7 @@ def test_poe_error_falls_back_to_tokenrhythm(monkeypatch):
     monkeypatch.setattr(
         analyzer.tokenrhythm_client.chat.completions,
         "create",
-        lambda **request: SimpleNamespace(
+        lambda **request: StreamResponse(
             usage=None,
             choices=[SimpleNamespace(finish_reason="stop", message=SimpleNamespace(content='{"ok":true}'))],
         ),
@@ -184,7 +203,7 @@ def test_tokenrhythm_retries_504_before_falling_back(monkeypatch):
                 request=httpx.Request("POST", "https://tokenrhythm.studio/v1/chat/completions"),
             )
             raise InternalServerError("gateway timeout", response=response, body=None)
-        return SimpleNamespace(
+        return StreamResponse(
             usage=None,
             choices=[SimpleNamespace(finish_reason="stop", message=SimpleNamespace(content='{"ok":true}'))],
         )
@@ -303,7 +322,7 @@ def test_poe_local_budget_exhaustion_falls_back_to_tokenrhythm(monkeypatch):
     monkeypatch.setattr(
         analyzer.tokenrhythm_client.chat.completions,
         "create",
-        lambda **request: SimpleNamespace(
+        lambda **request: StreamResponse(
             usage=None,
             choices=[SimpleNamespace(finish_reason="stop", message=SimpleNamespace(content='{"ok":true}'))],
         ),
@@ -330,7 +349,7 @@ def test_empty_reasoning_response_still_records_usage(monkeypatch):
     monkeypatch.setattr(
         analyzer.tokenrhythm_client.chat.completions,
         "create",
-        lambda **request: SimpleNamespace(
+        lambda **request: StreamResponse(
             usage=SimpleNamespace(prompt_tokens=100, completion_tokens=16000),
             choices=[SimpleNamespace(finish_reason="length", message=SimpleNamespace(content=""))],
         ),
