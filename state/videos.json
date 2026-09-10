@@ -1363,6 +1363,41 @@
       "video_id": "DBbDrACd1W8",
       "video_url": "https://www.youtube.com/watch?v=DBbDrACd1W8"
     },
+    "DmXJIDku62I": {
+      "alert_status": "pending",
+      "analysis_status": "failed",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 1,
+      "fetch_status": "complete",
+      "fetched_hash": "ccdce22d98ef1c3d7ce551e7322c1211ebe345e7c9844db43bcc11f442722310",
+      "last_attempt_at": "2026-09-10T01:20:57+00:00",
+      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: RuntimeError: empty response (finish_reason=length)",
+      "last_fetched_at": "2026-09-10T01:19:42+00:00",
+      "next_retry_at": "2026-09-11T01:20:57+00:00",
+      "note_version": 0,
+      "poe_usage": {
+        "calls": 1,
+        "completion_tokens": 3200,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2364
+        },
+        "points": 2364,
+        "prompt_tokens": 12318,
+        "providers": {
+          "poe": 1
+        }
+      },
+      "published_at": "2026-09-09T16:00:00+00:00",
+      "title": "The Middle East has been Reshaped Forever | Vali Nasr",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "DmXJIDku62I",
+      "video_url": "https://www.youtube.com/watch?v=DmXJIDku62I"
+    },
     "E68MfE_PRnw": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -4586,6 +4621,24 @@
       "video_id": "c4IT1Mwb_Pg",
       "video_url": "https://www.youtube.com/watch?v=c4IT1Mwb_Pg",
       "waiting_count": 2
+    },
+    "cOTLqoaHBxE": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-09-10T01:19:36+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] cOTLqoaHBxE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=cOTLqoaHBxE! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-09-10T02:19:36+00:00",
+      "note_version": 0,
+      "published_at": "2026-09-10T01:11:45+00:00",
+      "title": "2026/9/10(四)摺疊機登場 蘋果救美股? 市場飽和 蘋果能創造 下一個換機潮？【早晨財經速解讀】",
+      "video_id": "cOTLqoaHBxE",
+      "video_url": "https://www.youtube.com/watch?v=cOTLqoaHBxE",
+      "waiting_count": 1
     },
     "dFYqrIQIMvw": {
       "alert_status": "none",
