@@ -2936,7 +2936,7 @@
       "video_url": "https://www.youtube.com/watch?v=QBbZgj-a_is"
     },
     "R15MWKzLJpE": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "analyzed_at": "2026-09-03T02:31:19+00:00",
       "analyzed_hash": "0a242232d44b69ba2d7f418c7a1c0c3ad583e0440612527da4ab69938be4c0ee",
