@@ -5,6 +5,8 @@
 - Add TokenRhythm (基元律动) as an OpenAI-compatible fallback provider for Poe.
 - Automatically fail over between TokenRhythm and Poe on request errors, empty responses, or Poe
   point-budget exhaustion, while preserving legacy usage-state compatibility.
+- Retry transient TokenRhythm failures (rate limits, timeouts, connection errors, and 5xx responses)
+  up to three total attempts before falling back to the next provider.
 
 ## 0.2.0 — 2026-08-29
 
