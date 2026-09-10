@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from typing import Any
 
 import tiktoken
+import httpx
 from openai import APIConnectionError, APITimeoutError, OpenAI
 from pydantic import ValidationError
 
@@ -50,6 +51,8 @@ MODEL_POINT_RATES = {
 
 TOKENRHYTHM_BASE_URL = "https://tokenrhythm.studio/v1"
 DEFAULT_TOKENRHYTHM_MODEL = "glm-5.2"
+# Reasoning tokens share max_tokens with the final answer on this model.
+TOKENRHYTHM_REASONING_RESERVE = {"glm-5.2": 12_800}
 DEFAULT_PROVIDER_ORDER = ("poe", "tokenrhythm")
 TOKENRHYTHM_MAX_ATTEMPTS = 3
 TOKENRHYTHM_RETRY_DELAYS = (1.0, 2.0)
@@ -157,7 +160,7 @@ class PoeAnalyzer:
             OpenAI(
                 api_key=tokenrhythm_api_key,
                 base_url=TOKENRHYTHM_BASE_URL,
-                timeout=180,
+                timeout=600,
                 max_retries=0,
             )
             if tokenrhythm_api_key
@@ -252,14 +255,33 @@ class PoeAnalyzer:
 
     @staticmethod
     def _tokenrhythm_error_is_retryable(error: Exception) -> bool:
-        if isinstance(error, (APIConnectionError, APITimeoutError)):
+        if isinstance(error, (APIConnectionError, APITimeoutError, httpx.TransportError)):
             return True
         return getattr(error, "status_code", None) in RETRYABLE_HTTP_STATUS_CODES
 
     def _tokenrhythm_create(self, client: OpenAI, request: dict[str, Any]) -> Any:
         for attempt in range(TOKENRHYTHM_MAX_ATTEMPTS):
             try:
-                return client.chat.completions.create(**request)
+                parts: list[str] = []
+                usage = None
+                finish_reason = None
+                with client.chat.completions.create(
+                    **request, stream=True, stream_options={"include_usage": True}
+                ) as stream:
+                    for chunk in stream:
+                        if chunk.usage:
+                            usage = chunk.usage
+                        for choice in chunk.choices:
+                            if choice.finish_reason:
+                                finish_reason = choice.finish_reason
+                            if choice.delta.content:
+                                parts.append(choice.delta.content)
+                if finish_reason is None:
+                    raise APIConnectionError(
+                        message="Stream ended before completion",
+                        request=httpx.Request("POST", f"{TOKENRHYTHM_BASE_URL}/chat/completions"),
+                    )
+                return usage, finish_reason, "".join(parts)
             except Exception as error:
                 final_attempt = attempt == TOKENRHYTHM_MAX_ATTEMPTS - 1
                 if final_attempt or not self._tokenrhythm_error_is_retryable(error):
@@ -298,7 +320,9 @@ class PoeAnalyzer:
                         minimum=minimum_output_tokens,
                     )
                 else:
-                    max_tokens = requested_max_tokens
+                    max_tokens = requested_max_tokens + TOKENRHYTHM_REASONING_RESERVE.get(
+                        model.lower(), 0
+                    )
                 request = {
                     "model": model,
                     "messages": messages,
@@ -331,17 +355,16 @@ class PoeAnalyzer:
                                 parts.append(choice.delta.content)
                     content = "".join(parts)
                 else:
-                    response = (
-                        self._tokenrhythm_create(client, request)
-                        if provider == "tokenrhythm"
-                        else client.chat.completions.create(**request)
-                    )
-                    usage = response.usage
-                    finish_reason = response.choices[0].finish_reason
-                    content = response.choices[0].message.content
-                if not content:
-                    raise RuntimeError(f"empty response (finish_reason={finish_reason})")
+                    if provider == "tokenrhythm":
+                        usage, finish_reason, content = self._tokenrhythm_create(client, request)
+                    else:
+                        response = client.chat.completions.create(**request)
+                        usage = response.usage
+                        finish_reason = response.choices[0].finish_reason
+                        content = response.choices[0].message.content
                 self._record_usage(provider, model, usage, rates)
+                if not content or not content.strip():
+                    raise RuntimeError(f"empty response (finish_reason={finish_reason})")
                 return content
             except Exception as error:
                 failures.append(f"{provider}: {type(error).__name__}: {error}")

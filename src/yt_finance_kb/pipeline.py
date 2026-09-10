@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import sys
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -101,6 +102,7 @@ def _record_failure(record: dict[str, Any], stage: str, error: Exception) -> Non
     record["failure_count"] = int(record.get("failure_count", 0)) + 1
     record["next_retry_at"] = schedule_retry(record["failure_count"])
     record["last_error"] = _safe_error(error)[:1200]
+    print(f"{record.get('video_id', 'unknown')} {stage} failed: {record['last_error']}", file=sys.stderr)
     record["last_attempt_at"] = now_iso()
     record["alert_status"] = "pending"
 

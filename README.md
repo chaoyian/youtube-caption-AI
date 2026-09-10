@@ -78,6 +78,10 @@ Variables：
 - `POE_MODEL`：可选，默认 `GPT-5.4`。
 - `TOKENRHYTHM_MODEL`：可选，默认 `glm-5.2`。应填写基元律动模型页中当前账号可用的
   模型 ID。
+  GLM-5.2 额外预留 12,800 个推理 token，普通分析总输出上限为 16,000；
+  这会提高可能的 token 消耗，实际用量包含空正文响应。请求超时为 600 秒。
+  基元律动使用 SSE 流式接收，降低长时间等待整份回答造成的网关超时；断流重试会丢弃残片。
+  瞬态错误最多请求三次；处理失败会在 Actions 日志中输出脱敏原因，preview 也适用。
 - `AI_PROVIDER_ORDER`：可选，默认 `poe,tokenrhythm`，即 Poe 优先；Poe 报错、返回空内容
   或点数预算耗尽时自动切到基元律动。反向顺序可改为 `tokenrhythm,poe`。
 - `POE_POINT_LIMIT_PER_VIDEO`：可选，默认 `10000`。这是每个新视频的硬预算护栏，
