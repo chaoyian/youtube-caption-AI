@@ -559,7 +559,7 @@
       "fetched_hash": "46d9d252c24d5d50221869004e8dbb7ea9058235e95bafb9a16b04cf8b8163ca",
       "last_attempt_at": "2026-09-04T02:31:36+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-04T03:46:41+00:00",
+      "last_fetched_at": "2026-09-11T04:54:53+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-04-6weg9-YmGVs.md",
       "note_version": 1,
@@ -861,7 +861,7 @@
       "fetched_hash": "a9cbb14d65d5f8181e73e05ee363074ef9965a789cf0de547a41b7af1d81e38e",
       "last_attempt_at": "2026-09-09T09:37:50+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-11T03:45:40+00:00",
+      "last_fetched_at": "2026-09-11T04:45:35+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md",
       "note_version": 1,
@@ -2373,7 +2373,7 @@
       "fetched_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
       "last_attempt_at": "2026-09-09T04:49:49+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-11T03:45:47+00:00",
+      "last_fetched_at": "2026-09-11T04:54:40+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-26-KUZC2NyCCCY.md",
       "note_version": 1,
@@ -3117,7 +3117,7 @@
       "fetched_hash": "0a242232d44b69ba2d7f418c7a1c0c3ad583e0440612527da4ab69938be4c0ee",
       "last_attempt_at": "2026-09-10T02:48:56+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-11T03:45:51+00:00",
+      "last_fetched_at": "2026-09-11T04:54:46+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-03-R15MWKzLJpE.md",
       "note_version": 1,
@@ -4072,7 +4072,7 @@
       "fetched_hash": "f63e0f38d4f0b0e6238781b8b1148518e8e0748659028c5b47db49a55ec9892d",
       "last_attempt_at": "2026-09-09T04:46:32+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: RuntimeError: empty response (finish_reason=length)",
-      "last_fetched_at": "2026-09-11T03:45:33+00:00",
+      "last_fetched_at": "2026-09-11T04:45:30+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md",
       "note_version": 1,
@@ -4110,106 +4110,33 @@
     "ajjRvohk-Og": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-09-04T03:46:36+00:00",
-      "analyzed_hash": "fb22393e780518f924d02ce2c732810a3ace1c225305b1ebdc2e011cca869741",
+      "analyzed_at": "2026-09-11T04:54:30+00:00",
+      "analyzed_hash": "7e04a7d8740e2ac7ad2a60a4d504b4299b90060eb0a641bfd28ef2217650968f",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "genecc.chen@msa.hinet.net": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-09-04T03:48:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-09-04T03:48:06+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "fb22393e780518f924d02ce2c732810a3ace1c225305b1ebdc2e011cca869741",
+      "fetched_hash": "7e04a7d8740e2ac7ad2a60a4d504b4299b90060eb0a641bfd28ef2217650968f",
       "last_attempt_at": "2026-08-21T01:22:37+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-04T03:45:44+00:00",
+      "last_fetched_at": "2026-09-11T04:45:39+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-21-ajjRvohk-Og.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5071,
+        "completion_tokens": 17400,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3863
+          "tokenrhythm/glm-5.2": 0
         },
-        "points": 3863,
-        "prompt_tokens": 21051,
+        "points": 0,
+        "prompt_tokens": 25258,
         "providers": {
-          "poe": 2
+          "tokenrhythm": 2
         }
       },
       "published_at": "2026-08-21T01:14:13+00:00",
@@ -4219,17 +4146,17 @@
         "台湾",
         "美股",
         "宏观",
-        "美债",
-        "利率",
-        "财政部",
-        "美国财政",
-        "国债",
-        "赤字",
+        "美債",
+        "財政政策",
+        "殖利率",
+        "國債",
+        "財政赤字",
+        "利息支出",
         "美元",
-        "汇市"
+        "金融壓抑"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en-US",
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
       "transcript_source": "apify",
       "video_id": "ajjRvohk-Og",
       "video_url": "https://www.youtube.com/watch?v=ajjRvohk-Og",
