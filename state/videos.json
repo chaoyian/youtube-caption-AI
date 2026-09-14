@@ -989,7 +989,7 @@
       "fetched_hash": "a9cbb14d65d5f8181e73e05ee363074ef9965a789cf0de547a41b7af1d81e38e",
       "last_attempt_at": "2026-09-09T09:37:50+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-14T03:45:42+00:00",
+      "last_fetched_at": "2026-09-14T04:45:46+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md",
       "note_version": 1,
@@ -1189,7 +1189,7 @@
       "fetched_hash": "1a4f924db8f0dbc436e4c0cdd3bc37ae3d469856ef25199c88212b096b00ce8b",
       "last_attempt_at": "2026-08-31T02:30:41+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-07T04:46:20+00:00",
+      "last_fetched_at": "2026-09-14T04:51:53+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-31-BxtHhc6P1n0.md",
       "note_version": 1,
@@ -1220,8 +1220,8 @@
         "薪资"
       ],
       "transcript_generated": false,
-      "transcript_language": "zh-TW",
-      "transcript_source": "apify",
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "BxtHhc6P1n0",
       "video_url": "https://www.youtube.com/watch?v=BxtHhc6P1n0",
       "waiting_count": 2
@@ -2629,7 +2629,7 @@
       "fetched_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
       "last_attempt_at": "2026-09-09T04:49:49+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-14T03:45:48+00:00",
+      "last_fetched_at": "2026-09-14T04:51:13+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-26-KUZC2NyCCCY.md",
       "note_version": 1,
@@ -3373,7 +3373,7 @@
       "fetched_hash": "0a242232d44b69ba2d7f418c7a1c0c3ad583e0440612527da4ab69938be4c0ee",
       "last_attempt_at": "2026-09-10T02:48:56+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-14T03:45:54+00:00",
+      "last_fetched_at": "2026-09-14T04:52:02+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-03-R15MWKzLJpE.md",
       "note_version": 1,
@@ -4328,7 +4328,7 @@
       "fetched_hash": "f63e0f38d4f0b0e6238781b8b1148518e8e0748659028c5b47db49a55ec9892d",
       "last_attempt_at": "2026-09-09T04:46:32+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: RuntimeError: empty response (finish_reason=length)",
-      "last_fetched_at": "2026-09-14T03:45:36+00:00",
+      "last_fetched_at": "2026-09-14T04:45:38+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-18-aRPmzQfTLFc.md",
       "note_version": 1,
@@ -5098,106 +5098,33 @@
     "dFYqrIQIMvw": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-09-07T04:46:14+00:00",
-      "analyzed_hash": "5803b259532c351fdb78a69556e18a3cb9b2875145685cb32dd40c19385b11e2",
+      "analyzed_at": "2026-09-14T04:51:06+00:00",
+      "analyzed_hash": "983339930a5bfd24998b570078b7b5b1f26923870b996e6df798782fd84e3d1c",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "genecc.chen@msa.hinet.net": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-09-07T04:47:01+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-09-07T04:47:01+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "5803b259532c351fdb78a69556e18a3cb9b2875145685cb32dd40c19385b11e2",
+      "fetched_hash": "983339930a5bfd24998b570078b7b5b1f26923870b996e6df798782fd84e3d1c",
       "last_attempt_at": "2026-08-24T01:22:59+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-07T04:45:35+00:00",
+      "last_fetched_at": "2026-09-14T04:45:54+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-24-dFYqrIQIMvw.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5800,
+        "calls": 1,
+        "completion_tokens": 9582,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4058
+          "tokenrhythm/glm-5.2": 0
         },
-        "points": 4058,
-        "prompt_tokens": 19280,
+        "points": 0,
+        "prompt_tokens": 16499,
         "providers": {
-          "poe": 2
+          "tokenrhythm": 1
         }
       },
       "published_at": "2026-08-24T01:08:17+00:00",
@@ -5207,17 +5134,17 @@
         "台湾",
         "美股",
         "宏观",
-        "美债",
-        "美元",
-        "利率",
-        "财政赤字",
-        "风险溢价",
-        "比特币",
-        "资金流",
-        "空头回补"
+        "美債殖利率",
+        "美元貶值",
+        "財政部回購",
+        "比特幣",
+        "加密貨幣",
+        "軋空",
+        "黃金",
+        "央行買盤"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en-US",
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
       "transcript_source": "apify",
       "video_id": "dFYqrIQIMvw",
       "video_url": "https://www.youtube.com/watch?v=dFYqrIQIMvw",
