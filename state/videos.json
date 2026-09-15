@@ -989,7 +989,7 @@
       "fetched_hash": "a9cbb14d65d5f8181e73e05ee363074ef9965a789cf0de547a41b7af1d81e38e",
       "last_attempt_at": "2026-09-09T09:37:50+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-14T10:52:51+00:00",
+      "last_fetched_at": "2026-09-15T01:30:39+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-19-9VqNpjPGmbM.md",
       "note_version": 1,
@@ -1018,8 +1018,8 @@
         "融资"
       ],
       "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
       "video_id": "9VqNpjPGmbM",
       "video_url": "https://www.youtube.com/watch?v=9VqNpjPGmbM",
       "waiting_count": 2
@@ -2470,6 +2470,24 @@
       "video_url": "https://www.youtube.com/watch?v=IHB6xZANLDc",
       "waiting_count": 1
     },
+    "KNWS5tp0HYc": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-09-15T01:31:43+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] KNWS5tp0HYc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=KNWS5tp0HYc! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-09-15T02:31:43+00:00",
+      "note_version": 0,
+      "published_at": "2026-09-15T01:13:28+00:00",
+      "title": "2026/9/15(二)AI踩煞車 重擊晶片股?10年債殖利率破5% AI泡沫洩氣？【早晨財經速解讀】",
+      "video_id": "KNWS5tp0HYc",
+      "video_url": "https://www.youtube.com/watch?v=KNWS5tp0HYc",
+      "waiting_count": 1
+    },
     "KS_BkfqfALI": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -2629,7 +2647,7 @@
       "fetched_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
       "last_attempt_at": "2026-09-09T04:49:49+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-14T10:52:56+00:00",
+      "last_fetched_at": "2026-09-15T01:30:47+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-26-KUZC2NyCCCY.md",
       "note_version": 1,
@@ -3373,7 +3391,7 @@
       "fetched_hash": "0a242232d44b69ba2d7f418c7a1c0c3ad583e0440612527da4ab69938be4c0ee",
       "last_attempt_at": "2026-09-10T02:48:56+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-14T10:53:03+00:00",
+      "last_fetched_at": "2026-09-15T01:30:56+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-03-R15MWKzLJpE.md",
       "note_version": 1,
@@ -5697,6 +5715,60 @@
       "video_id": "g4Z6z8cUhBc",
       "video_url": "https://www.youtube.com/watch?v=g4Z6z8cUhBc",
       "waiting_count": 6
+    },
+    "hO0LGfwwDGo": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-15T01:33:48+00:00",
+      "analyzed_hash": "c3d9ce358c41f4e8fc90e202c898c10d34fa52f64c7a8f028eca6ef51f061d2d",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "c3d9ce358c41f4e8fc90e202c898c10d34fa52f64c7a8f028eca6ef51f061d2d",
+      "last_error": null,
+      "last_fetched_at": "2026-09-15T01:31:49+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-14-hO0LGfwwDGo.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 13655,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3062,
+          "tokenrhythm/glm-5.2": 0
+        },
+        "points": 3062,
+        "prompt_tokens": 25236,
+        "providers": {
+          "poe": 1,
+          "tokenrhythm": 2
+        }
+      },
+      "published_at": "2026-09-14T16:00:07+00:00",
+      "title": "Worse than 1929: Why the Market Falls 90% from Here | Harry Dent",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "财政赤字",
+        "货币政策",
+        "美国经济",
+        "美联储",
+        "流动性",
+        "市场触发",
+        "美股",
+        "标普500"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "hO0LGfwwDGo",
+      "video_url": "https://www.youtube.com/watch?v=hO0LGfwwDGo"
     },
     "hVoE3sV-1FM": {
       "alert_status": "none",
