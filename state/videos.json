@@ -7434,9 +7434,83 @@
       "analyzed_at": "2026-09-19T01:28:14+00:00",
       "analyzed_hash": "e8663303a1ef599dc06c4a01216f23df1a5c725337f9ea8e42d35632a1b56383",
       "channel_id": "wtfinance-podcast",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "genecc.chen@msa.hinet.net": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-09-19T01:28:36+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 1
+        }
+      },
+      "email_sent_at": "2026-09-19T01:28:36+00:00",
+      "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "e8663303a1ef599dc06c4a01216f23df1a5c725337f9ea8e42d35632a1b56383",
