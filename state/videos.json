@@ -2757,7 +2757,7 @@
       "fetched_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
       "last_attempt_at": "2026-09-09T04:49:49+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-18T09:34:58+00:00",
+      "last_fetched_at": "2026-09-19T01:26:13+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-26-KUZC2NyCCCY.md",
       "note_version": 1,
@@ -7427,6 +7427,58 @@
       "video_id": "tLvKGHyxhd8",
       "video_url": "https://www.youtube.com/watch?v=tLvKGHyxhd8",
       "waiting_count": 1
+    },
+    "tZxQceT8X4s": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-19T01:28:14+00:00",
+      "analyzed_hash": "e8663303a1ef599dc06c4a01216f23df1a5c725337f9ea8e42d35632a1b56383",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "e8663303a1ef599dc06c4a01216f23df1a5c725337f9ea8e42d35632a1b56383",
+      "last_error": null,
+      "last_fetched_at": "2026-09-19T01:26:19+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-18-tZxQceT8X4s.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 13075,
+        "limit": 10000,
+        "models": {
+          "tokenrhythm/glm-5.2": 0
+        },
+        "points": 0,
+        "prompt_tokens": 19105,
+        "providers": {
+          "tokenrhythm": 2
+        }
+      },
+      "published_at": "2026-09-18T16:00:00+00:00",
+      "title": "Central Banks Panicking as \"House is Burning Down\" | Michael Oliver",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "贵金属",
+        "矿企股",
+        "技术分析",
+        "主权债务",
+        "央行政策",
+        "外汇干预",
+        "金融板块",
+        "相对表现"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "tZxQceT8X4s",
+      "video_url": "https://www.youtube.com/watch?v=tZxQceT8X4s"
     },
     "tjxO59iCSDw": {
       "alert_status": "none",
