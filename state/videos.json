@@ -2885,7 +2885,7 @@
       "fetched_hash": "9c3e9778f83d9e7d348ee675610bccb6745ad5e0c8234becb287b19e5a4b35c2",
       "last_attempt_at": "2026-09-09T04:49:49+00:00",
       "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': \"You've used up your points! Visit https://poe.com/api/keys to get more.\", 'type': 'insufficient_quota', 'code': 'insufficient_quota'}} | tokenrhythm: InternalServerError: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>alb</center>\r\n</body>\r\n</html>",
-      "last_fetched_at": "2026-09-21T10:56:17+00:00",
+      "last_fetched_at": "2026-09-22T01:44:18+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-26-KUZC2NyCCCY.md",
       "note_version": 1,
@@ -4187,6 +4187,24 @@
       "video_url": "https://www.youtube.com/watch?v=TQ_oEc9vnB8",
       "waiting_count": 1
     },
+    "U4RH_CPe3GQ": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-09-22T01:44:39+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] U4RH_CPe3GQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=U4RH_CPe3GQ! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-09-22T02:44:39+00:00",
+      "note_version": 0,
+      "published_at": "2026-09-22T01:13:03+00:00",
+      "title": "2026/9/22(二)那指創新高!個股沒跟上?美股重新押注AI 不怕高利率了？【早晨財經速解讀】",
+      "video_id": "U4RH_CPe3GQ",
+      "video_url": "https://www.youtube.com/watch?v=U4RH_CPe3GQ",
+      "waiting_count": 1
+    },
     "Ulz539c38mw": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -5391,6 +5409,58 @@
       "video_id": "b2MbRUsIaU8",
       "video_url": "https://www.youtube.com/watch?v=b2MbRUsIaU8",
       "waiting_count": 1
+    },
+    "b8idz40H8WM": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-22T01:46:37+00:00",
+      "analyzed_hash": "846ab62eddc8094000306170bcea7c757c012f9eea5ca8f84a54337d68db579c",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "846ab62eddc8094000306170bcea7c757c012f9eea5ca8f84a54337d68db579c",
+      "last_error": null,
+      "last_fetched_at": "2026-09-22T01:44:45+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-21-b8idz40H8WM.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 14012,
+        "limit": 10000,
+        "models": {
+          "tokenrhythm/glm-5.2": 0
+        },
+        "points": 0,
+        "prompt_tokens": 12268,
+        "providers": {
+          "tokenrhythm": 2
+        }
+      },
+      "published_at": "2026-09-21T16:00:34+00:00",
+      "title": "Markets to Crash 50% as Long Awaited Recession Arrives | Simon Hunt",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美股",
+        "美债",
+        "宏观经济",
+        "地缘政治",
+        "原油",
+        "中东",
+        "美联储",
+        "货币政策"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "b8idz40H8WM",
+      "video_url": "https://www.youtube.com/watch?v=b8idz40H8WM"
     },
     "bi09ZJ7kOC4": {
       "alert_status": "none",
