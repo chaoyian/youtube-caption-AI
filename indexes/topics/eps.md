@@ -1,4 +1,3 @@
-# 主题：标普500
+# 主题：EPS
 
 - 2026-09-22 [2026/9/22(二)那指創新高!個股沒跟上?美股重新押注AI 不怕高利率了？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-22-U4RH_CPe3GQ.md)
-- 2026-09-14 [Worse than 1929: Why the Market Falls 90% from Here | Harry Dent](../../knowledge/wtfinance-podcast/2026/2026-09-14-hO0LGfwwDGo.md)
