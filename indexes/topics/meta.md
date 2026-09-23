@@ -1,4 +1,3 @@
-# 主题：技术分析
+# 主题：Meta
 
 - 2026-09-23 [2026/9/23(三)5%殖利率也擋不住FOMO？AI狂潮推那指再創新高【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-23-Xlj2cBFC7_s.md)
-- 2026-09-18 [Central Banks Panicking as "House is Burning Down" | Michael Oliver](../../knowledge/wtfinance-podcast/2026/2026-09-18-tZxQceT8X4s.md)
