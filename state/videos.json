@@ -4187,6 +4187,41 @@
       "video_url": "https://www.youtube.com/watch?v=TQ_oEc9vnB8",
       "waiting_count": 1
     },
+    "TVKacGhmAm4": {
+      "alert_status": "pending",
+      "analysis_status": "failed",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 1,
+      "fetch_status": "complete",
+      "fetched_hash": "956391e3e48a85981a114aac3774045092d02759732c439987affc33f9abdb13",
+      "last_attempt_at": "2026-09-24T01:40:35+00:00",
+      "last_error": "RuntimeError: All configured AI providers failed; poe: APIStatusError: Error code: 402 - {'error': {'message': 'The model GPT-5.4 requires an active Poe subscription for API access.', 'type': 'subscription_required', 'code': 'subscription_required', 'upgrade_url': 'https://poe.com/subscription_plans'}} | tokenrhythm: RuntimeError: empty response (finish_reason=length)",
+      "last_fetched_at": "2026-09-24T01:35:54+00:00",
+      "next_retry_at": "2026-09-25T01:40:35+00:00",
+      "note_version": 0,
+      "poe_usage": {
+        "calls": 1,
+        "completion_tokens": 16000,
+        "limit": 10000,
+        "models": {
+          "tokenrhythm/glm-5.2": 0
+        },
+        "points": 0,
+        "prompt_tokens": 14109,
+        "providers": {
+          "tokenrhythm": 1
+        }
+      },
+      "published_at": "2026-09-24T00:25:10+00:00",
+      "title": "2026/9/24(四) 台灣富到流油!為何大家喊窮?AI爆發下一步 去哪找人?【早晨財經速解讀】",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
+      "transcript_source": "apify",
+      "video_id": "TVKacGhmAm4",
+      "video_url": "https://www.youtube.com/watch?v=TVKacGhmAm4"
+    },
     "U4RH_CPe3GQ": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -8305,6 +8340,58 @@
       "video_id": "v7TpiWK5DTQ",
       "video_url": "https://www.youtube.com/watch?v=v7TpiWK5DTQ",
       "waiting_count": 3
+    },
+    "voqhElEsw2s": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-24T01:44:32+00:00",
+      "analyzed_hash": "e854e4dad04965a88bc58b4a6a6a57e9512cc64250cb6814da8476812220d5bd",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "e854e4dad04965a88bc58b4a6a6a57e9512cc64250cb6814da8476812220d5bd",
+      "last_error": null,
+      "last_fetched_at": "2026-09-24T01:41:12+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-23-voqhElEsw2s.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 10961,
+        "limit": 10000,
+        "models": {
+          "tokenrhythm/glm-5.2": 0
+        },
+        "points": 0,
+        "prompt_tokens": 23876,
+        "providers": {
+          "tokenrhythm": 2
+        }
+      },
+      "published_at": "2026-09-23T16:00:32+00:00",
+      "title": "\"They Orchestrated the Bond Crisis\" as Debt System Collapses | Francis Hunt",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "债券市场",
+        "美联储",
+        "债务危机",
+        "房地产市场",
+        "国有化",
+        "租赁市场",
+        "私人信贷",
+        "保险公司"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "voqhElEsw2s",
+      "video_url": "https://www.youtube.com/watch?v=voqhElEsw2s"
     },
     "vxCO-f4F3BA": {
       "alert_status": "none",
