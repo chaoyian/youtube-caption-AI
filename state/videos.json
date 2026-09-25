@@ -7721,98 +7721,34 @@
     "rTnPsm_gAhA": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-08-28T06:41:54+00:00",
-      "analyzed_hash": "2c132c6b05f180e32857cd7b41bf12da4913e550698286a1817535ea438988a3",
+      "analyzed_at": "2026-09-25T10:24:17+00:00",
+      "analyzed_hash": "a7dd7697cc1d02764279f654351868e12a37002d523fe98d9209bb9ab5759bb8",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-08-28T06:44:06+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 2
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-08-28T06:44:06+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "2c132c6b05f180e32857cd7b41bf12da4913e550698286a1817535ea438988a3",
+      "fetched_hash": "a7dd7697cc1d02764279f654351868e12a37002d523fe98d9209bb9ab5759bb8",
       "last_attempt_at": "2026-08-28T01:30:45+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-18T09:35:11+00:00",
+      "last_fetched_at": "2026-09-25T10:22:15+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-08-28-rTnPsm_gAhA.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5223,
+        "completion_tokens": 15391,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4157
+          "tokenrhythm/glm-5.2": 0
         },
-        "points": 4157,
-        "prompt_tokens": 24062
+        "points": 0,
+        "prompt_tokens": 21893,
+        "providers": {
+          "tokenrhythm": 2
+        }
       },
       "published_at": "2026-08-28T01:18:23+00:00",
       "title": "2026/8/28(五)輝達救美股 華許救美債?台灣景氣連八紅 台灣人終於有感?【早晨財經速解讀】",
@@ -7821,17 +7757,17 @@
         "台湾",
         "美股",
         "宏观",
-        "AI",
-        "财报",
-        "通胀",
-        "联准会",
-        "美债",
-        "GDP",
-        "消费",
-        "AI投资"
+        "辉达",
+        "AI基础设施",
+        "企业AI",
+        "美国通胀",
+        "PCE",
+        "服务业",
+        "美国经济",
+        "GDP"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "rTnPsm_gAhA",
       "video_url": "https://www.youtube.com/watch?v=rTnPsm_gAhA",
