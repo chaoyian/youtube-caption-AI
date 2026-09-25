@@ -687,7 +687,7 @@
       "fetched_hash": "46d9d252c24d5d50221869004e8dbb7ea9058235e95bafb9a16b04cf8b8163ca",
       "last_attempt_at": "2026-09-04T02:31:36+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-18T04:58:04+00:00",
+      "last_fetched_at": "2026-09-25T05:10:25+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-04-6weg9-YmGVs.md",
       "note_version": 1,
@@ -4542,7 +4542,7 @@
       "fetched_hash": "ad03698edb426cadcde80923c810b203edea7d0782907f7f855f366ecd172b04",
       "last_attempt_at": "2026-09-18T01:25:45+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-18T04:58:14+00:00",
+      "last_fetched_at": "2026-09-25T05:12:31+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-18-Ulz539c38mw.md",
       "note_version": 1,
@@ -7263,104 +7263,31 @@
     "mhVVuuWUhCw": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-09-11T02:37:37+00:00",
-      "analyzed_hash": "98d54dd9d320443f9af810ca222b8e4e406b36c3aadc23e1c5da51a070d726c2",
+      "analyzed_at": "2026-09-25T05:12:22+00:00",
+      "analyzed_hash": "dad4647790a343a38abe2b7c52a216d4f6444f76e96c1e4ad156b48f769ab136",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "genecc.chen@msa.hinet.net": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-09-11T02:37:58+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-09-11T02:37:58+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "98d54dd9d320443f9af810ca222b8e4e406b36c3aadc23e1c5da51a070d726c2",
+      "fetched_hash": "dad4647790a343a38abe2b7c52a216d4f6444f76e96c1e4ad156b48f769ab136",
       "last_attempt_at": "2026-09-11T01:23:18+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-18T04:58:08+00:00",
+      "last_fetched_at": "2026-09-25T05:10:33+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-11-mhVVuuWUhCw.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 12420,
+        "completion_tokens": 12447,
         "limit": 10000,
         "models": {
           "tokenrhythm/glm-5.2": 0
         },
         "points": 0,
-        "prompt_tokens": 24320,
+        "prompt_tokens": 21121,
         "providers": {
           "tokenrhythm": 2
         }
@@ -7372,17 +7299,17 @@
         "台湾",
         "美股",
         "宏观",
-        "原油",
-        "通膨",
-        "中东局势",
-        "美债殖利率",
         "AI资本支出",
+        "美债",
+        "流动性",
         "实质利率",
-        "VIX",
-        "基金现金"
+        "AI",
+        "资金成本",
+        "主权债",
+        "财政赤字"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "mhVVuuWUhCw",
       "video_url": "https://www.youtube.com/watch?v=mhVVuuWUhCw",
