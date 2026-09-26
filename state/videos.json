@@ -1365,6 +1365,58 @@
       "video_url": "https://www.youtube.com/watch?v=C8bYSy7FLIc",
       "waiting_count": 10
     },
+    "DAZQjlZH4NE": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-26T01:52:04+00:00",
+      "analyzed_hash": "d2413c78880fb869964ed4b70b68a8c1fda7aacefd7825c98265c17cf4b72d8d",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "d2413c78880fb869964ed4b70b68a8c1fda7aacefd7825c98265c17cf4b72d8d",
+      "last_error": null,
+      "last_fetched_at": "2026-09-26T01:50:29+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-25-DAZQjlZH4NE.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 10629,
+        "limit": 10000,
+        "models": {
+          "tokenrhythm/glm-5.2": 0
+        },
+        "points": 0,
+        "prompt_tokens": 20374,
+        "providers": {
+          "tokenrhythm": 2
+        }
+      },
+      "published_at": "2026-09-25T16:00:16+00:00",
+      "title": "Gold's Bloodbath Reversing as Dollar Crumbles | Clive Thompson",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "主权债务",
+        "欧元区",
+        "债券收益率",
+        "黄金",
+        "央行储备",
+        "中国",
+        "资产安全",
+        "内部纾困"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "DAZQjlZH4NE",
+      "video_url": "https://www.youtube.com/watch?v=DAZQjlZH4NE"
+    },
     "DBbDrACd1W8": {
       "alert_status": "none",
       "analysis_status": "complete",
