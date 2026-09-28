@@ -2,6 +2,7 @@
 
 - 2026-09-22 [2026/9/22(二)那指創新高!個股沒跟上?美股重新押注AI 不怕高利率了？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-22-U4RH_CPe3GQ.md)
 - 2026-09-10 [2026/9/11(五)油價破百 債券失火!股市撿便宜?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-11-mhVVuuWUhCw.md)
+- 2026-09-07 [2026/9/7(一)非農超強 美債失守 AI股卻悄悄轉多?美股Q4還有戲?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-07-c4IT1Mwb_Pg.md)
 - 2026-09-03 [2026/9/3(四)美國製造業 真的回來了？台灣央行 該升息了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-03-R15MWKzLJpE.md)
 - 2026-09-02 [2026/9/2(三)高利率炸彈 AI還能撐?亞洲AI行情 迎來大考驗?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-02-fpX071E5yI4.md)
 - 2026-08-27 [2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md)
