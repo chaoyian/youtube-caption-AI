@@ -2874,10 +2874,89 @@
       "analyzed_at": "2026-09-29T06:03:24+00:00",
       "analyzed_hash": "586be6d7a0612597eae27d3058939a930e4638983e96d16053cb3241fc479c73",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_sent_at": "2026-09-15T02:49:40+00:00",
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "genecc.chen@msa.hinet.net": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "raymond860808@gmail.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-09-29T06:06:22+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        }
+      },
+      "email_sent_at": "2026-09-29T06:06:22+00:00",
+      "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "586be6d7a0612597eae27d3058939a930e4638983e96d16053cb3241fc479c73",
@@ -3405,10 +3484,89 @@
       "analyzed_at": "2026-09-29T06:01:04+00:00",
       "analyzed_hash": "db6aff5bf2cfb554ed09494d2156d8671443728e4c20c9cbd128f82e8b8d18a1",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_sent_at": "2026-09-08T02:32:05+00:00",
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "genecc.chen@msa.hinet.net": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "raymond860808@gmail.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-09-29T06:06:47+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        }
+      },
+      "email_sent_at": "2026-09-29T06:06:47+00:00",
+      "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "db6aff5bf2cfb554ed09494d2156d8671443728e4c20c9cbd128f82e8b8d18a1",
@@ -4450,10 +4608,89 @@
       "analyzed_at": "2026-09-29T06:05:41+00:00",
       "analyzed_hash": "2c104dab69260f761b3d7569bde88390fa4e35c44117b0883187ffadafe8158a",
       "channel_id": "yutinghao-finance",
-      "discord_status": "pending",
-      "email_deliveries": {},
-      "email_sent_at": "2026-09-22T05:19:40+00:00",
-      "email_status": "pending",
+      "discord_status": "disabled",
+      "email_deliveries": {
+        "1065222108@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1379163295@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "1832033599@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "2911346472@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "2922859603@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "3221596917@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "787663687@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "892199508@qq.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "Siaberiss@outlook.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "genecc.chen@msa.hinet.net": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "jiayi9922333@gmail.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "raymond860808@gmail.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        },
+        "xiaoqianliu88@gmail.com": {
+          "attempted_at": "2026-09-29T06:07:11+00:00",
+          "provider": "gmail",
+          "status": "sent",
+          "version": 2
+        }
+      },
+      "email_sent_at": "2026-09-29T06:07:11+00:00",
+      "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "2c104dab69260f761b3d7569bde88390fa4e35c44117b0883187ffadafe8158a",
