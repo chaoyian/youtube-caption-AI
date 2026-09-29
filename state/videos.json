@@ -130,6 +130,58 @@
       "video_id": "20fQIC6PwQI",
       "video_url": "https://www.youtube.com/watch?v=20fQIC6PwQI"
     },
+    "5-_uQCSPHkM": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-29T02:43:44+00:00",
+      "analyzed_hash": "4abbf170fc5001ee23766ae452b127a2b6cacb318c6d8f5bb8453e96f9942c09",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "4abbf170fc5001ee23766ae452b127a2b6cacb318c6d8f5bb8453e96f9942c09",
+      "last_error": null,
+      "last_fetched_at": "2026-09-29T02:42:06+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-28-5-_uQCSPHkM.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8041,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5276
+        },
+        "points": 5276,
+        "prompt_tokens": 22078,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-09-28T16:00:19+00:00",
+      "title": "The Debt Crisis Has Begun as Yields Surge | Peter Schiff",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美债收益率",
+        "利率路径",
+        "股市估值",
+        "市场情绪",
+        "房地产",
+        "按揭利率",
+        "居民部门",
+        "美联储"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "5-_uQCSPHkM",
+      "video_url": "https://www.youtube.com/watch?v=5-_uQCSPHkM"
+    },
     "56m37NuxQsg": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -6814,15 +6866,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-09-28T12:45:11+00:00",
+      "last_attempt_at": "2026-09-29T02:40:10+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] dknQKeMAkvU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=dknQKeMAkvU! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-09-28T13:45:11+00:00",
+      "next_retry_at": "2026-09-29T03:40:10+00:00",
       "note_version": 0,
       "published_at": "2026-09-28T00:30:11+00:00",
-      "title": "2026/9/28(一) 導讀 國家為什麼會失敗/自由的窄廊台灣",
+      "title": "2026/9/28(一) 導讀 國家為什麼會失敗/自由的窄廊",
       "video_id": "dknQKeMAkvU",
       "video_url": "https://www.youtube.com/watch?v=dknQKeMAkvU",
-      "waiting_count": 3
+      "waiting_count": 4
     },
     "fpX071E5yI4": {
       "alert_status": "none",
@@ -8868,6 +8920,58 @@
       "transcript_source": "apify",
       "video_id": "vxCO-f4F3BA",
       "video_url": "https://www.youtube.com/watch?v=vxCO-f4F3BA"
+    },
+    "wBb7G4Ifd34": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-09-29T02:41:58+00:00",
+      "analyzed_hash": "319396b5ef32110e548569672724019ef15223f087919e79b4f0aa6f628a7822",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "319396b5ef32110e548569672724019ef15223f087919e79b4f0aa6f628a7822",
+      "last_error": null,
+      "last_fetched_at": "2026-09-29T02:40:17+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-09-29-wBb7G4Ifd34.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 7993,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5523
+        },
+        "points": 5523,
+        "prompt_tokens": 25643,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-09-29T01:11:52+00:00",
+      "title": "2026/9/29(二)10年美債殖利率 升破5.2%!債市會把股市 拖下水嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "美债殖利率",
+        "市场波动",
+        "估值",
+        "费半",
+        "利率",
+        "市场广度",
+        "标普500",
+        "权值股"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "wBb7G4Ifd34",
+      "video_url": "https://www.youtube.com/watch?v=wBb7G4Ifd34"
     },
     "wmu1GS07BMo": {
       "alert_status": "none",
