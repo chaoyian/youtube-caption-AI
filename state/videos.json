@@ -2871,106 +2871,33 @@
     "KNWS5tp0HYc": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-09-15T02:49:21+00:00",
-      "analyzed_hash": "fde8341513f41062b95a63b10e5c092fc75a3929f6f7d1b0f1dc001407abde14",
+      "analyzed_at": "2026-09-29T06:03:24+00:00",
+      "analyzed_hash": "586be6d7a0612597eae27d3058939a930e4638983e96d16053cb3241fc479c73",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "genecc.chen@msa.hinet.net": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-09-15T02:49:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-09-15T02:49:40+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "fde8341513f41062b95a63b10e5c092fc75a3929f6f7d1b0f1dc001407abde14",
+      "fetched_hash": "586be6d7a0612597eae27d3058939a930e4638983e96d16053cb3241fc479c73",
       "last_attempt_at": "2026-09-15T01:31:43+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-22T05:14:17+00:00",
+      "last_fetched_at": "2026-09-29T06:01:13+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-15-KNWS5tp0HYc.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 11796,
+        "calls": 3,
+        "completion_tokens": 8907,
         "limit": 10000,
         "models": {
-          "tokenrhythm/glm-5.2": 0
+          "GPT-5.4": 5681
         },
-        "points": 0,
-        "prompt_tokens": 21076,
+        "points": 5681,
+        "prompt_tokens": 22272,
         "providers": {
-          "tokenrhythm": 2
+          "poe": 3
         }
       },
       "published_at": "2026-09-15T01:13:28+00:00",
@@ -2980,17 +2907,17 @@
         "台湾",
         "美股",
         "宏观",
+        "美债殖利率",
+        "估值",
         "费半",
-        "晶片股",
-        "本益比",
-        "公债殖利率",
-        "估值压力",
-        "利率",
-        "资金轮动",
-        "软件股"
+        "板块表现",
+        "半导体",
+        "个股跌幅",
+        "AI概念股",
+        "软件"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "KNWS5tp0HYc",
       "video_url": "https://www.youtube.com/watch?v=KNWS5tp0HYc",
@@ -3475,104 +3402,31 @@
     "O0JBTLUGnQ0": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-09-08T02:31:48+00:00",
-      "analyzed_hash": "22532b50bb516da8f3f1b73d79a48a6d73d0d79e916b1db92fa4a554116a703c",
+      "analyzed_at": "2026-09-29T06:01:04+00:00",
+      "analyzed_hash": "db6aff5bf2cfb554ed09494d2156d8671443728e4c20c9cbd128f82e8b8d18a1",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "genecc.chen@msa.hinet.net": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-09-08T02:32:05+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-09-08T02:32:05+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "22532b50bb516da8f3f1b73d79a48a6d73d0d79e916b1db92fa4a554116a703c",
+      "fetched_hash": "db6aff5bf2cfb554ed09494d2156d8671443728e4c20c9cbd128f82e8b8d18a1",
       "last_attempt_at": "2026-09-08T01:19:47+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-22T05:14:04+00:00",
+      "last_fetched_at": "2026-09-29T05:58:45+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-08-O0JBTLUGnQ0.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8809,
+        "completion_tokens": 9310,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5951
+          "GPT-5.4": 5976
         },
-        "points": 5951,
-        "prompt_tokens": 26461,
+        "points": 5976,
+        "prompt_tokens": 23785,
         "providers": {
           "poe": 3
         }
@@ -3585,16 +3439,16 @@
         "美股",
         "宏观",
         "外汇",
+        "亚洲市场",
         "亚币",
         "政策",
+        "资金面",
         "美元",
-        "避险",
-        "资金流向",
-        "新台币",
-        "台股"
+        "机构资金",
+        "避险"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "O0JBTLUGnQ0",
       "video_url": "https://www.youtube.com/watch?v=O0JBTLUGnQ0",
@@ -4593,112 +4447,33 @@
     "U4RH_CPe3GQ": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-09-22T05:19:18+00:00",
-      "analyzed_hash": "6e1f7a139311e502071780864075eaa407dcfcecbe0ca8e1f3aecee62aaab06a",
+      "analyzed_at": "2026-09-29T06:05:41+00:00",
+      "analyzed_hash": "2c104dab69260f761b3d7569bde88390fa4e35c44117b0883187ffadafe8158a",
       "channel_id": "yutinghao-finance",
-      "discord_status": "disabled",
-      "email_deliveries": {
-        "1065222108@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1379163295@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "1832033599@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2911346472@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "2922859603@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "3221596917@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "787663687@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "892199508@qq.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "Siaberiss@outlook.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "genecc.chen@msa.hinet.net": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "jiayi9922333@gmail.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "raymond860808@gmail.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        },
-        "xiaoqianliu88@gmail.com": {
-          "attempted_at": "2026-09-22T05:19:40+00:00",
-          "provider": "gmail",
-          "status": "sent",
-          "version": 1
-        }
-      },
+      "discord_status": "pending",
+      "email_deliveries": {},
       "email_sent_at": "2026-09-22T05:19:40+00:00",
-      "email_status": "sent",
+      "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "6e1f7a139311e502071780864075eaa407dcfcecbe0ca8e1f3aecee62aaab06a",
+      "fetched_hash": "2c104dab69260f761b3d7569bde88390fa4e35c44117b0883187ffadafe8158a",
       "last_attempt_at": "2026-09-22T01:44:39+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-22T05:14:28+00:00",
+      "last_fetched_at": "2026-09-29T06:03:35+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-22-U4RH_CPe3GQ.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 12386,
+        "calls": 3,
+        "completion_tokens": 9202,
         "limit": 10000,
         "models": {
-          "tokenrhythm/glm-5.2": 0
+          "GPT-5.4": 5856
         },
-        "points": 0,
-        "prompt_tokens": 20992,
+        "points": 5856,
+        "prompt_tokens": 22830,
         "providers": {
-          "tokenrhythm": 2
+          "poe": 3
         }
       },
       "published_at": "2026-09-22T01:13:03+00:00",
@@ -4709,16 +4484,16 @@
         "美股",
         "宏观",
         "市场广度",
-        "纳指",
+        "指数结构",
+        "盈利",
+        "估值",
         "标普500",
-        "EPS",
-        "本益比",
-        "AI",
-        "科技七雄",
-        "资金轮动"
+        "油价",
+        "收益率",
+        "科技股估值"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en-US",
       "transcript_source": "apify",
       "video_id": "U4RH_CPe3GQ",
       "video_url": "https://www.youtube.com/watch?v=U4RH_CPe3GQ",
@@ -5068,7 +4843,7 @@
       "fetched_hash": "d9a6937db23de4993a8571e568b6a13016d299020b738ad4062a987e20cce296",
       "last_attempt_at": "2026-09-01T01:30:51+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-09-22T05:13:53+00:00",
+      "last_fetched_at": "2026-09-29T05:58:39+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-01-XY31kO-V0Q4.md",
       "note_version": 1,
@@ -6946,15 +6721,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-09-29T02:40:10+00:00",
+      "last_attempt_at": "2026-09-29T06:05:57+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] dknQKeMAkvU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=dknQKeMAkvU! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-09-29T03:40:10+00:00",
+      "next_retry_at": "2026-09-29T07:05:57+00:00",
       "note_version": 0,
       "published_at": "2026-09-28T00:30:11+00:00",
       "title": "2026/9/28(一) 導讀 國家為什麼會失敗/自由的窄廊",
       "video_id": "dknQKeMAkvU",
       "video_url": "https://www.youtube.com/watch?v=dknQKeMAkvU",
-      "waiting_count": 4
+      "waiting_count": 5
     },
     "fpX071E5yI4": {
       "alert_status": "none",
