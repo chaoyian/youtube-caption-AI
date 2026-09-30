@@ -1,4 +1,3 @@
-# 主题：美债收益率
+# 主题：AI资本开支
 
 - 2026-09-30 [2026/9/30(三)利率越漲 美股越不跌？數兆美元豪賭 AI驗收期到了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-30-eHz1_TGAo4I.md)
-- 2026-09-28 [The Debt Crisis Has Begun as Yields Surge | Peter Schiff](../../knowledge/wtfinance-podcast/2026/2026-09-28-5-_uQCSPHkM.md)
