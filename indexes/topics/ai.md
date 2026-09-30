@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-09-23 [2026/9/23(三)5%殖利率也擋不住FOMO？AI狂潮推那指再創新高【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-23-Xlj2cBFC7_s.md)
 - 2026-09-10 [2026/9/11(五)油價破百 債券失火!股市撿便宜?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-11-mhVVuuWUhCw.md)
 - 2026-09-07 [2026/9/7(一)非農超強 美債失守 AI股卻悄悄轉多?美股Q4還有戲?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-07-c4IT1Mwb_Pg.md)
 - 2026-09-03 [2026/9/3(四)美國製造業 真的回來了？台灣央行 該升息了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-03-R15MWKzLJpE.md)

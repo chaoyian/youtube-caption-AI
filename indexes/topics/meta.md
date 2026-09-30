@@ -1,3 +1,0 @@
-# 主题：Meta
-
-- 2026-09-23 [2026/9/23(三)5%殖利率也擋不住FOMO？AI狂潮推那指再創新高【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-23-Xlj2cBFC7_s.md)
