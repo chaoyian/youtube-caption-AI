@@ -2529,6 +2529,24 @@
       "video_id": "FlnyDuJXzAM",
       "video_url": "https://www.youtube.com/watch?v=FlnyDuJXzAM"
     },
+    "FsIraI_ezPI": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-10-01T01:31:08+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] FsIraI_ezPI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=FsIraI_ezPI! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-10-01T02:31:08+00:00",
+      "note_version": 0,
+      "published_at": "2026-10-01T01:07:28+00:00",
+      "title": "2026/10/1(四)美股詭異行情!債市拉警報 基本面卻上修?八成個股下跌 AI能撐多久?【早晨財經速解讀】",
+      "video_id": "FsIraI_ezPI",
+      "video_url": "https://www.youtube.com/watch?v=FsIraI_ezPI",
+      "waiting_count": 1
+    },
     "FtPa8H718To": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -6958,15 +6976,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-09-30T11:49:52+00:00",
+      "last_attempt_at": "2026-10-01T01:30:48+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] dknQKeMAkvU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=dknQKeMAkvU! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-09-30T12:49:52+00:00",
+      "next_retry_at": "2026-10-01T02:30:48+00:00",
       "note_version": 0,
       "published_at": "2026-09-28T00:30:11+00:00",
       "title": "2026/9/28(一) 導讀 國家為什麼會失敗/自由的窄廊",
       "video_id": "dknQKeMAkvU",
       "video_url": "https://www.youtube.com/watch?v=dknQKeMAkvU",
-      "waiting_count": 9
+      "waiting_count": 10
     },
     "eHz1_TGAo4I": {
       "alert_status": "none",
@@ -9635,6 +9653,58 @@
       "video_id": "z3pq4kLE5Sw",
       "video_url": "https://www.youtube.com/watch?v=z3pq4kLE5Sw",
       "waiting_count": 1
+    },
+    "zLR53skJSMo": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-01T01:32:56+00:00",
+      "analyzed_hash": "688a80f38550714393a45dbd4c05fd1431f46e92fb3815af32fcf1754fa0686c",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_deliveries": {},
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "688a80f38550714393a45dbd4c05fd1431f46e92fb3815af32fcf1754fa0686c",
+      "last_error": null,
+      "last_fetched_at": "2026-10-01T01:31:22+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-09-30-zLR53skJSMo.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 9210,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 6247
+        },
+        "points": 6247,
+        "prompt_tokens": 27994,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-09-30T16:00:08+00:00",
+      "title": "Oil Markets at a Breaking Point as Storage Runs Dry | Rory Johnston",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "原油",
+        "现货结构",
+        "价格",
+        "霍尔木兹",
+        "航运",
+        "供应",
+        "中国",
+        "原油进口"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "zLR53skJSMo",
+      "video_url": "https://www.youtube.com/watch?v=zLR53skJSMo"
     }
   }
 }
