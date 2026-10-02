@@ -4610,7 +4610,7 @@
       "waiting_count": 1
     },
     "TQ_oEc9vnB8": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "analyzed_at": "2026-09-17T02:53:21+00:00",
       "analyzed_hash": "e84d491393d7ee0cd54e7dfa6ae7d459747006ca718e793839b6aa29070ca157",
