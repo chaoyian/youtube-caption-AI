@@ -350,9 +350,6 @@ def process(
                 note_version=version,
                 note_path=relative_path,
                 topics=note_topics(note, channel),
-                email_status="pending",
-                email_deliveries={},
-                discord_status="pending",
                 alert_status="none",
                 last_error=None,
                 failure_count=0,
@@ -405,11 +402,12 @@ def notify(root: Path, state_path: Path, repository_url: str, branch: str = "mai
             else:
                 version = int(record["note_version"])
                 deliveries = record.setdefault("email_deliveries", {})
+                # Delivery is per video and recipient, independent of note revisions.
+                delivered = {address.casefold(): delivery for address, delivery in deliveries.items()}
                 pending = [
                     recipient
                     for recipient in recipients
-                    if deliveries.get(recipient, {}).get("status") != "sent"
-                    or deliveries.get(recipient, {}).get("version") != version
+                    if delivered.get(recipient.casefold(), {}).get("status") != "sent"
                 ]
                 results = (
                     send_email(
@@ -427,9 +425,9 @@ def notify(root: Path, state_path: Path, repository_url: str, branch: str = "mai
                     deliveries[recipient] = {**delivery, "version": version, "attempted_at": now_iso()}
                     if delivery["status"] == "sent":
                         counts["email"] += 1
+                delivered = {address.casefold(): delivery for address, delivery in deliveries.items()}
                 sent = sum(
-                    deliveries.get(recipient, {}).get("status") == "sent"
-                    and deliveries.get(recipient, {}).get("version") == version
+                    delivered.get(recipient.casefold(), {}).get("status") == "sent"
                     for recipient in recipients
                 )
                 if sent == len(recipients):

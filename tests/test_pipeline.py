@@ -381,3 +381,50 @@ def test_discovery_and_apify_keys_are_redacted_from_public_errors(monkeypatch):
     assert "youtube-sensitive-value" not in message
     assert "apify-sensitive-value" not in message
     assert message.count("***") == 2
+
+
+@pytest.mark.parametrize("force", [False, True])
+@pytest.mark.parametrize("status", ["sent", "partial"])
+def test_note_revision_preserves_delivery_history(
+    tmp_path, monkeypatch, sample_video, sample_segments, sample_note, force, status
+):
+    config, state = _workspace(tmp_path)
+    monkeypatch.setattr(pipeline, "fetch_channel_videos", lambda *args, **kwargs: [sample_video])
+    current = list(sample_segments)
+    monkeypatch.setattr(
+        pipeline, "fetch_transcript",
+        lambda *args: TranscriptResult("zh-TW", True, "fake", current),
+    )
+    analyzer = FakeAnalyzer(sample_note)
+    pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer)
+    data = json.loads(state.read_text())
+    record = data["videos"][sample_video.id]
+    deliveries = {"ONE@example.com": {"status": "sent", "version": 1, "provider": "gmail"}}
+    record.update(
+        email_status=status, email_deliveries=deliveries, email_sent_at="2026-09-22T02:00:00+00:00",
+        discord_status="sent", discord_sent_at="2026-09-22T02:00:00+00:00",
+        last_fetched_at=(datetime.now(UTC) - timedelta(days=8)).isoformat(),
+    )
+    state.write_text(json.dumps(data))
+    if not force:
+        current.append(type(sample_segments[0])(start=30, text="更新的金融观点"))
+    pipeline.process(tmp_path, config_path=config, state_path=state, analyzer=analyzer, force=force)
+    updated = json.loads(state.read_text())["videos"][sample_video.id]
+    assert updated["note_version"] == 2
+    assert updated["email_status"] == status
+    assert updated["email_deliveries"] == deliveries
+    assert updated["email_sent_at"] == record["email_sent_at"]
+    assert updated["discord_status"] == "sent"
+    monkeypatch.setenv("EMAIL_PROVIDER", "gmail")
+    monkeypatch.setenv("GMAIL_USERNAME", "sender@gmail.com")
+    monkeypatch.setenv("GMAIL_APP_PASSWORD", "test-password")
+    monkeypatch.setenv("EMAIL_TO", "one@example.com,two@example.com")
+    calls = []
+    def send(*args):
+        calls.append(args[-1])
+        return {recipient: {"status": "sent", "provider": "gmail"} for recipient in args[-1]}
+    monkeypatch.setattr(pipeline, "send_email", send)
+    monkeypatch.setattr(pipeline, "send_discord", lambda *args: pytest.fail("Already delivered"))
+    pipeline.notify(tmp_path, state, "https://github.com/example/repo")
+    pipeline.notify(tmp_path, state, "https://github.com/example/repo")
+    assert calls == ([["two@example.com"]] if status == "partial" else [])
