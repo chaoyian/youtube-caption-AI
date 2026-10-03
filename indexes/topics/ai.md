@@ -1,7 +1,7 @@
 # 主题：AI
 
-- 2026-10-02 [2026/10/2(五)台股創新高 下一棒換誰?利空鈍化?大賣空喊AI 為了人類該跌!【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-02-BTBH4-RZZXg.md)
 - 2026-10-02 [Felix Nikolas Prehn: A Generational Financial Reset Is Here](../../knowledge/wtfinance-podcast/2026/2026-10-02-4pEEU2qtNtM.md)
+- 2026-10-02 [2026/10/2(五)台股創新高 下一棒換誰?利空鈍化?大賣空喊AI 為了人類該跌!【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-02-BTBH4-RZZXg.md)
 - 2026-09-23 [2026/9/23(三)5%殖利率也擋不住FOMO？AI狂潮推那指再創新高【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-23-Xlj2cBFC7_s.md)
 - 2026-09-10 [2026/9/11(五)油價破百 債券失火!股市撿便宜?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-11-mhVVuuWUhCw.md)
 - 2026-09-07 [2026/9/7(一)非農超強 美債失守 AI股卻悄悄轉多?美股Q4還有戲?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-07-c4IT1Mwb_Pg.md)
