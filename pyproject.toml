@@ -9,7 +9,7 @@ description = "Build a finance-focused knowledge base from YouTube captions"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "Markdown==3.10.2",
+  "Markdown==3.10.3",
   "openai==2.49.0",
   "pydantic==2.13.4",
   "tiktoken==0.11.0",
