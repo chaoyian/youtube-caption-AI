@@ -4742,10 +4742,10 @@
       "waiting_count": 1
     },
     "TQ_oEc9vnB8": {
-      "alert_status": "disabled",
-      "analysis_status": "failed",
-      "analyzed_at": "2026-09-17T02:53:21+00:00",
-      "analyzed_hash": "e84d491393d7ee0cd54e7dfa6ae7d459747006ca718e793839b6aa29070ca157",
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-04T01:32:35+00:00",
+      "analyzed_hash": "a2cd898663e1d093ab60e2ddf500438a356175f652580923e4e585edfd10e89a",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -4824,26 +4824,26 @@
       },
       "email_sent_at": "2026-09-17T02:53:39+00:00",
       "email_status": "sent",
-      "failure_count": 1,
+      "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "a2cd898663e1d093ab60e2ddf500438a356175f652580923e4e585edfd10e89a",
       "last_attempt_at": "2026-10-02T12:24:09+00:00",
-      "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: 33 validation errors for ResearchNote\nmacro_context.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[37]-[49]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.1.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[93]-[113]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.2.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[483]-[565]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[866]-[940]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.1.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[151",
-      "last_fetched_at": "2026-10-02T12:22:10+00:00",
-      "next_retry_at": "2026-10-03T12:24:09+00:00",
+      "last_error": null,
+      "last_fetched_at": "2026-10-04T01:31:10+00:00",
+      "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-17-TQ_oEc9vnB8.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 4,
-        "completion_tokens": 12772,
+        "calls": 3,
+        "completion_tokens": 8534,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7624
+          "GPT-5.4": 5539
         },
-        "points": 7624,
-        "prompt_tokens": 24980,
+        "points": 5539,
+        "prompt_tokens": 22607,
         "providers": {
-          "poe": 4
+          "poe": 3
         }
       },
       "published_at": "2026-09-17T01:05:31+00:00",
@@ -4853,14 +4853,14 @@
         "台湾",
         "美股",
         "宏观",
-        "聯準會",
-        "利率決議",
-        "點陣圖",
-        "貨幣政策",
+        "联准会",
+        "升息",
+        "通胀",
+        "点阵图",
+        "利率",
+        "政策路径",
         "前瞻指引",
-        "通膨預期",
-        "公債殖利率",
-        "科技債"
+        "鲍威尔"
       ],
       "transcript_generated": true,
       "transcript_language": "en-US",
@@ -7358,15 +7358,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-10-03T11:00:46+00:00",
+      "last_attempt_at": "2026-10-04T01:32:56+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] dknQKeMAkvU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=dknQKeMAkvU! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-03T12:00:46+00:00",
+      "next_retry_at": "2026-10-04T02:32:56+00:00",
       "note_version": 0,
       "published_at": "2026-09-28T00:30:11+00:00",
       "title": "2026/9/28(一) 導讀 國家為什麼會失敗/自由的窄廊",
       "video_id": "dknQKeMAkvU",
       "video_url": "https://www.youtube.com/watch?v=dknQKeMAkvU",
-      "waiting_count": 22
+      "waiting_count": 23
     },
     "eHz1_TGAo4I": {
       "alert_status": "none",
