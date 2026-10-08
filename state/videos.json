@@ -2889,7 +2889,7 @@
       "fetched_hash": "108eb16729c7e6e6b67249f0c538eaf66fdb5057af0855eb9a5e05ed8eacdeec",
       "last_attempt_at": "2026-10-01T01:31:08+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-01T02:45:53+00:00",
+      "last_fetched_at": "2026-10-08T02:50:56+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-01-FsIraI_ezPI.md",
       "note_version": 1,
@@ -2923,8 +2923,8 @@
         "财政"
       ],
       "transcript_generated": false,
-      "transcript_language": "zh-TW",
-      "transcript_source": "apify",
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "FsIraI_ezPI",
       "video_url": "https://www.youtube.com/watch?v=FsIraI_ezPI",
       "waiting_count": 1
