@@ -1368,8 +1368,8 @@
     "BTBH4-RZZXg": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-02T02:47:40+00:00",
-      "analyzed_hash": "7adf112b386e01895189a4e37882f24035afed506f748048e2c268da8ac86502",
+      "analyzed_at": "2026-10-09T03:03:45+00:00",
+      "analyzed_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -1456,22 +1456,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "7adf112b386e01895189a4e37882f24035afed506f748048e2c268da8ac86502",
+      "fetched_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
       "last_attempt_at": "2026-10-02T01:31:10+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-02T02:46:02+00:00",
+      "last_fetched_at": "2026-10-09T03:02:01+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-02-BTBH4-RZZXg.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 9106,
+        "completion_tokens": 8890,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 6020
+          "GPT-5.4": 5712
         },
-        "points": 6020,
-        "prompt_tokens": 25598,
+        "points": 5712,
+        "prompt_tokens": 22783,
         "providers": {
           "poe": 3
         }
@@ -1485,15 +1485,15 @@
         "宏观",
         "美债",
         "利率",
+        "Fed",
         "全球债市",
-        "AI",
-        "信用债",
-        "美国经济",
-        "PMI",
-        "就业"
+        "主权债",
+        "融资",
+        "公司债",
+        "能源"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "BTBH4-RZZXg",
       "video_url": "https://www.youtube.com/watch?v=BTBH4-RZZXg",
@@ -5777,36 +5777,53 @@
       "video_url": "https://www.youtube.com/watch?v=Z9pCZkTe358"
     },
     "_dfkO0oKRvg": {
-      "alert_status": "disabled",
-      "analysis_status": "failed",
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-09T03:05:20+00:00",
+      "analyzed_hash": "2c77e020e84543159180d95ec5f071e12cb7ac8dc3b84357640034e167f651c1",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
-      "failure_count": 1,
+      "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "e59a5f881a1471e6595edc1a9d02558e164a6d64e71a0901ec286f71723b529f",
+      "fetched_hash": "2c77e020e84543159180d95ec5f071e12cb7ac8dc3b84357640034e167f651c1",
       "last_attempt_at": "2026-10-08T02:48:04+00:00",
-      "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: 34 validation errors for ResearchNote\nmacro_context.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[70]-[89]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.1.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[217]-[270]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\nmacro_context.2.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[381]-[383]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.0.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[263]-[328]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_parsing\ncore_theses.1.timestamp\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='[38",
-      "last_fetched_at": "2026-10-08T02:45:36+00:00",
-      "next_retry_at": "2026-10-09T02:48:04+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-10-09T03:03:54+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-08-_dfkO0oKRvg.md",
+      "note_version": 1,
       "poe_usage": {
-        "calls": 4,
-        "completion_tokens": 12766,
+        "calls": 3,
+        "completion_tokens": 8353,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7915
+          "GPT-5.4": 5512
         },
-        "points": 7915,
-        "prompt_tokens": 28907,
+        "points": 5512,
+        "prompt_tokens": 23342,
         "providers": {
-          "poe": 4
+          "poe": 3
         }
       },
       "published_at": "2026-10-08T01:15:25+00:00",
       "title": "2026/10/8(四)全球政府都缺錢!高利率時代誰來買單?AI時代 企業賺錢、政府缺錢、人民沒錢?【早晨財經速解讀】",
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "股债分化",
+        "全球利率",
+        "估值",
+        "美国房地产",
+        "房贷利率",
+        "消费",
+        "美债",
+        "外资流入"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "_dfkO0oKRvg",
       "video_url": "https://www.youtube.com/watch?v=_dfkO0oKRvg",
