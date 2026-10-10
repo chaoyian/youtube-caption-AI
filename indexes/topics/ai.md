@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-10-09 [El Nino Food Crisis, Energy Shortages & the Worst Geopolitical Decision in History | Peter Grandich](../../knowledge/wtfinance-podcast/2026/2026-10-09-m94sPc4s1AA.md)
 - 2026-10-02 [Felix Nikolas Prehn: A Generational Financial Reset Is Here](../../knowledge/wtfinance-podcast/2026/2026-10-02-4pEEU2qtNtM.md)
 - 2026-09-23 [2026/9/23(三)5%殖利率也擋不住FOMO？AI狂潮推那指再創新高【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-23-Xlj2cBFC7_s.md)
 - 2026-09-10 [2026/9/11(五)油價破百 債券失火!股市撿便宜?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-11-mhVVuuWUhCw.md)

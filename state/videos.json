@@ -8348,6 +8348,57 @@
       "video_id": "lDeHFopOfIs",
       "video_url": "https://www.youtube.com/watch?v=lDeHFopOfIs"
     },
+    "m94sPc4s1AA": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-10T01:32:03+00:00",
+      "analyzed_hash": "3b3895e015fec1f0442322b88dfe53e3616711a38db4a9b9a98bcc336362e868",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "3b3895e015fec1f0442322b88dfe53e3616711a38db4a9b9a98bcc336362e868",
+      "last_error": null,
+      "last_fetched_at": "2026-10-10T01:30:38+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-09-m94sPc4s1AA.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8933,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5719
+        },
+        "points": 5719,
+        "prompt_tokens": 22633,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-10-09T16:00:10+00:00",
+      "title": "El Nino Food Crisis, Energy Shortages & the Worst Geopolitical Decision in History | Peter Grandich",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美国债务",
+        "融资",
+        "去美元化",
+        "美股",
+        "AI",
+        "被动投资",
+        "利率",
+        "债券"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "m94sPc4s1AA",
+      "video_url": "https://www.youtube.com/watch?v=m94sPc4s1AA"
+    },
     "mhVVuuWUhCw": {
       "alert_status": "none",
       "analysis_status": "complete",
