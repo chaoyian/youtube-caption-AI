@@ -9339,8 +9339,8 @@
     "sHnrkgDMHqE": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-05T02:47:07+00:00",
-      "analyzed_hash": "a0e449c877e047120a55a9d63cabb1af2d6f499e602ab3f069e73fafe1ed95d9",
+      "analyzed_at": "2026-10-12T03:31:38+00:00",
+      "analyzed_hash": "ca4aee63330a4d9e505c5246cb55886099da7fc91b4fcbfcb74424cdf043a7b3",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -9427,24 +9427,24 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "a0e449c877e047120a55a9d63cabb1af2d6f499e602ab3f069e73fafe1ed95d9",
+      "fetched_hash": "ca4aee63330a4d9e505c5246cb55886099da7fc91b4fcbfcb74424cdf043a7b3",
       "last_attempt_at": "2026-10-05T01:31:20+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-05T02:45:47+00:00",
+      "last_fetched_at": "2026-10-12T03:30:41+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-05-sHnrkgDMHqE.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8054,
+        "calls": 2,
+        "completion_tokens": 5399,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5548
+          "GPT-5.4": 3876
         },
-        "points": 5548,
-        "prompt_tokens": 25613,
+        "points": 3876,
+        "prompt_tokens": 19271,
         "providers": {
-          "poe": 3
+          "poe": 2
         }
       },
       "published_at": "2026-10-05T01:07:48+00:00",
@@ -9454,17 +9454,17 @@
         "台湾",
         "美股",
         "宏观",
-        "非农",
-        "联准会",
         "美债",
-        "就业",
-        "宏观数据",
-        "美国",
+        "非农",
+        "利率",
         "科技股",
-        "估值"
+        "估值",
+        "盈利",
+        "半导体",
+        "记忆体"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "sHnrkgDMHqE",
       "video_url": "https://www.youtube.com/watch?v=sHnrkgDMHqE",
