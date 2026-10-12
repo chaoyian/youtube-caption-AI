@@ -7972,6 +7972,57 @@
       "video_url": "https://www.youtube.com/watch?v=g4Z6z8cUhBc",
       "waiting_count": 6
     },
+    "gtxpFAVDySE": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-12T01:31:48+00:00",
+      "analyzed_hash": "c57d9df3abd0c8c01e2bfd8f18e6d42a407dd69918f7ebc9d7f1655432be80b4",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "c57d9df3abd0c8c01e2bfd8f18e6d42a407dd69918f7ebc9d7f1655432be80b4",
+      "last_error": null,
+      "last_fetched_at": "2026-10-12T01:30:33+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-12-gtxpFAVDySE.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8336,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5590
+        },
+        "points": 5590,
+        "prompt_tokens": 24491,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-10-12T01:04:39+00:00",
+      "title": "2026/10/12(一)美俄協議 壓得住油價?中東打不垮經濟 卻拖垮債市?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "油价",
+        "美债殖利率",
+        "通胀",
+        "AI资本支出",
+        "美债",
+        "资金面",
+        "市场广度",
+        "AI"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "gtxpFAVDySE",
+      "video_url": "https://www.youtube.com/watch?v=gtxpFAVDySE"
+    },
     "hO0LGfwwDGo": {
       "alert_status": "none",
       "analysis_status": "complete",
