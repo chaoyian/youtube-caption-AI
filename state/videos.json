@@ -10028,8 +10028,8 @@
     "tlXP3xUPZLI": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-06T02:47:17+00:00",
-      "analyzed_hash": "84cffccf0d6c2224b8283fd13b956377c2e6621584a2e5d97800830b26040983",
+      "analyzed_at": "2026-10-13T03:32:29+00:00",
+      "analyzed_hash": "b2033e931a4f71f80f210f2b4917336d47664031ce9992e4445acc55b30de75f",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10116,22 +10116,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "84cffccf0d6c2224b8283fd13b956377c2e6621584a2e5d97800830b26040983",
+      "fetched_hash": "b2033e931a4f71f80f210f2b4917336d47664031ce9992e4445acc55b30de75f",
       "last_attempt_at": "2026-10-06T01:32:50+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-06T02:45:44+00:00",
+      "last_fetched_at": "2026-10-13T03:30:57+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-06-tlXP3xUPZLI.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8827,
+        "completion_tokens": 9174,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5933
+          "GPT-5.4": 5886
         },
-        "points": 5933,
-        "prompt_tokens": 26116,
+        "points": 5886,
+        "prompt_tokens": 23401,
         "providers": {
           "poe": 3
         }
@@ -10144,16 +10144,16 @@
         "美股",
         "宏观",
         "市场广度",
-        "大型科技股",
+        "AI",
         "美债",
         "波动率",
-        "风险偏好",
         "美债殖利率",
         "估值",
-        "标普500"
+        "台股",
+        "台积电"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "tlXP3xUPZLI",
       "video_url": "https://www.youtube.com/watch?v=tlXP3xUPZLI",
@@ -10719,7 +10719,7 @@
       "fetch_status": "complete",
       "fetched_hash": "319396b5ef32110e548569672724019ef15223f087919e79b4f0aa6f628a7822",
       "last_error": null,
-      "last_fetched_at": "2026-10-06T02:45:38+00:00",
+      "last_fetched_at": "2026-10-13T03:30:52+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-29-wBb7G4Ifd34.md",
       "note_version": 1,
