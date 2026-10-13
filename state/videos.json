@@ -11385,18 +11385,53 @@
     },
     "zfU6oHbS8s8": {
       "alert_status": "none",
-      "analysis_status": "pending",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-13T02:47:22+00:00",
+      "analyzed_hash": "f38fbdf5ae2431ae2a63d21b4fc18a1c8443dd5e40548fe770342d84d12a433f",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 0,
-      "fetch_status": "waiting",
+      "fetch_status": "complete",
+      "fetched_hash": "f38fbdf5ae2431ae2a63d21b4fc18a1c8443dd5e40548fe770342d84d12a433f",
       "last_attempt_at": "2026-10-13T01:30:48+00:00",
-      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] zfU6oHbS8s8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=zfU6oHbS8s8! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-13T02:30:48+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-10-13T02:45:37+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-13-zfU6oHbS8s8.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8593,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5732
+        },
+        "points": 5732,
+        "prompt_tokens": 24835,
+        "providers": {
+          "poe": 3
+        }
+      },
       "published_at": "2026-10-13T01:06:24+00:00",
       "title": "2026/10/13(二)記憶體重挫 買股趁現在?美債殖利率突破5% AI巨頭反而加速舉債？【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "美债殖利率",
+        "美股估值",
+        "资产配置",
+        "半导体",
+        "记忆体",
+        "费半",
+        "市场广度",
+        "权值集中"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
       "video_id": "zfU6oHbS8s8",
       "video_url": "https://www.youtube.com/watch?v=zfU6oHbS8s8",
       "waiting_count": 1
