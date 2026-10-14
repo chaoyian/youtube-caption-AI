@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-10-14 [2026/10/14(三)外資狂砍1600億 股市怎麼又要崩了?韓股先倒破年線 台股撐得住?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-14-1Tygxzj3E1M.md)
 - 2026-10-12 [2026/10/12(一)美俄協議 壓得住油價?中東打不垮經濟 卻拖垮債市?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-12-gtxpFAVDySE.md)
 - 2026-10-09 [El Nino Food Crisis, Energy Shortages & the Worst Geopolitical Decision in History | Peter Grandich](../../knowledge/wtfinance-podcast/2026/2026-10-09-m94sPc4s1AA.md)
 - 2026-10-06 [2026/10/6(二)台股衝五萬 這次誰在買?美債殖利率衝6% 美股越漲越怪?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-06-tlXP3xUPZLI.md)

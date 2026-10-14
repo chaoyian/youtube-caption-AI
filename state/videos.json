@@ -3,18 +3,53 @@
   "videos": {
     "1Tygxzj3E1M": {
       "alert_status": "none",
-      "analysis_status": "pending",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-14T02:49:07+00:00",
+      "analyzed_hash": "c06167dc63f9275b5f557911c460d3f991bbd8fa88688cf7773f810caa188e54",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 0,
-      "fetch_status": "waiting",
+      "fetch_status": "complete",
+      "fetched_hash": "c06167dc63f9275b5f557911c460d3f991bbd8fa88688cf7773f810caa188e54",
       "last_attempt_at": "2026-10-14T01:30:47+00:00",
-      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] 1Tygxzj3E1M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=1Tygxzj3E1M! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-14T02:30:47+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-10-14T02:47:19+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-14-1Tygxzj3E1M.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 4,
+        "completion_tokens": 11614,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7470
+        },
+        "points": 7470,
+        "prompt_tokens": 29879,
+        "providers": {
+          "poe": 4
+        }
+      },
       "published_at": "2026-10-14T01:07:47+00:00",
       "title": "2026/10/14(三)外資狂砍1600億 股市怎麼又要崩了?韓股先倒破年線 台股撐得住?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "AI",
+        "市场风格",
+        "美债",
+        "利率",
+        "韩股",
+        "半导体",
+        "台股",
+        "外资"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
       "video_id": "1Tygxzj3E1M",
       "video_url": "https://www.youtube.com/watch?v=1Tygxzj3E1M",
       "waiting_count": 1
@@ -7862,7 +7897,7 @@
       "fetch_status": "complete",
       "fetched_hash": "eb720b9aaf5ef2681eeb765444076b8c82465c181c47b38cb812373c0e380ae7",
       "last_error": null,
-      "last_fetched_at": "2026-10-07T02:31:17+00:00",
+      "last_fetched_at": "2026-10-14T02:45:41+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-09-30-eHz1_TGAo4I.md",
       "note_version": 1,
@@ -10877,8 +10912,8 @@
     "wM7uDRpaC-g": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-07T02:32:46+00:00",
-      "analyzed_hash": "713e356b76553a1f5547c70624cf107359272c6b7f2010fe74715067560e0578",
+      "analyzed_at": "2026-10-14T02:47:11+00:00",
+      "analyzed_hash": "5bcfc234486a778e22a830c8c486befc45a677dfa50c19efff175d51fb552dd2",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10965,22 +11000,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "713e356b76553a1f5547c70624cf107359272c6b7f2010fe74715067560e0578",
+      "fetched_hash": "5bcfc234486a778e22a830c8c486befc45a677dfa50c19efff175d51fb552dd2",
       "last_attempt_at": "2026-10-07T01:31:03+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-07T02:31:26+00:00",
+      "last_fetched_at": "2026-10-14T02:45:47+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-07-wM7uDRpaC-g.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8921,
+        "completion_tokens": 8625,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5918
+          "GPT-5.4": 5569
         },
-        "points": 5918,
-        "prompt_tokens": 25350,
+        "points": 5569,
+        "prompt_tokens": 22468,
         "providers": {
           "poe": 3
         }
@@ -10995,14 +11030,14 @@
         "市场广度",
         "标普500",
         "利率",
-        "小型股",
-        "REITs",
-        "辉达",
-        "估值",
-        "本益比"
+        "小盘股",
+        "行业分化",
+        "半导体",
+        "盈利",
+        "集中度"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "wM7uDRpaC-g",
       "video_url": "https://www.youtube.com/watch?v=wM7uDRpaC-g",
