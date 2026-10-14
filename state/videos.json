@@ -5021,34 +5021,51 @@
       "video_url": "https://www.youtube.com/watch?v=TVKacGhmAm4"
     },
     "TxPhjmV6gvQ": {
-      "alert_status": "disabled",
-      "analysis_status": "failed",
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-14T02:06:30+00:00",
+      "analyzed_hash": "5ffdc8120b6fa923892cd4f161b51110726fe0ac3a783bea7368202d0d444b21",
       "channel_id": "wtfinance-podcast",
       "discord_status": "pending",
       "email_status": "pending",
-      "failure_count": 1,
+      "failure_count": 0,
       "fetch_status": "complete",
       "fetched_hash": "5ffdc8120b6fa923892cd4f161b51110726fe0ac3a783bea7368202d0d444b21",
       "last_attempt_at": "2026-10-13T01:33:21+00:00",
-      "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: Expecting ',' delimiter: line 192 column 6 (char 5907)",
-      "last_fetched_at": "2026-10-13T01:30:56+00:00",
-      "next_retry_at": "2026-10-14T01:33:21+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-10-14T02:04:58+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-12-TxPhjmV6gvQ.md",
+      "note_version": 1,
       "poe_usage": {
-        "calls": 4,
-        "completion_tokens": 12800,
+        "calls": 3,
+        "completion_tokens": 9190,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7824
+          "GPT-5.4": 6038
         },
-        "points": 7824,
-        "prompt_tokens": 27483,
+        "points": 6038,
+        "prompt_tokens": 25321,
         "providers": {
-          "poe": 4
+          "poe": 3
         }
       },
       "published_at": "2026-10-12T16:00:28+00:00",
       "title": "The West Is Running Out of Metals as the Resource War Begins | Lobo Tiggre",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "通胀",
+        "财政",
+        "中国",
+        "房地产",
+        "商品",
+        "黄金",
+        "油价",
+        "利率"
+      ],
       "transcript_generated": true,
       "transcript_language": "en",
       "transcript_source": "apify",
