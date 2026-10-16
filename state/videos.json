@@ -1632,7 +1632,7 @@
       "waiting_count": 1
     },
     "BTBH4-RZZXg": {
-      "alert_status": "pending",
+      "alert_status": "disabled",
       "analysis_status": "failed",
       "analyzed_at": "2026-10-09T03:03:45+00:00",
       "analyzed_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
