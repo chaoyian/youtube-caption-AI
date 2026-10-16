@@ -1632,8 +1632,8 @@
       "waiting_count": 1
     },
     "BTBH4-RZZXg": {
-      "alert_status": "none",
-      "analysis_status": "complete",
+      "alert_status": "pending",
+      "analysis_status": "failed",
       "analyzed_at": "2026-10-09T03:03:45+00:00",
       "analyzed_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
       "channel_id": "yutinghao-finance",
@@ -1720,26 +1720,26 @@
       },
       "email_sent_at": "2026-10-02T02:48:06+00:00",
       "email_status": "sent",
-      "failure_count": 0,
+      "failure_count": 1,
       "fetch_status": "complete",
-      "fetched_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
-      "last_attempt_at": "2026-10-02T01:31:10+00:00",
-      "last_error": null,
-      "last_fetched_at": "2026-10-09T03:02:01+00:00",
-      "next_retry_at": null,
+      "fetched_hash": "7adf112b386e01895189a4e37882f24035afed506f748048e2c268da8ac86502",
+      "last_attempt_at": "2026-10-16T03:32:58+00:00",
+      "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: Expecting ',' delimiter: line 206 column 6 (char 6310)",
+      "last_fetched_at": "2026-10-16T03:30:33+00:00",
+      "next_retry_at": "2026-10-17T03:32:58+00:00",
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-02-BTBH4-RZZXg.md",
       "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8890,
+        "calls": 4,
+        "completion_tokens": 12800,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5712
+          "GPT-5.4": 7860
         },
-        "points": 5712,
-        "prompt_tokens": 22783,
+        "points": 7860,
+        "prompt_tokens": 27970,
         "providers": {
-          "poe": 3
+          "poe": 4
         }
       },
       "published_at": "2026-10-02T01:06:52+00:00",
@@ -1758,9 +1758,9 @@
         "公司债",
         "能源"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "BTBH4-RZZXg",
       "video_url": "https://www.youtube.com/watch?v=BTBH4-RZZXg",
       "waiting_count": 1
@@ -6446,8 +6446,8 @@
     "_dfkO0oKRvg": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-09T03:05:20+00:00",
-      "analyzed_hash": "2c77e020e84543159180d95ec5f071e12cb7ac8dc3b84357640034e167f651c1",
+      "analyzed_at": "2026-10-16T03:34:48+00:00",
+      "analyzed_hash": "e59a5f881a1471e6595edc1a9d02558e164a6d64e71a0901ec286f71723b529f",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -6534,22 +6534,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "2c77e020e84543159180d95ec5f071e12cb7ac8dc3b84357640034e167f651c1",
+      "fetched_hash": "e59a5f881a1471e6595edc1a9d02558e164a6d64e71a0901ec286f71723b529f",
       "last_attempt_at": "2026-10-08T02:48:04+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-09T03:03:54+00:00",
+      "last_fetched_at": "2026-10-16T03:33:06+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-08-_dfkO0oKRvg.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8353,
+        "completion_tokens": 8159,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5512
+          "GPT-5.4": 5635
         },
-        "points": 5512,
-        "prompt_tokens": 23342,
+        "points": 5635,
+        "prompt_tokens": 26138,
         "providers": {
           "poe": 3
         }
@@ -6561,18 +6561,18 @@
         "台湾",
         "美股",
         "宏观",
-        "股债分化",
-        "全球利率",
-        "估值",
-        "美国房地产",
-        "房贷利率",
-        "消费",
-        "美债",
-        "外资流入"
+        "股债关系",
+        "资产定价",
+        "主权债",
+        "利率",
+        "财政",
+        "美国房市",
+        "房贷",
+        "居民部门"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "_dfkO0oKRvg",
       "video_url": "https://www.youtube.com/watch?v=_dfkO0oKRvg",
       "waiting_count": 1
