@@ -3534,6 +3534,24 @@
       "video_url": "https://www.youtube.com/watch?v=IHB6xZANLDc",
       "waiting_count": 1
     },
+    "JiP3avKjocg": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-10-16T01:30:51+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] JiP3avKjocg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=JiP3avKjocg! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-10-16T02:30:51+00:00",
+      "note_version": 0,
+      "published_at": "2026-10-16T01:04:38+00:00",
+      "title": "2026/10/16(五)賴清德總統談台灣經濟【早晨財經速解讀】",
+      "video_id": "JiP3avKjocg",
+      "video_url": "https://www.youtube.com/watch?v=JiP3avKjocg",
+      "waiting_count": 1
+    },
     "KNWS5tp0HYc": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -9536,6 +9554,57 @@
       "transcript_source": "apify",
       "video_id": "nA4ZpU7lvq4",
       "video_url": "https://www.youtube.com/watch?v=nA4ZpU7lvq4"
+    },
+    "nniTzekRB5A": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-16T01:32:29+00:00",
+      "analyzed_hash": "cf815b265c3a4728b9eff79cefa42da1345ed660c7bdcdd1746d855b4dc6b12f",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "cf815b265c3a4728b9eff79cefa42da1345ed660c7bdcdd1746d855b4dc6b12f",
+      "last_error": null,
+      "last_fetched_at": "2026-10-16T01:30:59+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-16-nniTzekRB5A.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 9412,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 6845
+        },
+        "points": 6845,
+        "prompt_tokens": 34757,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-10-16T01:15:13+00:00",
+      "title": "【財經皓角專訪】賴清德總統談台灣經濟",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "AI政策",
+        "监管",
+        "治理",
+        "产业政策",
+        "人才",
+        "中小企业",
+        "K型经济",
+        "产业链"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "nniTzekRB5A",
+      "video_url": "https://www.youtube.com/watch?v=nniTzekRB5A"
     },
     "oLPxNHRAPEI": {
       "alert_status": "none",
