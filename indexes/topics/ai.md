@@ -5,6 +5,7 @@
 - 2026-10-09 [El Nino Food Crisis, Energy Shortages & the Worst Geopolitical Decision in History | Peter Grandich](../../knowledge/wtfinance-podcast/2026/2026-10-09-m94sPc4s1AA.md)
 - 2026-10-06 [2026/10/6(二)台股衝五萬 這次誰在買?美債殖利率衝6% 美股越漲越怪?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-06-tlXP3xUPZLI.md)
 - 2026-10-02 [Felix Nikolas Prehn: A Generational Financial Reset Is Here](../../knowledge/wtfinance-podcast/2026/2026-10-02-4pEEU2qtNtM.md)
+- 2026-09-24 [2026/9/24(四) 台灣富到流油!為何大家喊窮?AI爆發下一步 去哪找人?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-24-TVKacGhmAm4.md)
 - 2026-09-23 [2026/9/23(三)5%殖利率也擋不住FOMO？AI狂潮推那指再創新高【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-23-Xlj2cBFC7_s.md)
 - 2026-09-10 [2026/9/11(五)油價破百 債券失火!股市撿便宜?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-11-mhVVuuWUhCw.md)
 - 2026-09-07 [2026/9/7(一)非農超強 美債失守 AI股卻悄悄轉多?美股Q4還有戲?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-07-c4IT1Mwb_Pg.md)
