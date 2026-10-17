@@ -1,3 +1,4 @@
 # 主题：CPI
 
+- 2026-10-16 [The Fed Is Already Doing QE as the Debt Crisis Begins | Nomi Prins](../../knowledge/wtfinance-podcast/2026/2026-10-16-ZOpfEhOTBw8.md)
 - 2026-09-09 [2026/9/9(三)油價快破100美元 期中選舉拉警報?道瓊跌費半升!市場大換血?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-09-09-b2MbRUsIaU8.md)

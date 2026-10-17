@@ -6443,6 +6443,57 @@
       "video_id": "Z9pCZkTe358",
       "video_url": "https://www.youtube.com/watch?v=Z9pCZkTe358"
     },
+    "ZOpfEhOTBw8": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-17T01:26:50+00:00",
+      "analyzed_hash": "e9f220222f35335b203b6b4de893323331f2952a235853c87a37744f26b16369",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "e9f220222f35335b203b6b4de893323331f2952a235853c87a37744f26b16369",
+      "last_error": null,
+      "last_fetched_at": "2026-10-17T01:25:55+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-16-ZOpfEhOTBw8.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5066,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3700
+        },
+        "points": 3700,
+        "prompt_tokens": 18908,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-16T16:00:01+00:00",
+      "title": "The Fed Is Already Doing QE as the Debt Crisis Begins | Nomi Prins",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "CPI",
+        "能源",
+        "通胀",
+        "美联储",
+        "供给",
+        "美债",
+        "财政",
+        "利息支出"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "ZOpfEhOTBw8",
+      "video_url": "https://www.youtube.com/watch?v=ZOpfEhOTBw8"
+    },
     "_dfkO0oKRvg": {
       "alert_status": "none",
       "analysis_status": "complete",
