@@ -133,6 +133,57 @@
       "video_id": "0eG-2zcDOeo",
       "video_url": "https://www.youtube.com/watch?v=0eG-2zcDOeo"
     },
+    "18Rs1UefyKg": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-17T08:59:36+00:00",
+      "analyzed_hash": "4a589bd37806be1bfb6f8d351f4b0942dcc4059b29b079e2611d06abcb378dad",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "4a589bd37806be1bfb6f8d351f4b0942dcc4059b29b079e2611d06abcb378dad",
+      "last_error": null,
+      "last_fetched_at": "2026-10-17T08:58:55+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-17-18Rs1UefyKg.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3471,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 1994
+        },
+        "points": 1994,
+        "prompt_tokens": 5758,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-17T08:56:10+00:00",
+      "title": "賴清德總統看失聯移工問題",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "移工",
+        "规模",
+        "政策",
+        "警力",
+        "执法",
+        "量能",
+        "治理",
+        "治安"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "18Rs1UefyKg",
+      "video_url": "https://www.youtube.com/watch?v=18Rs1UefyKg"
+    },
     "1Tygxzj3E1M": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -1725,7 +1776,7 @@
       "fetched_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
       "last_attempt_at": "2026-10-16T03:32:58+00:00",
       "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: Expecting ',' delimiter: line 206 column 6 (char 6310)",
-      "last_fetched_at": "2026-10-17T04:47:45+00:00",
+      "last_fetched_at": "2026-10-17T08:58:50+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-02-BTBH4-RZZXg.md",
       "note_version": 2,
@@ -10587,6 +10638,57 @@
       "video_id": "sk7DVOEJpig",
       "video_url": "https://www.youtube.com/watch?v=sk7DVOEJpig",
       "waiting_count": 1
+    },
+    "symISvtkekE": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-17T09:00:30+00:00",
+      "analyzed_hash": "9090468de356abdbc065218cacc654a55f3579f1c39858faa775a7e97c4d95fa",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "9090468de356abdbc065218cacc654a55f3579f1c39858faa775a7e97c4d95fa",
+      "last_error": null,
+      "last_fetched_at": "2026-10-17T08:59:46+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-17-symISvtkekE.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3763,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2294
+        },
+        "points": 2294,
+        "prompt_tokens": 7975,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-17T08:56:22+00:00",
+      "title": "賴清德總統談核電立場",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "核能政策",
+        "能源立场",
+        "环境永续",
+        "决策原则",
+        "核安",
+        "核废料",
+        "社会共识",
+        "立法院"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "symISvtkekE",
+      "video_url": "https://www.youtube.com/watch?v=symISvtkekE"
     },
     "tLvKGHyxhd8": {
       "alert_status": "none",
