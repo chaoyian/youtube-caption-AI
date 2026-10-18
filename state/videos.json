@@ -1857,7 +1857,7 @@
       "fetched_hash": "f79c443b836f5618e1c41de6e0489d14920c5fa444b377898fbc739aedfd1c39",
       "last_attempt_at": "2026-10-16T03:32:58+00:00",
       "last_error": "RuntimeError: Poe output remained invalid after three repair attempts: Expecting ',' delimiter: line 206 column 6 (char 6310)",
-      "last_fetched_at": "2026-10-17T08:58:50+00:00",
+      "last_fetched_at": "2026-10-18T01:23:58+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-02-BTBH4-RZZXg.md",
       "note_version": 2,
@@ -2160,6 +2160,57 @@
       "video_id": "C8bYSy7FLIc",
       "video_url": "https://www.youtube.com/watch?v=C8bYSy7FLIc",
       "waiting_count": 10
+    },
+    "CzfczJVW3rg": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-18T01:25:45+00:00",
+      "analyzed_hash": "a697da1156c8d18d4d4d67e8e2502898c135413561dc61e33d66d66bb53c5700",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "a697da1156c8d18d4d4d67e8e2502898c135413561dc61e33d66d66bb53c5700",
+      "last_error": null,
+      "last_fetched_at": "2026-10-18T01:25:03+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-17-CzfczJVW3rg.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3862,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2230
+        },
+        "points": 2230,
+        "prompt_tokens": 6549,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-17T11:11:49+00:00",
+      "title": "賴清德總統談年輕人困境",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "人口",
+        "青年",
+        "社会问题",
+        "价值观",
+        "政策表态",
+        "生育",
+        "家庭支持",
+        "政策前提"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "CzfczJVW3rg",
+      "video_url": "https://www.youtube.com/watch?v=CzfczJVW3rg"
     },
     "DAZQjlZH4NE": {
       "alert_status": "none",
@@ -6191,6 +6242,57 @@
       "video_id": "Wrou7O0wOX0",
       "video_url": "https://www.youtube.com/watch?v=Wrou7O0wOX0"
     },
+    "Wvz5biIJOac": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-18T01:24:59+00:00",
+      "analyzed_hash": "1679a1f5e199d18196c6e6cc8b145357867165b47db671bd5ba7c42ad404b46c",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "1679a1f5e199d18196c6e6cc8b145357867165b47db671bd5ba7c42ad404b46c",
+      "last_error": null,
+      "last_fetched_at": "2026-10-18T01:24:05+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-17-Wvz5biIJOac.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4729,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2653
+        },
+        "points": 2653,
+        "prompt_tokens": 6975,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-17T11:11:45+00:00",
+      "title": "賴清德總統談美光爭議",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "劳资分配",
+        "美光",
+        "补助",
+        "劳资协商",
+        "政策态度",
+        "AI政策",
+        "K型经济",
+        "贫富差距"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "Wvz5biIJOac",
+      "video_url": "https://www.youtube.com/watch?v=Wvz5biIJOac"
+    },
     "XY31kO-V0Q4": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -6706,6 +6808,24 @@
       "transcript_source": "apify",
       "video_id": "ZOpfEhOTBw8",
       "video_url": "https://www.youtube.com/watch?v=ZOpfEhOTBw8"
+    },
+    "ZPLYkGXLVx0": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-10-18T01:26:02+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] ZPLYkGXLVx0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=ZPLYkGXLVx0! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-10-18T02:26:02+00:00",
+      "note_version": 0,
+      "published_at": "2026-10-17T11:11:54+00:00",
+      "title": "賴清德總統談央行獨立",
+      "video_id": "ZPLYkGXLVx0",
+      "video_url": "https://www.youtube.com/watch?v=ZPLYkGXLVx0",
+      "waiting_count": 1
     },
     "_dfkO0oKRvg": {
       "alert_status": "none",
