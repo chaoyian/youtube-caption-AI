@@ -1389,6 +1389,57 @@
       "video_url": "https://www.youtube.com/watch?v=6weg9-YmGVs",
       "waiting_count": 2
     },
+    "7AuZ_qPcon0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-19T01:37:08+00:00",
+      "analyzed_hash": "9d485f4ca1014c1445d35e7f8f11888c715e5f691b64aa75861af9a35b35b44e",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "9d485f4ca1014c1445d35e7f8f11888c715e5f691b64aa75861af9a35b35b44e",
+      "last_error": null,
+      "last_fetched_at": "2026-10-19T01:36:19+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-7AuZ_qPcon0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4126,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2382
+        },
+        "points": 2382,
+        "prompt_tokens": 6966,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-18T12:28:32+00:00",
+      "title": "賴清德總統談產業政策",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "產業政策",
+        "資源配置",
+        "政府角色",
+        "經濟成長",
+        "財政",
+        "科技產業",
+        "中小企業",
+        "就業"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "7AuZ_qPcon0",
+      "video_url": "https://www.youtube.com/watch?v=7AuZ_qPcon0"
+    },
     "7RUZWygQDvE": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -1685,6 +1736,24 @@
       "video_id": "9VqNpjPGmbM",
       "video_url": "https://www.youtube.com/watch?v=9VqNpjPGmbM",
       "waiting_count": 2
+    },
+    "9tgxOICMz2M": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-10-19T01:35:16+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] 9tgxOICMz2M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=9tgxOICMz2M! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-10-19T02:35:16+00:00",
+      "note_version": 0,
+      "published_at": "2026-10-18T09:49:23+00:00",
+      "title": "賴清德總統談AI政策",
+      "video_id": "9tgxOICMz2M",
+      "video_url": "https://www.youtube.com/watch?v=9tgxOICMz2M",
+      "waiting_count": 1
     },
     "ApykW90PQ58": {
       "alert_status": "none",
@@ -6979,15 +7048,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-10-18T09:19:34+00:00",
+      "last_attempt_at": "2026-10-19T01:33:23+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] ZPLYkGXLVx0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=ZPLYkGXLVx0! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-18T10:19:34+00:00",
+      "next_retry_at": "2026-10-19T02:33:23+00:00",
       "note_version": 0,
       "published_at": "2026-10-17T11:11:54+00:00",
       "title": "賴清德總統談央行獨立",
       "video_id": "ZPLYkGXLVx0",
       "video_url": "https://www.youtube.com/watch?v=ZPLYkGXLVx0",
-      "waiting_count": 3
+      "waiting_count": 4
     },
     "_dfkO0oKRvg": {
       "alert_status": "none",
@@ -7822,6 +7891,24 @@
       "video_url": "https://www.youtube.com/watch?v=b2MbRUsIaU8",
       "waiting_count": 1
     },
+    "b6e_2a_A5Is": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-10-19T01:38:13+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] b6e_2a_A5Is: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=b6e_2a_A5Is! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-10-19T02:38:13+00:00",
+      "note_version": 0,
+      "published_at": "2026-10-19T01:03:32+00:00",
+      "title": "2026/10/19(一)費半又入熊市!買點到了嗎?AI行情結束了?還是Q4最大買點?【早晨財經速解讀】",
+      "video_id": "b6e_2a_A5Is",
+      "video_url": "https://www.youtube.com/watch?v=b6e_2a_A5Is",
+      "waiting_count": 1
+    },
     "b8idz40H8WM": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -7954,6 +8041,57 @@
       "video_id": "b8idz40H8WM",
       "video_url": "https://www.youtube.com/watch?v=b8idz40H8WM"
     },
+    "bQSonNebADo": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-19T01:34:12+00:00",
+      "analyzed_hash": "f2822f962bb9663697812766b86d24a03fdafcef06216107eb2038dd1a75e3aa",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "f2822f962bb9663697812766b86d24a03fdafcef06216107eb2038dd1a75e3aa",
+      "last_error": null,
+      "last_fetched_at": "2026-10-19T01:33:31+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-bQSonNebADo.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3581,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2062
+        },
+        "points": 2062,
+        "prompt_tokens": 5992,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-18T09:49:11+00:00",
+      "title": "賴清德總統談居住問題",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "住房政策",
+        "民意回应",
+        "政策逻辑",
+        "青年",
+        "生育",
+        "住房负担",
+        "社会住宅",
+        "租金补贴"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "bQSonNebADo",
+      "video_url": "https://www.youtube.com/watch?v=bQSonNebADo"
+    },
     "bi09ZJ7kOC4": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -8047,6 +8185,57 @@
       "video_id": "bi09ZJ7kOC4",
       "video_url": "https://www.youtube.com/watch?v=bi09ZJ7kOC4",
       "waiting_count": 1
+    },
+    "biOxPqljHWU": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-19T01:37:54+00:00",
+      "analyzed_hash": "49f10003abb3aeb455124db8cdd20c5695851b18e9dac079484dafcb0af6457f",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "49f10003abb3aeb455124db8cdd20c5695851b18e9dac079484dafcb0af6457f",
+      "last_error": null,
+      "last_fetched_at": "2026-10-19T01:37:12+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-biOxPqljHWU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3894,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2267
+        },
+        "points": 2267,
+        "prompt_tokens": 6850,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-18T12:28:35+00:00",
+      "title": "賴清德總統談關稅談判",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "关税谈判",
+        "贸易顺差",
+        "台湾对美",
+        "出口",
+        "宏观数据",
+        "美国",
+        "出口结构",
+        "谈判策略"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "biOxPqljHWU",
+      "video_url": "https://www.youtube.com/watch?v=biOxPqljHWU"
     },
     "c4IT1Mwb_Pg": {
       "alert_status": "none",
@@ -9188,8 +9377,8 @@
     "gtxpFAVDySE": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-12T01:31:48+00:00",
-      "analyzed_hash": "c57d9df3abd0c8c01e2bfd8f18e6d42a407dd69918f7ebc9d7f1655432be80b4",
+      "analyzed_at": "2026-10-19T01:33:05+00:00",
+      "analyzed_hash": "8c8b1db071ac5aa4a68a8d8e7f19869b006d11f5d929be30167d993887a5dd0e",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -9276,21 +9465,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "c57d9df3abd0c8c01e2bfd8f18e6d42a407dd69918f7ebc9d7f1655432be80b4",
+      "fetched_hash": "8c8b1db071ac5aa4a68a8d8e7f19869b006d11f5d929be30167d993887a5dd0e",
       "last_error": null,
-      "last_fetched_at": "2026-10-12T01:30:33+00:00",
+      "last_fetched_at": "2026-10-19T01:31:44+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-12-gtxpFAVDySE.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8336,
+        "completion_tokens": 8493,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5590
+          "GPT-5.4": 5479
         },
-        "points": 5590,
-        "prompt_tokens": 24491,
+        "points": 5479,
+        "prompt_tokens": 22063,
         "providers": {
           "poe": 3
         }
@@ -9303,16 +9492,16 @@
         "美股",
         "宏观",
         "油价",
-        "美债殖利率",
+        "美债收益率",
         "通胀",
-        "AI资本支出",
-        "美债",
-        "资金面",
-        "市场广度",
-        "AI"
+        "美股广度",
+        "标普500",
+        "市场结构",
+        "流动性",
+        "ETF"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "gtxpFAVDySE",
       "video_url": "https://www.youtube.com/watch?v=gtxpFAVDySE"
@@ -10546,6 +10735,108 @@
       "transcript_source": "apify",
       "video_id": "p47rt1sVUEM",
       "video_url": "https://www.youtube.com/watch?v=p47rt1sVUEM"
+    },
+    "qVzLCFpJ11U": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-19T01:34:57+00:00",
+      "analyzed_hash": "9b3683632ff221f5b015b17f6f3c49c5f97f10ef111238f02ed3196dce04133c",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "9b3683632ff221f5b015b17f6f3c49c5f97f10ef111238f02ed3196dce04133c",
+      "last_error": null,
+      "last_fetched_at": "2026-10-19T01:34:18+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-qVzLCFpJ11U.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 3538,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2046
+        },
+        "points": 2046,
+        "prompt_tokens": 6027,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-18T09:49:18+00:00",
+      "title": "賴清德總統談普發現金",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "税制",
+        "分配政策",
+        "中产",
+        "企业",
+        "AI红利",
+        "分配机制",
+        "劳动贡献",
+        "分配原则"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "qVzLCFpJ11U",
+      "video_url": "https://www.youtube.com/watch?v=qVzLCFpJ11U"
+    },
+    "rTj8hICOBJY": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-19T01:36:11+00:00",
+      "analyzed_hash": "1e5f5d0533e168df678ced7259fa531dc7e7e7ed9d0f7f89cb510577c8ca7ff4",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "1e5f5d0533e168df678ced7259fa531dc7e7e7ed9d0f7f89cb510577c8ca7ff4",
+      "last_error": null,
+      "last_fetched_at": "2026-10-19T01:35:21+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-rTj8hICOBJY.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4518,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2597
+        },
+        "points": 2597,
+        "prompt_tokens": 7480,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-18T12:28:27+00:00",
+      "title": "賴清德總統談移工政策",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "劳动力",
+        "产业发展",
+        "移工政策",
+        "服务业",
+        "制造业",
+        "家庭服务",
+        "劳动参与",
+        "薪资"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "rTj8hICOBJY",
+      "video_url": "https://www.youtube.com/watch?v=rTj8hICOBJY"
     },
     "rTnPsm_gAhA": {
       "alert_status": "none",
