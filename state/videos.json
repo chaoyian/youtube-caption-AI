@@ -1820,18 +1820,53 @@
     },
     "9tgxOICMz2M": {
       "alert_status": "none",
-      "analysis_status": "pending",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-20T02:01:19+00:00",
+      "analyzed_hash": "d33a0a778eef2420955d918c7b6924144522cd7c2e09670cc68a902d7e6e0fd0",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 0,
-      "fetch_status": "waiting",
+      "fetch_status": "complete",
+      "fetched_hash": "d33a0a778eef2420955d918c7b6924144522cd7c2e09670cc68a902d7e6e0fd0",
       "last_attempt_at": "2026-10-19T11:03:27+00:00",
-      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] 9tgxOICMz2M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=9tgxOICMz2M! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-19T12:03:27+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-10-20T02:00:28+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-9tgxOICMz2M.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4547,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 2592
+        },
+        "points": 2592,
+        "prompt_tokens": 7263,
+        "providers": {
+          "poe": 2
+        }
+      },
       "published_at": "2026-10-18T09:49:23+00:00",
       "title": "賴清德總統談AI政策",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "AI政策",
+        "分配效应",
+        "ICT",
+        "资源消耗",
+        "融资",
+        "AI基建",
+        "AI治理",
+        "监管原则"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "9tgxOICMz2M",
       "video_url": "https://www.youtube.com/watch?v=9tgxOICMz2M",
       "waiting_count": 3
@@ -4903,6 +4938,24 @@
       "video_url": "https://www.youtube.com/watch?v=OJ5vxmwQrE0",
       "waiting_count": 2
     },
+    "Q4THm8kBXSI": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-10-20T02:01:47+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] Q4THm8kBXSI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=Q4THm8kBXSI! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-10-20T03:01:47+00:00",
+      "note_version": 0,
+      "published_at": "2026-10-20T01:05:37+00:00",
+      "title": "2026/10/20(二)美股跌完了嗎?年底反攻行情啟動?大賣空貝瑞卻警告:真正熊市剛開始？早晨財經速解讀】",
+      "video_id": "Q4THm8kBXSI",
+      "video_url": "https://www.youtube.com/watch?v=Q4THm8kBXSI",
+      "waiting_count": 1
+    },
     "Q9jWUV1F2WE": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -5423,6 +5476,57 @@
       "transcript_source": "apify",
       "video_id": "R3Eic7CdLz4",
       "video_url": "https://www.youtube.com/watch?v=R3Eic7CdLz4"
+    },
+    "RoQjpf9KvJU": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-20T02:03:26+00:00",
+      "analyzed_hash": "cac59b5146b3d0b86719ceea3dba146e629e794f56ad7571d1d1fd0d6ab1d057",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "cac59b5146b3d0b86719ceea3dba146e629e794f56ad7571d1d1fd0d6ab1d057",
+      "last_error": null,
+      "last_fetched_at": "2026-10-20T02:01:56+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-19-RoQjpf9KvJU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8295,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5227
+        },
+        "points": 5227,
+        "prompt_tokens": 19882,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-10-19T16:00:27+00:00",
+      "title": "“Death Knell of the Everything Bubble” as the Bond Market Breaks | Mario Innecco",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "债券市场",
+        "利率",
+        "宏观框架",
+        "债务",
+        "再融资",
+        "金融化",
+        "通胀",
+        "货币政策"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "RoQjpf9KvJU",
+      "video_url": "https://www.youtube.com/watch?v=RoQjpf9KvJU"
     },
     "SOQXjoSlE7A": {
       "alert_status": "none",
@@ -7129,15 +7233,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-10-19T11:03:10+00:00",
+      "last_attempt_at": "2026-10-20T02:00:21+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] ZPLYkGXLVx0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=ZPLYkGXLVx0! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-19T12:03:10+00:00",
+      "next_retry_at": "2026-10-20T03:00:21+00:00",
       "note_version": 0,
       "published_at": "2026-10-17T11:11:54+00:00",
       "title": "賴清德總統談央行獨立",
       "video_id": "ZPLYkGXLVx0",
       "video_url": "https://www.youtube.com/watch?v=ZPLYkGXLVx0",
-      "waiting_count": 6
+      "waiting_count": 7
     },
     "_dfkO0oKRvg": {
       "alert_status": "none",
