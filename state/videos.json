@@ -268,8 +268,8 @@
     "1Tygxzj3E1M": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-14T02:49:07+00:00",
-      "analyzed_hash": "c06167dc63f9275b5f557911c460d3f991bbd8fa88688cf7773f810caa188e54",
+      "analyzed_at": "2026-10-21T05:08:29+00:00",
+      "analyzed_hash": "30e3503dae0db282073eba88e56cdb722473cf5780ffd043bc12588e5fb870f8",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -356,22 +356,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "c06167dc63f9275b5f557911c460d3f991bbd8fa88688cf7773f810caa188e54",
+      "fetched_hash": "30e3503dae0db282073eba88e56cdb722473cf5780ffd043bc12588e5fb870f8",
       "last_attempt_at": "2026-10-14T01:30:47+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-14T02:47:19+00:00",
+      "last_fetched_at": "2026-10-21T05:06:41+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-14-1Tygxzj3E1M.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 4,
-        "completion_tokens": 11614,
+        "completion_tokens": 11590,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7470
+          "GPT-5.4": 7231
         },
-        "points": 7470,
-        "prompt_tokens": 29879,
+        "points": 7231,
+        "prompt_tokens": 26854,
         "providers": {
           "poe": 4
         }
@@ -383,17 +383,17 @@
         "台湾",
         "美股",
         "宏观",
-        "AI",
-        "市场风格",
-        "美债",
-        "利率",
-        "韩股",
+        "SOX",
+        "美债殖利率",
         "半导体",
+        "韩国股市",
+        "记忆体",
+        "风险偏好",
         "台股",
         "外资"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "1Tygxzj3E1M",
       "video_url": "https://www.youtube.com/watch?v=1Tygxzj3E1M",
@@ -7511,15 +7511,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-10-21T01:51:51+00:00",
+      "last_attempt_at": "2026-10-21T05:08:46+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] ZPLYkGXLVx0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=ZPLYkGXLVx0! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-21T02:51:51+00:00",
+      "next_retry_at": "2026-10-21T06:08:46+00:00",
       "note_version": 0,
       "published_at": "2026-10-17T11:11:54+00:00",
       "title": "賴清德總統談央行獨立",
       "video_id": "ZPLYkGXLVx0",
       "video_url": "https://www.youtube.com/watch?v=ZPLYkGXLVx0",
-      "waiting_count": 10
+      "waiting_count": 11
     },
     "_dfkO0oKRvg": {
       "alert_status": "none",
@@ -11611,18 +11611,53 @@
     },
     "qaDEKdaJTto": {
       "alert_status": "none",
-      "analysis_status": "pending",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-21T05:10:27+00:00",
+      "analyzed_hash": "0cbe3dac93f07ee629dffc73620b4e65ab3287290864f4dbb6d5fc87a4bccb14",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 0,
-      "fetch_status": "waiting",
+      "fetch_status": "complete",
+      "fetched_hash": "0cbe3dac93f07ee629dffc73620b4e65ab3287290864f4dbb6d5fc87a4bccb14",
       "last_attempt_at": "2026-10-21T01:52:15+00:00",
-      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] qaDEKdaJTto: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=qaDEKdaJTto! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-21T02:52:15+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-10-21T05:08:53+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-21-qaDEKdaJTto.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 9208,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5872
+        },
+        "points": 5872,
+        "prompt_tokens": 23017,
+        "providers": {
+          "poe": 3
+        }
+      },
       "published_at": "2026-10-21T01:06:07+00:00",
       "title": "2026/10/21(三)全台游資氾濫 為何會錢荒?股匯大矛盾!台幣越貶經濟越強？【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "估值",
+        "那斯达克",
+        "信用利差",
+        "科技股",
+        "CDS",
+        "AI",
+        "信用市场",
+        "成交量"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "qaDEKdaJTto",
       "video_url": "https://www.youtube.com/watch?v=qaDEKdaJTto",
       "waiting_count": 1
