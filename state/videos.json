@@ -7777,15 +7777,15 @@
       "email_status": "pending",
       "failure_count": 0,
       "fetch_status": "waiting",
-      "last_attempt_at": "2026-10-22T10:24:38+00:00",
+      "last_attempt_at": "2026-10-23T01:46:56+00:00",
       "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] ZPLYkGXLVx0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=ZPLYkGXLVx0! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-10-22T11:24:38+00:00",
+      "next_retry_at": "2026-10-23T02:46:56+00:00",
       "note_version": 0,
       "published_at": "2026-10-17T11:11:54+00:00",
       "title": "賴清德總統談央行獨立",
       "video_id": "ZPLYkGXLVx0",
       "video_url": "https://www.youtube.com/watch?v=ZPLYkGXLVx0",
-      "waiting_count": 15
+      "waiting_count": 16
     },
     "_dfkO0oKRvg": {
       "alert_status": "none",
@@ -10772,6 +10772,57 @@
       "video_id": "hVoE3sV-1FM",
       "video_url": "https://www.youtube.com/watch?v=hVoE3sV-1FM"
     },
+    "kA5f2hc9FW0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-23T01:48:21+00:00",
+      "analyzed_hash": "019e4a79ea19367a9233d3dfdc9d6147d9df525ddda8c269c229538e608f8a3d",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "019e4a79ea19367a9233d3dfdc9d6147d9df525ddda8c269c229538e608f8a3d",
+      "last_error": null,
+      "last_fetched_at": "2026-10-23T01:47:18+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-23-kA5f2hc9FW0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5476,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5838
+        },
+        "points": 5838,
+        "prompt_tokens": 44954,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-23T01:09:31+00:00",
+      "title": "2026/10/23(五)颱風魔咒!美股出事了?費半狂瀉近7% 台積電ADR跌超4.5%【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "费半",
+        "半导体",
+        "台积电",
+        "ADR",
+        "Meta",
+        "资本开支",
+        "信用风险",
+        "CDS"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "kA5f2hc9FW0",
+      "video_url": "https://www.youtube.com/watch?v=kA5f2hc9FW0"
+    },
     "lDeHFopOfIs": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -11416,8 +11467,8 @@
     "nniTzekRB5A": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-16T01:32:29+00:00",
-      "analyzed_hash": "cf815b265c3a4728b9eff79cefa42da1345ed660c7bdcdd1746d855b4dc6b12f",
+      "analyzed_at": "2026-10-23T01:46:31+00:00",
+      "analyzed_hash": "9cad33e7daba634a1ff56a658f1ac3d62b453cb76265c9928b401007645d24fa",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -11504,23 +11555,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "cf815b265c3a4728b9eff79cefa42da1345ed660c7bdcdd1746d855b4dc6b12f",
+      "fetched_hash": "9cad33e7daba634a1ff56a658f1ac3d62b453cb76265c9928b401007645d24fa",
       "last_error": null,
-      "last_fetched_at": "2026-10-16T01:30:59+00:00",
+      "last_fetched_at": "2026-10-23T01:45:29+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-16-nniTzekRB5A.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 9412,
+        "calls": 2,
+        "completion_tokens": 5225,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 6845
+          "GPT-5.4": 4283
         },
-        "points": 6845,
-        "prompt_tokens": 34757,
+        "points": 4283,
+        "prompt_tokens": 25734,
         "providers": {
-          "poe": 3
+          "poe": 2
         }
       },
       "published_at": "2026-10-16T01:15:13+00:00",
@@ -11533,15 +11584,15 @@
         "AI政策",
         "监管",
         "治理",
-        "产业政策",
-        "人才",
         "中小企业",
-        "K型经济",
-        "产业链"
+        "人才",
+        "产业政策",
+        "供应链",
+        "分配"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "nniTzekRB5A",
       "video_url": "https://www.youtube.com/watch?v=nniTzekRB5A"
     },
