@@ -2,6 +2,7 @@
 
 - 2026-10-22 [2026/10/22(四)美股財報反攻 誰最值得買?巨頭狂燒錢 誰來買單?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-22-3qS11YVouFQ.md)
 - 2026-10-21 [2026/10/21(三)全台游資氾濫 為何會錢荒?股匯大矛盾!台幣越貶經濟越強？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-21-qaDEKdaJTto.md)
+- 2026-10-16 [2026/10/16(五)賴清德總統談台灣經濟【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-16-JiP3avKjocg.md)
 - 2026-10-09 [El Nino Food Crisis, Energy Shortages & the Worst Geopolitical Decision in History | Peter Grandich](../../knowledge/wtfinance-podcast/2026/2026-10-09-m94sPc4s1AA.md)
 - 2026-10-06 [2026/10/6(二)台股衝五萬 這次誰在買?美債殖利率衝6% 美股越漲越怪?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-06-tlXP3xUPZLI.md)
 - 2026-10-02 [Felix Nikolas Prehn: A Generational Financial Reset Is Here](../../knowledge/wtfinance-podcast/2026/2026-10-02-4pEEU2qtNtM.md)
