@@ -2178,7 +2178,7 @@
       "fetched_hash": "d33a0a778eef2420955d918c7b6924144522cd7c2e09670cc68a902d7e6e0fd0",
       "last_attempt_at": "2026-10-19T11:03:27+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-20T02:00:28+00:00",
+      "last_fetched_at": "2026-10-27T02:19:54+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-9tgxOICMz2M.md",
       "note_version": 1,
@@ -4869,6 +4869,57 @@
       "video_url": "https://www.youtube.com/watch?v=LUGWERSl01s",
       "waiting_count": 1
     },
+    "Msyc3TiN5t4": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-27T02:22:31+00:00",
+      "analyzed_hash": "263e78d0e7e04e65e50fe71b5ddcf5c3d1046c265ffc4a6da7413bbf57d317a0",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "263e78d0e7e04e65e50fe71b5ddcf5c3d1046c265ffc4a6da7413bbf57d317a0",
+      "last_error": null,
+      "last_fetched_at": "2026-10-27T02:21:22+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-26-Msyc3TiN5t4.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4828,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3363
+        },
+        "points": 3363,
+        "prompt_tokens": 15848,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-26T17:00:08+00:00",
+      "title": "France Is Only the Beginning: The End of the Western Empire | Richard Wolff",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "地缘政治",
+        "欧洲",
+        "全球化",
+        "不平等",
+        "生态",
+        "美国",
+        "战争",
+        "民意"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "Msyc3TiN5t4",
+      "video_url": "https://www.youtube.com/watch?v=Msyc3TiN5t4"
+    },
     "NZGYUCHpm0w": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -6033,7 +6084,7 @@
       "fetch_status": "complete",
       "fetched_hash": "cac59b5146b3d0b86719ceea3dba146e629e794f56ad7571d1d1fd0d6ab1d057",
       "last_error": null,
-      "last_fetched_at": "2026-10-20T02:01:56+00:00",
+      "last_fetched_at": "2026-10-27T02:21:18+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-10-19-RoQjpf9KvJU.md",
       "note_version": 1,
@@ -10274,6 +10325,57 @@
       "transcript_source": "apify",
       "video_id": "eHz1_TGAo4I",
       "video_url": "https://www.youtube.com/watch?v=eHz1_TGAo4I"
+    },
+    "fXo4kKJjQ5E": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-27T02:21:09+00:00",
+      "analyzed_hash": "1ae6a02ebe1125e71bbd613258aa7249cf8f1bc6a722c44bc6b99a81be93ab7a",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "1ae6a02ebe1125e71bbd613258aa7249cf8f1bc6a722c44bc6b99a81be93ab7a",
+      "last_error": null,
+      "last_fetched_at": "2026-10-27T02:20:03+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-27-fXo4kKJjQ5E.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5332,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4022
+        },
+        "points": 4022,
+        "prompt_tokens": 21618,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-27T01:07:29+00:00",
+      "title": "2026/10/27(二)美股止跌了?加碼or觀望 Anthropic上市倒數 期中選舉恐衝擊AI?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "AI",
+        "估值分化",
+        "信用风险",
+        "科技巨头",
+        "估值",
+        "成本",
+        "资本开支",
+        "信用利差"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "fXo4kKJjQ5E",
+      "video_url": "https://www.youtube.com/watch?v=fXo4kKJjQ5E"
     },
     "fpX071E5yI4": {
       "alert_status": "none",

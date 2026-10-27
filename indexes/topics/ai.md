@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-10-27 [2026/10/27(二)美股止跌了?加碼or觀望 Anthropic上市倒數 期中選舉恐衝擊AI?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-27-fXo4kKJjQ5E.md)
 - 2026-10-22 [2026/10/22(四)美股財報反攻 誰最值得買?巨頭狂燒錢 誰來買單?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-22-3qS11YVouFQ.md)
 - 2026-10-21 [2026/10/21(三)全台游資氾濫 為何會錢荒?股匯大矛盾!台幣越貶經濟越強？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-21-qaDEKdaJTto.md)
 - 2026-10-16 [2026/10/16(五)賴清德總統談台灣經濟【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-16-JiP3avKjocg.md)
