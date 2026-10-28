@@ -7125,6 +7125,57 @@
       "video_url": "https://www.youtube.com/watch?v=Ulz539c38mw",
       "waiting_count": 1
     },
+    "WScGZDz5Kno": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-28T02:32:14+00:00",
+      "analyzed_hash": "c23e2d62196920ffa6737c32adfe19246a551bbb55f179b590afd77846177fba",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "c23e2d62196920ffa6737c32adfe19246a551bbb55f179b590afd77846177fba",
+      "last_error": null,
+      "last_fetched_at": "2026-10-28T02:30:47+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-28-WScGZDz5Kno.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8267,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5560
+        },
+        "points": 5560,
+        "prompt_tokens": 24509,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-10-28T01:07:09+00:00",
+      "title": "2026/10/28(三)川普選情告急!美股將迎政治變局?Anthropic IPO行情 美股買點到了?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "FOMC",
+        "科技财报",
+        "美债",
+        "利率",
+        "通胀",
+        "标售",
+        "需求",
+        "AI"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "yt-dlp",
+      "video_id": "WScGZDz5Kno",
+      "video_url": "https://www.youtube.com/watch?v=WScGZDz5Kno"
+    },
     "Wrou7O0wOX0": {
       "alert_status": "none",
       "analysis_status": "complete",
