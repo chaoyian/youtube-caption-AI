@@ -755,7 +755,7 @@
       "fetch_status": "complete",
       "fetched_hash": "d395f8bc16292d5f24d3ed83a64b254b2d3c667a68b0a85cd21820ecf4877a18",
       "last_error": null,
-      "last_fetched_at": "2026-10-22T01:43:06+00:00",
+      "last_fetched_at": "2026-10-29T02:41:41+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-10-21-4FeNcA9CCPg.md",
       "note_version": 1,
@@ -790,7 +790,7 @@
       ],
       "transcript_generated": true,
       "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_source": "yt-dlp",
       "video_id": "4FeNcA9CCPg",
       "video_url": "https://www.youtube.com/watch?v=4FeNcA9CCPg"
     },
@@ -11416,6 +11416,57 @@
       "video_id": "hVoE3sV-1FM",
       "video_url": "https://www.youtube.com/watch?v=hVoE3sV-1FM"
     },
+    "jP2PllUUXrI": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-29T02:41:40+00:00",
+      "analyzed_hash": "36ce84025bb1301b3866de017e9ad8eaeda19064f2c15a633ae6b3c63798cefe",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "36ce84025bb1301b3866de017e9ad8eaeda19064f2c15a633ae6b3c63798cefe",
+      "last_error": null,
+      "last_fetched_at": "2026-10-29T02:40:32+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-29-jP2PllUUXrI.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5075,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3938
+        },
+        "points": 3938,
+        "prompt_tokens": 22030,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-29T01:08:01+00:00",
+      "title": "2026/10/29(四)微軟噴谷歌崩 巨頭撐得住?聯準會攤牌 升息還沒完?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "联准会",
+        "利率",
+        "政策路径",
+        "前瞻指引",
+        "政策沟通",
+        "波动",
+        "微软",
+        "AI云端"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "jP2PllUUXrI",
+      "video_url": "https://www.youtube.com/watch?v=jP2PllUUXrI"
+    },
     "kA5f2hc9FW0": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -14837,6 +14888,57 @@
       "video_id": "wmu1GS07BMo",
       "video_url": "https://www.youtube.com/watch?v=wmu1GS07BMo",
       "waiting_count": 1
+    },
+    "xW6eaMhHnY0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-29T02:43:15+00:00",
+      "analyzed_hash": "bf39cda4884951cd89e804af1228c313e46f3d16eda0f74df5bf63ca26946dca",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "bf39cda4884951cd89e804af1228c313e46f3d16eda0f74df5bf63ca26946dca",
+      "last_error": null,
+      "last_fetched_at": "2026-10-29T02:41:42+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-28-xW6eaMhHnY0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 9034,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 6057
+        },
+        "points": 6057,
+        "prompt_tokens": 26530,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-10-28T17:00:17+00:00",
+      "title": "The Liquidity Trap: Why The Global Debt Bubble Is About To Burst | Michael Howell",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "全球流动性",
+        "领先指标",
+        "周期",
+        "美联储",
+        "银行准备金",
+        "回购市场",
+        "货币市场",
+        "流动性操作"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "yt-dlp",
+      "video_id": "xW6eaMhHnY0",
+      "video_url": "https://www.youtube.com/watch?v=xW6eaMhHnY0"
     },
     "yTSWpctP12E": {
       "alert_status": "none",
