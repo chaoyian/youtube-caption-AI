@@ -11551,8 +11551,8 @@
     "kA5f2hc9FW0": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-23T01:48:21+00:00",
-      "analyzed_hash": "019e4a79ea19367a9233d3dfdc9d6147d9df525ddda8c269c229538e608f8a3d",
+      "analyzed_at": "2026-10-30T02:49:36+00:00",
+      "analyzed_hash": "b621abe5bfbcd71a94d9ab4a8880a1c7569d7fe6f90551ebac97fd6f96c4c3ef",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -11639,23 +11639,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "019e4a79ea19367a9233d3dfdc9d6147d9df525ddda8c269c229538e608f8a3d",
+      "fetched_hash": "b621abe5bfbcd71a94d9ab4a8880a1c7569d7fe6f90551ebac97fd6f96c4c3ef",
       "last_error": null,
-      "last_fetched_at": "2026-10-23T01:47:18+00:00",
+      "last_fetched_at": "2026-10-30T02:48:04+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-23-kA5f2hc9FW0.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5476,
+        "calls": 3,
+        "completion_tokens": 8795,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5838
+          "GPT-5.4": 5800
         },
-        "points": 5838,
-        "prompt_tokens": 44954,
+        "points": 5800,
+        "prompt_tokens": 24523,
         "providers": {
-          "poe": 2
+          "poe": 3
         }
       },
       "published_at": "2026-10-23T01:09:31+00:00",
@@ -11665,18 +11665,18 @@
         "台湾",
         "美股",
         "宏观",
-        "费半",
         "半导体",
-        "台积电",
-        "ADR",
+        "估值重估",
+        "市场情绪",
+        "风险偏好",
+        "交易结构",
         "Meta",
-        "资本开支",
-        "信用风险",
-        "CDS"
+        "AI资本开支",
+        "信用风险"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "kA5f2hc9FW0",
       "video_url": "https://www.youtube.com/watch?v=kA5f2hc9FW0"
     },
@@ -14234,6 +14234,57 @@
       "transcript_source": "apify",
       "video_id": "uFsnInHE3JU",
       "video_url": "https://www.youtube.com/watch?v=uFsnInHE3JU"
+    },
+    "uo6c3YNtEY8": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-30T02:51:27+00:00",
+      "analyzed_hash": "6547f95937916cf05a9f7ac2cad8dc1308dea387d02286085bc0493557dce93c",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "6547f95937916cf05a9f7ac2cad8dc1308dea387d02286085bc0493557dce93c",
+      "last_error": null,
+      "last_fetched_at": "2026-10-30T02:49:43+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-10-30-uo6c3YNtEY8.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 4,
+        "completion_tokens": 11708,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7604
+        },
+        "points": 7604,
+        "prompt_tokens": 31093,
+        "providers": {
+          "poe": 4
+        }
+      },
+      "published_at": "2026-10-30T01:54:41+00:00",
+      "title": "2026/10/30(五)Alphabet狂瀉12% Marvell暴跌逾13% 英特爾暴跌20% 美股到底 跌完了沒有?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "AI投资",
+        "现金流",
+        "财报",
+        "市场广度",
+        "半导体",
+        "回撤",
+        "Amazon",
+        "云端"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh-TW",
+      "transcript_source": "apify",
+      "video_id": "uo6c3YNtEY8",
+      "video_url": "https://www.youtube.com/watch?v=uo6c3YNtEY8"
     },
     "v-tPoKBJBoA": {
       "alert_status": "disabled",
