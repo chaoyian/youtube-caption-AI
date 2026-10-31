@@ -8127,7 +8127,7 @@
       "fetched_hash": "9aca535b42a32964573eef30f545c31cb3d45a45d68004aafd27594e3327c81d",
       "last_attempt_at": "2026-10-23T10:21:47+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-24T01:50:24+00:00",
+      "last_fetched_at": "2026-10-31T02:39:20+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-17-ZPLYkGXLVx0.md",
       "note_version": 1,
@@ -11156,8 +11156,8 @@
     "hQMDbEfxavY": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-24T01:54:10+00:00",
-      "analyzed_hash": "fc6dbc007f14d18e059a3841fa2bea1ad4e7ae9d22d946d48c9154b30c63a414",
+      "analyzed_at": "2026-10-31T02:41:44+00:00",
+      "analyzed_hash": "397ada586cf81be9a26599e44c51ef98d003207fa7ec76e5a35435bb1a4bb642",
       "channel_id": "wtfinance-podcast",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -11244,23 +11244,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "fc6dbc007f14d18e059a3841fa2bea1ad4e7ae9d22d946d48c9154b30c63a414",
+      "fetched_hash": "397ada586cf81be9a26599e44c51ef98d003207fa7ec76e5a35435bb1a4bb642",
       "last_error": null,
-      "last_fetched_at": "2026-10-24T01:52:49+00:00",
+      "last_fetched_at": "2026-10-31T02:39:32+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-10-23-hQMDbEfxavY.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8112,
+        "calls": 4,
+        "completion_tokens": 11498,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5599
+          "GPT-5.4": 7450
         },
-        "points": 5599,
-        "prompt_tokens": 25956,
+        "points": 7450,
+        "prompt_tokens": 30314,
         "providers": {
-          "poe": 3
+          "poe": 4
         }
       },
       "published_at": "2026-10-23T16:00:05+00:00",
@@ -11271,13 +11271,13 @@
         "宏观",
         "英文",
         "制度调整",
-        "政策取舍",
-        "历史框架",
-        "罗马史",
-        "系统危机",
-        "长期调整",
-        "精英动员",
-        "国家能力"
+        "领导力",
+        "历史类比",
+        "罗马帝国",
+        "危机修复",
+        "长期变化",
+        "民主制度",
+        "教育"
       ],
       "transcript_generated": true,
       "transcript_language": "en",
@@ -12062,6 +12062,57 @@
       "video_id": "mhVVuuWUhCw",
       "video_url": "https://www.youtube.com/watch?v=mhVVuuWUhCw",
       "waiting_count": 1
+    },
+    "mxdIM5VkGAA": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-10-31T02:42:53+00:00",
+      "analyzed_hash": "eeecbaad99f8e8035ef6e5cb23f9ee2cd54a32577e4ab6a72b1a13595e32a4d1",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "eeecbaad99f8e8035ef6e5cb23f9ee2cd54a32577e4ab6a72b1a13595e32a4d1",
+      "last_error": null,
+      "last_fetched_at": "2026-10-31T02:41:50+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-10-30-mxdIM5VkGAA.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5129,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3809
+        },
+        "points": 3809,
+        "prompt_tokens": 19997,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-10-30T17:00:14+00:00",
+      "title": "Why Renewables Are Making Energy More Expensive (And What Happens Next) | Scott Tinker",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "电价",
+        "LCOE",
+        "电网",
+        "总能耗",
+        "电气化",
+        "工业",
+        "储能",
+        "风光"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "mxdIM5VkGAA",
+      "video_url": "https://www.youtube.com/watch?v=mxdIM5VkGAA"
     },
     "my7Y-WeBB-0": {
       "alert_status": "none",
