@@ -8618,6 +8618,57 @@
       "video_url": "https://www.youtube.com/watch?v=aRPmzQfTLFc",
       "waiting_count": 1
     },
+    "adzWDkxEWMU": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-02T01:32:31+00:00",
+      "analyzed_hash": "0612f2e69c3483c2c60c94770f10d3b53af026911e779eb098fccb2f23e31831",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "0612f2e69c3483c2c60c94770f10d3b53af026911e779eb098fccb2f23e31831",
+      "last_error": null,
+      "last_fetched_at": "2026-11-02T01:30:51+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-02-adzWDkxEWMU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8308,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 6961
+        },
+        "points": 6961,
+        "prompt_tokens": 42930,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-02T01:06:04+00:00",
+      "title": "2026/11/2(一)費半暴跌7% 台股成下張骨牌?跳樓大拍賣 今天撿股票?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "科技股",
+        "半导体",
+        "CDS",
+        "避险",
+        "市场情绪",
+        "估值",
+        "标普500",
+        "盈利"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "adzWDkxEWMU",
+      "video_url": "https://www.youtube.com/watch?v=adzWDkxEWMU"
+    },
     "ajjRvohk-Og": {
       "alert_status": "none",
       "analysis_status": "complete",
