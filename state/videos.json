@@ -133,6 +133,57 @@
       "video_id": "0eG-2zcDOeo",
       "video_url": "https://www.youtube.com/watch?v=0eG-2zcDOeo"
     },
+    "0ekTT_culAY": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-03T01:32:10+00:00",
+      "analyzed_hash": "ae406ebc6adbb3bd283bd3cf2a1aed105fa759c2767fe9d44a0d20c4dbbc613c",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "ae406ebc6adbb3bd283bd3cf2a1aed105fa759c2767fe9d44a0d20c4dbbc613c",
+      "last_error": null,
+      "last_fetched_at": "2026-11-03T01:30:41+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-03-0ekTT_culAY.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 7562,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 6608
+        },
+        "points": 6608,
+        "prompt_tokens": 42705,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-03T01:04:14+00:00",
+      "title": "2026/11/3(二)蘋果重奪市值第一 AI生產力革命是真是假 美股跌出買點了嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "苹果",
+        "市值",
+        "财报",
+        "毛利率",
+        "iPhone",
+        "手机",
+        "Mac",
+        "PC"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "0ekTT_culAY",
+      "video_url": "https://www.youtube.com/watch?v=0ekTT_culAY"
+    },
     "18Rs1UefyKg": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -11811,6 +11862,57 @@
       "transcript_source": "apify",
       "video_id": "kA5f2hc9FW0",
       "video_url": "https://www.youtube.com/watch?v=kA5f2hc9FW0"
+    },
+    "l6aUAMXypj4": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-03T01:33:32+00:00",
+      "analyzed_hash": "662b7d840b72862ff448a8f1e14a444ff96c2652c4a0d578c9dc43849a8e9145",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "662b7d840b72862ff448a8f1e14a444ff96c2652c4a0d578c9dc43849a8e9145",
+      "last_error": null,
+      "last_fetched_at": "2026-11-03T01:32:15+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-02-l6aUAMXypj4.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5130,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3775
+        },
+        "points": 3775,
+        "prompt_tokens": 19519,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-02T17:00:16+00:00",
+      "title": "Economist Who Predicted 2008: “The AI Bubble Is Worse” | Ann Pettifor",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "AI",
+        "信用风险",
+        "债务",
+        "金融周期",
+        "影子银行",
+        "主权债",
+        "财政",
+        "监管"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "l6aUAMXypj4",
+      "video_url": "https://www.youtube.com/watch?v=l6aUAMXypj4"
     },
     "lDeHFopOfIs": {
       "alert_status": "none",
