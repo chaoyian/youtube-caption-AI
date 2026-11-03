@@ -2310,7 +2310,7 @@
       "fetched_hash": "d33a0a778eef2420955d918c7b6924144522cd7c2e09670cc68a902d7e6e0fd0",
       "last_attempt_at": "2026-10-19T11:03:27+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-10-27T02:19:54+00:00",
+      "last_fetched_at": "2026-11-03T02:30:35+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-18-9tgxOICMz2M.md",
       "note_version": 1,
@@ -5004,8 +5004,8 @@
     "Msyc3TiN5t4": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-27T02:22:31+00:00",
-      "analyzed_hash": "263e78d0e7e04e65e50fe71b5ddcf5c3d1046c265ffc4a6da7413bbf57d317a0",
+      "analyzed_at": "2026-11-03T02:33:17+00:00",
+      "analyzed_hash": "7a1e2a64e6d95ab1ca106c844e380a787b5f3d2300318b7ed789ed4acc4e25ca",
       "channel_id": "wtfinance-podcast",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -5092,21 +5092,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "263e78d0e7e04e65e50fe71b5ddcf5c3d1046c265ffc4a6da7413bbf57d317a0",
+      "fetched_hash": "7a1e2a64e6d95ab1ca106c844e380a787b5f3d2300318b7ed789ed4acc4e25ca",
       "last_error": null,
-      "last_fetched_at": "2026-10-27T02:21:22+00:00",
+      "last_fetched_at": "2026-11-03T02:32:08+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-10-26-Msyc3TiN5t4.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 4828,
+        "completion_tokens": 5041,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3363
+          "GPT-5.4": 3476
         },
-        "points": 3363,
-        "prompt_tokens": 15848,
+        "points": 3476,
+        "prompt_tokens": 16072,
         "providers": {
           "poe": 2
         }
@@ -5118,14 +5118,14 @@
         "投资",
         "宏观",
         "英文",
-        "地缘政治",
-        "欧洲",
-        "全球化",
-        "不平等",
-        "生态",
         "美国",
-        "战争",
-        "民意"
+        "欧洲",
+        "不平等",
+        "全球化",
+        "地缘政治",
+        "政治",
+        "制造业",
+        "就业"
       ],
       "transcript_generated": true,
       "transcript_language": "en",
@@ -10806,8 +10806,8 @@
     "fXo4kKJjQ5E": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-27T02:21:09+00:00",
-      "analyzed_hash": "1ae6a02ebe1125e71bbd613258aa7249cf8f1bc6a722c44bc6b99a81be93ab7a",
+      "analyzed_at": "2026-11-03T02:31:59+00:00",
+      "analyzed_hash": "dd157052ee7dacb0430fa91b673c2edb2231142bd31cca8c70547a8d21110149",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10894,21 +10894,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "1ae6a02ebe1125e71bbd613258aa7249cf8f1bc6a722c44bc6b99a81be93ab7a",
+      "fetched_hash": "dd157052ee7dacb0430fa91b673c2edb2231142bd31cca8c70547a8d21110149",
       "last_error": null,
-      "last_fetched_at": "2026-10-27T02:20:03+00:00",
+      "last_fetched_at": "2026-11-03T02:30:41+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-27-fXo4kKJjQ5E.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5332,
+        "completion_tokens": 6059,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4022
+          "GPT-5.4": 4190
         },
-        "points": 4022,
-        "prompt_tokens": 21618,
+        "points": 4190,
+        "prompt_tokens": 19475,
         "providers": {
           "poe": 2
         }
@@ -10920,17 +10920,17 @@
         "台湾",
         "美股",
         "宏观",
+        "科技股",
         "AI",
         "估值分化",
-        "信用风险",
-        "科技巨头",
+        "七巨头",
+        "盈利预期",
         "估值",
-        "成本",
-        "资本开支",
-        "信用利差"
+        "AI成本",
+        "资本开支"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "fXo4kKJjQ5E",
       "video_url": "https://www.youtube.com/watch?v=fXo4kKJjQ5E"
