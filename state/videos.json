@@ -7260,8 +7260,8 @@
     "WScGZDz5Kno": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-28T02:32:14+00:00",
-      "analyzed_hash": "c23e2d62196920ffa6737c32adfe19246a551bbb55f179b590afd77846177fba",
+      "analyzed_at": "2026-11-04T02:46:49+00:00",
+      "analyzed_hash": "33c9b149978177a607803d9c3fa2241aff7d10dc99bb61caf4dc41ced82bf915",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -7348,23 +7348,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "c23e2d62196920ffa6737c32adfe19246a551bbb55f179b590afd77846177fba",
+      "fetched_hash": "33c9b149978177a607803d9c3fa2241aff7d10dc99bb61caf4dc41ced82bf915",
       "last_error": null,
-      "last_fetched_at": "2026-10-28T02:30:47+00:00",
+      "last_fetched_at": "2026-11-04T02:45:34+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-28-WScGZDz5Kno.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8267,
+        "calls": 2,
+        "completion_tokens": 5337,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5560
+          "GPT-5.4": 3767
         },
-        "points": 5560,
-        "prompt_tokens": 24509,
+        "points": 3767,
+        "prompt_tokens": 18181,
         "providers": {
-          "poe": 3
+          "poe": 2
         }
       },
       "published_at": "2026-10-28T01:07:09+00:00",
@@ -7375,17 +7375,17 @@
         "美股",
         "宏观",
         "FOMC",
-        "科技财报",
-        "美债",
-        "利率",
-        "通胀",
-        "标售",
-        "需求",
-        "AI"
+        "利率预期",
+        "美债殖利率",
+        "美债拍卖",
+        "海外需求",
+        "资金成本",
+        "AI基建",
+        "美国投资"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
-      "transcript_source": "yt-dlp",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "WScGZDz5Kno",
       "video_url": "https://www.youtube.com/watch?v=WScGZDz5Kno"
     },
