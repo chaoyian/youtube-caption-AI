@@ -11812,6 +11812,57 @@
       "video_id": "jP2PllUUXrI",
       "video_url": "https://www.youtube.com/watch?v=jP2PllUUXrI"
     },
+    "jh9CCNUy0XY": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-04T01:32:55+00:00",
+      "analyzed_hash": "8836904ac8a8abd99e4e5555770cf14562a1ed48a72ca159f02f4ff3a008a870",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "8836904ac8a8abd99e4e5555770cf14562a1ed48a72ca159f02f4ff3a008a870",
+      "last_error": null,
+      "last_fetched_at": "2026-11-04T01:31:10+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-04-jh9CCNUy0XY.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8720,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7458
+        },
+        "points": 7458,
+        "prompt_tokens": 47081,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-04T01:07:53+00:00",
+      "title": "2026/11/4(三)這波融資 殺夠了嗎?晶片股反攻 現在該停損 還是加碼?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "科技股",
+        "市场情绪",
+        "波动率",
+        "风险偏好",
+        "避险基金",
+        "美债",
+        "去杠杆",
+        "台股"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "jh9CCNUy0XY",
+      "video_url": "https://www.youtube.com/watch?v=jh9CCNUy0XY"
+    },
     "kA5f2hc9FW0": {
       "alert_status": "none",
       "analysis_status": "complete",
