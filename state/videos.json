@@ -1321,6 +1321,57 @@
       "video_id": "56m37NuxQsg",
       "video_url": "https://www.youtube.com/watch?v=56m37NuxQsg"
     },
+    "5FQAv9FlF4Y": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-05T01:32:55+00:00",
+      "analyzed_hash": "2834683eccfdda1d58eb0563c715c215aad029d6cd794cf6ea25ab7462fb6bdf",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "2834683eccfdda1d58eb0563c715c215aad029d6cd794cf6ea25ab7462fb6bdf",
+      "last_error": null,
+      "last_fetched_at": "2026-11-05T01:32:01+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-04-5FQAv9FlF4Y.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4773,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3603
+        },
+        "points": 3603,
+        "prompt_tokens": 19373,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-04T17:00:06+00:00",
+      "title": "Ukraine Is Only the Beginning: Russia’s War Is Coming for Europe | Andrew Roberts",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "俄罗斯",
+        "欧洲安全",
+        "北约",
+        "核风险",
+        "威慑",
+        "美国",
+        "地缘政治",
+        "英国"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "5FQAv9FlF4Y",
+      "video_url": "https://www.youtube.com/watch?v=5FQAv9FlF4Y"
+    },
     "5KYh-RMH2R8": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -8674,6 +8725,57 @@
       "transcript_source": "apify",
       "video_id": "_t-xcxPL86E",
       "video_url": "https://www.youtube.com/watch?v=_t-xcxPL86E"
+    },
+    "aI_-iYx_-Hk": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-05T01:31:53+00:00",
+      "analyzed_hash": "492710a93a23337c55e9d66f397b2ede2528a36ea37b2912289c1016039e7769",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "492710a93a23337c55e9d66f397b2ede2528a36ea37b2912289c1016039e7769",
+      "last_error": null,
+      "last_fetched_at": "2026-11-05T01:30:50+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-05-aI_-iYx_-Hk.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5095,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5624
+        },
+        "points": 5624,
+        "prompt_tokens": 44392,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-05T01:08:40+00:00",
+      "title": "2026/11/5(四)川普大潰敗 藍潮反撲!為什麼選完 費半還在跌?現在該停損 還是加碼?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "半导体",
+        "AI资本开支",
+        "估值",
+        "科技巨头",
+        "德州",
+        "资料中心",
+        "电力",
+        "美国政治"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "aI_-iYx_-Hk",
+      "video_url": "https://www.youtube.com/watch?v=aI_-iYx_-Hk"
     },
     "aRPmzQfTLFc": {
       "alert_status": "disabled",
