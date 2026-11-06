@@ -12208,6 +12208,57 @@
       "video_id": "jh9CCNUy0XY",
       "video_url": "https://www.youtube.com/watch?v=jh9CCNUy0XY"
     },
+    "jm9T-NgW0pY": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-06T01:31:58+00:00",
+      "analyzed_hash": "88922296d0a79d334e224710142fb08e9f52bacf58758e93004341c479b163d3",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "88922296d0a79d334e224710142fb08e9f52bacf58758e93004341c479b163d3",
+      "last_error": null,
+      "last_fetched_at": "2026-11-06T01:30:45+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-06-jm9T-NgW0pY.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5399,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5594
+        },
+        "points": 5594,
+        "prompt_tokens": 42150,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-06T01:05:17+00:00",
+      "title": "2026/11/6(五)AI監管風暴 費半血崩12% 煞車壞了?台股斷頭潮 槓桿大清洗!【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "费半",
+        "半导体",
+        "AI监管",
+        "资料中心",
+        "政策",
+        "德州",
+        "AI",
+        "民意"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "jm9T-NgW0pY",
+      "video_url": "https://www.youtube.com/watch?v=jm9T-NgW0pY"
+    },
     "kA5f2hc9FW0": {
       "alert_status": "none",
       "analysis_status": "complete",
