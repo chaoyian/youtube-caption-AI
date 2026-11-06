@@ -12433,7 +12433,7 @@
       "fetch_status": "complete",
       "fetched_hash": "b621abe5bfbcd71a94d9ab4a8880a1c7569d7fe6f90551ebac97fd6f96c4c3ef",
       "last_error": null,
-      "last_fetched_at": "2026-10-30T02:48:04+00:00",
+      "last_fetched_at": "2026-11-06T03:30:35+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-23-kA5f2hc9FW0.md",
       "note_version": 2,
@@ -15294,8 +15294,8 @@
     "uo6c3YNtEY8": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-30T02:51:27+00:00",
-      "analyzed_hash": "6547f95937916cf05a9f7ac2cad8dc1308dea387d02286085bc0493557dce93c",
+      "analyzed_at": "2026-11-06T03:32:30+00:00",
+      "analyzed_hash": "ed74285c02a2bb71b4b4a53b12f4ef89d89b2d1e24d469b2b7470fb1ffc5e013",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -15382,23 +15382,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "6547f95937916cf05a9f7ac2cad8dc1308dea387d02286085bc0493557dce93c",
+      "fetched_hash": "ed74285c02a2bb71b4b4a53b12f4ef89d89b2d1e24d469b2b7470fb1ffc5e013",
       "last_error": null,
-      "last_fetched_at": "2026-10-30T02:49:43+00:00",
+      "last_fetched_at": "2026-11-06T03:30:43+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-30-uo6c3YNtEY8.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 4,
-        "completion_tokens": 11708,
+        "calls": 3,
+        "completion_tokens": 9076,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7604
+          "GPT-5.4": 5883
         },
-        "points": 7604,
-        "prompt_tokens": 31093,
+        "points": 5883,
+        "prompt_tokens": 23936,
         "providers": {
-          "poe": 4
+          "poe": 3
         }
       },
       "published_at": "2026-10-30T01:54:41+00:00",
@@ -15408,17 +15408,17 @@
         "台湾",
         "美股",
         "宏观",
-        "AI投资",
-        "现金流",
-        "财报",
         "市场广度",
         "半导体",
-        "回撤",
-        "Amazon",
-        "云端"
+        "小盘股",
+        "利率",
+        "资金轮动",
+        "企业债",
+        "融资成本",
+        "Amazon"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh-TW",
+      "transcript_generated": true,
+      "transcript_language": "en",
       "transcript_source": "apify",
       "video_id": "uo6c3YNtEY8",
       "video_url": "https://www.youtube.com/watch?v=uo6c3YNtEY8"
