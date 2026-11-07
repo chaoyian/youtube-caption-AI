@@ -6336,6 +6336,57 @@
       "video_id": "R3Eic7CdLz4",
       "video_url": "https://www.youtube.com/watch?v=R3Eic7CdLz4"
     },
+    "R88eOlrXeoU": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-07T01:31:48+00:00",
+      "analyzed_hash": "5dbf5c014389558553a71c5eb6a875fef4607cbecbeccfd38a9c370ea483dee3",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "5dbf5c014389558553a71c5eb6a875fef4607cbecbeccfd38a9c370ea483dee3",
+      "last_error": null,
+      "last_fetched_at": "2026-11-07T01:30:36+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-06-R88eOlrXeoU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5510,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3919
+        },
+        "points": 3919,
+        "prompt_tokens": 19173,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-06T17:00:26+00:00",
+      "title": "Legendary Resource Investor: \"This Could be the End of the Metals Bear Market\"",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "信用市场",
+        "ETF",
+        "高收益债",
+        "黄金",
+        "利率",
+        "矿业融资",
+        "贵金属股票",
+        "投资期限"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "R88eOlrXeoU",
+      "video_url": "https://www.youtube.com/watch?v=R88eOlrXeoU"
+    },
     "RoQjpf9KvJU": {
       "alert_status": "none",
       "analysis_status": "complete",
