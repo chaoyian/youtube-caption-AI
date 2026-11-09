@@ -11199,6 +11199,57 @@
       "video_id": "eHz1_TGAo4I",
       "video_url": "https://www.youtube.com/watch?v=eHz1_TGAo4I"
     },
+    "eet_LPUY8Q0": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-09T01:32:18+00:00",
+      "analyzed_hash": "264348c694276fbb3e11cea5f74f3d6866b88c482685433f337cf1da21559218",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "264348c694276fbb3e11cea5f74f3d6866b88c482685433f337cf1da21559218",
+      "last_error": null,
+      "last_fetched_at": "2026-11-09T01:30:49+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-09-eet_LPUY8Q0.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8640,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7340
+        },
+        "points": 7340,
+        "prompt_tokens": 46004,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-09T01:05:46+00:00",
+      "title": "2026/11/9(一)黑天鵝?輝達間諜案 國安調查全面轉向?國安基金來了台股四萬點防線 守得住嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "辉达",
+        "AI芯片",
+        "监管",
+        "公司治理",
+        "国安",
+        "台股",
+        "国安基金",
+        "流动性"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "eet_LPUY8Q0",
+      "video_url": "https://www.youtube.com/watch?v=eet_LPUY8Q0"
+    },
     "fXo4kKJjQ5E": {
       "alert_status": "none",
       "analysis_status": "complete",
