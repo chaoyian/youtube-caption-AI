@@ -9149,8 +9149,8 @@
     "adzWDkxEWMU": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-02T01:32:31+00:00",
-      "analyzed_hash": "0612f2e69c3483c2c60c94770f10d3b53af026911e779eb098fccb2f23e31831",
+      "analyzed_at": "2026-11-09T02:31:53+00:00",
+      "analyzed_hash": "e1cffc8d7c7db91eb956eed568437d4471b3572f665cf60e0df5e7588ac3d458",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -9237,23 +9237,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "0612f2e69c3483c2c60c94770f10d3b53af026911e779eb098fccb2f23e31831",
+      "fetched_hash": "e1cffc8d7c7db91eb956eed568437d4471b3572f665cf60e0df5e7588ac3d458",
       "last_error": null,
-      "last_fetched_at": "2026-11-02T01:30:51+00:00",
+      "last_fetched_at": "2026-11-09T02:30:39+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-02-adzWDkxEWMU.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8308,
+        "calls": 2,
+        "completion_tokens": 6116,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 6961
+          "GPT-5.4": 4092
         },
-        "points": 6961,
-        "prompt_tokens": 42930,
+        "points": 4092,
+        "prompt_tokens": 17836,
         "providers": {
-          "poe": 3
+          "poe": 2
         }
       },
       "published_at": "2026-11-02T01:06:04+00:00",
@@ -9263,18 +9263,18 @@
         "台湾",
         "美股",
         "宏观",
-        "科技股",
         "半导体",
-        "CDS",
-        "避险",
-        "市场情绪",
-        "估值",
+        "科技股",
+        "市场广度",
         "标普500",
-        "盈利"
+        "七巨头",
+        "估值",
+        "本益比",
+        "AI基础设施"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "adzWDkxEWMU",
       "video_url": "https://www.youtube.com/watch?v=adzWDkxEWMU"
     },
