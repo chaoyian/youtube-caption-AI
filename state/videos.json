@@ -3347,6 +3347,57 @@
       "video_id": "DBbDrACd1W8",
       "video_url": "https://www.youtube.com/watch?v=DBbDrACd1W8"
     },
+    "DaExTV6TtNA": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-10T01:33:11+00:00",
+      "analyzed_hash": "1266830f7f7f1ce8abfc9ec92ad8fdcef5e5103ca2a9eceb8052f3970b71fc3f",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "1266830f7f7f1ce8abfc9ec92ad8fdcef5e5103ca2a9eceb8052f3970b71fc3f",
+      "last_error": null,
+      "last_fetched_at": "2026-11-10T01:32:17+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-09-DaExTV6TtNA.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4693,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3306
+        },
+        "points": 3306,
+        "prompt_tokens": 15894,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-09T17:00:10+00:00",
+      "title": "“When All Else Fails, They Take You to War”: Iran, the Crash and What Comes Next | Gerald Celente",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "AI",
+        "美股",
+        "估值泡沫",
+        "金融危机",
+        "债务",
+        "利率",
+        "商业地产",
+        "银行"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "DaExTV6TtNA",
+      "video_url": "https://www.youtube.com/watch?v=DaExTV6TtNA"
+    },
     "DmXJIDku62I": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -3730,6 +3781,57 @@
       "video_id": "EJdsmRgakkU",
       "video_url": "https://www.youtube.com/watch?v=EJdsmRgakkU",
       "waiting_count": 1
+    },
+    "FDZ_qvI3qDU": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-10T01:32:08+00:00",
+      "analyzed_hash": "e3296c92196b86042ecfbb25f9d86ba4d54532d90a7dd410ebdd5b249ebb7f39",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "e3296c92196b86042ecfbb25f9d86ba4d54532d90a7dd410ebdd5b249ebb7f39",
+      "last_error": null,
+      "last_fetched_at": "2026-11-10T01:30:44+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-10-FDZ_qvI3qDU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8182,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7070
+        },
+        "points": 7070,
+        "prompt_tokens": 45134,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-10T01:05:37+00:00",
+      "title": "2026/11/10(二)美股大反彈!現在該加碼 還是停損?輝達小M頭 棒打AI多頭?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "技术面",
+        "费半",
+        "VIX",
+        "情绪",
+        "辉达",
+        "半导体",
+        "估值",
+        "本益比"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "FDZ_qvI3qDU",
+      "video_url": "https://www.youtube.com/watch?v=FDZ_qvI3qDU"
     },
     "FG3pyecKLvg": {
       "alert_status": "none",
