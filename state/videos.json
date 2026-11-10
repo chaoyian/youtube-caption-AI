@@ -136,8 +136,8 @@
     "0ekTT_culAY": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-03T01:32:10+00:00",
-      "analyzed_hash": "ae406ebc6adbb3bd283bd3cf2a1aed105fa759c2767fe9d44a0d20c4dbbc613c",
+      "analyzed_at": "2026-11-10T02:31:37+00:00",
+      "analyzed_hash": "0d889267608196c11ff059b8257b25cacc64320af11344386ef50c6af6d3f681",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -224,23 +224,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "ae406ebc6adbb3bd283bd3cf2a1aed105fa759c2767fe9d44a0d20c4dbbc613c",
+      "fetched_hash": "0d889267608196c11ff059b8257b25cacc64320af11344386ef50c6af6d3f681",
       "last_error": null,
-      "last_fetched_at": "2026-11-03T01:30:41+00:00",
+      "last_fetched_at": "2026-11-10T02:30:35+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-03-0ekTT_culAY.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 7562,
+        "calls": 2,
+        "completion_tokens": 5140,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 6608
+          "GPT-5.4": 3624
         },
-        "points": 6608,
-        "prompt_tokens": 42705,
+        "points": 3624,
+        "prompt_tokens": 17462,
         "providers": {
-          "poe": 3
+          "poe": 2
         }
       },
       "published_at": "2026-11-03T01:04:14+00:00",
@@ -251,17 +251,17 @@
         "美股",
         "宏观",
         "苹果",
-        "市值",
+        "资金风格",
         "财报",
-        "毛利率",
-        "iPhone",
-        "手机",
-        "Mac",
-        "PC"
+        "盈利能力",
+        "智能手机",
+        "市场份额",
+        "PC",
+        "新品催化"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "0ekTT_culAY",
       "video_url": "https://www.youtube.com/watch?v=0ekTT_culAY"
     },
@@ -13003,8 +13003,8 @@
     "l6aUAMXypj4": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-03T01:33:32+00:00",
-      "analyzed_hash": "662b7d840b72862ff448a8f1e14a444ff96c2652c4a0d578c9dc43849a8e9145",
+      "analyzed_at": "2026-11-10T02:33:11+00:00",
+      "analyzed_hash": "1f8e3982ab7d08ab53670d076e25e7dafc22686bd7633d50b523db24f729b818",
       "channel_id": "wtfinance-podcast",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -13091,23 +13091,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "662b7d840b72862ff448a8f1e14a444ff96c2652c4a0d578c9dc43849a8e9145",
+      "fetched_hash": "1f8e3982ab7d08ab53670d076e25e7dafc22686bd7633d50b523db24f729b818",
       "last_error": null,
-      "last_fetched_at": "2026-11-03T01:32:15+00:00",
+      "last_fetched_at": "2026-11-10T02:31:42+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-11-02-l6aUAMXypj4.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5130,
+        "calls": 3,
+        "completion_tokens": 8917,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3775
+          "GPT-5.4": 5789
         },
-        "points": 3775,
-        "prompt_tokens": 19519,
+        "points": 5789,
+        "prompt_tokens": 23638,
         "providers": {
-          "poe": 2
+          "poe": 3
         }
       },
       "published_at": "2026-11-02T17:00:16+00:00",
@@ -13118,12 +13118,12 @@
         "宏观",
         "英文",
         "AI",
+        "私人债务",
         "信用风险",
-        "债务",
-        "金融周期",
+        "现金流",
+        "资本开支",
         "影子银行",
-        "主权债",
-        "财政",
+        "回购市场",
         "监管"
       ],
       "transcript_generated": true,
