@@ -12739,8 +12739,8 @@
     "jh9CCNUy0XY": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-04T01:32:55+00:00",
-      "analyzed_hash": "8836904ac8a8abd99e4e5555770cf14562a1ed48a72ca159f02f4ff3a008a870",
+      "analyzed_at": "2026-11-11T02:32:20+00:00",
+      "analyzed_hash": "0e74998d0b55bd579cfb94e5dd2e0779225f93b89beec06dd4aa13e70418e375",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -12827,21 +12827,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "8836904ac8a8abd99e4e5555770cf14562a1ed48a72ca159f02f4ff3a008a870",
+      "fetched_hash": "0e74998d0b55bd579cfb94e5dd2e0779225f93b89beec06dd4aa13e70418e375",
       "last_error": null,
-      "last_fetched_at": "2026-11-04T01:31:10+00:00",
+      "last_fetched_at": "2026-11-11T02:30:41+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-04-jh9CCNUy0XY.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8720,
+        "completion_tokens": 8957,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7458
+          "GPT-5.4": 5776
         },
-        "points": 7458,
-        "prompt_tokens": 47081,
+        "points": 5776,
+        "prompt_tokens": 23252,
         "providers": {
           "poe": 3
         }
@@ -12853,18 +12853,18 @@
         "台湾",
         "美股",
         "宏观",
+        "半导体",
+        "反弹",
+        "选举",
+        "AI监管",
+        "估值",
         "科技股",
-        "市场情绪",
-        "波动率",
-        "风险偏好",
-        "避险基金",
-        "美债",
-        "去杠杆",
-        "台股"
+        "费半",
+        "AMD"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "jh9CCNUy0XY",
       "video_url": "https://www.youtube.com/watch?v=jh9CCNUy0XY"
     },
