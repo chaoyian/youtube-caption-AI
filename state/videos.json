@@ -4251,6 +4251,57 @@
       "video_id": "FUEajAPAfL0",
       "video_url": "https://www.youtube.com/watch?v=FUEajAPAfL0"
     },
+    "FjcRUxUZ290": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-11T01:32:25+00:00",
+      "analyzed_hash": "d315af521a8dd14f986ae66f752546b305693f40531d5cd61265409ca21b595b",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "d315af521a8dd14f986ae66f752546b305693f40531d5cd61265409ca21b595b",
+      "last_error": null,
+      "last_fetched_at": "2026-11-11T01:30:52+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-11-FjcRUxUZ290.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8137,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7177
+        },
+        "points": 7177,
+        "prompt_tokens": 46838,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-11T01:07:00+00:00",
+      "title": "2026/11/11(三)輝達跌不停 美股被拖垮?通膨炸鍋!12月升息避不了?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "美国通胀",
+        "联准会",
+        "消费",
+        "能源",
+        "美债",
+        "利率",
+        "就业",
+        "薪资"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "FjcRUxUZ290",
+      "video_url": "https://www.youtube.com/watch?v=FjcRUxUZ290"
+    },
     "FlnyDuJXzAM": {
       "alert_status": "none",
       "analysis_status": "complete",
