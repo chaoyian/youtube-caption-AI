@@ -1414,7 +1414,7 @@
       "fetch_status": "complete",
       "fetched_hash": "2834683eccfdda1d58eb0563c715c215aad029d6cd794cf6ea25ab7462fb6bdf",
       "last_error": null,
-      "last_fetched_at": "2026-11-05T01:32:01+00:00",
+      "last_fetched_at": "2026-11-12T01:32:37+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-11-04-5FQAv9FlF4Y.md",
       "note_version": 1,
@@ -2558,6 +2558,57 @@
       "video_id": "ApykW90PQ58",
       "video_url": "https://www.youtube.com/watch?v=ApykW90PQ58",
       "waiting_count": 1
+    },
+    "BB3WV1auMm4": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-12T01:33:53+00:00",
+      "analyzed_hash": "52ee78b78281f40a53adee98c1690dbccf8da68a3b13a3b4ff7543e227366748",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "52ee78b78281f40a53adee98c1690dbccf8da68a3b13a3b4ff7543e227366748",
+      "last_error": null,
+      "last_fetched_at": "2026-11-12T01:32:46+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-11-BB3WV1auMm4.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5295,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3726
+        },
+        "points": 3726,
+        "prompt_tokens": 17883,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-11T17:00:04+00:00",
+      "title": "The $40 Trillion Problem That Breaks the Entire Financial System | Lynette Zang",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "债务市场",
+        "利率",
+        "央行",
+        "美国财政",
+        "主权债",
+        "法国",
+        "欧元",
+        "信用利差"
+      ],
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
+      "video_id": "BB3WV1auMm4",
+      "video_url": "https://www.youtube.com/watch?v=BB3WV1auMm4"
     },
     "BTBH4-RZZXg": {
       "alert_status": "disabled",
@@ -5999,6 +6050,57 @@
       "video_id": "O0JBTLUGnQ0",
       "video_url": "https://www.youtube.com/watch?v=O0JBTLUGnQ0",
       "waiting_count": 1
+    },
+    "ODGD_qHlkPM": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-12T01:32:32+00:00",
+      "analyzed_hash": "68180826067d15a6c8b535274f43f75b1a8342df37ed3f4af9030f6e7f001933",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "68180826067d15a6c8b535274f43f75b1a8342df37ed3f4af9030f6e7f001933",
+      "last_error": null,
+      "last_fetched_at": "2026-11-12T01:30:49+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-12-ODGD_qHlkPM.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8782,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 7524
+        },
+        "points": 7524,
+        "prompt_tokens": 47596,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-12T01:06:53+00:00",
+      "title": "2026/11/12(四)利空連環爆 輝達盤後重挫7% 老黃再爆桃花劫!股市V轉 該追股票嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "辉达",
+        "公司治理",
+        "事件风险",
+        "股价反应",
+        "情绪",
+        "管理层",
+        "情境分析",
+        "半导体"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "ODGD_qHlkPM",
+      "video_url": "https://www.youtube.com/watch?v=ODGD_qHlkPM"
     },
     "OJ5vxmwQrE0": {
       "alert_status": "none",
