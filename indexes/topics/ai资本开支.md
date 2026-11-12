@@ -1,6 +1,5 @@
 # 主题：AI资本开支
 
-- 2026-11-05 [2026/11/5(四)川普大潰敗 藍潮反撲!為什麼選完 費半還在跌?現在該停損 還是加碼?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-05-aI_-iYx_-Hk.md)
 - 2026-10-23 [2026/10/23(五)颱風魔咒!美股出事了?費半狂瀉近7% 台積電ADR跌超4.5%【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-23-kA5f2hc9FW0.md)
 - 2026-10-22 [2026/10/22(四)美股財報反攻 誰最值得買?巨頭狂燒錢 誰來買單?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-22-3qS11YVouFQ.md)
 - 2026-10-02 [Felix Nikolas Prehn: A Generational Financial Reset Is Here](../../knowledge/wtfinance-podcast/2026/2026-10-02-4pEEU2qtNtM.md)

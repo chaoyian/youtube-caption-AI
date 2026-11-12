@@ -1,5 +1,6 @@
 # 主题：AI基建
 
+- 2026-11-05 [2026/11/5(四)川普大潰敗 藍潮反撲!為什麼選完 費半還在跌?現在該停損 還是加碼?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-05-aI_-iYx_-Hk.md)
 - 2026-10-28 [2026/10/28(三)川普選情告急!美股將迎政治變局?Anthropic IPO行情 美股買點到了?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-28-WScGZDz5Kno.md)
 - 2026-10-18 [賴清德總統談AI政策](../../knowledge/yutinghao-finance/2026/2026-10-18-9tgxOICMz2M.md)
 - 2026-08-27 [2026/8/27(四)輝達財報再超標!追高意願低?美股為何原地踏步?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-08-27-lDeHFopOfIs.md)

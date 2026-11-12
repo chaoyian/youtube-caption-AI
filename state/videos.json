@@ -9602,8 +9602,8 @@
     "aI_-iYx_-Hk": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-05T01:31:53+00:00",
-      "analyzed_hash": "492710a93a23337c55e9d66f397b2ede2528a36ea37b2912289c1016039e7769",
+      "analyzed_at": "2026-11-12T02:31:55+00:00",
+      "analyzed_hash": "ead07270ceebdb7762444e3f1fe439ddf810e2d9e2e1334cc35ffb125ef7ec88",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -9690,21 +9690,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "492710a93a23337c55e9d66f397b2ede2528a36ea37b2912289c1016039e7769",
+      "fetched_hash": "ead07270ceebdb7762444e3f1fe439ddf810e2d9e2e1334cc35ffb125ef7ec88",
       "last_error": null,
-      "last_fetched_at": "2026-11-05T01:30:50+00:00",
+      "last_fetched_at": "2026-11-12T02:30:37+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-05-aI_-iYx_-Hk.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5095,
+        "completion_tokens": 4967,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5624
+          "GPT-5.4": 3684
         },
-        "points": 5624,
-        "prompt_tokens": 44392,
+        "points": 3684,
+        "prompt_tokens": 19293,
         "providers": {
           "poe": 2
         }
@@ -9717,17 +9717,17 @@
         "美股",
         "宏观",
         "半导体",
-        "AI资本开支",
-        "估值",
+        "AI基建",
+        "市场解读",
         "科技巨头",
+        "风格分化",
         "德州",
-        "资料中心",
-        "电力",
+        "数据中心",
         "美国政治"
       ],
-      "transcript_generated": false,
-      "transcript_language": "zh",
-      "transcript_source": "supadata",
+      "transcript_generated": true,
+      "transcript_language": "en",
+      "transcript_source": "apify",
       "video_id": "aI_-iYx_-Hk",
       "video_url": "https://www.youtube.com/watch?v=aI_-iYx_-Hk"
     },
