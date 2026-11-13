@@ -13401,8 +13401,8 @@
     "kA5f2hc9FW0": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-30T02:49:36+00:00",
-      "analyzed_hash": "b621abe5bfbcd71a94d9ab4a8880a1c7569d7fe6f90551ebac97fd6f96c4c3ef",
+      "analyzed_at": "2026-11-13T03:33:49+00:00",
+      "analyzed_hash": "6a9f821cae4d1d1da0e83d18320a4c34a69c8872defbcf1401c6ed059f2220dd",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -13489,23 +13489,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "b621abe5bfbcd71a94d9ab4a8880a1c7569d7fe6f90551ebac97fd6f96c4c3ef",
+      "fetched_hash": "6a9f821cae4d1d1da0e83d18320a4c34a69c8872defbcf1401c6ed059f2220dd",
       "last_error": null,
-      "last_fetched_at": "2026-11-06T03:30:35+00:00",
+      "last_fetched_at": "2026-11-13T03:31:40+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-23-kA5f2hc9FW0.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8795,
+        "calls": 4,
+        "completion_tokens": 11279,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5800
+          "GPT-5.4": 7396
         },
-        "points": 5800,
-        "prompt_tokens": 24523,
+        "points": 7396,
+        "prompt_tokens": 30902,
         "providers": {
-          "poe": 3
+          "poe": 4
         }
       },
       "published_at": "2026-10-23T01:09:31+00:00",
@@ -13516,17 +13516,17 @@
         "美股",
         "宏观",
         "半导体",
-        "估值重估",
+        "市场结构",
         "市场情绪",
         "风险偏好",
-        "交易结构",
-        "Meta",
-        "AI资本开支",
-        "信用风险"
+        "原油",
+        "通胀",
+        "农产品",
+        "Meta"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "kA5f2hc9FW0",
       "video_url": "https://www.youtube.com/watch?v=kA5f2hc9FW0"
     },
@@ -16352,8 +16352,8 @@
     "uo6c3YNtEY8": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-06T03:32:30+00:00",
-      "analyzed_hash": "ed74285c02a2bb71b4b4a53b12f4ef89d89b2d1e24d469b2b7470fb1ffc5e013",
+      "analyzed_at": "2026-11-13T03:35:36+00:00",
+      "analyzed_hash": "6547f95937916cf05a9f7ac2cad8dc1308dea387d02286085bc0493557dce93c",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -16440,21 +16440,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "ed74285c02a2bb71b4b4a53b12f4ef89d89b2d1e24d469b2b7470fb1ffc5e013",
+      "fetched_hash": "6547f95937916cf05a9f7ac2cad8dc1308dea387d02286085bc0493557dce93c",
       "last_error": null,
-      "last_fetched_at": "2026-11-06T03:30:43+00:00",
+      "last_fetched_at": "2026-11-13T03:33:54+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-30-uo6c3YNtEY8.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 9076,
+        "completion_tokens": 9057,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5883
+          "GPT-5.4": 6124
         },
-        "points": 5883,
-        "prompt_tokens": 23936,
+        "points": 6124,
+        "prompt_tokens": 27283,
         "providers": {
           "poe": 3
         }
@@ -16467,17 +16467,17 @@
         "美股",
         "宏观",
         "市场广度",
-        "半导体",
-        "小盘股",
+        "风险偏好",
+        "对冲基金",
+        "拥挤交易",
+        "罗素2000",
         "利率",
         "资金轮动",
-        "企业债",
-        "融资成本",
         "Amazon"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "uo6c3YNtEY8",
       "video_url": "https://www.youtube.com/watch?v=uo6c3YNtEY8"
     },
