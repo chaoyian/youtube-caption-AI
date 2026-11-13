@@ -8183,18 +8183,53 @@
     },
     "Vgi26nHgnpM": {
       "alert_status": "none",
-      "analysis_status": "pending",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-13T02:32:51+00:00",
+      "analyzed_hash": "e5f98193361dcc7526a7f889ac7f5c425d5ed6c1a35b580086c64ae7efcea03f",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 0,
-      "fetch_status": "waiting",
+      "fetch_status": "complete",
+      "fetched_hash": "e5f98193361dcc7526a7f889ac7f5c425d5ed6c1a35b580086c64ae7efcea03f",
       "last_attempt_at": "2026-11-13T01:30:41+00:00",
-      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] Vgi26nHgnpM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=Vgi26nHgnpM! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-11-13T02:30:41+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-11-13T02:31:51+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-13-Vgi26nHgnpM.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5359,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4413
+        },
+        "points": 4413,
+        "prompt_tokens": 26661,
+        "providers": {
+          "poe": 2
+        }
+      },
       "published_at": "2026-11-13T01:11:52+00:00",
       "title": "2026/11/13(五)黃仁勳退位 輝達下一步?輝達股價最壞 時刻過了嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "辉达",
+        "估值",
+        "半导体",
+        "治理",
+        "管理层",
+        "AI",
+        "融资",
+        "监管"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "Vgi26nHgnpM",
       "video_url": "https://www.youtube.com/watch?v=Vgi26nHgnpM",
       "waiting_count": 1
@@ -13153,8 +13188,8 @@
     "jm9T-NgW0pY": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-06T01:31:58+00:00",
-      "analyzed_hash": "88922296d0a79d334e224710142fb08e9f52bacf58758e93004341c479b163d3",
+      "analyzed_at": "2026-11-13T02:31:47+00:00",
+      "analyzed_hash": "5234c4f68af8e30801873d4e1323080f216a565496d7e71347bf43f579a091b9",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -13241,21 +13276,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "88922296d0a79d334e224710142fb08e9f52bacf58758e93004341c479b163d3",
+      "fetched_hash": "5234c4f68af8e30801873d4e1323080f216a565496d7e71347bf43f579a091b9",
       "last_error": null,
-      "last_fetched_at": "2026-11-06T01:30:45+00:00",
+      "last_fetched_at": "2026-11-13T02:30:38+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-06-jm9T-NgW0pY.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5399,
+        "completion_tokens": 5782,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5594
+          "GPT-5.4": 4268
         },
-        "points": 5594,
-        "prompt_tokens": 42150,
+        "points": 4268,
+        "prompt_tokens": 22185,
         "providers": {
           "poe": 2
         }
@@ -13267,14 +13302,14 @@
         "台湾",
         "美股",
         "宏观",
-        "费半",
         "半导体",
+        "AI链",
         "AI监管",
-        "资料中心",
+        "数据中心",
         "政策",
-        "德州",
-        "AI",
-        "民意"
+        "州政策",
+        "民意",
+        "台股"
       ],
       "transcript_generated": false,
       "transcript_language": "zh",

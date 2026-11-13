@@ -1,7 +1,7 @@
 # 主题：AI
 
+- 2026-11-13 [2026/11/13(五)黃仁勳退位 輝達下一步?輝達股價最壞 時刻過了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-13-Vgi26nHgnpM.md)
 - 2026-11-09 [“When All Else Fails, They Take You to War”: Iran, the Crash and What Comes Next | Gerald Celente](../../knowledge/wtfinance-podcast/2026/2026-11-09-DaExTV6TtNA.md)
-- 2026-11-06 [2026/11/6(五)AI監管風暴 費半血崩12% 煞車壞了?台股斷頭潮 槓桿大清洗!【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-06-jm9T-NgW0pY.md)
 - 2026-11-02 [Economist Who Predicted 2008: “The AI Bubble Is Worse” | Ann Pettifor](../../knowledge/wtfinance-podcast/2026/2026-11-02-l6aUAMXypj4.md)
 - 2026-10-29 [2026/10/29(四)微軟噴谷歌崩 巨頭撐得住?聯準會攤牌 升息還沒完?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-29-jP2PllUUXrI.md)
 - 2026-10-27 [2026/10/27(二)美股止跌了?加碼or觀望 Anthropic上市倒數 期中選舉恐衝擊AI?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-27-fXo4kKJjQ5E.md)
