@@ -5793,6 +5793,57 @@
       "video_id": "Msyc3TiN5t4",
       "video_url": "https://www.youtube.com/watch?v=Msyc3TiN5t4"
     },
+    "NRAlcsPHuoA": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-14T01:31:32+00:00",
+      "analyzed_hash": "9ea1bc832688588f6d073ee45690758ac27c6e5fa4c6b5a07c39cc2e6c65de76",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "9ea1bc832688588f6d073ee45690758ac27c6e5fa4c6b5a07c39cc2e6c65de76",
+      "last_error": null,
+      "last_fetched_at": "2026-11-14T01:30:34+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-13-NRAlcsPHuoA.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5367,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3651
+        },
+        "points": 3651,
+        "prompt_tokens": 16452,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-13T17:00:14+00:00",
+      "title": "The $110 Trillion Wealth Transfer Nobody Is Ready For | Richard Vague",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美股",
+        "估值",
+        "回调",
+        "风险",
+        "AI",
+        "经济周期",
+        "历史类比",
+        "信用"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "NRAlcsPHuoA",
+      "video_url": "https://www.youtube.com/watch?v=NRAlcsPHuoA"
+    },
     "NZGYUCHpm0w": {
       "alert_status": "none",
       "analysis_status": "complete",
