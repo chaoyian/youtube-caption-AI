@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-11-16 [2026/11/16(一)輝達崩跌 散戶狂抄底 誰是贏家?矽谷對決華府!老黃復甦 華府大封殺?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-16-_h0gpc8s5jM.md)
 - 2026-11-13 [The $110 Trillion Wealth Transfer Nobody Is Ready For | Richard Vague](../../knowledge/wtfinance-podcast/2026/2026-11-13-NRAlcsPHuoA.md)
 - 2026-11-13 [2026/11/13(五)黃仁勳退位 輝達下一步?輝達股價最壞 時刻過了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-13-Vgi26nHgnpM.md)
 - 2026-11-09 [“When All Else Fails, They Take You to War”: Iran, the Crash and What Comes Next | Gerald Celente](../../knowledge/wtfinance-podcast/2026/2026-11-09-DaExTV6TtNA.md)

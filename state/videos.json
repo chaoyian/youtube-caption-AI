@@ -9623,6 +9623,57 @@
       "video_url": "https://www.youtube.com/watch?v=_dfkO0oKRvg",
       "waiting_count": 1
     },
+    "_h0gpc8s5jM": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-16T01:31:37+00:00",
+      "analyzed_hash": "796e80a8e5a174950dc398f0338ace2b8b565f027d63b0bf0175da7f66e171a5",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "796e80a8e5a174950dc398f0338ace2b8b565f027d63b0bf0175da7f66e171a5",
+      "last_error": null,
+      "last_fetched_at": "2026-11-16T01:30:41+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-16-_h0gpc8s5jM.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5177,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5747
+        },
+        "points": 5747,
+        "prompt_tokens": 45535,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-16T01:08:04+00:00",
+      "title": "2026/11/16(一)輝達崩跌 散戶狂抄底 誰是贏家?矽谷對決華府!老黃復甦 華府大封殺?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "辉达",
+        "财报",
+        "管理层",
+        "散户",
+        "资金流",
+        "分析师",
+        "估值",
+        "AI"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "_h0gpc8s5jM",
+      "video_url": "https://www.youtube.com/watch?v=_h0gpc8s5jM"
+    },
     "_m4TSQiYZi4": {
       "alert_status": "none",
       "analysis_status": "complete",
