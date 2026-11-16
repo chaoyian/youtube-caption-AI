@@ -12260,8 +12260,8 @@
     "eet_LPUY8Q0": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-09T01:32:18+00:00",
-      "analyzed_hash": "264348c694276fbb3e11cea5f74f3d6866b88c482685433f337cf1da21559218",
+      "analyzed_at": "2026-11-16T02:32:00+00:00",
+      "analyzed_hash": "075279551de112fcc6d9d33a06100d2fdcc90d9aef035c319919f9bc2cf00274",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -12348,21 +12348,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "264348c694276fbb3e11cea5f74f3d6866b88c482685433f337cf1da21559218",
+      "fetched_hash": "075279551de112fcc6d9d33a06100d2fdcc90d9aef035c319919f9bc2cf00274",
       "last_error": null,
-      "last_fetched_at": "2026-11-09T01:30:49+00:00",
+      "last_fetched_at": "2026-11-16T02:30:30+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-09-eet_LPUY8Q0.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8640,
+        "completion_tokens": 8628,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7340
+          "GPT-5.4": 5745
         },
-        "points": 7340,
-        "prompt_tokens": 46004,
+        "points": 5745,
+        "prompt_tokens": 24786,
         "providers": {
           "poe": 3
         }
@@ -12375,13 +12375,13 @@
         "美股",
         "宏观",
         "辉达",
-        "AI芯片",
+        "国安调查",
+        "AI",
+        "美国政治",
         "监管",
-        "公司治理",
-        "国安",
-        "台股",
-        "国安基金",
-        "流动性"
+        "流动性",
+        "波动率",
+        "台股"
       ],
       "transcript_generated": false,
       "transcript_language": "zh",

@@ -4,6 +4,7 @@
 - 2026-11-13 [The $110 Trillion Wealth Transfer Nobody Is Ready For | Richard Vague](../../knowledge/wtfinance-podcast/2026/2026-11-13-NRAlcsPHuoA.md)
 - 2026-11-13 [2026/11/13(五)黃仁勳退位 輝達下一步?輝達股價最壞 時刻過了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-13-Vgi26nHgnpM.md)
 - 2026-11-09 [“When All Else Fails, They Take You to War”: Iran, the Crash and What Comes Next | Gerald Celente](../../knowledge/wtfinance-podcast/2026/2026-11-09-DaExTV6TtNA.md)
+- 2026-11-09 [雙11會員優惠開跑!!2026/11/9(一)黑天鵝?輝達間諜案 國安調查全面轉向?國安基金來了台股四萬點防線 守得住嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-09-eet_LPUY8Q0.md)
 - 2026-11-02 [Economist Who Predicted 2008: “The AI Bubble Is Worse” | Ann Pettifor](../../knowledge/wtfinance-podcast/2026/2026-11-02-l6aUAMXypj4.md)
 - 2026-10-29 [2026/10/29(四)微軟噴谷歌崩 巨頭撐得住?聯準會攤牌 升息還沒完?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-29-jP2PllUUXrI.md)
 - 2026-10-27 [2026/10/27(二)美股止跌了?加碼or觀望 Anthropic上市倒數 期中選舉恐衝擊AI?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-10-27-fXo4kKJjQ5E.md)
