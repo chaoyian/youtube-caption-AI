@@ -10207,8 +10207,8 @@
     "adzWDkxEWMU": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-09T02:31:53+00:00",
-      "analyzed_hash": "e1cffc8d7c7db91eb956eed568437d4471b3572f665cf60e0df5e7588ac3d458",
+      "analyzed_at": "2026-11-16T02:46:42+00:00",
+      "analyzed_hash": "a1f16f873784426d4f51f4bd8779f8d627f65df64094816e8259e08758d2fe4c",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10295,21 +10295,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "e1cffc8d7c7db91eb956eed568437d4471b3572f665cf60e0df5e7588ac3d458",
+      "fetched_hash": "a1f16f873784426d4f51f4bd8779f8d627f65df64094816e8259e08758d2fe4c",
       "last_error": null,
-      "last_fetched_at": "2026-11-09T02:30:39+00:00",
+      "last_fetched_at": "2026-11-16T02:45:29+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-02-adzWDkxEWMU.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 6116,
+        "completion_tokens": 6006,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4092
+          "GPT-5.4": 4263
         },
-        "points": 4092,
-        "prompt_tokens": 17836,
+        "points": 4263,
+        "prompt_tokens": 20784,
         "providers": {
           "poe": 2
         }
@@ -10321,18 +10321,18 @@
         "台湾",
         "美股",
         "宏观",
-        "半导体",
+        "费半",
+        "市场结构",
+        "CDS",
         "科技股",
-        "市场广度",
-        "标普500",
-        "七巨头",
+        "风险对冲",
         "估值",
-        "本益比",
-        "AI基础设施"
+        "标普500",
+        "本益比"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "adzWDkxEWMU",
       "video_url": "https://www.youtube.com/watch?v=adzWDkxEWMU"
     },
