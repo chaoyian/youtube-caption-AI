@@ -10721,8 +10721,8 @@
     "b6e_2a_A5Is": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-26T05:08:51+00:00",
-      "analyzed_hash": "24ae1b0b0bfffe7974fc9996fa481ab445b17385e0fa8fa15b621c44e4dc8fd5",
+      "analyzed_at": "2026-11-16T07:01:17+00:00",
+      "analyzed_hash": "ee67805d4cecd54070097bf4b0be7cbc00a5ea92c7584d9b800b19990927a685",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10809,22 +10809,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "24ae1b0b0bfffe7974fc9996fa481ab445b17385e0fa8fa15b621c44e4dc8fd5",
+      "fetched_hash": "ee67805d4cecd54070097bf4b0be7cbc00a5ea92c7584d9b800b19990927a685",
       "last_attempt_at": "2026-10-19T01:38:13+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-11-09T06:59:33+00:00",
+      "last_fetched_at": "2026-11-16T07:00:15+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-19-b6e_2a_A5Is.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5336,
+        "completion_tokens": 5387,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3730
+          "GPT-5.4": 3959
         },
-        "points": 3730,
-        "prompt_tokens": 17678,
+        "points": 3959,
+        "prompt_tokens": 20439,
         "providers": {
           "poe": 2
         }
@@ -10837,17 +10837,17 @@
         "美股",
         "宏观",
         "半导体",
+        "费半",
         "技术面",
-        "波动",
         "小型股",
         "信用利差",
-        "标普500",
-        "美债殖利率",
-        "Fed"
+        "融资成本",
+        "FOMC",
+        "利率预期"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "b6e_2a_A5Is",
       "video_url": "https://www.youtube.com/watch?v=b6e_2a_A5Is",
       "waiting_count": 1
