@@ -3998,8 +3998,8 @@
     "FDZ_qvI3qDU": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-10T01:32:08+00:00",
-      "analyzed_hash": "e3296c92196b86042ecfbb25f9d86ba4d54532d90a7dd410ebdd5b249ebb7f39",
+      "analyzed_at": "2026-11-17T02:32:38+00:00",
+      "analyzed_hash": "2cbb4cb6c7c81ad4a381fb0fcd40ef1188551c0b04bf13dc0aba8e61de566cad",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -4086,21 +4086,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "e3296c92196b86042ecfbb25f9d86ba4d54532d90a7dd410ebdd5b249ebb7f39",
+      "fetched_hash": "2cbb4cb6c7c81ad4a381fb0fcd40ef1188551c0b04bf13dc0aba8e61de566cad",
       "last_error": null,
-      "last_fetched_at": "2026-11-10T01:30:44+00:00",
+      "last_fetched_at": "2026-11-17T02:30:36+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-10-FDZ_qvI3qDU.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8182,
+        "completion_tokens": 8850,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7070
+          "GPT-5.4": 5894
         },
-        "points": 7070,
-        "prompt_tokens": 45134,
+        "points": 5894,
+        "prompt_tokens": 25457,
         "providers": {
           "poe": 3
         }
@@ -4113,13 +4113,13 @@
         "美股",
         "宏观",
         "技术面",
-        "费半",
+        "风险情绪",
         "VIX",
-        "情绪",
         "辉达",
         "半导体",
+        "AI",
         "估值",
-        "本益比"
+        "财报"
       ],
       "transcript_generated": false,
       "transcript_language": "zh",
@@ -18237,18 +18237,53 @@
     },
     "zl_0SAhU3YU": {
       "alert_status": "none",
-      "analysis_status": "pending",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-17T02:34:33+00:00",
+      "analyzed_hash": "8304f12fed3c89668b35b505f8d5013cbfae475af66b56a90af0a075fae902b6",
       "channel_id": "yutinghao-finance",
       "discord_status": "pending",
       "email_status": "pending",
       "failure_count": 0,
-      "fetch_status": "waiting",
+      "fetch_status": "complete",
+      "fetched_hash": "8304f12fed3c89668b35b505f8d5013cbfae475af66b56a90af0a075fae902b6",
       "last_attempt_at": "2026-11-17T01:30:44+00:00",
-      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] zl_0SAhU3YU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=zl_0SAhU3YU! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
-      "next_retry_at": "2026-11-17T02:30:44+00:00",
-      "note_version": 0,
+      "last_error": null,
+      "last_fetched_at": "2026-11-17T02:32:42+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-17-zl_0SAhU3YU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8483,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5690
+        },
+        "points": 5690,
+        "prompt_tokens": 24933,
+        "providers": {
+          "poe": 3
+        }
+      },
       "published_at": "2026-11-17T01:03:58+00:00",
       "title": "2026/11/17(二)費半重挫5.2%美股還有 多少壞消息?投信轉賣第四法人鬆了?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "跨资产",
+        "流动性",
+        "半导体",
+        "估值",
+        "科技股",
+        "AI",
+        "融资",
+        "监管"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "zl_0SAhU3YU",
       "video_url": "https://www.youtube.com/watch?v=zl_0SAhU3YU",
       "waiting_count": 1
