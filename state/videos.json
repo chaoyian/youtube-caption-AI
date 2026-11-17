@@ -136,8 +136,8 @@
     "0ekTT_culAY": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-10T02:31:37+00:00",
-      "analyzed_hash": "0d889267608196c11ff059b8257b25cacc64320af11344386ef50c6af6d3f681",
+      "analyzed_at": "2026-11-17T02:49:00+00:00",
+      "analyzed_hash": "e646393f9469d5a42bdf845007bfc0227ea9375cd74d67a9970718a19463e9e5",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -224,23 +224,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "0d889267608196c11ff059b8257b25cacc64320af11344386ef50c6af6d3f681",
+      "fetched_hash": "e646393f9469d5a42bdf845007bfc0227ea9375cd74d67a9970718a19463e9e5",
       "last_error": null,
-      "last_fetched_at": "2026-11-10T02:30:35+00:00",
+      "last_fetched_at": "2026-11-17T02:47:25+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-03-0ekTT_culAY.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5140,
+        "calls": 3,
+        "completion_tokens": 7717,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3624
+          "GPT-5.4": 5253
         },
-        "points": 3624,
-        "prompt_tokens": 17462,
+        "points": 5253,
+        "prompt_tokens": 23704,
         "providers": {
-          "poe": 2
+          "poe": 3
         }
       },
       "published_at": "2026-11-03T01:04:14+00:00",
@@ -250,18 +250,18 @@
         "台湾",
         "美股",
         "宏观",
+        "半导体",
+        "市场情绪",
         "苹果",
-        "资金风格",
+        "估值",
         "财报",
-        "盈利能力",
-        "智能手机",
-        "市场份额",
-        "PC",
-        "新品催化"
+        "毛利率",
+        "iPhone",
+        "Mac"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "0ekTT_culAY",
       "video_url": "https://www.youtube.com/watch?v=0ekTT_culAY"
     },
@@ -12524,8 +12524,8 @@
     "fXo4kKJjQ5E": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-03T02:31:59+00:00",
-      "analyzed_hash": "dd157052ee7dacb0430fa91b673c2edb2231142bd31cca8c70547a8d21110149",
+      "analyzed_at": "2026-11-17T02:47:21+00:00",
+      "analyzed_hash": "1ae6a02ebe1125e71bbd613258aa7249cf8f1bc6a722c44bc6b99a81be93ab7a",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -12612,21 +12612,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "dd157052ee7dacb0430fa91b673c2edb2231142bd31cca8c70547a8d21110149",
+      "fetched_hash": "1ae6a02ebe1125e71bbd613258aa7249cf8f1bc6a722c44bc6b99a81be93ab7a",
       "last_error": null,
-      "last_fetched_at": "2026-11-10T02:45:44+00:00",
+      "last_fetched_at": "2026-11-17T02:45:52+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-27-fXo4kKJjQ5E.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 6059,
+        "completion_tokens": 5331,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 4190
+          "GPT-5.4": 4043
         },
-        "points": 4190,
-        "prompt_tokens": 19475,
+        "points": 4043,
+        "prompt_tokens": 21900,
         "providers": {
           "poe": 2
         }
@@ -12639,17 +12639,17 @@
         "美股",
         "宏观",
         "科技股",
-        "AI",
-        "估值分化",
-        "七巨头",
-        "盈利预期",
+        "风格分化",
+        "科技七雄",
         "估值",
-        "AI成本",
-        "资本开支"
+        "盈利",
+        "AI",
+        "资料中心",
+        "融资"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "fXo4kKJjQ5E",
       "video_url": "https://www.youtube.com/watch?v=fXo4kKJjQ5E"
     },
