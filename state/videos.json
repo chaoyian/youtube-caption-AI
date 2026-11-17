@@ -6567,7 +6567,7 @@
       "fetched_hash": "0ad94b0875d38803ebaeeb616ddd645729cb553091bccaff2f419f3630e7fb56",
       "last_attempt_at": "2026-10-20T02:01:47+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-11-10T07:35:44+00:00",
+      "last_fetched_at": "2026-11-17T08:15:17+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-20-Q4THm8kBXSI.md",
       "note_version": 1,
@@ -6601,8 +6601,8 @@
         "回购"
       ],
       "transcript_generated": false,
-      "transcript_language": "zh-TW",
-      "transcript_source": "apify",
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "Q4THm8kBXSI",
       "video_url": "https://www.youtube.com/watch?v=Q4THm8kBXSI",
       "waiting_count": 1
