@@ -8185,6 +8185,57 @@
       "video_url": "https://www.youtube.com/watch?v=U4RH_CPe3GQ",
       "waiting_count": 1
     },
+    "UW6JYgmBWkU": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-17T01:32:19+00:00",
+      "analyzed_hash": "0823285c2939434cbfa4160fb60e6779dc90322d1f41145754a01096d3db8c29",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "0823285c2939434cbfa4160fb60e6779dc90322d1f41145754a01096d3db8c29",
+      "last_error": null,
+      "last_fetched_at": "2026-11-17T01:30:48+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-16-UW6JYgmBWkU.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 4815,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 3419
+        },
+        "points": 3419,
+        "prompt_tokens": 16673,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-16T19:00:39+00:00",
+      "title": "Someone Just Unplugged the AI Trade - Who Brought Down Jesnsen Huang? | Doomberg",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "AI监管",
+        "美国政策",
+        "英伟达",
+        "时间窗口",
+        "政治风险",
+        "AI交易",
+        "美股",
+        "半导体"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "UW6JYgmBWkU",
+      "video_url": "https://www.youtube.com/watch?v=UW6JYgmBWkU"
+    },
     "Ulz539c38mw": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -18101,6 +18152,24 @@
       "transcript_source": "apify",
       "video_id": "zfU6oHbS8s8",
       "video_url": "https://www.youtube.com/watch?v=zfU6oHbS8s8",
+      "waiting_count": 1
+    },
+    "zl_0SAhU3YU": {
+      "alert_status": "none",
+      "analysis_status": "pending",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "waiting",
+      "last_attempt_at": "2026-11-17T01:30:44+00:00",
+      "last_error": "TranscriptPending: fetch_with_ytdlp: DownloadError: ERROR: [youtube] zl_0SAhU3YU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies | fetch_with_transcript_api: RequestBlocked: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=zl_0SAhU3YU! This is most likely caused by:\n\nYouTube is blocking requests from your IP. This usually is due to one of the following reasons:\n- You have done too many requests and your IP has been blocked by YouTube\n- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.\n\nThere are two things you can do to work around this:\n1. Use proxies to hide your IP address, as explained in the \"Working around IP bans\" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around",
+      "next_retry_at": "2026-11-17T02:30:44+00:00",
+      "note_version": 0,
+      "published_at": "2026-11-17T01:03:58+00:00",
+      "title": "2026/11/17(二)費半重挫5.2%美股還有 多少壞消息?投信轉賣第四法人鬆了?【早晨財經速解讀】",
+      "video_id": "zl_0SAhU3YU",
+      "video_url": "https://www.youtube.com/watch?v=zl_0SAhU3YU",
       "waiting_count": 1
     }
   }
