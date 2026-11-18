@@ -2825,6 +2825,57 @@
       "video_url": "https://www.youtube.com/watch?v=BTBH4-RZZXg",
       "waiting_count": 1
     },
+    "Bku5I3LcgSY": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-18T04:44:29+00:00",
+      "analyzed_hash": "8cb5286146e226ad36a2323e31ed262221c39921bb83b14e726f454da9fd8f85",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "8cb5286146e226ad36a2323e31ed262221c39921bb83b14e726f454da9fd8f85",
+      "last_error": null,
+      "last_fetched_at": "2026-11-18T04:43:00+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-18-Bku5I3LcgSY.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8307,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5701
+        },
+        "points": 5701,
+        "prompt_tokens": 26141,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-18T01:06:52+00:00",
+      "title": "2026/11/18(三)輝達財報炸裂 老黃回鍋夢碎?新CEO如何面對 晶片禁令與融資風暴?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "英伟达",
+        "财报",
+        "EPS",
+        "数据中心",
+        "AI需求",
+        "云端",
+        "财测",
+        "毛利率"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "Bku5I3LcgSY",
+      "video_url": "https://www.youtube.com/watch?v=Bku5I3LcgSY"
+    },
     "BxtHhc6P1n0": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -4386,8 +4437,8 @@
     "FjcRUxUZ290": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-11T01:32:25+00:00",
-      "analyzed_hash": "d315af521a8dd14f986ae66f752546b305693f40531d5cd61265409ca21b595b",
+      "analyzed_at": "2026-11-18T04:42:56+00:00",
+      "analyzed_hash": "be3cc22e8adf8d7a79d60c57acfea6c34ea1f6104639069e1e2043abf6378612",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -4474,23 +4525,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "d315af521a8dd14f986ae66f752546b305693f40531d5cd61265409ca21b595b",
+      "fetched_hash": "be3cc22e8adf8d7a79d60c57acfea6c34ea1f6104639069e1e2043abf6378612",
       "last_error": null,
-      "last_fetched_at": "2026-11-11T01:30:52+00:00",
+      "last_fetched_at": "2026-11-18T04:41:52+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-11-FjcRUxUZ290.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
-        "calls": 3,
-        "completion_tokens": 8137,
+        "calls": 2,
+        "completion_tokens": 5484,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7177
+          "GPT-5.4": 4147
         },
-        "points": 7177,
-        "prompt_tokens": 46838,
+        "points": 4147,
+        "prompt_tokens": 22363,
         "providers": {
-          "poe": 3
+          "poe": 2
         }
       },
       "published_at": "2026-11-11T01:07:00+00:00",
@@ -4500,12 +4551,12 @@
         "台湾",
         "美股",
         "宏观",
-        "美国通胀",
-        "联准会",
-        "消费",
-        "能源",
-        "美债",
+        "通胀",
+        "美国",
         "利率",
+        "美债",
+        "联准会",
+        "估值",
         "就业",
         "薪资"
       ],
@@ -8582,8 +8633,8 @@
     "WScGZDz5Kno": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-04T02:46:49+00:00",
-      "analyzed_hash": "33c9b149978177a607803d9c3fa2241aff7d10dc99bb61caf4dc41ced82bf915",
+      "analyzed_at": "2026-11-18T04:40:16+00:00",
+      "analyzed_hash": "c23e2d62196920ffa6737c32adfe19246a551bbb55f179b590afd77846177fba",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -8670,23 +8721,23 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "33c9b149978177a607803d9c3fa2241aff7d10dc99bb61caf4dc41ced82bf915",
+      "fetched_hash": "c23e2d62196920ffa6737c32adfe19246a551bbb55f179b590afd77846177fba",
       "last_error": null,
-      "last_fetched_at": "2026-11-11T02:55:41+00:00",
+      "last_fetched_at": "2026-11-18T04:38:51+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-28-WScGZDz5Kno.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
-        "calls": 2,
-        "completion_tokens": 5337,
+        "calls": 3,
+        "completion_tokens": 8132,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3767
+          "GPT-5.4": 5473
         },
-        "points": 3767,
-        "prompt_tokens": 18181,
+        "points": 5473,
+        "prompt_tokens": 24148,
         "providers": {
-          "poe": 2
+          "poe": 3
         }
       },
       "published_at": "2026-10-28T01:07:09+00:00",
@@ -8697,17 +8748,17 @@
         "美股",
         "宏观",
         "FOMC",
-        "利率预期",
+        "科技财报",
+        "市场定价",
         "美债殖利率",
+        "联准会",
+        "流动性",
         "美债拍卖",
-        "海外需求",
-        "资金成本",
-        "AI基建",
-        "美国投资"
+        "海外需求"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "WScGZDz5Kno",
       "video_url": "https://www.youtube.com/watch?v=WScGZDz5Kno"
     },
@@ -13533,8 +13584,8 @@
     "jh9CCNUy0XY": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-11T02:32:20+00:00",
-      "analyzed_hash": "0e74998d0b55bd579cfb94e5dd2e0779225f93b89beec06dd4aa13e70418e375",
+      "analyzed_at": "2026-11-18T04:41:48+00:00",
+      "analyzed_hash": "0596466117bc716bc8f4c0c6d2e7c949905081b5c0eb930706fcdd7ea0eca98b",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -13621,21 +13672,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "0e74998d0b55bd579cfb94e5dd2e0779225f93b89beec06dd4aa13e70418e375",
+      "fetched_hash": "0596466117bc716bc8f4c0c6d2e7c949905081b5c0eb930706fcdd7ea0eca98b",
       "last_error": null,
-      "last_fetched_at": "2026-11-11T02:30:41+00:00",
+      "last_fetched_at": "2026-11-18T04:40:20+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-04-jh9CCNUy0XY.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8957,
+        "completion_tokens": 8421,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5776
+          "GPT-5.4": 5775
         },
-        "points": 5776,
-        "prompt_tokens": 23252,
+        "points": 5775,
+        "prompt_tokens": 26428,
         "providers": {
           "poe": 3
         }
@@ -13648,17 +13699,17 @@
         "美股",
         "宏观",
         "半导体",
-        "反弹",
-        "选举",
-        "AI监管",
-        "估值",
+        "空单回补",
+        "波动率",
         "科技股",
-        "费半",
-        "AMD"
+        "市场情绪",
+        "估值",
+        "台股",
+        "融资"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "jh9CCNUy0XY",
       "video_url": "https://www.youtube.com/watch?v=jh9CCNUy0XY"
     },
