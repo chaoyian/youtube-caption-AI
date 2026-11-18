@@ -15428,8 +15428,8 @@
     "qaDEKdaJTto": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-10-21T05:10:27+00:00",
-      "analyzed_hash": "0cbe3dac93f07ee629dffc73620b4e65ab3287290864f4dbb6d5fc87a4bccb14",
+      "analyzed_at": "2026-11-18T07:50:36+00:00",
+      "analyzed_hash": "caa32b92a8b4d00082b0cb77918263a1acbbcaaa4a131ba7c72632403ce124ab",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -15516,22 +15516,22 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "0cbe3dac93f07ee629dffc73620b4e65ab3287290864f4dbb6d5fc87a4bccb14",
+      "fetched_hash": "caa32b92a8b4d00082b0cb77918263a1acbbcaaa4a131ba7c72632403ce124ab",
       "last_attempt_at": "2026-10-21T01:52:15+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-11-11T06:53:55+00:00",
+      "last_fetched_at": "2026-11-18T07:48:53+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-21-qaDEKdaJTto.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 9208,
+        "completion_tokens": 8311,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5872
+          "GPT-5.4": 5664
         },
-        "points": 5872,
-        "prompt_tokens": 23017,
+        "points": 5664,
+        "prompt_tokens": 25619,
         "providers": {
           "poe": 3
         }
@@ -15544,17 +15544,17 @@
         "美股",
         "宏观",
         "估值",
-        "那斯达克",
-        "信用利差",
-        "科技股",
-        "CDS",
+        "纳指",
         "AI",
         "信用市场",
-        "成交量"
+        "利差",
+        "汇率",
+        "资金流",
+        "出口"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "qaDEKdaJTto",
       "video_url": "https://www.youtube.com/watch?v=qaDEKdaJTto",
       "waiting_count": 1
