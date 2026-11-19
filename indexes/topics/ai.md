@@ -1,9 +1,11 @@
 # 主题：AI
 
+- 2026-11-19 [2026/11/19(四)AI股災遇上 史上最大IPO?輝達對中政策轉彎 美股這波 夠恐慌了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-19-1zFM-c93KCY.md)
 - 2026-11-17 [2026/11/17(二)費半重挫5.2%美股還有 多少壞消息?投信轉賣第四法人鬆了?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-17-zl_0SAhU3YU.md)
 - 2026-11-16 [2026/11/16(一)輝達崩跌 散戶狂抄底 誰是贏家?矽谷對決華府!老黃復甦 華府大封殺?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-16-_h0gpc8s5jM.md)
 - 2026-11-13 [The $110 Trillion Wealth Transfer Nobody Is Ready For | Richard Vague](../../knowledge/wtfinance-podcast/2026/2026-11-13-NRAlcsPHuoA.md)
 - 2026-11-13 [2026/11/13(五)黃仁勳退位 輝達下一步?輝達股價最壞 時刻過了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-13-Vgi26nHgnpM.md)
+- 2026-11-12 [2026/11/12(四)利空連環爆 輝達盤後重挫7% 老黃再爆桃花劫!股市V轉 該追股票嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-12-ODGD_qHlkPM.md)
 - 2026-11-10 [2026/11/10(二)美股大反彈!現在該加碼 還是停損?輝達小M頭 棒打AI多頭?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-10-FDZ_qvI3qDU.md)
 - 2026-11-09 [“When All Else Fails, They Take You to War”: Iran, the Crash and What Comes Next | Gerald Celente](../../knowledge/wtfinance-podcast/2026/2026-11-09-DaExTV6TtNA.md)
 - 2026-11-09 [雙11會員優惠開跑!!2026/11/9(一)黑天鵝?輝達間諜案 國安調查全面轉向?國安基金來了台股四萬點防線 守得住嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-09-eet_LPUY8Q0.md)

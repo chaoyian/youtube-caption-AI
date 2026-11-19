@@ -531,6 +531,57 @@
       "video_url": "https://www.youtube.com/watch?v=1Tygxzj3E1M",
       "waiting_count": 1
     },
+    "1zFM-c93KCY": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-19T04:29:54+00:00",
+      "analyzed_hash": "35e6b283d10b5310ddca6484dd023166588db1925e42d760ae619f6b4fd04071",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "35e6b283d10b5310ddca6484dd023166588db1925e42d760ae619f6b4fd04071",
+      "last_error": null,
+      "last_fetched_at": "2026-11-19T04:28:19+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-19-1zFM-c93KCY.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 9071,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5988
+        },
+        "points": 5988,
+        "prompt_tokens": 25379,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-19T01:06:39+00:00",
+      "title": "2026/11/19(四)AI股災遇上 史上最大IPO?輝達對中政策轉彎 美股這波 夠恐慌了嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "辉达",
+        "AI股",
+        "监管风险",
+        "技术面",
+        "估值",
+        "Anthropic",
+        "IPO",
+        "AI"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "1zFM-c93KCY",
+      "video_url": "https://www.youtube.com/watch?v=1zFM-c93KCY"
+    },
     "20fQIC6PwQI": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -6399,8 +6450,8 @@
     "ODGD_qHlkPM": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-12T01:32:32+00:00",
-      "analyzed_hash": "68180826067d15a6c8b535274f43f75b1a8342df37ed3f4af9030f6e7f001933",
+      "analyzed_at": "2026-11-19T04:28:14+00:00",
+      "analyzed_hash": "0d452e541c255a328e8b12478557baafaa8a7f8d12f2c967e9cfce1b7d53fa90",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -6487,21 +6538,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "68180826067d15a6c8b535274f43f75b1a8342df37ed3f4af9030f6e7f001933",
+      "fetched_hash": "0d452e541c255a328e8b12478557baafaa8a7f8d12f2c967e9cfce1b7d53fa90",
       "last_error": null,
-      "last_fetched_at": "2026-11-12T01:30:49+00:00",
+      "last_fetched_at": "2026-11-19T04:26:50+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-12-ODGD_qHlkPM.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8782,
+        "completion_tokens": 8140,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 7524
+          "GPT-5.4": 5606
         },
-        "points": 7524,
-        "prompt_tokens": 47596,
+        "points": 5606,
+        "prompt_tokens": 25873,
         "providers": {
           "poe": 3
         }
@@ -6515,12 +6566,12 @@
         "宏观",
         "辉达",
         "公司治理",
-        "事件风险",
-        "股价反应",
-        "情绪",
-        "管理层",
-        "情境分析",
-        "半导体"
+        "AI",
+        "股价",
+        "市场情绪",
+        "半导体",
+        "盈利预期",
+        "去杠杆"
       ],
       "transcript_generated": false,
       "transcript_language": "zh",
@@ -10264,8 +10315,8 @@
     "aI_-iYx_-Hk": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-12T02:31:55+00:00",
-      "analyzed_hash": "ead07270ceebdb7762444e3f1fe439ddf810e2d9e2e1334cc35ffb125ef7ec88",
+      "analyzed_at": "2026-11-19T04:26:46+00:00",
+      "analyzed_hash": "db0b7f1ae09fa793bc54659ec19896a3142871284b2f365b8a5d98089a0e2b20",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10352,21 +10403,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "ead07270ceebdb7762444e3f1fe439ddf810e2d9e2e1334cc35ffb125ef7ec88",
+      "fetched_hash": "db0b7f1ae09fa793bc54659ec19896a3142871284b2f365b8a5d98089a0e2b20",
       "last_error": null,
-      "last_fetched_at": "2026-11-12T02:30:37+00:00",
+      "last_fetched_at": "2026-11-19T04:25:38+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-05-aI_-iYx_-Hk.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 4967,
+        "completion_tokens": 5271,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 3684
+          "GPT-5.4": 4050
         },
-        "points": 3684,
-        "prompt_tokens": 19293,
+        "points": 4050,
+        "prompt_tokens": 22355,
         "providers": {
           "poe": 2
         }
@@ -10378,18 +10429,18 @@
         "台湾",
         "美股",
         "宏观",
-        "半导体",
-        "AI基建",
-        "市场解读",
-        "科技巨头",
-        "风格分化",
+        "费半",
+        "AI资本开支",
+        "半导体硬体",
+        "大型科技股",
+        "记忆体",
         "德州",
-        "数据中心",
-        "美国政治"
+        "资料中心",
+        "电力与审批"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "aI_-iYx_-Hk",
       "video_url": "https://www.youtube.com/watch?v=aI_-iYx_-Hk"
     },
@@ -13530,11 +13581,62 @@
       "video_id": "hVoE3sV-1FM",
       "video_url": "https://www.youtube.com/watch?v=hVoE3sV-1FM"
     },
+    "jIVKcWsMBi4": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-19T04:31:07+00:00",
+      "analyzed_hash": "ed7f6a2d190861f8285c698b1768e35d3f8db497935b38468781be6f348d5501",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "ed7f6a2d190861f8285c698b1768e35d3f8db497935b38468781be6f348d5501",
+      "last_error": null,
+      "last_fetched_at": "2026-11-19T04:29:58+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-18-jIVKcWsMBi4.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5661,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4114
+        },
+        "points": 4114,
+        "prompt_tokens": 20864,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-18T17:00:25+00:00",
+      "title": "Everything Is Crashing and Defensive Stocks Won’t Save You | Chris Vermeulen",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "市场结构",
+        "资金流向",
+        "防御板块",
+        "熊市",
+        "分散化",
+        "趋势判断",
+        "仓位管理",
+        "美元"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "jIVKcWsMBi4",
+      "video_url": "https://www.youtube.com/watch?v=jIVKcWsMBi4"
+    },
     "jP2PllUUXrI": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-05T02:47:10+00:00",
-      "analyzed_hash": "cc3d6d6b9c5ba999185aa7a160df8557491b09bd43dd0e6dbb20fdb44ce2e9a3",
+      "analyzed_at": "2026-11-19T04:25:34+00:00",
+      "analyzed_hash": "36ce84025bb1301b3866de017e9ad8eaeda19064f2c15a633ae6b3c63798cefe",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -13621,21 +13723,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "cc3d6d6b9c5ba999185aa7a160df8557491b09bd43dd0e6dbb20fdb44ce2e9a3",
+      "fetched_hash": "36ce84025bb1301b3866de017e9ad8eaeda19064f2c15a633ae6b3c63798cefe",
       "last_error": null,
-      "last_fetched_at": "2026-11-12T03:30:39+00:00",
+      "last_fetched_at": "2026-11-19T04:23:59+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-29-jP2PllUUXrI.md",
-      "note_version": 2,
+      "note_version": 3,
       "poe_usage": {
         "calls": 3,
-        "completion_tokens": 8687,
+        "completion_tokens": 8025,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5676
+          "GPT-5.4": 5528
         },
-        "points": 5676,
-        "prompt_tokens": 23535,
+        "points": 5528,
+        "prompt_tokens": 25529,
         "providers": {
           "poe": 3
         }
@@ -13649,16 +13751,16 @@
         "宏观",
         "联准会",
         "利率",
-        "通膨",
+        "政策沟通",
+        "市场预期",
         "微软",
         "AI",
-        "财报",
-        "资本开支",
-        "现金流"
+        "云计算",
+        "Google"
       ],
-      "transcript_generated": true,
-      "transcript_language": "en",
-      "transcript_source": "apify",
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "jP2PllUUXrI",
       "video_url": "https://www.youtube.com/watch?v=jP2PllUUXrI"
     },
