@@ -886,7 +886,7 @@
       "fetched_hash": "16f8964db755280ea29828a8687300a15979faf38deea60de409d222c5ebc45c",
       "last_attempt_at": "2026-10-22T01:42:59+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-11-12T07:29:50+00:00",
+      "last_fetched_at": "2026-11-19T07:44:07+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-10-22-3qS11YVouFQ.md",
       "note_version": 1,
@@ -920,8 +920,8 @@
         "AI"
       ],
       "transcript_generated": false,
-      "transcript_language": "zh-TW",
-      "transcript_source": "apify",
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
       "video_id": "3qS11YVouFQ",
       "video_url": "https://www.youtube.com/watch?v=3qS11YVouFQ",
       "waiting_count": 1
