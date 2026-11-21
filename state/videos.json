@@ -11872,6 +11872,57 @@
       "video_url": "https://www.youtube.com/watch?v=c4IT1Mwb_Pg",
       "waiting_count": 2
     },
+    "cDuTmC1e4B8": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-21T04:11:17+00:00",
+      "analyzed_hash": "70a854d6f06f841f1a33a0f0a32dad4a61820e8dc69dc4ab69fd6e2db3d6cddc",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "70a854d6f06f841f1a33a0f0a32dad4a61820e8dc69dc4ab69fd6e2db3d6cddc",
+      "last_error": null,
+      "last_fetched_at": "2026-11-21T04:10:09+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-20-cDuTmC1e4B8.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5677,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4172
+        },
+        "points": 4172,
+        "prompt_tokens": 21543,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-20T17:00:37+00:00",
+      "title": "Why Nobody Is Buying Homes Right Now (It’s Worse Than You Think) | Nick Gerli",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美国楼市",
+        "需求",
+        "成交",
+        "估值",
+        "利率",
+        "供需错配",
+        "卖方行为",
+        "就业"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "cDuTmC1e4B8",
+      "video_url": "https://www.youtube.com/watch?v=cDuTmC1e4B8"
+    },
     "cOTLqoaHBxE": {
       "alert_status": "none",
       "analysis_status": "complete",
