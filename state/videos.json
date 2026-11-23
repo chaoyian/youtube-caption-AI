@@ -10022,8 +10022,8 @@
     "_h0gpc8s5jM": {
       "alert_status": "none",
       "analysis_status": "complete",
-      "analyzed_at": "2026-11-16T01:31:37+00:00",
-      "analyzed_hash": "796e80a8e5a174950dc398f0338ace2b8b565f027d63b0bf0175da7f66e171a5",
+      "analyzed_at": "2026-11-23T03:55:25+00:00",
+      "analyzed_hash": "11488e76e0a36d0deb285947db0b8589a31c785a6c443d5d8335ab04cb3a682c",
       "channel_id": "yutinghao-finance",
       "discord_status": "disabled",
       "email_deliveries": {
@@ -10110,21 +10110,21 @@
       "email_status": "sent",
       "failure_count": 0,
       "fetch_status": "complete",
-      "fetched_hash": "796e80a8e5a174950dc398f0338ace2b8b565f027d63b0bf0175da7f66e171a5",
+      "fetched_hash": "11488e76e0a36d0deb285947db0b8589a31c785a6c443d5d8335ab04cb3a682c",
       "last_error": null,
-      "last_fetched_at": "2026-11-16T01:30:41+00:00",
+      "last_fetched_at": "2026-11-23T03:54:30+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-16-_h0gpc8s5jM.md",
-      "note_version": 1,
+      "note_version": 2,
       "poe_usage": {
         "calls": 2,
-        "completion_tokens": 5177,
+        "completion_tokens": 4400,
         "limit": 10000,
         "models": {
-          "GPT-5.4": 5747
+          "GPT-5.4": 3658
         },
-        "points": 5747,
-        "prompt_tokens": 45535,
+        "points": 3658,
+        "prompt_tokens": 22340,
         "providers": {
           "poe": 2
         }
@@ -10138,12 +10138,12 @@
         "宏观",
         "辉达",
         "财报",
-        "管理层",
-        "散户",
-        "资金流",
-        "分析师",
+        "AI融资",
+        "散户资金",
+        "情绪",
+        "卖方观点",
         "估值",
-        "AI"
+        "指数权重"
       ],
       "transcript_generated": false,
       "transcript_language": "zh",
@@ -10693,7 +10693,7 @@
       "fetch_status": "complete",
       "fetched_hash": "a1f16f873784426d4f51f4bd8779f8d627f65df64094816e8259e08758d2fe4c",
       "last_error": null,
-      "last_fetched_at": "2026-11-16T02:45:29+00:00",
+      "last_fetched_at": "2026-11-23T03:54:24+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-02-adzWDkxEWMU.md",
       "note_version": 3,
@@ -12878,7 +12878,7 @@
       "fetch_status": "complete",
       "fetched_hash": "075279551de112fcc6d9d33a06100d2fdcc90d9aef035c319919f9bc2cf00274",
       "last_error": null,
-      "last_fetched_at": "2026-11-16T02:30:30+00:00",
+      "last_fetched_at": "2026-11-23T03:54:27+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-09-eet_LPUY8Q0.md",
       "note_version": 2,
@@ -18137,6 +18137,57 @@
       "video_id": "wM7uDRpaC-g",
       "video_url": "https://www.youtube.com/watch?v=wM7uDRpaC-g",
       "waiting_count": 1
+    },
+    "wUTABzLMekc": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-23T03:56:37+00:00",
+      "analyzed_hash": "d6e43db99d2e586b3a540f8d43536aa045a148bd58b5e13a1aa2154508c10a60",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "d6e43db99d2e586b3a540f8d43536aa045a148bd58b5e13a1aa2154508c10a60",
+      "last_error": null,
+      "last_fetched_at": "2026-11-23T03:55:29+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-23-wUTABzLMekc.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5515,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4206
+        },
+        "points": 4206,
+        "prompt_tokens": 22962,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-23T01:06:08+00:00",
+      "title": "2026/11/23(一)融資斷頭大逃殺 政府全面救市!誰能解決 流動性問題?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "台股",
+        "流动性",
+        "融资",
+        "监管",
+        "做空",
+        "政策",
+        "国安基金",
+        "技术面"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "wUTABzLMekc",
+      "video_url": "https://www.youtube.com/watch?v=wUTABzLMekc"
     },
     "wmu1GS07BMo": {
       "alert_status": "none",
