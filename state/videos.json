@@ -226,7 +226,7 @@
       "fetch_status": "complete",
       "fetched_hash": "e646393f9469d5a42bdf845007bfc0227ea9375cd74d67a9970718a19463e9e5",
       "last_error": null,
-      "last_fetched_at": "2026-11-17T02:47:25+00:00",
+      "last_fetched_at": "2026-11-24T07:01:42+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-03-0ekTT_culAY.md",
       "note_version": 3,
@@ -3089,6 +3089,57 @@
       "video_id": "Bku5I3LcgSY",
       "video_url": "https://www.youtube.com/watch?v=Bku5I3LcgSY"
     },
+    "BoizSUJ-z-s": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-24T07:03:14+00:00",
+      "analyzed_hash": "9ffb492b57857aa285fd390203b12b2a5b4c9c3ff9c43bad06cd3e120df80def",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "9ffb492b57857aa285fd390203b12b2a5b4c9c3ff9c43bad06cd3e120df80def",
+      "last_error": null,
+      "last_fetched_at": "2026-11-24T07:01:51+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-24-BoizSUJ-z-s.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8551,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5651
+        },
+        "points": 5651,
+        "prompt_tokens": 24015,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-24T01:05:23+00:00",
+      "title": "2026/11/24(二)黃仁勳閃電回鍋!輝達狂飆31% 現在買股 還來得及嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "辉达",
+        "公司治理",
+        "市场情绪",
+        "估值",
+        "波动",
+        "政治",
+        "华府",
+        "监管"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "BoizSUJ-z-s",
+      "video_url": "https://www.youtube.com/watch?v=BoizSUJ-z-s"
+    },
     "BxtHhc6P1n0": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -4352,7 +4403,7 @@
       "fetch_status": "complete",
       "fetched_hash": "2cbb4cb6c7c81ad4a381fb0fcd40ef1188551c0b04bf13dc0aba8e61de566cad",
       "last_error": null,
-      "last_fetched_at": "2026-11-17T02:30:36+00:00",
+      "last_fetched_at": "2026-11-24T07:01:45+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-10-FDZ_qvI3qDU.md",
       "note_version": 2,
@@ -6299,6 +6350,57 @@
       "transcript_source": "apify",
       "video_id": "NZGYUCHpm0w",
       "video_url": "https://www.youtube.com/watch?v=NZGYUCHpm0w"
+    },
+    "NdrJTQ9LcJo": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-24T07:04:56+00:00",
+      "analyzed_hash": "09bc6546754bed43c28a42610e741558d3933a55c3371597eb3c9665a3efe98e",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "09bc6546754bed43c28a42610e741558d3933a55c3371597eb3c9665a3efe98e",
+      "last_error": null,
+      "last_fetched_at": "2026-11-24T07:03:21+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-23-NdrJTQ9LcJo.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 3,
+        "completion_tokens": 8514,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 5704
+        },
+        "points": 5704,
+        "prompt_tokens": 24949,
+        "providers": {
+          "poe": 3
+        }
+      },
+      "published_at": "2026-11-23T17:00:36+00:00",
+      "title": "The 2027 Melt-Up Will be the Largest in History | David Hunter",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "美股",
+        "目标位",
+        "市场节奏",
+        "情绪",
+        "回撤",
+        "AI",
+        "数据中心",
+        "半导体"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "NdrJTQ9LcJo",
+      "video_url": "https://www.youtube.com/watch?v=NdrJTQ9LcJo"
     },
     "NspN81zjSzw": {
       "alert_status": "none",
@@ -8542,7 +8644,7 @@
       "fetch_status": "complete",
       "fetched_hash": "0823285c2939434cbfa4160fb60e6779dc90322d1f41145754a01096d3db8c29",
       "last_error": null,
-      "last_fetched_at": "2026-11-17T01:30:48+00:00",
+      "last_fetched_at": "2026-11-24T07:03:17+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-11-16-UW6JYgmBWkU.md",
       "note_version": 1,
@@ -19121,7 +19223,7 @@
       "fetched_hash": "8304f12fed3c89668b35b505f8d5013cbfae475af66b56a90af0a075fae902b6",
       "last_attempt_at": "2026-11-17T01:30:44+00:00",
       "last_error": null,
-      "last_fetched_at": "2026-11-17T02:32:42+00:00",
+      "last_fetched_at": "2026-11-24T07:01:48+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-17-zl_0SAhU3YU.md",
       "note_version": 1,
