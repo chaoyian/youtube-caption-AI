@@ -1,5 +1,6 @@
 # 主题：AI
 
+- 2026-11-25 [2026/11/25(三)反彈乏力 關稅帝君回來了?股市暴漲暴跌時代!牛市修正還是泡沫破裂？【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-25-BdGySn52EHU.md)
 - 2026-11-23 [The 2027 Melt-Up Will be the Largest in History | David Hunter](../../knowledge/wtfinance-podcast/2026/2026-11-23-NdrJTQ9LcJo.md)
 - 2026-11-20 [2026/11/20(五)四大指數年線全失守 ANT吃飽 美股全倒?台股禁空令 擋得住賣壓?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-20-vBIWf_ne83Q.md)
 - 2026-11-19 [2026/11/19(四)AI股災遇上 史上最大IPO?輝達對中政策轉彎 美股這波 夠恐慌了嗎?【早晨財經速解讀】](../../knowledge/yutinghao-finance/2026/2026-11-19-1zFM-c93KCY.md)
