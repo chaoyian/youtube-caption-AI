@@ -624,7 +624,7 @@
       "fetch_status": "complete",
       "fetched_hash": "35e6b283d10b5310ddca6484dd023166588db1925e42d760ae619f6b4fd04071",
       "last_error": null,
-      "last_fetched_at": "2026-11-19T04:28:19+00:00",
+      "last_fetched_at": "2026-11-26T05:19:08+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-19-1zFM-c93KCY.md",
       "note_version": 1,
@@ -2050,6 +2050,57 @@
       "video_id": "6weg9-YmGVs",
       "video_url": "https://www.youtube.com/watch?v=6weg9-YmGVs",
       "waiting_count": 2
+    },
+    "7-V-NWQpF7I": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-26T05:20:08+00:00",
+      "analyzed_hash": "ae46a506d6f2c99e2f893c791b7f97427254568bcca8275b7d134a44884f0eef",
+      "channel_id": "yutinghao-finance",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "ae46a506d6f2c99e2f893c791b7f97427254568bcca8275b7d134a44884f0eef",
+      "last_error": null,
+      "last_fetched_at": "2026-11-26T05:19:11+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/yutinghao-finance/2026/2026-11-26-7-V-NWQpF7I.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5011,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4058
+        },
+        "points": 4058,
+        "prompt_tokens": 24018,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-26T01:06:56+00:00",
+      "title": "2026/11/26(四)急漲急跌!多空大屠殺?外資提款無底洞 國家隊能守住台股嗎?【早晨財經速解讀】",
+      "topics": [
+        "财经",
+        "台湾",
+        "美股",
+        "宏观",
+        "量化资金",
+        "全球股市",
+        "波动",
+        "通胀",
+        "美债",
+        "联准会",
+        "台股",
+        "外资"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "zh",
+      "transcript_source": "supadata",
+      "video_id": "7-V-NWQpF7I",
+      "video_url": "https://www.youtube.com/watch?v=7-V-NWQpF7I"
     },
     "7AuZ_qPcon0": {
       "alert_status": "none",
@@ -5445,6 +5496,57 @@
       "video_url": "https://www.youtube.com/watch?v=FtPa8H718To",
       "waiting_count": 2
     },
+    "H87LvRwcG60": {
+      "alert_status": "none",
+      "analysis_status": "complete",
+      "analyzed_at": "2026-11-26T05:21:19+00:00",
+      "analyzed_hash": "fc2d6fc4f1c6556cedb1e71ce7d792cd3a817652bee9891e323c67fbdd828bb9",
+      "channel_id": "wtfinance-podcast",
+      "discord_status": "pending",
+      "email_status": "pending",
+      "failure_count": 0,
+      "fetch_status": "complete",
+      "fetched_hash": "fc2d6fc4f1c6556cedb1e71ce7d792cd3a817652bee9891e323c67fbdd828bb9",
+      "last_error": null,
+      "last_fetched_at": "2026-11-26T05:20:14+00:00",
+      "next_retry_at": null,
+      "note_path": "knowledge/wtfinance-podcast/2026/2026-11-25-H87LvRwcG60.md",
+      "note_version": 1,
+      "poe_usage": {
+        "calls": 2,
+        "completion_tokens": 5884,
+        "limit": 10000,
+        "models": {
+          "GPT-5.4": 4306
+        },
+        "points": 4306,
+        "prompt_tokens": 22084,
+        "providers": {
+          "poe": 2
+        }
+      },
+      "published_at": "2026-11-25T17:00:23+00:00",
+      "title": "This AI Rally Is a Trap Before the Biggest Crash in History | Harry Dent",
+      "topics": [
+        "财经",
+        "投资",
+        "宏观",
+        "英文",
+        "AI",
+        "英伟达",
+        "估值",
+        "宏观周期",
+        "技术周期",
+        "代际周期",
+        "财政刺激",
+        "债务"
+      ],
+      "transcript_generated": false,
+      "transcript_language": "en",
+      "transcript_source": "supadata",
+      "video_id": "H87LvRwcG60",
+      "video_url": "https://www.youtube.com/watch?v=H87LvRwcG60"
+    },
     "HXHxiiYjKFY": {
       "alert_status": "none",
       "analysis_status": "complete",
@@ -7017,7 +7119,7 @@
       "fetch_status": "complete",
       "fetched_hash": "0d452e541c255a328e8b12478557baafaa8a7f8d12f2c967e9cfce1b7d53fa90",
       "last_error": null,
-      "last_fetched_at": "2026-11-19T04:26:50+00:00",
+      "last_fetched_at": "2026-11-26T05:19:05+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-12-ODGD_qHlkPM.md",
       "note_version": 2,
@@ -10882,7 +10984,7 @@
       "fetch_status": "complete",
       "fetched_hash": "db0b7f1ae09fa793bc54659ec19896a3142871284b2f365b8a5d98089a0e2b20",
       "last_error": null,
-      "last_fetched_at": "2026-11-19T04:25:38+00:00",
+      "last_fetched_at": "2026-11-26T05:19:01+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/yutinghao-finance/2026/2026-11-05-aI_-iYx_-Hk.md",
       "note_version": 3,
@@ -14283,7 +14385,7 @@
       "fetch_status": "complete",
       "fetched_hash": "ed7f6a2d190861f8285c698b1768e35d3f8db497935b38468781be6f348d5501",
       "last_error": null,
-      "last_fetched_at": "2026-11-19T04:29:58+00:00",
+      "last_fetched_at": "2026-11-26T05:20:11+00:00",
       "next_retry_at": null,
       "note_path": "knowledge/wtfinance-podcast/2026/2026-11-18-jIVKcWsMBi4.md",
       "note_version": 1,
